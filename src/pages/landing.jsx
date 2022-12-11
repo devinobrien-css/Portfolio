@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
 import {  PageSection, SectionTitle, TitleXl } from "../components/custom.library";
+import { AcademicExperience } from "./academic.component";
 import { OverallAd } from "./advertisement.component";
+import { WorkExperience } from "./experience.component";
 import { WebsitesAd } from "./websites.component";
 
 
@@ -36,7 +38,8 @@ const Landing = () => {
             </PageSection>
 
             <OverallAd/>
-
+            <AcademicExperience />
+            <WorkExperience />
             <WebsitesAd />
         </div>
     )

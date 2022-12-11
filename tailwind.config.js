@@ -20,6 +20,11 @@ module.exports = {
         "neuro":"url('./img/neuroexed.png')",
         "landing":"url('./img/landing.png')",
       },
+      transitionProperty: {
+        'height': 'height',
+        'width': 'width',
+        'spacing': 'margin, padding',
+      },
     },
   },
   plugins: [],
