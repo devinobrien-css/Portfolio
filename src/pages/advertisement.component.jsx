@@ -18,7 +18,7 @@ const DevelopmentSection = () => {
                     <Icon icon={"logos:vue"} width="50" height="50"/>
                 </div>
                 <div className="bg-gray-900 rounded p-2 mx-auto">
-                    <Icon icon={"logos:tailwindcss-icon"} width="50" height="50"/>
+                    <Icon icon={"logos:angular-icon"} width="50" height="50"/>
                 </div>
             </div>
         </div>

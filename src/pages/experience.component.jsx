@@ -5,7 +5,7 @@ import { Accordion, PageSection, SectionContent, SectionSubTitle, TitleLg, Title
 export const WorkExperience = () => {
 
     return (
-        <PageSection>
+        <PageSection className="mb-12">
             <div className="md:my-auto mt-4 w-full md:w-4/5 lg:w-4/5 transition-all duration-300">
                 <TitleXl>Past work experience</TitleXl>
                 <br/>
@@ -22,7 +22,7 @@ export const WorkExperience = () => {
                         }
                     >
                         <SectionContent>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cupiditate nesciunt voluptates fugiat earum cum delectus quidem ullam laudantium provident. Neque explicabo beatae ad non doloremque, error ullam ipsum cumque.</SectionContent>
-
+                        <br/>
                         <TitleMd>Skills Used:</TitleMd>
                         <div className="flex">
                             <div className="bg-gray-900 rounded p-2 mx-auto">
@@ -46,6 +46,19 @@ export const WorkExperience = () => {
                         }
                     >
                         <SectionContent>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cupiditate nesciunt voluptates fugiat earum cum delectus quidem ullam laudantium provident. Neque explicabo beatae ad non doloremque, error ullam ipsum cumque.</SectionContent>
+                        <br/>
+                        <TitleMd>Skills Used:</TitleMd>
+                        <div className="flex">
+                            <div className="bg-gray-900 rounded p-2 mx-auto">
+                                <Icon icon={"mdi:dot-net"} width="50" height="50" color="white" />
+                            </div>
+                            <div className="bg-gray-900 rounded p-2 mx-auto">
+                                <Icon icon={"logos:c-sharp"} width="50" height="50" />
+                            </div>
+                            <div className="bg-gray-900 rounded p-2 mx-auto">
+                                <Icon icon={"logos:mariadb"} width="50" height="50" />
+                            </div>
+                        </div>
                     </Accordion>
                     
 
