@@ -1,34 +1,11 @@
 import { PageSection, TitleXl } from "../components/custom.library"
-
-
-
-const websites = [
-    {
-        name:"Neuroexed",
-        link:"https://www.neuroexed.com",
-        img:"bg-neuro"
-    },
-    {
-        name:"Example Portfolio",
-        link:"https://devinobrien-css.github.io",
-        img:"bg-landing"
-    },
-    {
-        name:"Sympathetic Intelligence",
-        link:"",
-        img:"bg-landing"
-    }
-]
-
-
+import { websites } from "../manifest"
 
 export const WebsitesAd = () => {
-
-
     return (
         <PageSection>
             <div className="md:my-auto mt-4 w-full md:w-4/5 lg:w-4/5 transition-all duration-300">
-                <TitleXl>Some of my live work</TitleXl>
+                <TitleXl>Deployed Web Applications</TitleXl>
 
                 <div className="mt-8 flex flex-wrap [&>*]:mx-auto [&>*]:my-3 p-2">
                     {websites.map((website,index) => {

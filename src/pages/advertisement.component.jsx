@@ -52,7 +52,7 @@ const DataSection = () => {
 const CloudSection = () => {
     return (
         <div>
-            <SectionTitle>Looking to enhance your app to the cloud?</SectionTitle>
+            <SectionTitle>Low code? No code? Looking to enhance your app to the cloud?</SectionTitle>
             <SectionSubTitle>With serverless development on the rise, Google, Microsoft and Amazon have stepped up as cloud providers...</SectionSubTitle>
             <div className="flex mt-4">
                 <div className="bg-gray-900 rounded p-2 mx-auto text-white">

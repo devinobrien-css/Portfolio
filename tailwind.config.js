@@ -15,10 +15,16 @@ module.exports = {
       montserrat:['Montserrat', 'sans-serif']
     },
     extend: {
+      colors:{
+        'std-red':'#F95C75',
+      },
       backgroundImage:{
         "headshot":"url('./img/headshot.png')",
         "neuro":"url('./img/neuroexed.png')",
         "landing":"url('./img/landing.png')",
+        "tcsi":"url('./img/tcsi.png')",
+        "playarti":"url('./img/playarti.png')",
+        "richiet":"url('./img/richiet.png')",
       },
       transitionProperty: {
         'height': 'height',
