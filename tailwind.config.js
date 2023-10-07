@@ -13,24 +13,30 @@ module.exports = {
       bebas: ['Bebas Neue', 'cursive'],
       lato: ['Lato', 'sans-serif'],
       montserrat: ['Montserrat', 'sans-serif'],
+      code: ['Source Code Pro', 'monospace']
     },
     extend: {
       colors: {
-        'std-red': '#F95C75',
+        'oxford-blue': '#101935',
+        'paynes-grey': '#557786',
+        'tiffany-blue': '#9AD4D6',
+        'light-cyan': '#C6E9EB',
+        'azure-blue': '#F2FDFF'
       },
       backgroundImage: {
-        headshot: "url('./img/headshot.png')",
-        neuro: "url('./img/neuroexed.png')",
-        landing: "url('./img/landing.png')",
-        tcsi: "url('./img/tcsi.png')",
-        playarti: "url('./img/playarti.png')",
-        richiet: "url('./img/richiet.png')",
+        headshot: "url('./assets/img/headshot.png')",
+        neuro: "url('./assets/img/neuroexed.png')",
+        landing: "url('./assets/img/landing.png')",
+        tcsi: "url('./assets/img/tcsi.png')",
+        playarti: "url('./assets/img/playarti.png')",
+        richiet: "url('./assets/img/richiet.png')",
       },
       transitionProperty: {
         height: 'height',
         width: 'width',
         spacing: 'margin, padding',
       },
+      keyframes: {}
     },
   },
   plugins: [],

@@ -46,7 +46,7 @@ export const WorkExperience = () => {
             </div>
           </Accordion>
           <Accordion
-            className="mx-auto my-4 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            className="mx-auto my-4 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bgoxford-blue"
             title={
               <>
                 <Title size={TitleSize.LG}>Tekniverse</Title>

@@ -1,0 +1,28 @@
+import { ButtonHTMLAttributes } from "react";
+import cx from 'classnames'
+
+
+
+export enum ButtonType {
+  PRIMARY = 'border-2 text-tiffany-blue border-paynes-grey rounded-lg p-4 hover:bg-slate-800 bg-opacity-50 transition-colors',
+}
+
+interface ButtonProps {
+  className?: string;
+  children: string;
+  style: ButtonType
+}
+export const Button = ({ className, children, style, ...rest }: ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) => {
+
+
+  return (
+    <button
+      className={
+        cx(className, style)
+      }
+      {...rest}
+    >
+      {children}
+    </button>
+  )
+}

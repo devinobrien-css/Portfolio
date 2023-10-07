@@ -13,7 +13,7 @@ export const AcademicExperience = () => {
         <br />
         <div className="flex justify-between ">
           <Accordion
-            className="mx-1 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            className="mx-1 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:oxford-blue"
             title={
               <>
                 <Title size={TitleSize.LG}>Master's Degree</Title>
@@ -30,22 +30,22 @@ export const AcademicExperience = () => {
               doloremque, error ullam ipsum cumque.
             </p>
             <div className="flex w-full flex-wrap p-2">
-              <Title size={TitleSize.SM} className="mx-auto my-2 rounded bg-std-red px-3 py-1 text-center">
+              <Title size={TitleSize.SM} className="mx-auto my-2 rounded px-3 py-1 text-center">
                 Data Structures
               </Title>
-              <Title size={TitleSize.SM} className="mx-auto my-2 rounded bg-std-red px-3 py-1 text-center">
+              <Title size={TitleSize.SM} className="mx-auto my-2 rounded px-3 py-1 text-center">
                 Discrete Math
               </Title>
-              <Title size={TitleSize.SM} className="mx-auto my-2 rounded bg-std-red px-3 py-1 text-center">
+              <Title size={TitleSize.SM} className="mx-auto my-2 rounded px-3 py-1 text-center">
                 Databases
               </Title>
-              <Title size={TitleSize.SM} className="mx-auto my-2 rounded bg-std-red px-3 py-1 text-center">
+              <Title size={TitleSize.SM} className="mx-auto my-2 rounded px-3 py-1 text-center">
                 Machine Learning
               </Title>
             </div>
           </Accordion>
           <Accordion
-            className="mx-1 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            className="mx-1 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:oxford-blue"
             title={
               <>
                 <Title size={TitleSize.LG}>Bachelor's Degree</Title>

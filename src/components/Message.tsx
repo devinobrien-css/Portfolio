@@ -14,7 +14,7 @@ export const Messenger = () => {
   return (
     <>
       {open ? (
-        <div className="fixed top-0 flex h-full w-full flex-col items-center bg-gray-700">
+        <div className="fixed top-0 flex h-full w-full flex-col items-center bg-oxford-blue">
           {sent ? (
             <div className="my-auto w-full">
               <SectionTitle className='text-center'>
