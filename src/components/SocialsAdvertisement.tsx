@@ -45,7 +45,7 @@ export const SocialsAdvertisement = ({ }: SocialsAdvertisementProps) => {
 
   return (
     <div className="fixed bottom-0 left-0">
-      <div id="socials" className="flex flex-col gap-y-4 p-4">
+      <div id="socials" className="flex flex-col gap-y-4 p-2">
         {
           socials.map((social: Social) => {
             return (

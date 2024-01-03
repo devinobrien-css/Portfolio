@@ -154,7 +154,7 @@ const tabData = [
 interface SelectedTab {
   name: string;
   index: number;
-  button_title: string;
+  button_title?: string;
 }
 export const OverallAd = () => {
   const [currentTab, setTab] = useState<SelectedTab>({
@@ -169,8 +169,8 @@ export const OverallAd = () => {
 
 
   return (
-    <PageSection>
-      <div className="md:my-auto md:w-9/12 ">
+    <PageSection className='p-6'>
+      <div className="md:my-auto md:w-9/12">
         <div className="md:flex">
           <div className="mx-auto w-11/12 md:mx-0 md:w-5/12 relative h-fit">
 
@@ -187,11 +187,11 @@ export const OverallAd = () => {
 
             {tabData.map((tab, index) => {
               return (
-                <div className='flex relative'>
+                <div key={tab.name} className='flex relative'>
                   <LabeledIcon
                     key={tab.name}
                     className={
-                      cx('p-3 transition-colors ', {
+                      cx('p-2 transition-colors', {
                         'text-light-cyan': tab.name === currentTab.name,
                         'text-paynes-grey': tab.name !== currentTab.name,
                       })}
@@ -207,19 +207,16 @@ export const OverallAd = () => {
               );
             })}
           </div>
-          <div className="pl-8 md:w-1/2">
+          <div className="p-3 md:w-1/2">
             <Section />
             <br />
-            <Button style={ButtonType.PRIMARY}>
-              get in touch
-            </Button>
-            <button className="mx-auto my-4 block scale-95 transform rounded px-4 py-2 text-gray-400 outline-none ring ring-gray-400 transition-all hover:scale-100">
+            <Button style={ButtonType.PRIMARY} className='mx-auto block'>
               {
                 tabData.filter((tab) => {
                   return tab.name === currentTab.name;
                 })[0].button
               }
-            </button>
+            </Button>
           </div>
         </div>
       </div>

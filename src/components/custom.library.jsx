@@ -5,7 +5,7 @@ export const LabeledIcon = ({ children, className, icon, ...rest }) => {
   return (
     <p className={`flex cursor-pointer transition-all ${className}`} {...rest}>
       <Icon icon={icon} width="40" />
-      <span className="my-auto pl-2 font-lato text-2xl font-light uppercase">
+      <span className="my-auto pl-2 font-lato text-lg md:text-2xl font-light uppercase">
         {children}
       </span>
     </p>
@@ -52,7 +52,7 @@ export const Accordion = ({ children, className, title }) => {
     >
       {title}
       <div
-        className={`duration-900 overflow-hidden transition-all ${open ? 'h-56' : 'h-0'
+        className={`duration-900 overflow-hidden transition-all ${open ? 'h-64' : 'h-0'
           }`}
       >
         {children}

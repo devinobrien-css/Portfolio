@@ -11,10 +11,14 @@ export const TypewriterText = ({ text, className }: TypeTextAnimationProps) => {
     <div id="typewriter" className={cx(className, "")} >
       <Typewriter
         onInit={(typewriter) => {
-          typewriter.typeString(text)
+          typewriter
+            .typeString(text)
             .pauseFor(2500)
             .start()
-            .deleteAll();
+            .deleteAll()
+            .typeString(text)
+            .pauseFor(2500)
+            .start();
         }}
       />
     </div>

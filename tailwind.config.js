@@ -18,13 +18,15 @@ module.exports = {
     extend: {
       colors: {
         'oxford-blue': '#101935',
+        'charcoal': '#33485E',
         'paynes-grey': '#557786',
+        'moonstone': '#78A6AE',
         'tiffany-blue': '#9AD4D6',
         'light-cyan': '#C6E9EB',
         'azure-blue': '#F2FDFF'
       },
       backgroundImage: {
-        headshot: "url('./assets/img/headshot.png')",
+        headshot: "url('./assets/img/headshot.jpeg')",
         neuro: "url('./assets/img/neuroexed.png')",
         landing: "url('./assets/img/landing.png')",
         tcsi: "url('./assets/img/tcsi.png')",

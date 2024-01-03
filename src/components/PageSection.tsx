@@ -7,7 +7,7 @@ interface PageSectionProps {
 
 export const PageSection = ({ className, children }: PageSectionProps) => {
   return (
-    <div className={`flex h-screen flex-col items-center ${className}`}>
+    <div className={`flex min-h-screen flex-col items-center ${className}`}>
       {children}
     </div>
   );
