@@ -7,7 +7,7 @@ export const projects: ProjectCardProps[] = [
     content: 'This webapp helps schools better locate and provide help for at risk students'
   },
   {
-    title: 'Shipping & Handling Management Portal',
+    title: 'S&H Portal',
     subtitle: 'Tracked outbound orders for print jobs',
     content: 'Provided full management for outgoing print jobs from cutting the paper to when it ships'
   },
@@ -22,12 +22,17 @@ export const projects: ProjectCardProps[] = [
     content: 'This production application hits the midjourney API to allow kids to create custom generated images through emoji clicks.'
   },
   {
-    title: 'Drag & Drop Components',
-    subtitle: 'An example of draggable and sortable lists',
-    content: 'This repository breaks down a drag and droppable section of sortable components similar to a column of a ticket tracking board.'
+    title: 'Div. at College',
+    subtitle: 'An informative site for college diversity',
+    content: 'lorem ipsum dolor sit amet iri etsum tu id'
   },
+  // {
+  //   title: 'Drag & Drop Components',
+  //   subtitle: 'An example of draggable and sortable lists',
+  //   content: 'This repository breaks down a drag and droppable section of sortable components similar to a column of a ticket tracking board.'
+  // },
   {
-    title: 'Object Tracking',
+    title: 'Motion Detection',
     subtitle: 'Implementing object tracking across video frames',
     content: 'This is a python solution for tracking objects in motion within a set of consecutive frames of a video.'
   },

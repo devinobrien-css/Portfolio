@@ -10,13 +10,13 @@ export interface ProjectCardProps {
 export const ProjectCard = ({ title, subtitle, content }: ProjectCardProps) => {
   return (
     <div
-      className="w-1/3 cursor-pointer rounded p-4 bg-slate-700 bg-opacity-80 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+      className="md:w-1/3 cursor-pointer rounded p-4 bg-slate-700 bg-opacity-80 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
     >
       <Title size={TitleSize.LG}>{title}</Title>
       <SubTitle>
         {subtitle}
       </SubTitle>
-      <br />
+      <hr className="my-2"/>
       <TextSection>
         {content}
       </TextSection>

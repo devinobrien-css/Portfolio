@@ -1,4 +1,5 @@
 import { PageSection } from "../../../components/PageSection";
+import { PageTitle } from "../../../components/PageTitle";
 import { Title, TitleSize } from "../../../components/Title";
 
 
@@ -32,23 +33,24 @@ export const websites = [
 
 export const WebsitesAd = () => {
   return (
-    <PageSection>
+    <PageSection className="p-8">
       <div className="mt-4 w-full transition-all duration-300 md:my-auto md:w-4/5 lg:w-4/5">
-        <Title size={TitleSize.XL}>Deployed Web Applications</Title>
+        <PageTitle title="Deployed Apps" />
 
         <div className="mt-8 flex flex-wrap p-2 [&>*]:mx-auto [&>*]:my-3">
-          {websites.map((website, index) => {
+          {websites.map((website) => {
             return (
               <a
                 key={website.name}
-                className={`duration-800 block w-min overflow-hidden rounded-lg bg-gray-900 transition-all hover:scale-105`}
+                className={`duration-800 block w-full overflow-hidden rounded-lg bg-gray-900 transition-all hover:scale-105`}
                 href={website.link}
                 target="_blank"
                 rel="noreferrer"
               >
                 <div
-                  className={`${website.img} h-48 w-96 bg-cover bg-no-repeat`}
+                  className={`${website.img} h-48  bg-cover bg-no-repeat bg-center`}
                 ></div>
+
                 <p className="p-2 font-lato text-3xl font-light text-white">
                   {website.name}
                 </p>

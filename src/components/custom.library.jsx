@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const LabeledIcon = ({ children, className, icon, ...rest }) => {
   return (

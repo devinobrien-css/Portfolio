@@ -5,19 +5,52 @@ import {
 import { PageSection } from '../../../components/PageSection';
 import { Title, TitleSize } from '../../../components/Title';
 import { SubTitle } from '../../../components/SubTitle';
+import { PageTitle } from '../../../components/PageTitle';
 
 export const WorkExperience = () => {
   return (
-    <PageSection className="mb-12">
+    <PageSection className="p-9">
       <div className="mt-4 w-full transition-all duration-300 md:my-auto md:w-4/5 lg:w-4/5">
-        <Title size={TitleSize.XL}>Past work experience</Title>
+        <PageTitle title='Past Employment' />
         <br />
-        <div className="flex flex-wrap justify-between">
+        <div className="">
           <Accordion
-            className="mx-auto my-4 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            className="mx-auto my-4 md:w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
             title={
               <>
-                <Title size={TitleSize.LG}>NeuroExed</Title>
+                <Title size={TitleSize.LG}>Jahnel Group</Title>
+                <SubTitle>
+                  content here 
+                </SubTitle>
+              </>
+            }
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+              cupiditate nesciunt voluptates fugiat earum cum delectus quidem
+              ullam laudantium provident. Neque explicabo beatae ad non
+              doloremque, error ullam ipsum cumque.
+            </p>
+            <br />
+            <Title size={TitleSize.MD}>Skills Used:</Title>
+            <div className="flex">
+              <div className="mx-auto rounded bg-gray-900 p-2">
+                <Icon icon={'logos:react'} width="50" height="50" />
+              </div>
+              <div className="mx-auto rounded bg-gray-900 p-2">
+                <Icon icon={'logos:aws'} width="50" height="50" />
+              </div>
+              <div className="mx-auto rounded bg-gray-900 p-2">
+                <Icon icon={'logos:tailwindcss-icon'} width="50" height="50" />
+              </div>
+            </div>
+          </Accordion>
+          
+          <Accordion
+            className="mx-auto my-4 md:w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            title={
+              <>
+                <Title size={TitleSize.LG}>NeuroScience Lab</Title>
                 <SubTitle>
                   Develop and manage the Center for Neuroscience and Experiantal
                   Education's web presence
@@ -45,8 +78,9 @@ export const WorkExperience = () => {
               </div>
             </div>
           </Accordion>
+
           <Accordion
-            className="mx-auto my-4 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bgoxford-blue"
+            className="mx-auto my-4 md:w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bgoxford-blue"
             title={
               <>
                 <Title size={TitleSize.LG}>Tekniverse</Title>
@@ -84,7 +118,7 @@ export const WorkExperience = () => {
           </Accordion>
 
           <Accordion
-            className="mx-auto my-4 w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
+            className="mx-auto my-4 md:w-2/5 cursor-pointer rounded p-2 ring ring-blue-300 transition-all hover:scale-105 hover:bg-gray-700"
             title={
               <>
                 <Title size={TitleSize.LG}>Content Critical Solutions</Title>
