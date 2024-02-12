@@ -1,10 +1,10 @@
-import { PageSection } from '../../../components/PageSection';
-import { PageTitle } from '../../../components/PageTitle';
-import { SubTitle } from '../../../components/SubTitle';
-import { Title, TitleSize } from '../../../components/Title';
+import { PageSection } from '../components/PageSection';
+import { PageTitle } from '../components/PageTitle';
+import { SubTitle } from '../components/SubTitle';
+import { Title, TitleSize } from '../components/Title';
 import {
   Accordion,
-} from '../../../components/custom.library';
+} from '../components/custom.library';
 
 export const AcademicExperience = () => {
   return (

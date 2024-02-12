@@ -1,6 +1,6 @@
-import { PageSection } from "../../../components/PageSection";
-import { PageTitle } from "../../../components/PageTitle";
-import { Title, TitleSize } from "../../../components/Title";
+import { PageSection } from "../components/PageSection";
+import { PageTitle } from "../components/PageTitle";
+import { Title, TitleSize } from "../components/Title";
 
 
 export const websites = [

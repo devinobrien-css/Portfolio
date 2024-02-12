@@ -2,12 +2,12 @@ import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import {
   LabeledIcon,
-} from '../../../components/custom.library';
-import { SectionTitle } from '../../../components/titles/SectionTitle';
-import { SubTitle } from '../../../components/SubTitle';
-import { PageSection } from '../../../components/PageSection';
+} from '../components/custom.library';
+import { SectionTitle } from '../components/titles/SectionTitle';
+import { SubTitle } from '../components/SubTitle';
+import { PageSection } from '../components/PageSection';
 import cx from 'classnames'
-import { Button, ButtonType } from '../../../components/form/Button';
+import { Button, ButtonType } from '../components/form/Button';
 
 const DevelopmentSection = () => {
   return (
@@ -145,7 +145,7 @@ const tabData = [
   },
   {
     name: 'performance analysis',
-    button: 'statistics experience',
+    button: 'analytics experience',
     icon: 'carbon:chart-line-data',
     description: AnalysisSection,
   },
@@ -157,51 +157,51 @@ interface SelectedTab {
   button_title?: string;
 }
 export const OverallAd = () => {
-  const [currentTab, setTab] = useState<SelectedTab>({
+  const [tab, setTab] = useState<SelectedTab>({
     index: 0,
     name: tabData[0].name,
     button_title: tabData[0].button
   });
 
-  const Section = tabData.filter((tab) => {
-    return tab.name === currentTab.name;
+  const Section = tabData.filter((t) => {
+    return t.name === tab.name;
   })[0].description;
 
 
   return (
     <PageSection className='p-6'>
-      <div className="md:my-auto md:w-9/12">
+      <div className="md:my-auto">
         <div className="md:flex">
           <div className="mx-auto w-11/12 md:mx-0 md:w-5/12 relative h-fit">
 
             <div className={
               cx(`z-10 border-l-2 border-light-cyan w-max h-1/4 absolute transition-all left-0`, {
-                'top-0': currentTab.index === 0,
-                'top-1/4': currentTab.index === 1,
-                'top-1/2': currentTab.index === 2,
-                'top-3/4': currentTab.index === 3,
+                'top-0': tab.index === 0,
+                'top-1/4': tab.index === 1,
+                'top-1/2': tab.index === 2,
+                'top-3/4': tab.index === 3,
               })}
             ></div>
             <div className={`z-0 border-l-2 border-gray-500  h-[100%] absolute top-0 left-0`}></div>
 
 
-            {tabData.map((tab, index) => {
+            {tabData.map((t, index) => {
               return (
-                <div key={tab.name} className='flex relative'>
+                <div key={t.name} className='flex relative'>
                   <LabeledIcon
-                    key={tab.name}
+                    key={t.name}
                     className={
                       cx('p-2 transition-colors', {
-                        'text-light-cyan': tab.name === currentTab.name,
-                        'text-paynes-grey': tab.name !== currentTab.name,
+                        'text-light-cyan': t.name === tab.name,
+                        'text-paynes-grey': t.name !== tab.name,
                       })}
-                    icon={tab.icon}
+                    icon={t.icon}
                     onClick={() => setTab({
-                      name: tab.name,
+                      name: t.name,
                       index: index
                     })}
                   >
-                    {tab.name}
+                    {t.name}
                   </LabeledIcon>
                 </div>
               );
@@ -212,8 +212,8 @@ export const OverallAd = () => {
             <br />
             <Button style={ButtonType.PRIMARY} className='mx-auto block'>
               {
-                tabData.filter((tab) => {
-                  return tab.name === currentTab.name;
+                tabData.filter((t) => {
+                  return t.name === tab.name;
                 })[0].button
               }
             </Button>

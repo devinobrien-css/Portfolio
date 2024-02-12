@@ -1,24 +1,25 @@
-import { Messenger } from './components/Message';
+// import { Messenger } from './components/Message';
 import { SocialsAdvertisement } from './components/SocialsAdvertisement';
-import { AboutMe } from './pages/landing/sections/AboutMe';
-import { AcademicExperience } from './pages/landing/sections/Academic';
-import { OverallAd } from './pages/landing/sections/Advertisement';
-import { WorkExperience } from './pages/landing/sections/Experience';
-import { Introduction } from './pages/landing/sections/Introduction';
-import { ProjectExperience } from './pages/landing/sections/ProjectExperience/ProjectExperience';
-import { WebsitesAd } from './pages/landing/sections/Websites';
+import { AboutMe } from './pages/AboutMe';
+import { AcademicExperience } from './pages/Academic';
+import { OverallAd } from './pages/Advertisement';
+import { WorkExperience } from './pages/Experience';
+import { Introduction } from './pages/Introduction';
+import { ProjectExperience } from './pages/ProjectExperience/ProjectExperience';
+import { WebsitesAd } from './pages/Websites';
 
 const App = () => {
   return (
-    <div>
+    <div className='md:max-w-[70%] mx-auto'>
       <Introduction />
       <AboutMe />
       <OverallAd />
-      <AcademicExperience />
       <ProjectExperience />
+      <AcademicExperience />
       <WorkExperience />
       <WebsitesAd /> 
       <SocialsAdvertisement /> 
+      {/* <Messenger /> */}
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import { Icon } from '@iconify/react';
 import {
   Accordion,
-} from '../../../components/custom.library';
-import { PageSection } from '../../../components/PageSection';
-import { Title, TitleSize } from '../../../components/Title';
-import { SubTitle } from '../../../components/SubTitle';
-import { PageTitle } from '../../../components/PageTitle';
+} from '../components/custom.library';
+import { PageSection } from '../components/PageSection';
+import { Title, TitleSize } from '../components/Title';
+import { SubTitle } from '../components/SubTitle';
+import { PageTitle } from '../components/PageTitle';
 
 export const WorkExperience = () => {
   return (
