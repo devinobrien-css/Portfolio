@@ -3,13 +3,14 @@ import { SocialsAdvertisement } from './components/SocialsAdvertisement';
 import { useGlobalContext } from './components/context/GlobalContext';
 import { AboutMe } from './pages/AboutMe';
 import { AcademicExperience } from './pages/Academic';
-import { OverallAd } from './pages/Advertisement/Advertisement';
+import { OverallAd } from './pages/Advertisement';
 import { WorkExperience } from './pages/WorkExperience';
 import { Introduction } from './pages/Introduction';
 import { ProjectExperience } from './pages/ProductionApps/ProductionApps';
 import cx from 'classnames';
 import { Personality } from './pages/Personality';
 import { useEffect, useState } from 'react';
+import { Messenger } from './components/Message';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
@@ -35,22 +36,31 @@ const TldrSwitch = () => {
 };
 
 const Navigation = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
+    if(window.innerWidth > 908) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  }
+  , []);
+
+  // TODO use effect to close the menu on scroll 
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShow(false);
-      } else {
-        setShow(true);
-      }
+      setShow(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }
+  , []);
 
   return (
-    <div className='fixed right-0 top-0 z-[1000] flex w-fit justify-end'>
+    <div className={cx('fixed right-0 top-0 z-[1000] flex w-fit  justify-end', {
+      'animate-pulse': !show,
+    })}>
       <button 
         className='mt-4 flex h-fit rounded-l-full bg-gray-800 p-1 text-white' 
         onClick={() => setShow(!show)}
@@ -96,41 +106,47 @@ const Navigation = () => {
 
 };
 
+const Background = () => {
+  return (
+    <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 hidden h-screen w-screen sm:block' >
+      <defs>
+
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#33485E" />
+          {/* <stop offset="100%" stopColor="#78A6AE" /> */}
+          <stop offset="100%" stopColor="#101935" />
+        </linearGradient>
+
+        <filter id="blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+        </filter>
+      </defs>
+      <path xmlns="http://www.w3.org/2000/svg" 
+        transform='translate(30, -390) scale(1.7)'
+        className='fill-tiffany-blue/10'
+        // className='opacity-60'
+        // fill="url(#gradient)"
+        d="M576.8,498.9c-0.6,0-1.3,0-1.9,0c-5.7,0.1-11.7-0.6-17.9-2c-39.2-8.8-37.4-47.9-24.7-78.3c20.4-49,71.3-124.8,31.9-175.3  c-0.4-0.5-0.7-1-1.2-1.5c-2.9-3.5-6.2-6.8-9.9-10c-42.8-36.3-97.2-17.6-141.6,10.5c-0.7,0.5-1.5,0.9-2.2,1.4  c-15.7,10.1-30,21.4-42.2,31.7c-11.2,9.5-22.1,19.4-33.8,28.2c-22.5,17-50.8,31.6-79.8,25.7c-64.2-13-66-86.8-49.9-137.6H612v296.2  C601.6,494.6,589.9,498.5,576.8,498.9z"
+        
+      />
+
+      <path xmlns="http://www.w3.org/2000/svg" 
+        transform='translate(0, 409) rotate(180, 301, 396) scale(1.8)'
+        // className='fill-tiffany-blue/10'
+        className='opacity-30'
+        fill="url(#gradient)"
+        d="M576.8,498.9c-0.6,0-1.3,0-1.9,0c-5.7,0.1-11.7-0.6-17.9-2c-39.2-8.8-37.4-47.9-24.7-78.3c20.4-49,71.3-124.8,31.9-175.3  c-0.4-0.5-0.7-1-1.2-1.5c-2.9-3.5-6.2-6.8-9.9-10c-42.8-36.3-97.2-17.6-141.6,10.5c-0.7,0.5-1.5,0.9-2.2,1.4  c-15.7,10.1-30,21.4-42.2,31.7c-11.2,9.5-22.1,19.4-33.8,28.2c-22.5,17-50.8,31.6-79.8,25.7c-64.2-13-66-86.8-49.9-137.6H612v296.2  C601.6,494.6,589.9,498.5,576.8,498.9z"
+        
+      />
+    </svg>
+  );
+};
+
 
 const App = () => {
   return (
     <>
-      <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 h-screen w-screen' >
-        <defs>
-
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#33485E" />
-            {/* <stop offset="100%" stopColor="#78A6AE" /> */}
-            <stop offset="100%" stopColor="#101935" />
-          </linearGradient>
-
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-          </filter>
-        </defs>
-        <path xmlns="http://www.w3.org/2000/svg" 
-          transform='translate(30, -390) scale(1.7)'
-          className='fill-tiffany-blue/10'
-          // className='opacity-60'
-          // fill="url(#gradient)"
-          d="M576.8,498.9c-0.6,0-1.3,0-1.9,0c-5.7,0.1-11.7-0.6-17.9-2c-39.2-8.8-37.4-47.9-24.7-78.3c20.4-49,71.3-124.8,31.9-175.3  c-0.4-0.5-0.7-1-1.2-1.5c-2.9-3.5-6.2-6.8-9.9-10c-42.8-36.3-97.2-17.6-141.6,10.5c-0.7,0.5-1.5,0.9-2.2,1.4  c-15.7,10.1-30,21.4-42.2,31.7c-11.2,9.5-22.1,19.4-33.8,28.2c-22.5,17-50.8,31.6-79.8,25.7c-64.2-13-66-86.8-49.9-137.6H612v296.2  C601.6,494.6,589.9,498.5,576.8,498.9z"
-        
-        />
-
-        <path xmlns="http://www.w3.org/2000/svg" 
-          transform='translate(0, 409) rotate(180, 301, 396) scale(1.8)'
-          // className='fill-tiffany-blue/10'
-          className='opacity-30'
-          fill="url(#gradient)"
-          d="M576.8,498.9c-0.6,0-1.3,0-1.9,0c-5.7,0.1-11.7-0.6-17.9-2c-39.2-8.8-37.4-47.9-24.7-78.3c20.4-49,71.3-124.8,31.9-175.3  c-0.4-0.5-0.7-1-1.2-1.5c-2.9-3.5-6.2-6.8-9.9-10c-42.8-36.3-97.2-17.6-141.6,10.5c-0.7,0.5-1.5,0.9-2.2,1.4  c-15.7,10.1-30,21.4-42.2,31.7c-11.2,9.5-22.1,19.4-33.8,28.2c-22.5,17-50.8,31.6-79.8,25.7c-64.2-13-66-86.8-49.9-137.6H612v296.2  C601.6,494.6,589.9,498.5,576.8,498.9z"
-        
-        />
-      </svg>
+      <Background />
       <Navigation />
       <div className='group relative mx-auto md:max-w-[70%]'>
         {/* <TldrSwitch /> */}
@@ -156,7 +172,7 @@ const App = () => {
         <Personality />
 
 
-        {/* <Messenger /> */}
+        <Messenger />
         <SocialsAdvertisement /> 
       </div>
     </>

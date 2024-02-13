@@ -2,15 +2,15 @@ import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import {
   LabeledIcon,
-} from '../../components/custom.library';
-import { SectionTitle } from '../../components/titles/SectionTitle';
-import { SubTitle } from '../../components/SubTitle';
-import { PageSection } from '../../components/PageSection';
+} from '../components/custom.library';
+import { SectionTitle } from '../components/titles/SectionTitle';
+import { SubTitle } from '../components/SubTitle';
+import { PageSection } from '../components/PageSection';
 import cx from 'classnames';
-import { Button } from '../../components/form/Button';
-import { ButtonType } from '../../components/constants';
-import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
-import { BottomBarAnimation } from '../../components/animations/BottomBarAnimation';
+import { Button } from '../components/form/Button';
+import { ButtonType } from '../components/constants';
+import { TopBarAnimation } from '../components/animations/TopBarAnimation';
+import { BottomBarAnimation } from '../components/animations/BottomBarAnimation';
 
 const DevelopmentSection = () => {
   return (
@@ -174,9 +174,9 @@ export const OverallAd = () => {
   return (
     <PageSection className='p-6'>
       <BottomBarAnimation
-        threshold={20}
+        threshold={23}
         content={
-          <div className='flex w-full justify-end py-8'>
+          <div className='hidden w-full justify-end px-12 py-8 sm:flex'>
             <div className='float-right size-32 bg-programming bg-cover bg-center bg-no-repeat md:size-64'></div>
           </div>
         }>
