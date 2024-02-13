@@ -5,12 +5,14 @@ import { ButtonType, TitleSize } from '../components/constants';
 import { useGlobalContext } from '../components/context/GlobalContext';
 import { Button } from '../components/form/Button';
 
+
 export const Introduction = () => {
   const {tldr} = useGlobalContext();
 
   return (
     <PageSection className="">
       <div className="transition-all duration-300 md:my-auto md:flex">
+        
         <div className="mx-auto my-0 w-full p-10 sm:my-24 md:p-6">
           <TypewriterText text='Hello there, my name is' className='pl-1 font-code text-xl text-gray-500' />
           <Title size={TitleSize.XL} className="mt-2 text-light-cyan">Devin O'Brien</Title>
