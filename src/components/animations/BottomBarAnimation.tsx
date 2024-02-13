@@ -23,7 +23,7 @@ export const BottomBarAnimation = ({children, content, threshold, initialPositio
       setCurrentPosition(normalized*(threshold ?? 8));
     else if(normalized > (upper_value ?? 70))
       setCurrentPosition((100-normalized)*(threshold ?? 8));
-  }, [percentage]);
+  }, [percentage, threshold, lower_value, upper_value]);
 
   return (
     <div ref={ref}>
