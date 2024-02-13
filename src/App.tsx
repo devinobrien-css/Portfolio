@@ -100,7 +100,7 @@ const Navigation = () => {
 const App = () => {
   return (
     <>
-      <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 602 792" className='fixed right-0 top-0 z-0' >
+      <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 h-screen w-screen' >
         <defs>
 
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -114,7 +114,7 @@ const App = () => {
           </filter>
         </defs>
         <path xmlns="http://www.w3.org/2000/svg" 
-          transform='translate(4, -209) '
+          transform='translate(30, -339) scale(1.7)'
           // className='fill-tiffany-blue/10'
           className='opacity-60'
           fill="url(#gradient)"
@@ -123,7 +123,7 @@ const App = () => {
         />
 
         <path xmlns="http://www.w3.org/2000/svg" 
-          transform='translate(0, -209) rotate(180, 301, 396)'
+          transform='translate(0, 409) rotate(180, 301, 396) scale(1.8)'
           // className='fill-tiffany-blue/10'
           className='opacity-30'
           fill="url(#gradient)"
