@@ -7,7 +7,6 @@ import { OverallAd } from './pages/Advertisement/Advertisement';
 import { WorkExperience } from './pages/WorkExperience';
 import { Introduction } from './pages/Introduction';
 import { ProjectExperience } from './pages/ProductionApps/ProductionApps';
-import { WebsitesAd } from './pages/Websites';
 import cx from 'classnames';
 import { Personality } from './pages/Personality';
 import { useState } from 'react';
@@ -37,8 +36,6 @@ const TldrSwitch = () => {
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
-
-  console.log(show);
   return (
     <div className='fixed right-0 top-0 z-[1000] flex w-fit justify-end'>
       <button 
