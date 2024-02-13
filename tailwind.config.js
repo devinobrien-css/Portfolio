@@ -45,6 +45,7 @@ module.exports = {
         '128': '31rem',
         '132': '33rem',
         '144': '36rem',
+        '160': '40rem',
       },
       keyframes: {}
     },
