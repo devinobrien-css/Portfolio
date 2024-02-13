@@ -12,11 +12,11 @@ export const socials: Social[] = [
   {
     label: 'LinkedIn',
     icon: 'line-md:linkedin',
-    href: ''
+    href: 'https://www.linkedin.com/in/obrien-devin/'
   },
   {
     label: 'Instagram',
     icon: 'line-md:instagram',
-    href: ''
+    href: 'https://www.instagram.com/devinobrien/'
   }
 ];

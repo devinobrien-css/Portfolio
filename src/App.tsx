@@ -9,7 +9,7 @@ import { Introduction } from './pages/Introduction';
 import { ProjectExperience } from './pages/ProductionApps/ProductionApps';
 import cx from 'classnames';
 import { Personality } from './pages/Personality';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
@@ -35,7 +35,20 @@ const TldrSwitch = () => {
 };
 
 const Navigation = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className='fixed right-0 top-0 z-[1000] flex w-fit justify-end'>
       <button 
@@ -43,7 +56,7 @@ const Navigation = () => {
         onClick={() => setShow(!show)}
       >
         <Icon icon="iconamoon:arrow-left-2-bold" className={cx(
-          'w-8 h-8',
+          'w-12 h-12',
           {
             'transform rotate-180': show,
           }
