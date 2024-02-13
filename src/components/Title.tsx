@@ -1,13 +1,8 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 import cx from 'classnames';
+import { TitleSize } from './constants';
 
-export enum TitleSize {
-  XS = 'xs',
-  SM = 'sm',
-  MD = 'md',
-  LG = 'lg',
-  XL = 'xl'
-}
+
 
 interface TitleProps {
   size?: TitleSize;
@@ -21,7 +16,7 @@ export const Title = ({ className, size = TitleSize.SM, children }: TitleProps) 
       className={
         cx(
           className,
-          `font-montserrat font-light text-white `,
+          'font-montserrat font-light text-white ',
           {
             'text-3xl sm:text-5xl md:text-6xl': size === TitleSize.XL,
             'text-xl sm:text-3xl md:text-4xl': size === TitleSize.LG,
@@ -33,5 +28,5 @@ export const Title = ({ className, size = TitleSize.SM, children }: TitleProps) 
     >
       {children}
     </p>
-  )
-}
+  );
+};

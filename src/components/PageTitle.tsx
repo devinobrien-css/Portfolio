@@ -7,8 +7,8 @@ export const PageTitle = ({
 }) => {
   return (
     <div className="flex gap-x-4">
-      <h3 className="text-light-cyan whitespace-nowrap font-code text-xl md:text-3xl my-auto">{title}</h3>
-      <hr className="border-b border-charcoal w-full my-auto" />
+      <h3 className="my-auto whitespace-nowrap font-code text-xl text-light-cyan md:text-3xl">{title}</h3>
+      <hr className="my-auto w-full border-b border-charcoal" />
     </div>
-  )
-}
+  );
+};

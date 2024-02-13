@@ -2,7 +2,16 @@ import { ReactNode, useEffect, useState } from 'react';
 import { useScrollPercentage } from 'react-scroll-percentage'
 import cx from 'classnames';
 
-export const TopBarAnimation = ({children, content}:{children:ReactNode, content:ReactNode}) => {
+interface SideBarAnimationProps {
+  className?:string;
+  children:ReactNode;
+  content:ReactNode;
+  threshold?: number;
+  lower_value?: number;
+  upper_value?: number;
+}
+
+export const TopBarAnimation = ({className, children, content, threshold, lower_value, upper_value }:SideBarAnimationProps) => {
   const [currentPosition, setCurrentPosition] = useState(0);
 
   const [ref, percentage] = useScrollPercentage({
@@ -10,20 +19,19 @@ export const TopBarAnimation = ({children, content}:{children:ReactNode, content
   })
   useEffect(() => {
     const normalized = Math.round(percentage*100);
-    if(normalized < 50)
-      setCurrentPosition(normalized*5);
-    else
-      setCurrentPosition((100-normalized)*5);
+    if(normalized < (lower_value ?? 30))
+      setCurrentPosition(normalized*(threshold ?? 8));
+    else if(normalized > (upper_value ?? 70))
+      setCurrentPosition((100-normalized)*(threshold ?? 8));
   }, [percentage]);
 
   return (
     <div ref={ref}>
       <div 
-
           style={{
-            transform:`translateX(-${currentPosition}px)`,
+            transform:`translateY(${currentPosition}px)`,
           }}
-          className={cx('fixed h-screen top-0 -right-[190px] md:-right-[210px] transition-all')}
+          className={cx('fixed w-screen right-0 -top-[200px] md:-right-[210px] transition-all', className)}
         >
           {content}
         </div>

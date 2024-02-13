@@ -6,11 +6,12 @@ interface SideBarAnimationProps {
   children:ReactNode;
   content:ReactNode;
   threshold?: number;
+  initialPosition?: number;
   lower_value?: number;
   upper_value?: number;
 }
 
-export const SideBarAnimation = ({children, content, threshold, lower_value, upper_value }:SideBarAnimationProps) => {
+export const BottomBarAnimation = ({children, content, threshold, initialPosition, lower_value, upper_value }:SideBarAnimationProps) => {
   const [currentPosition, setCurrentPosition] = useState(0);
 
   const [ref, percentage] = useScrollPercentage({
@@ -27,10 +28,11 @@ export const SideBarAnimation = ({children, content, threshold, lower_value, upp
   return (
     <div ref={ref}>
       <div 
+
           style={{
-            transform:`translateX(-${currentPosition}px)`,
+            transform:`translateY(-${currentPosition}px)`,
           }}
-          className={cx('fixed min-h-screen bottom-0 -right-[240px]')}
+          className={cx('fixed w-screen left-0 -bottom-[550px] md:-right-[210px] transition-all')}
         >
           {content}
         </div>

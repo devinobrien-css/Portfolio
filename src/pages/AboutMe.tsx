@@ -1,9 +1,10 @@
 
-import { PageSection } from "../components/PageSection"
+import { PageSection } from '../components/PageSection';
 import cx from 'classnames';
-import { PageTitle } from "../components/PageTitle";
-import { SideBarAnimation } from "../components/animations/SideBarAnimation";
-import { Icon } from "@iconify/react";
+import { PageTitle } from '../components/PageTitle';
+import { SideBarAnimation } from '../components/animations/SideBarAnimation';
+import { Icon } from '@iconify/react';
+import { useGlobalContext } from '../components/context/GlobalContext';
 
 const frontendFrameworks = [
   {
@@ -22,7 +23,7 @@ const frontendFrameworks = [
     icon: 'logos:svelte-icon',
     title: 'Svelte',
   }
-]
+];
 
 const backendFrameworks = [
   {
@@ -53,17 +54,9 @@ const backendFrameworks = [
     title: 'Laravel',
     icon: 'logos:laravel'
   }
-]
+];
 
 const languages = [
-  {
-    icon: 'vscode-icons:file-type-html',
-    title: 'HTML',
-  },
-  {
-    icon: 'vscode-icons:file-type-css',
-    title: 'CSS',
-  },
   {
     icon: 'vscode-icons:file-type-js-official',
     title: 'JavaScript',
@@ -77,6 +70,10 @@ const languages = [
     title: 'Python',
   }, 
   {
+    title: 'GoLang',
+    icon: 'logos:go'
+  },
+  {
     icon: 'logos:java',
     title: 'Java',
   },
@@ -88,90 +85,111 @@ const languages = [
     icon: 'logos:php',
     title: 'PHP',
   }
-]
+];
 
 export const AboutMe = () => {
+  const {tldr} = useGlobalContext();
+
   return (
     <PageSection className="p-2">
       <SideBarAnimation
         content={
-          <div className="bg-gray-800 h-full overflow-y-auto px-4 md:py-0 py-2 font-lato text-white">
-            <h2 className="text-2xl py-2 sticky top-0 bg-gray-800 md:block hidden">
-              Quick Statistics
-            </h2>
+          <div className=" flex h-screen flex-col overflow-y-auto px-4 py-2 font-lato text-white md:py-0">
 
-            <div className="md:border md:p-2 rounded">
-              <h2 className="border-b mb-1 md:block hidden">Frontend Frameworks:</h2>
-              <div className="flex flex-col gap-y-1">
-                {frontendFrameworks.map((framework) => {
-                  return (
-                    <div key={framework.title} className="flex gap-2">
-                      <Icon icon={framework.icon} className="w-8 h-8 shadow p-1 bg-white rounded"/>
-                      <p className="text-lg md:block hidden">{framework.title}</p>
-                    </div>
-                  )
-                })}
+            <div className="my-auto">
+              <h2 className="mb-2 hidden text-2xl md:block">
+                Quick Statistics
+              </h2>
+              <div className="rounded md:bg-charcoal md:p-2">
+                <h2 className=" mb-1 hidden md:block">Frontend Frameworks:</h2>
+                <div className="flex flex-col gap-y-1">
+                  {frontendFrameworks.map((framework) => {
+                    return (
+                      <div key={framework.title} className="flex gap-2">
+                        <Icon icon={framework.icon} className="size-8 rounded bg-white p-1 shadow"/>
+                        <p className="hidden text-lg md:block">{framework.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
 
-            <div className="md:border md:p-2 rounded my-2">
-              <h2 className="border-b mb-1 md:block hidden">Backend Frameworks:</h2>
-              <div className="flex flex-col gap-y-1">
-                {backendFrameworks.map((framework) => {
-                  return (
-                    <div key={framework.title} className="flex gap-2">
-                      <Icon icon={framework.icon} className="w-8 h-8 shadow p-1 bg-white rounded"/>
-                      <p className="text-lg md:block hidden">{framework.title}</p>
-                    </div>
-                  )
-                })}
+              <div className="my-2 rounded md:bg-charcoal md:p-2">
+                <h2 className="mb-1 hidden md:block">Backend Frameworks:</h2>
+                <div className="flex flex-col gap-y-1">
+                  {backendFrameworks.map((framework) => {
+                    return (
+                      <div key={framework.title} className="flex gap-2">
+                        <Icon icon={framework.icon} className="size-8 rounded bg-white p-1 shadow"/>
+                        <p className="hidden text-lg md:block">{framework.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
 
-            <div className="md:border md:p-2 rounded">
-              <h2 className="border-b mb-1 md:block hidden">Languages:</h2>
-              <div className="flex flex-col gap-y-1">
-                {languages.map((language) => {
-                  return (
-                    <div key={language.title} className="flex gap-2">
-                      <Icon icon={language.icon} className="w-8 h-8 shadow p-1 bg-white rounded"/>
-                      <p className="text-lg md:block hidden">{language.title}</p>
-                    </div>
-                  )
-                })}
+              <div className="rounded md:bg-charcoal md:p-2">
+                <h2 className="mb-1 hidden md:block">Languages:</h2>
+                <div className="flex flex-col gap-y-1">
+                  {languages.map((language) => {
+                    return (
+                      <div key={language.title} className="flex gap-2">
+                        <Icon icon={language.icon} className="size-8 rounded bg-white p-1 shadow"/>
+                        <p className="hidden text-lg md:block">{language.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
             
           </div>
         }
       >
-        <div className="transition-all duration-300 md:my-auto flex md:flex-nowrap flex-wrap">
-          <div className="p-10 md:p-6 md:mx-auto w-[95%]">
+        <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap">
+          <div className="w-[95%] p-10 md:mx-auto md:p-6">
             <PageTitle title="About Me" />
 
             <br />
             <p className={
-              cx("text-paynes-grey font-montserrat transition-height delay-500 duration-[3s] overflow-clip")
+              cx('text-paynes-grey font-montserrat transition-height delay-500 duration-[3s] overflow-clip')
             }>
               From the front-end's aesthetic appeal to the back-end's robust functionality, my portfolio showcases
               the diverse range of projects I've had the pleasure of working on. Each project is a testament to my
               problem-solving skills, attention to detail, and relentless pursuit of excellence in software development.
               <br />
               <br />
+              {
+                !tldr && (
+                  <span>
+                    My journey in software development began with a passion for technology and a desire to create
+                    innovative solutions. I've since honed my skills in full-stack development, mastering a wide array
+                    of technologies and frameworks.
+                  </span>
+                )
+              }
+              <br />
+              <br />
+              {
+                !tldr && (
+                  <span>
+                    I thrive on challenges and take pride in transforming complex problems into elegant, scalable solutions.
+                    My expertise encompasses a wide array of technologies, frameworks, and languages, allowing me to adapt to
+                    the ever-evolving landscape of software development.
+                  </span>
+                )
+              }
 
-              I thrive on challenges and take pride in transforming complex problems into elegant, scalable solutions.
-              My expertise encompasses a wide array of technologies, frameworks, and languages, allowing me to adapt to
-              the ever-evolving landscape of software development.
             </p>
             <br />
             <br />
           </div>
-          <div className="w-3/5 border-l-8 border-b-8 m-8 md:m-0 md:block hidden">
-            <div className="border-l-8 border-b-8 border-paynes-grey relative h-full min-h-[20vh] md:min-h-[20vh] m-8 bg-headshot bg-cover bg-top bg-no-repeat">
+          <div className="m-8 hidden w-3/5 border-b-8 border-l-8 md:m-0 md:block">
+            <div className="relative m-8 h-full min-h-[20vh] border-b-8 border-l-8 border-paynes-grey bg-headshot bg-cover bg-top bg-no-repeat md:min-h-[20vh]">
             </div>
           </div>
         </div>
       </SideBarAnimation>
     </PageSection >
-  )
-}
+  );
+};

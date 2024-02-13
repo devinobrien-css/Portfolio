@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
@@ -32,6 +33,7 @@ module.exports = {
         tcsi: "url('./assets/img/tcsi.png')",
         playarti: "url('./assets/img/playarti.png')",
         richiet: "url('./assets/img/richiet.png')",
+        programming: "url('./assets/img/programming.png')",
       },
       transitionProperty: {
         height: 'height',

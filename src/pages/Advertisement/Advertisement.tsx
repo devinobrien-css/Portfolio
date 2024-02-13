@@ -2,12 +2,15 @@ import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import {
   LabeledIcon,
-} from '../components/custom.library';
-import { SectionTitle } from '../components/titles/SectionTitle';
-import { SubTitle } from '../components/SubTitle';
-import { PageSection } from '../components/PageSection';
-import cx from 'classnames'
-import { Button, ButtonType } from '../components/form/Button';
+} from '../../components/custom.library';
+import { SectionTitle } from '../../components/titles/SectionTitle';
+import { SubTitle } from '../../components/SubTitle';
+import { PageSection } from '../../components/PageSection';
+import cx from 'classnames';
+import { Button } from '../../components/form/Button';
+import { ButtonType } from '../../components/constants';
+import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
+import { BottomBarAnimation } from '../../components/animations/BottomBarAnimation';
 
 const DevelopmentSection = () => {
   return (
@@ -170,56 +173,75 @@ export const OverallAd = () => {
 
   return (
     <PageSection className='p-6'>
-      <div className="md:my-auto">
-        <div className="md:flex">
-          <div className="mx-auto w-11/12 md:mx-0 md:w-5/12 relative h-fit">
-
-            <div className={
-              cx(`z-10 border-l-2 border-light-cyan w-max h-1/4 absolute transition-all left-0`, {
-                'top-0': tab.index === 0,
-                'top-1/4': tab.index === 1,
-                'top-1/2': tab.index === 2,
-                'top-3/4': tab.index === 3,
-              })}
-            ></div>
-            <div className={`z-0 border-l-2 border-gray-500  h-[100%] absolute top-0 left-0`}></div>
-
-
-            {tabData.map((t, index) => {
-              return (
-                <div key={t.name} className='flex relative'>
-                  <LabeledIcon
-                    key={t.name}
-                    className={
-                      cx('p-2 transition-colors', {
-                        'text-light-cyan': t.name === tab.name,
-                        'text-paynes-grey': t.name !== tab.name,
-                      })}
-                    icon={t.icon}
-                    onClick={() => setTab({
-                      name: t.name,
-                      index: index
-                    })}
-                  >
-                    {t.name}
-                  </LabeledIcon>
-                </div>
-              );
-            })}
+      <BottomBarAnimation
+        threshold={20}
+        content={
+          <div className='flex w-full justify-end py-8'>
+            <div className='float-right size-32 bg-programming bg-cover bg-center bg-no-repeat md:size-64'></div>
           </div>
-          <div className="p-3 md:w-1/2">
-            <Section />
-            <br />
-            <Button style={ButtonType.PRIMARY} className='mx-auto block'>
-              {
-                tabData.filter((t) => {
-                  return t.name === tab.name;
-                })[0].button
-              }
-            </Button>
+        }>
+        <TopBarAnimation
+          className='hidden p-2 sm:block'
+          threshold={8}
+          content={
+            <div className='z-[110] w-full py-8  font-montserrat'>
+              <h2 className='text-4xl text-tiffany-blue'>Right Tool, Right Job</h2>
+              <p className='text-xl text-moonstone'>Mastering Cloud Infra, Frontend, API, and DB Development Expertise</p>
+            </div>
+          }
+        >
+          <div className="md:my-auto">
+            <div className="md:flex">
+              <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-5/12">
+
+                <div className={
+                  cx('z-10 border-l-2 border-light-cyan w-max h-1/4 absolute transition-all left-0', {
+                    'top-0': tab.index === 0,
+                    'top-1/4': tab.index === 1,
+                    'top-1/2': tab.index === 2,
+                    'top-3/4': tab.index === 3,
+                  })}
+                ></div>
+                <div className={'absolute left-0 top-0  z-0 h-[100%] border-l-2 border-gray-500'}></div>
+
+
+                {tabData.map((t, index) => {
+                  return (
+                    <div key={t.name} className='relative flex'>
+                      <LabeledIcon
+                        key={t.name}
+                        className={
+                          cx('p-2 transition-colors', {
+                            'text-light-cyan': t.name === tab.name,
+                            'text-paynes-grey': t.name !== tab.name,
+                          })}
+                        icon={t.icon}
+                        onClick={() => setTab({
+                          name: t.name,
+                          index: index
+                        })}
+                      >
+                        {t.name}
+                      </LabeledIcon>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="p-3 md:w-1/2">
+                <Section />
+                <br />
+                <Button style={ButtonType.PRIMARY} className='mx-auto block'>
+                  {
+                    tabData.filter((t) => {
+                      return t.name === tab.name;
+                    })[0].button
+                  }
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </TopBarAnimation>
+      </BottomBarAnimation>
     </PageSection >
   );
 };
