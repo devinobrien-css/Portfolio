@@ -39,14 +39,14 @@ const TldrSwitch = () => {
 const App = () => {
   return (
     <div className='group relative mx-auto md:max-w-[70%]'>
-      <TldrSwitch />
+      {/* <TldrSwitch /> */}
       <Introduction />
       <AboutMe />
       <OverallAd />
       <ProjectExperience />
       <AcademicExperience />
       <WorkExperience />
-      <WebsitesAd /> 
+      {/* <WebsitesAd />  */}
       <SocialsAdvertisement /> 
       <Personality />
       {/* <Messenger /> */}

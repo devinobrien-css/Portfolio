@@ -20,6 +20,10 @@ export const AcademicExperience = () => {
           <div
             className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
           >
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto w-full'/>
+            
+            <hr className="my-2"/>
+            
             <Title size={TitleSize.LG}>Master's Degree</Title>
             <SubTitle className='italic'>
               State University at Albany, SUNY - 2024
@@ -57,6 +61,8 @@ export const AcademicExperience = () => {
           <div
             className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
           >
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto w-full'/>
+            <hr className="my-2"/>
             <Title size={TitleSize.LG}>Bachelor's Degree</Title>
             <SubTitle className='italic'>
               State University at Albany, SUNY - 2022

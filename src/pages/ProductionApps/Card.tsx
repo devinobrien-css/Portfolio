@@ -82,7 +82,7 @@ export const ProjectCard = ({ title, subtitle, content, skills, description }: P
           </p>
         )}
         <hr className="my-2"/>
-        <div className="flex flex-nowrap gap-x-1 overflow-x-auto py-1">
+        <div className="flex flex-wrap gap-2 overflow-x-auto py-1 md:flex-nowrap">
           {skills?.map((skill) => {
             return (
               <div key={skill.title} className="mx-auto flex gap-2">

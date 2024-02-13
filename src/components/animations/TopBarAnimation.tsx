@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { useScrollPercentage } from 'react-scroll-percentage'
+import { useScrollPercentage } from 'react-scroll-percentage';
 import cx from 'classnames';
 
 interface SideBarAnimationProps {
@@ -16,7 +16,7 @@ export const TopBarAnimation = ({className, children, content, threshold, lower_
 
   const [ref, percentage] = useScrollPercentage({
     threshold: 0,
-  })
+  });
   useEffect(() => {
     const normalized = Math.round(percentage*100);
     if(normalized < (lower_value ?? 30))
@@ -28,14 +28,14 @@ export const TopBarAnimation = ({className, children, content, threshold, lower_
   return (
     <div ref={ref}>
       <div 
-          style={{
-            transform:`translateY(${currentPosition}px)`,
-          }}
-          className={cx('fixed w-screen right-0 -top-[200px] md:-right-[210px] transition-all', className)}
-        >
-          {content}
-        </div>
-        {children}
+        style={{
+          transform:`translateY(${currentPosition}px)`,
+        }}
+        className={cx('fixed w-screen right-0 -top-[200px] md:-right-[210px] transition-all', className)}
+      >
+        {content}
+      </div>
+      {children}
     </div>
-  )
-}
+  );
+};

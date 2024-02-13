@@ -40,6 +40,12 @@ module.exports = {
         width: 'width',
         spacing: 'margin, padding',
       },
+      margin: { 
+        '36': '9rem',
+        '128': '31rem',
+        '132': '33rem',
+        '144': '36rem',
+      },
       keyframes: {}
     },
   },
