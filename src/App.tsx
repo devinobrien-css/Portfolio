@@ -104,16 +104,13 @@ const Navigation = () => {
         )
       }>
         <div className='flex flex-col py-4 font-code dark:text-tiffany-blue'>
-          <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='mx-auto size-32 rounded object-cover'/>
+          <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='mx-auto size-20 rounded object-cover md:size-32'/>
           <h1 className='py-1 text-center text-lg'>Devin O'Brien</h1>
           <a href='tel:203-228-8579' className='text-center text-paynes-grey underline'>
             203-228-8579
           </a>
           <a href='mailto:devinobrien@icloud.com' className='text-center text-paynes-grey underline'>
             devinobrien@icloud.com
-          </a>
-          <a href='https://www.linkedin.com/in/obrien-devin/' className='text-center text-paynes-grey underline' target='_blank'>
-            LinkedIn
           </a>
 
           <hr className='my-2 border-tiffany-blue'/>
@@ -122,42 +119,42 @@ const Navigation = () => {
           <Link
             smooth={true}
             to={'introduction'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             Introduction
           </Link>
           <Link
             smooth={true}
             to={'about-me'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             About Me
           </Link>
           <Link
             smooth={true}
             to={'project-experience'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             Project Experience
           </Link>
           <Link
             smooth={true}
             to={'academic-experience'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             Academic Experience
           </Link>
           <Link
             smooth={true}
             to={'work-experience'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             Work Experience
           </Link>
           <Link
             smooth={true}
             to={'personality'}
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-1 md:p-2"
           >
             More than Code
           </Link>
@@ -166,10 +163,7 @@ const Navigation = () => {
           
           <p className=''>
             TLDR:{' '}
-            <span className='text-sm italic'>Too Long Didn't Read</span>
-          </p>
-          <p className='text-sm'>
-            (shorten descriptions)
+            <span className='text-sm italic'>(shorten descriptions)</span>
           </p>
           <TldrSwitch />
 
@@ -189,7 +183,7 @@ const Navigation = () => {
 
 const Background = () => {
   return (
-    <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 hidden h-screen w-screen sm:block' >
+    <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 h-screen w-screen' >
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#33485E" />
