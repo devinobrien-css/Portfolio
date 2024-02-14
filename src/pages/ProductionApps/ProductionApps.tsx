@@ -21,7 +21,7 @@ export const ProjectExperience = () => {
           </div>
         }
       >
-        <SideBarAnimation
+        {/* <SideBarAnimation
           threshold={11}
           content={
             <div className='mt-160 hidden md:block'>
@@ -29,20 +29,20 @@ export const ProjectExperience = () => {
               <br/>
             </div>
           }
-        >
-          <div className="w-[95%] p-10 md:mx-auto md:p-6">
-            <PageTitle title="Production Apps" />
-            <SubTitle>click for further details</SubTitle>
+        > */}
+        <div className="w-[95%] p-10 md:mx-auto md:p-6">
+          <PageTitle title="Production Apps" />
+          <SubTitle>click for further details</SubTitle>
 
-            <br />
-            <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
-              {projects.map((project) => {
-                return <ProjectCard {...project} key={project.content}/>;
-              })} 
-            </div>
-            <br/>
+          <br />
+          <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
+            {projects.map((project) => {
+              return <ProjectCard {...project} key={project.content}/>;
+            })} 
           </div>
-        </SideBarAnimation>
+          <br/>
+        </div>
+        {/* </SideBarAnimation> */}
       </TopBarAnimation>
     </PageSection>
   );

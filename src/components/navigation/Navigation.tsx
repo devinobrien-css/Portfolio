@@ -59,7 +59,7 @@ export const Navigation = () => {
       setShow(true);
     } else {
       setShow(false);
-      toast.info('TLDR mode is enabled. Description are shortened. Click the switch in the menu to disable.');
+      toast.info('TLDR mode is enabled. Descriptions are shortened. Click the switch in the menu to disable.');
     }
   
     const handleScroll = () => {
