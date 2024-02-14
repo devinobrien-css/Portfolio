@@ -22,7 +22,7 @@ export const SocialsAdvertisement = () => {
           socials.map((social: Social) => {
             return (
               <a className="group relative flex flex-nowrap" href={social.href} key={social.href} target='_blank'>
-                <Icon icon={social.icon} className={'m-auto text-light-cyan'} />
+                <Icon icon={social.icon} className={'m-auto text-gray-700 dark:text-light-cyan'} />
               </a>
             );
           })

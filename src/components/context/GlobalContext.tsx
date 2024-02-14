@@ -30,24 +30,40 @@ export const GlobalContextProvider = ({ children }: {
       document.documentElement.classList.remove('dark');
       setDarkMode(false);
     }
+
+    if(localStorage.tldr === 'true'){
+      setTldr(true);
+    } else {
+      setTldr(false);
+    }
   }, []);
 
+  const toggleDarkMode = (value: boolean) => {
+    if (value) {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+    }
+    setDarkMode(value);
+  };
 
-  // // Whenever the user explicitly chooses light mode
-  // localStorage.theme = 'light';
-
-  // // Whenever the user explicitly chooses dark mode
-  // localStorage.theme = 'dark';
-
-  // // Whenever the user explicitly chooses to respect the OS preference
-  // localStorage.removeItem('theme');
-
+  const toggleTldr = (value: boolean) => {
+    if(value){
+      localStorage.tldr = 'true';
+      setTldr(true);
+    } else {
+      localStorage.removeItem('tldr');
+      setTldr(false);
+    }
+  };
 
   const exportContext = {
     tldr,
-    setTldr,
+    setTldr: toggleTldr,
     darkMode,
-    setDarkMode,
+    setDarkMode: toggleDarkMode,
   };
 
   return (

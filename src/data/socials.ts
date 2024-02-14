@@ -18,5 +18,11 @@ export const socials: Social[] = [
     label: 'Instagram',
     icon: 'line-md:instagram',
     href: 'https://www.instagram.com/devinobrien/'
+  },
+
+  {
+    label: 'Email',
+    icon: 'line-md:email',
+    href: 'mailto:devinobrien@icloud.com'
   }
 ];

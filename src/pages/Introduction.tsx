@@ -1,10 +1,8 @@
 import { TypewriterText } from '../animations/TypewriterText';
 import { PageSection } from '../components/PageSection';
 import { Title } from '../components/Title';
-import { ButtonType, TitleSize } from '../components/constants';
+import { TitleSize } from '../components/constants';
 import { useGlobalContext } from '../components/context/useGlobalContext';
-import { Button } from '../components/form/Button';
-
 
 export const Introduction = () => {
   const {tldr} = useGlobalContext();
@@ -15,11 +13,11 @@ export const Introduction = () => {
         
         <div className="mx-auto my-0 w-full p-10 sm:my-24 md:p-6">
           <TypewriterText text='Hello there, my name is' className='pl-1 font-code text-xl text-gray-500' />
-          <Title size={TitleSize.XL} className="mt-2 text-light-cyan">Devin O'Brien</Title>
+          <Title size={TitleSize.XL} className="mt-2 text-gray-900 dark:text-light-cyan">Devin O'Brien</Title>
           <br />
-          <Title size={TitleSize.LG} className='font-montserrat text-moonstone'>Full Stack Software Engineer</Title>
-          <Title size={TitleSize.LG} className='font-montserrat text-moonstone'>-</Title>
-          <Title size={TitleSize.LG} className='font-montserrat text-moonstone'>Computer Science Master's Student</Title>
+          <Title size={TitleSize.LG} className='font-montserrat text-gray-800 dark:text-moonstone'>Full Stack Software Engineer</Title>
+          <Title size={TitleSize.LG} className='font-montserrat text-gray-800 dark:text-moonstone md:hidden'>-</Title>
+          <Title size={TitleSize.LG} className='font-montserrat text-gray-800 dark:text-moonstone'>Computer Science Master's Student</Title>
           <br />
           <p className="font-montserrat text-paynes-grey">
             {
@@ -50,9 +48,9 @@ export const Introduction = () => {
             }
           </p>
           <br />
-          <Button style={ButtonType.WIDE}>
+          <a href='malto:devinobrien@icloud.com' className='block w-1/2 rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal'>
             get in touch
-          </Button>
+          </a>
         </div>
       </div>
     </PageSection>
