@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle';
 import { SubTitle } from '../components/SubTitle';
 import { Title } from '../components/Title';
 import { TitleSize } from '../components/constants';
-import { useGlobalContext } from '../components/context/GlobalContext';
+import { useGlobalContext } from '../components/context/useGlobalContext';
 
 
 export const AcademicExperience = () => {

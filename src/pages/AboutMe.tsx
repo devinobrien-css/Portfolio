@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { PageTitle } from '../components/PageTitle';
 import { SideBarAnimation } from '../components/animations/SideBarAnimation';
 import { Icon } from '@iconify/react';
-import { useGlobalContext } from '../components/context/GlobalContext';
+import { useGlobalContext } from '../components/context/useGlobalContext';
 
 const frontendFrameworks = [
   {

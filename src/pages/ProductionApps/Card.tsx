@@ -4,7 +4,7 @@ import { TextSection } from '../../components/TextSection';
 import { Title } from '../../components/Title';
 import { TitleSize } from '../../components/constants';
 import { useState } from 'react';
-import { useGlobalContext } from '../../components/context/GlobalContext';
+import { useGlobalContext } from '../../components/context/useGlobalContext';
 
 interface ProjectSkillProps {
   title: string;

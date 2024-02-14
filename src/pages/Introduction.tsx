@@ -2,7 +2,7 @@ import { TypewriterText } from '../animations/TypewriterText';
 import { PageSection } from '../components/PageSection';
 import { Title } from '../components/Title';
 import { ButtonType, TitleSize } from '../components/constants';
-import { useGlobalContext } from '../components/context/GlobalContext';
+import { useGlobalContext } from '../components/context/useGlobalContext';
 import { Button } from '../components/form/Button';
 
 

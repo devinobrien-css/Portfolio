@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react';
 import { SocialsAdvertisement } from './components/SocialsAdvertisement';
-import { useGlobalContext } from './components/context/GlobalContext';
 import { AboutMe } from './pages/AboutMe';
 import { AcademicExperience } from './pages/Academic';
 import { OverallAd } from './pages/Advertisement';
@@ -11,7 +10,8 @@ import cx from 'classnames';
 import { Personality } from './pages/Personality';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { useGlobalContext } from './components/context/useGlobalContext';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
@@ -39,12 +39,15 @@ const TldrSwitch = () => {
 const Navigation = () => {
   const [show, setShow] = useState(false);
 
+  const { darkmode, setDarkMode } = useGlobalContext();
+
+  console.log(darkmode);
+
   useEffect(() => {
     if(window.innerWidth > 908) {
       setShow(true);
     } else {
       setShow(false);
-      console.log('here');
       toast.info('TLDR mode is enabled. Description are shortened. Click the switch in the menu to disable.');
     }
 
