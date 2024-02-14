@@ -229,7 +229,7 @@ export const OverallAd = () => {
                   );
                 })}
               </div>
-              <div className="max-w-xl md:w-1/2">
+              <div className="max-w-xl p-4 md:w-1/2">
                 <Section />
                 <br />
                 {/* <Button style={ButtonType.PRIMARY} className='mx-auto block'>
