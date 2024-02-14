@@ -161,20 +161,21 @@ export const QuickStats = () => {
           </button>
         </div>
 
-        <div className='md:flex'>
+        <div className='mx-auto block cursor-pointer pb-8 md:hidden md:w-3/5'>
           <Pie 
-            className='mx-auto cursor-pointer pb-8 md:hidden md:w-3/5'
             data={data} 
             options={options}
           />
-          <div className='hidden md:block md:w-2/3'>
+        </div>
+        <div className='md:flex'>
+          <div className='hidden w-2/3 md:block'>
             {
               chartType === 'bar' ? <Bar 
-                className='mx-auto w-full cursor-pointer '
+                className='mx-auto w-full cursor-pointer'
                 data={data} 
                 options={options}
               /> : <Pie 
-                className='mx-auto cursor-pointer md:w-3/5'
+                className='mx-auto w-3/5 cursor-pointer'
                 data={data} 
                 options={options}
               />

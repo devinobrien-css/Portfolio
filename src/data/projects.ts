@@ -1,4 +1,4 @@
-import { ProjectCardProps } from '../pages/PersonalExperience/ProjectCard';
+import { ProjectCardProps } from '../pages/ProductionApps/Card';
 
 export const projects: ProjectCardProps[] = [
   {
