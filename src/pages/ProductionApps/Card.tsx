@@ -20,8 +20,7 @@ export interface ProjectCardProps {
   skills?: ProjectSkillProps[];
 }
 
-
-export const ProjectModal = ({ title, subtitle, skills, description, closeModal }: ProjectCardProps & {closeModal: () => void}) => {
+const ProjectModal = ({ title, subtitle, skills, description, closeModal }: ProjectCardProps & {closeModal: () => void}) => {
   return (  
     <div className="fixed left-0 top-0 z-[100] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
       <div

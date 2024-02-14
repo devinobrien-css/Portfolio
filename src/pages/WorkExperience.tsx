@@ -10,7 +10,7 @@ export const WorkExperience = () => {
   return (
     <PageSection className="p-10 md:p-6">
       <div className="mt-4 w-full transition-all duration-300 md:my-auto">
-        <PageTitle title='Past Employment' />
+        <PageTitle title='Work Experience' />
         <br />
         <div className='flex flex-wrap gap-4'>
           {
@@ -28,12 +28,12 @@ export const WorkExperience = () => {
                   <SubTitle>
                     {employer.description}
                   </SubTitle>
-                  <br />
-                  <Title size={TitleSize.MD}>Skills Used:</Title>
+                  <hr className="my-2"/>
+
                   <div className="flex">
                     {employer.skills.map((skill) => {
                       return (
-                        <div key={skill} className="mx-auto rounded bg-gray-900 p-2">
+                        <div key={skill} className="mx-auto rounded bg-white p-2 shadow">
                           <Icon icon={`logos:${skill}`} width="50" height="50" />
                         </div>
                       );

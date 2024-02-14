@@ -16,7 +16,7 @@ export const employers = [
     name: 'Tekniverse',
     title: 'Software Intern',
     description: 'Constructed self-generating unit tests for a suite of applications',
-    skills: ['csharp', 'dotnet', 'mariadb'],
+    skills: ['c-sharp', 'dotnet', 'mariadb'],
   },
   {
     name: 'Content Critical Sol.',
