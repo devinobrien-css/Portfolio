@@ -16,7 +16,7 @@ export const Title = ({ className, size = TitleSize.SM, children }: TitleProps) 
       className={
         cx(
           className,
-          'font-montserrat font-light text-white ',
+          'font-montserrat font-light dark:text-white',
           {
             'text-3xl sm:text-5xl md:text-6xl': size === TitleSize.XL,
             'text-xl sm:text-3xl md:text-4xl': size === TitleSize.LG,

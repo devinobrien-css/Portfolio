@@ -8,7 +8,7 @@ interface SectionTitleProps {
 export const SectionTitle = ({ children, className }: SectionTitleProps) => {
   return (
     <p
-      className={`font-lato text-2xl font-light text-white transition-all md:text-4xl ${className}`}
+      className={`font-lato text-2xl font-light transition-all dark:text-white md:text-4xl ${className}`}
     >
       {children}
     </p>

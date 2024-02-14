@@ -23,33 +23,37 @@ export interface ProjectCardProps {
 
 export const ProjectModal = ({ title, subtitle, skills, description, closeModal }: ProjectCardProps & {closeModal: () => void}) => {
   return (  
-    <div className="fixed left-0 top-0 z-[100] h-screen w-screen overflow-y-auto bg-gray-700 p-8">
-      <button className="absolute right-0 top-0 p-4" onClick={() => closeModal()}>
-        <Icon icon="ic:round-close" className="size-8 text-white"/>
-      </button>
-      <Title size={TitleSize.LG}>{title}</Title>
-      <SubTitle>
-        {subtitle}
-      </SubTitle>
-      <hr className="my-2"/>
-      <TextSection>
-        {description}
-      </TextSection>
-      <hr className="my-2"/>
-      <div className="">
-        {skills?.map((skill) => {
-          return (
-            <div key={skill.title} className="mx-auto my-2 flex gap-2">
-              <div>
-                <Icon icon={skill.icon} className="size-20 rounded bg-white p-1 shadow"/>
+    <div className="fixed left-0 top-0 z-[100] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
+      <div
+        className='relative mx-auto w-full rounded-lg bg-white p-8 shadow-lg dark:bg-slate-800 md:w-[50%]'
+      >
+        <button className="absolute right-0 top-0 p-4" onClick={() => closeModal()}>
+          <Icon icon="ic:round-close" className="size-8 dark:text-white"/>
+        </button>
+        <Title size={TitleSize.LG}>{title}</Title>
+        <SubTitle>
+          {subtitle}
+        </SubTitle>
+        <hr className="my-2"/>
+        <TextSection>
+          {description}
+        </TextSection>
+        <hr className="my-2"/>
+        <div className="">
+          {skills?.map((skill) => {
+            return (
+              <div key={skill.title} className="mx-auto my-2 flex gap-2">
+                <div>
+                  <Icon icon={skill.icon} className="size-20 rounded bg-white p-1 shadow"/>
+                </div>
+                <div>
+                  <p className="my-auto font-montserrat text-xl dark:text-white ">{skill.title}</p>
+                  <p className="my-auto font-montserrat text-sm dark:text-slate-300 ">{skill.description}</p>
+                </div>
               </div>
-              <div>
-                <p className="my-auto font-montserrat text-xl text-white ">{skill.title}</p>
-                <p className="my-auto font-montserrat text-sm text-slate-300 ">{skill.description}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -68,7 +72,7 @@ export const ProjectCard = ({ title, subtitle, content, skills, description }: P
         closeModal={() => setIsModalOpen(false)}
       />}
       <button
-        className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
+        className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-100 dark:bg-slate-700/80 dark:hover:bg-gray-700 md:w-[48%]"
         onClick={() => setIsModalOpen(!isModalOpen)}
       >
         <Title size={TitleSize.LG}>{title}</Title>
@@ -77,7 +81,7 @@ export const ProjectCard = ({ title, subtitle, content, skills, description }: P
         </SubTitle>
         <hr className="my-2"/>
         {!tldr && (
-          <p className="text-white">
+          <p className="text-gray-700 dark:text-white">
             {content}
           </p>
         )}

@@ -48,7 +48,7 @@ export const Introduction = () => {
             }
           </p>
           <br />
-          <a href='malto:devinobrien@icloud.com' className='block w-1/2 rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal'>
+          <a href='mailto:devinobrien@icloud.com' className='block w-1/2 rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal'>
             get in touch
           </a>
         </div>

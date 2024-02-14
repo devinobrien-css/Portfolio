@@ -2,6 +2,54 @@ import { ProjectCardProps } from './Card';
 
 export const projects: ProjectCardProps[] = [
   {
+    title: 'Warner Bros. Discovery',
+    subtitle: 'Streaming Management platform',
+    content: 'A platform for managing the creation and distribution contracts and royalties ebabling the streaming of Warner Bros. Discovery content.',
+    description: 'Warner Bros. Discovery is a media company that sought a platform for managing the creation and distribution contracts and royalties for their streaming service. The platform is designed to be a one-stop shop for managing the content and the contracts associated with it.',
+    skills: [
+      {
+        title: 'Angular',
+        icon: 'logos:angular-icon',
+        description: 'Angular was used for the user interface for its ease of use and responsiveness.'
+      },
+      {
+        title: 'SCSS',
+        icon: 'logos:sass',
+        description: 'SCSS was used for the styling for its ability to create a consistent look and feel, and have more control over animations and transitions.'
+      },
+      {
+        title: 'TypeScript',
+        icon: 'logos:typescript-icon',
+        description: 'TypeScript was used for the frontend for its strict typing and ability to create a more maintainable codebase.'
+      },
+      {
+        title: 'Java',
+        icon: 'logos:java',
+        description: 'Java was used for the backend for its ability to create a scalable and maintainable server.'
+      },
+      {
+        title: 'Springboot',
+        icon: 'logos:spring-icon',
+        description: 'Springboot was used for the backend for simplified routing and middleware.'
+      },
+      {
+        title: 'PostgreSQL',
+        icon: 'logos:postgresql',
+        description: 'PostgreSQL was used for the database for a reliable, relational database.'
+      },
+      {
+        title: 'Kubernetes',
+        icon: 'logos:kubernetes',
+        description: 'Kubernetes was used for containerizing the database and API for a consistent deployment and local development.'
+      },
+      {
+        title: 'AWS',
+        icon: 'logos:aws',
+        description: 'AWS was used for hosting the webapp and several other cloud resources used by the API (S3, Lambda, CloudFront).'
+      }
+    ],
+  },
+  {
     title: 'Maro for Schools',
     subtitle: 'A Mental Health App',
     content: 'This webapp helps schools better locate and provide help for at risk students',

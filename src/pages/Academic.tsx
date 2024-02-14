@@ -18,10 +18,10 @@ export const AcademicExperience = () => {
         <br />
         <div className="flex flex-wrap justify-between gap-y-8">
           <div
-            className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
+            className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
           >
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto w-full'/>
-            
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Black_White.png' alt='ualbany' className='mx-auto  w-full rounded p-2 dark:hidden'/>
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto hidden w-full rounded p-2 dark:block'/>
             <hr className="my-2"/>
             
             <Title size={TitleSize.LG}>Master's Degree</Title>
@@ -32,7 +32,7 @@ export const AcademicExperience = () => {
 
             {
               !tldr && (
-                <p className='text-light font-montserrat text-gray-400'>
+                <p className='text-light font-lato text-gray-700 dark:text-gray-500'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
                     cupiditate nesciunt voluptates fugiat earum cum delectus quidem
                     ullam laudantium provident. Neque explicabo beatae ad non
@@ -59,9 +59,10 @@ export const AcademicExperience = () => {
           </div>
 
           <div
-            className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
+            className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
           >
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto w-full'/>
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto hidden w-full rounded p-2 dark:block'/>
+            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Black_White.png' alt='ualbany' className='mx-auto  w-full rounded p-2 dark:hidden'/>
             <hr className="my-2"/>
             <Title size={TitleSize.LG}>Bachelor's Degree</Title>
             <SubTitle className='italic'>
@@ -71,7 +72,7 @@ export const AcademicExperience = () => {
 
             {
               !tldr && (
-                <p className='text-light font-montserrat text-gray-400'>
+                <p className='text-light font-lato text-gray-700 dark:text-gray-500'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
                     cupiditate nesciunt voluptates fugiat earum cum delectus quidem
                     ullam laudantium provident. Neque explicabo beatae ad non

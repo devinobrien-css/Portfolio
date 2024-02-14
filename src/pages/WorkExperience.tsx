@@ -18,7 +18,7 @@ export const WorkExperience = () => {
               return (
                 <div
                   key={employer.name}
-                  className="w-full cursor-pointer rounded bg-slate-700/80 p-4 text-left transition-all  hover:bg-gray-700 md:w-[48%]"
+                  className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
                 >
                   <Title size={TitleSize.LG}>{employer.name}</Title>
                   <SubTitle>

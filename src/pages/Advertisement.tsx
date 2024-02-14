@@ -3,11 +3,9 @@ import { useState } from 'react';
 import { SectionTitle } from '../components/titles/SectionTitle';
 import { SubTitle } from '../components/SubTitle';
 import { PageSection } from '../components/PageSection';
-import cx from 'classnames';
-import { Button } from '../components/form/Button';
-import { ButtonType } from '../components/constants';
 import { TopBarAnimation } from '../components/animations/TopBarAnimation';
 import { BottomBarAnimation } from '../components/animations/BottomBarAnimation';
+import cx from 'classnames';
 
 const DevelopmentSection = () => {
   return (
@@ -20,20 +18,20 @@ const DevelopmentSection = () => {
         top-of-the-line tools available...
       </SubTitle>
       <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon
             icon={'vscode-icons:file-type-reactjs'}
             width="50"
             height="50"
           />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:svelte-icon'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:vue'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:angular-icon'} width="50" height="50" />
         </div>
       </div>
@@ -53,16 +51,16 @@ const DataSection = () => {
         essential to proper management of an application...
       </SubTitle>
       <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:postgresql'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:mysql'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:graphql'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2 text-white">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'simple-icons:neo4j'} width="50" height="50" />
         </div>
       </div>
@@ -81,7 +79,7 @@ const CloudSection = () => {
         have stepped up as cloud providers...
       </SubTitle>
       <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-900 p-2 text-white">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon
             icon={'logos:aws'}
             width="50"
@@ -89,10 +87,10 @@ const CloudSection = () => {
             className="rounded border-white bg-white p-1 text-white"
           />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:google-cloud'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:microsoft-icon'} width="50" height="50" />
         </div>
       </div>
@@ -110,15 +108,22 @@ const AnalysisSection = () => {
         and end to end test suites...
       </SubTitle>
       <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-900 p-2">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'vscode-icons:file-type-jest'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2 text-white">
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
           <Icon icon={'logos:github-octocat'} width="50" height="50" />
         </div>
-        <div className="mx-auto rounded bg-gray-900 p-2 text-white">
-          <Icon icon={'mdi:microsoft-dot-net'} width="50" height="50" />
+
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
+          <Icon icon={'logos:git-icon'} width="50" height="50" />
+        </div>  
+        
+        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
+          <Icon icon={'logos:docker-icon'} width="50" height="50" />
         </div>
+
+        
       </div>
     </div>
   );
@@ -182,8 +187,8 @@ export const OverallAd = () => {
           threshold={8}
           content={
             <div className='z-[110] w-full py-8  font-montserrat'>
-              <h2 className='text-4xl text-tiffany-blue'>Right Tool, Right Job</h2>
-              <p className='text-xl text-moonstone'>Mastering Cloud Infra, Frontend, API, and DB Development Expertise</p>
+              <h2 className='text-4xl text-gray-900 dark:text-tiffany-blue'>Right Tool, Right Job</h2>
+              <p className='text-xl text-gray-700 dark:text-moonstone'>Mastering Cloud Infra, Frontend, API, and DB Development Expertise</p>
             </div>
           }
         >
@@ -192,7 +197,7 @@ export const OverallAd = () => {
               <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-1/2">
 
                 <div className={
-                  cx('z-10 border-l-2 border-light-cyan w-max h-1/4 absolute transition-all left-0', {
+                  cx('z-10 border-l-2 dark:border-light-cyan border-gray-800 w-max h-1/4 absolute transition-all left-0', {
                     'top-0': tab.index === 0,
                     'top-1/4': tab.index === 1,
                     'top-1/2': tab.index === 2,
@@ -209,8 +214,8 @@ export const OverallAd = () => {
                         key={t.name}
                         className={
                           cx('p-2 transition-colors flex', {
-                            'text-light-cyan': t.name === tab.name,
-                            'text-paynes-grey': t.name !== tab.name,
+                            'dark:text-light-cyan text-gray-700': t.name === tab.name,
+                            'dark:text-paynes-grey text-gray-500': t.name !== tab.name,
                           })}
                         onClick={() => setTab({
                           name: t.name,
@@ -227,13 +232,13 @@ export const OverallAd = () => {
               <div className="max-w-xl md:w-1/2">
                 <Section />
                 <br />
-                <Button style={ButtonType.PRIMARY} className='mx-auto block'>
+                {/* <Button style={ButtonType.PRIMARY} className='mx-auto block'>
                   {
                     tabData.filter((t) => {
                       return t.name === tab.name;
                     })[0].button
                   }
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
