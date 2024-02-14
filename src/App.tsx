@@ -11,7 +11,7 @@ import cx from 'classnames';
 import { Personality } from './pages/Personality';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
