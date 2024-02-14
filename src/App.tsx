@@ -10,7 +10,8 @@ import { ProjectExperience } from './pages/ProductionApps/ProductionApps';
 import cx from 'classnames';
 import { Personality } from './pages/Personality';
 import { useEffect, useState } from 'react';
-import { Messenger } from './components/Message';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
@@ -43,19 +44,16 @@ const Navigation = () => {
       setShow(true);
     } else {
       setShow(false);
+      console.log('here');
+      toast.info('TLDR mode is enabled. Description are shortened. Click the switch in the menu to disable.');
     }
-  }
-  , []);
 
-  // TODO use effect to close the menu on scroll 
-  useEffect(() => {
     const handleScroll = () => {
       setShow(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }
-  , []);
+  },[]);
 
   return (
     <div className={cx('fixed right-0 top-0 z-[1000] flex w-fit  justify-end', {
@@ -147,7 +145,9 @@ const App = () => {
   return (
     <>
       <Background />
+      
       <Navigation />
+
       <div className='group relative mx-auto md:max-w-[70%]'>
         {/* <TldrSwitch /> */}
         <div id='introduction' />
@@ -171,10 +171,17 @@ const App = () => {
         <div id='personality' />
         <Personality />
 
-
-        <Messenger />
+        {/* <Messenger /> */}
         <SocialsAdvertisement /> 
       </div>
+
+      <ToastContainer
+        position="bottom-right"
+        newestOnTop
+        autoClose={3000}
+        toastClassName="rounded-lg"
+        closeButton={true}
+      />
     </>
   );
 };

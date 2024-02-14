@@ -1,8 +1,5 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
-import {
-  LabeledIcon,
-} from '../components/custom.library';
 import { SectionTitle } from '../components/titles/SectionTitle';
 import { SubTitle } from '../components/SubTitle';
 import { PageSection } from '../components/PageSection';
@@ -192,7 +189,7 @@ export const OverallAd = () => {
         >
           <div className="md:my-auto">
             <div className="md:flex">
-              <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-5/12">
+              <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-1/2">
 
                 <div className={
                   cx('z-10 border-l-2 border-light-cyan w-max h-1/4 absolute transition-all left-0', {
@@ -208,26 +205,26 @@ export const OverallAd = () => {
                 {tabData.map((t, index) => {
                   return (
                     <div key={t.name} className='relative flex'>
-                      <LabeledIcon
+                      <button
                         key={t.name}
                         className={
-                          cx('p-2 transition-colors', {
+                          cx('p-2 transition-colors flex', {
                             'text-light-cyan': t.name === tab.name,
                             'text-paynes-grey': t.name !== tab.name,
                           })}
-                        icon={t.icon}
                         onClick={() => setTab({
                           name: t.name,
                           index: index
                         })}
                       >
-                        {t.name}
-                      </LabeledIcon>
+                        <Icon icon={t.icon} width="40" height="40" />
+                        <span className='my-auto ml-4 font-bebas text-2xl'>{t.name}</span>
+                      </button>
                     </div>
                   );
                 })}
               </div>
-              <div className="p-3 md:w-1/2">
+              <div className="max-w-xl md:w-1/2">
                 <Section />
                 <br />
                 <Button style={ButtonType.PRIMARY} className='mx-auto block'>

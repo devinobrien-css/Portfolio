@@ -15,7 +15,7 @@ export const ProjectExperience = () => {
       <TopBarAnimation
         threshold={16}
         content={
-          <div className='-ml-32 -mt-48 hidden w-1/2 pb-24 md:block'>
+          <div className='-ml-48 -mt-48 hidden w-1/2 pb-24 md:block'>
             <img src='https://access-portfolio-images.s3.amazonaws.com/Data+extraction-amico.svg' alt='project' className='w-1/4 object-cover'/>
             <br/>
           </div>

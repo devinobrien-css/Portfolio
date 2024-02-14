@@ -9,6 +9,7 @@
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch",
     "build": "tsc && vite build",
     "serve": "vite preview",
+    "prune": "ts-prune",
     "prepare": "husky install",
     "prettier": "npx prettier . --write"
   },
@@ -29,6 +30,7 @@
     "react-intersection-observer": "^9.5.2",
     "react-router-dom": "^6.14.2",
     "react-toastify": "^9.1.3",
+    "ts-prune": "^0.10.3",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
