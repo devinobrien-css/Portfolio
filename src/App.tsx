@@ -39,9 +39,9 @@ const TldrSwitch = () => {
 const Navigation = () => {
   const [show, setShow] = useState(false);
 
-  const { darkmode, setDarkMode } = useGlobalContext();
+  const { darkMode } = useGlobalContext();
 
-  console.log(darkmode);
+  console.log(darkMode);
 
   useEffect(() => {
     if(window.innerWidth > 908) {
