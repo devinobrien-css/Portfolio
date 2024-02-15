@@ -32,6 +32,15 @@ const data = {
         '#101935',
       ],
       hoverBackgroundColor: '#F2FDFF',
+      hoverBorderColor: [
+        '#C6E9EB',
+        '#9AD4D6',
+        '#78A6AE',
+        '#78A6BE',
+        '#557786',
+        '#557796',
+        '#101935',
+      ],
       borderColor: 'transparent',
       borderWidth: 2,
       data: [backendFrameworks.length, frontendFrameworks.length, styles.length, languages.length, databases.length, infrastructure.length, cloudServices.length]

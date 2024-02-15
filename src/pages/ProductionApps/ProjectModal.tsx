@@ -35,7 +35,7 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
             <>
               <h2 className="font-montserrat text-xl dark:text-white">Website Link</h2>
               <a 
-                className="block w-1/2 justify-center overflow-hidden py-4 transition-all hover:scale-105"
+                className="block justify-center overflow-hidden py-4 transition-all hover:scale-105 md:w-1/2"
                 href={url}
                 target="_blank"
               >
