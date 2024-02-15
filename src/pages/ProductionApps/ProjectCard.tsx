@@ -39,7 +39,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         />
       )}
       <button
-        className="z-[500] w-full cursor-pointer rounded border bg-white p-4 text-left shadow transition-all hover:bg-gray-100 dark:bg-slate-700/80 dark:hover:bg-gray-700 md:w-[48%]"
+        className="z-[500] w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-100 dark:bg-slate-700/80 dark:hover:bg-gray-700 md:w-[48%]"
         onClick={() => setIsModalOpen(!isModalOpen)}
       >
         <Title size={TitleSize.LG}>{title}</Title>

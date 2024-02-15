@@ -25,11 +25,12 @@ export const Routes = () => {
       <div id='project-experience' className='md:mb-32'/>
       <ProjectExperience />
 
+      <div id='work-experience' />
+      <WorkExperience />
+      
       <div id='academic-experience' />
       <AcademicExperience />
 
-      <div id='work-experience' />
-      <WorkExperience />
 
       <div id='personality' />
       <Personality />

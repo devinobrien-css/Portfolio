@@ -207,64 +207,20 @@ export const infrastructure = [
     icon: 'logos:kubernetes'
   },
   {
-    title: 'AWS S3',
-    icon: 'logos:aws-s3'
+    title: 'Jenkins',
+    icon: 'logos:jenkins'
   },
   {
-    title: 'AWS EC2',
-    icon: 'logos:aws-ec2'
+    title: 'Nginx',
+    icon: 'logos:nginx'
   },
   {
-    title: 'AWS ECS',
-    icon: 'logos:aws-ecs'
+    title: 'Apache',
+    icon: 'logos:apache'
   },
   {
-    title: 'AWS Lambda',
-    icon: 'logos:aws-lambda'
-  },
-  {
-    title: 'AWS RDS',
-    icon: 'logos:aws-rds'
-  },
-  {
-    title: 'AWS DynamoDB',
-    icon: 'logos:aws-dynamodb'
-  },
-  {
-    title: 'AWS SNS',
-    icon: 'logos:aws-sns'
-  },
-  {
-    title: 'AWS SQS',
-    icon: 'logos:aws-sqs'
-  },
-  {
-    title: 'AWS SES',
-    icon: 'logos:aws-ses'
-  },
-  {
-    title: 'AWS CloudFront',
-    icon: 'logos:aws-cloudfront'
-  },
-  {
-    title: 'AWS Route 53',
-    icon: 'logos:aws-route53'
-  },
-  {
-    title: 'AWS CloudWatch',
-    icon: 'logos:aws-cloudwatch'
-  },
-  {
-    title: 'AWS API Gateway',
-    icon: 'logos:aws-api-gateway'
-  },
-  {
-    title: 'AWS CodeBuild',
-    icon: 'logos:aws-codebuild'
-  },
-  {
-    title: 'AWS CodeDeploy',
-    icon: 'logos:aws-codedeploy'
+    title: 'CloudFront',
+    icon: 'logos:cloudfront'
   },
 ];
 

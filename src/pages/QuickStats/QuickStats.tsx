@@ -29,7 +29,7 @@ const data = {
         '#78A6BE',
         '#557786',
         '#557796',
-        '#101935',
+        '#55A690',
       ],
       hoverBackgroundColor: '#F2FDFF',
       hoverBorderColor: [
@@ -39,7 +39,7 @@ const data = {
         '#78A6BE',
         '#557786',
         '#557796',
-        '#101935',
+        '#55A690',
       ],
       borderColor: 'transparent',
       borderWidth: 2,
@@ -56,7 +56,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           backendFrameworks.map((framework) => {
             return (
-              <Icon width={8} height={8} key={framework.title} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={framework.title+new Date().getTime()} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -68,7 +68,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           frontendFrameworks.map((framework) => {
             return (
-              <Icon width={8} height={8} key={framework.title} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={framework.title+new Date().getTime()} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -80,7 +80,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           styles.map((style) => {
             return (
-              <Icon width={8} height={8} key={style.title} icon={style.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={style.title+new Date().getTime()} icon={style.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -92,7 +92,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           languages.map((language) => {
             return (
-              <Icon width={8} height={8} key={language.title} icon={language.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={language.title+new Date().getTime()} icon={language.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -104,7 +104,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           infrastructure.map((infra) => {
             return (
-              <Icon width={8} height={8} key={infra.title} icon={infra.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={infra.title+new Date().getTime()} icon={infra.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -116,7 +116,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           databases.map((database) => {
             return (
-              <Icon width={8} height={8} key={database.title} icon={database.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={database.title+new Date().getTime()} icon={database.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -128,7 +128,7 @@ const RenderSection = ({section}:{section:string}) => {
         {
           cloudServices.map((cloud) => {
             return (
-              <Icon width={8} height={8} key={cloud.title} icon={cloud.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <Icon width={8} height={8} key={cloud.title+new Date().getTime()} icon={cloud.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
             );
           })
         }
@@ -155,6 +155,18 @@ export const QuickStats = () => {
         setSection(data?.labels?.[index]);
       }
     },
+    plugins: {
+      legend: {
+        position: 'bottom' as const,
+        labels: {
+          font: {
+            family: 'Lato',
+            size: 11,
+            weight: 'normal' as const,
+          },
+        },
+      }
+    },
   };
 
   return (
@@ -170,28 +182,28 @@ export const QuickStats = () => {
           </button>
         </div>
 
-        <div className='mx-auto block cursor-pointer pb-8 md:hidden md:w-3/5'>
+        <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
           <Pie 
             data={data} 
             options={options}
           />
         </div>
-        <div className='md:flex'>
-          <div className='hidden w-2/3 font-lato md:block'>
+        <div className='lg:flex'>
+          <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
             {
               chartType === 'bar' ? <Bar 
-                className='mx-auto w-full cursor-pointer'
+                className='m-auto w-full cursor-pointer'
                 data={data} 
                 options={options}
               /> : <Pie 
-                className='mx-auto w-3/5 cursor-pointer'
+                className='m-auto w-3/5 cursor-pointer'
                 data={data} 
                 options={options}
               />
             }
           </div>
-          <div className='px-4 md:w-1/3 md:pt-4'>
-            <h2 className='pb-4 font-bebas text-3xl dark:text-white md:text-4xl'>{section}</h2>
+          <div className='px-4 lg:w-1/3 lg:pt-4'>
+            <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
             <RenderSection section={section} />
           </div>
         </div>

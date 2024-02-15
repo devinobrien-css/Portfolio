@@ -17,7 +17,7 @@ import {
 ChartJS.defaults.font.family = 'lato';
 ChartJS.defaults.font.size = 16;
 ChartJS.defaults.font.weight = 'lighter'; // lighter font weight
-// ChartJS.defaults.color = '#333';
+ChartJS.defaults.color = '#557786';
 ChartJS.register(
   ArcElement,
   CategoryScale,

@@ -23,7 +23,7 @@ export const WorkExperience = () => {
                   <div className='flex'>
                     <img src={employer.icon} alt={employer.name} className="size-20 rounded-full object-cover p-2 shadow"/>
                     <div className='pl-2'>
-                      <Title size={TitleSize.LG}>{employer.name}</Title>
+                      <Title size={TitleSize.MD}>{employer.name}</Title>
                       <SubTitle>
                         {employer.title}
                       </SubTitle>
@@ -36,7 +36,7 @@ export const WorkExperience = () => {
                   <SubTitle>
                     {employer.description}
                   </SubTitle>
-                  <hr className="my-2"/>
+                  {/* <hr className="my-2"/>
 
                   <div className="flex">
                     {employer.skills.map((skill) => {
@@ -46,7 +46,7 @@ export const WorkExperience = () => {
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
               );
             })
