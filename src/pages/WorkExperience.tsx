@@ -35,17 +35,6 @@ export const WorkExperience = () => {
                   <SubTitle>
                     {employer.description}
                   </SubTitle>
-                  {/* <hr className="my-2"/>
-
-                  <div className="flex">
-                    {employer.skills.map((skill) => {
-                      return (
-                        <div key={skill} className="mx-auto rounded bg-white p-2 shadow">
-                          <Icon icon={`logos:${skill}`} width="50" height="50" />
-                        </div>
-                      );
-                    })}
-                  </div> */}
                 </div>
               );
             })

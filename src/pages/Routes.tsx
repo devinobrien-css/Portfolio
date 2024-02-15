@@ -27,7 +27,7 @@ export const Routes = () => {
 
       <div id='work-experience' />
       <WorkExperience />
-      
+
       <div id='academic-experience' />
       <AcademicExperience />
 

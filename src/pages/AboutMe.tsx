@@ -50,6 +50,8 @@ export const AboutMe = () => {
 
         <div className="hidden w-3/5 flex-col p-8 md:flex">
           <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='size-90 my-auto rounded bg-white object-cover p-4 shadow'/>
+          {/* <img src='https://access-portfolio-images.s3.amazonaws.com/profile-removebg-preview.png' alt='Devin' className='size-90 my-auto rounded  object-cover p-4'/> */}
+          
         </div>
       </div>
     </PageSection >

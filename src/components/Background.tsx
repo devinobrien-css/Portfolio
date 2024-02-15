@@ -14,7 +14,6 @@ export const Background = () => {
           <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
         </filter>
       </defs>
-  
       <path
         // transform='translate(-30, -350) scale(1.7)'
         className='translate-y-[-24em]  scale-[1.7] fill-gray-100 dark:fill-charcoal/10' 
