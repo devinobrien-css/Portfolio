@@ -88,7 +88,7 @@ export const Navigation = () => {
   
       <div className={
         cx(
-          'transition-all overflow-clip whitespace-nowrap bg-white dark:bg-gray-800',
+          'transition-all overflow-clip whitespace-nowrap bg-white dark:bg-gray-800 max-h-[90vh]',
           {
             'blur-sm': !show,
             'rounded-b-lg shadow': show,
