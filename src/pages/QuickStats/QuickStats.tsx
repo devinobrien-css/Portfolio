@@ -1,16 +1,16 @@
 import { Bar, Pie } from 'react-chartjs-2';
-import { PageSection } from '../components/PageSection';
-import { PageTitle } from '../components/PageTitle';
+import { PageSection } from '../../components/PageSection';
+import { PageTitle } from '../../components/PageTitle';
 import { ChartEvent } from 'chart.js';
 import { useState } from 'react';
-import { SubTitle } from '../components/SubTitle';
-import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../data/skills';
+import { SubTitle } from '../../components/SubTitle';
+import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../data/skills';
 import { Icon } from '@iconify/react';
 
 enum Section {
   BackendFrameworks = 'Backend Frameworks',
   FrontendFrameworks = 'Frontend Frameworks',
-  Styling = 'Styling',
+  Styling = 'Design/Styling',
   Languages = 'Languages',
   Databases = 'Databases',
   Infrastructure = 'Infrastructure',
@@ -18,7 +18,7 @@ enum Section {
 }
 
 const data = {
-  labels: ['Backend Frameworks', 'Frontend Frameworks', 'Styling', 'Languages', 'Databases', 'Infrastructure', 'Cloud Services'],
+  labels: ['Backend Frameworks', 'Frontend Frameworks', 'Design/Styling', 'Languages', 'Databases', 'Infrastructure', 'Cloud Services'],
   datasets: [
     {
       label: '# of Skills',
@@ -43,7 +43,7 @@ const RenderSection = ({section}:{section:string}) => {
   switch (section) {
   case Section.BackendFrameworks:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           backendFrameworks.map((framework) => {
             return (
@@ -55,7 +55,7 @@ const RenderSection = ({section}:{section:string}) => {
     );
   case Section.FrontendFrameworks:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           frontendFrameworks.map((framework) => {
             return (
@@ -67,7 +67,7 @@ const RenderSection = ({section}:{section:string}) => {
     );
   case Section.Styling:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           styles.map((style) => {
             return (
@@ -79,7 +79,7 @@ const RenderSection = ({section}:{section:string}) => {
     );
   case Section.Languages:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           languages.map((language) => {
             return (
@@ -91,7 +91,7 @@ const RenderSection = ({section}:{section:string}) => {
     );
   case Section.Infrastructure:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           infrastructure.map((infra) => {
             return (
@@ -103,7 +103,7 @@ const RenderSection = ({section}:{section:string}) => {
     );  
   case Section.Databases:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           databases.map((database) => {
             return (
@@ -115,7 +115,7 @@ const RenderSection = ({section}:{section:string}) => {
     );
   case Section.CloudServices:
     return (
-      <div className="flex flex-wrap justify-evenly gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
           cloudServices.map((cloud) => {
             return (
@@ -145,7 +145,7 @@ export const QuickStats = () => {
         const index = elements[0].index;
         setSection(data?.labels?.[index]);
       }
-    }
+    },
   };
 
   return (
@@ -168,7 +168,7 @@ export const QuickStats = () => {
           />
         </div>
         <div className='md:flex'>
-          <div className='hidden w-2/3 md:block'>
+          <div className='hidden w-2/3 font-lato md:block'>
             {
               chartType === 'bar' ? <Bar 
                 className='mx-auto w-full cursor-pointer'

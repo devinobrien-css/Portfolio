@@ -95,7 +95,7 @@ export const Navigation = () => {
           }
         )
       }>
-        <div className='flex flex-col p-2 py-4 font-code dark:text-tiffany-blue'>
+        <div className='flex max-h-screen flex-col overflow-y-auto p-2 py-4 font-code dark:text-tiffany-blue'>
           <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='mx-auto size-20 rounded object-cover md:size-32'/>
           <h1 className='py-1 text-center text-lg'>Devin O'Brien</h1>
           <a href='tel:203-228-8579' className='text-center text-paynes-grey underline'>
@@ -104,7 +104,11 @@ export const Navigation = () => {
           <a href='mailto:devinobrien@icloud.com' className='text-center text-paynes-grey underline'>
               devinobrien@icloud.com
           </a>
-  
+
+          <a href='mailto:devinobrien@icloud.com' className='text-center text-paynes-grey underline'>
+            download my resume
+          </a>
+
           <hr className='my-2 border-tiffany-blue'/>
   
           {/* <a href='#introduction' className='block p-2'>Introduction</a> */}

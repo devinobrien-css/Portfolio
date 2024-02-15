@@ -10,9 +10,9 @@ export const WorkExperience = () => {
   return (
     <PageSection className="p-10 md:p-6">
       <div className="mt-4 w-full transition-all duration-300 md:my-auto">
-        <PageTitle title='Work Experience' />
+        <PageTitle title='Employers' />
         <br />
-        <div className='flex flex-wrap gap-4'>
+        <div className='flex flex-wrap justify-center gap-4'>
           {
             employers.map((employer) => {
               return (
@@ -20,10 +20,18 @@ export const WorkExperience = () => {
                   key={employer.name}
                   className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
                 >
-                  <Title size={TitleSize.LG}>{employer.name}</Title>
-                  <SubTitle>
-                    {employer.title}
-                  </SubTitle>
+                  <div className='flex'>
+                    <img src={employer.icon} alt={employer.name} className="size-20 rounded-full object-cover p-2 shadow"/>
+                    <div className='pl-2'>
+                      <Title size={TitleSize.LG}>{employer.name}</Title>
+                      <SubTitle>
+                        {employer.title}
+                      </SubTitle>
+                      <SubTitle>
+                        {employer.timeline}
+                      </SubTitle>
+                    </div>
+                  </div>
                   <hr className="my-2"/>
                   <SubTitle>
                     {employer.description}

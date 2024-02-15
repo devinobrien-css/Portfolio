@@ -41,8 +41,7 @@ export const Introduction = () => {
               !tldr && (
                 <span>
                   Here, you'll find a curated collection of my work, a
-                  testament to my commitment to creating seamless, efficient, and user-centric software
-                  applications.
+                  testament to my commitment to creating seamless, efficient, and user-centric software.
                 </span>
               )
             }
