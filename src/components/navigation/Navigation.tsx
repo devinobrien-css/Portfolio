@@ -135,17 +135,17 @@ export const Navigation = () => {
           </Link>
           <Link
             smooth={true}
-            to={'academic-experience'}
-            className="cursor-pointer p-1 md:p-2"
-          >
-              Academic Experience
-          </Link>
-          <Link
-            smooth={true}
             to={'work-experience'}
             className="cursor-pointer p-1 md:p-2"
           >
               Work Experience
+          </Link>
+          <Link
+            smooth={true}
+            to={'academic-experience'}
+            className="cursor-pointer p-1 md:p-2"
+          >
+              Academic Experience
           </Link>
           <Link
             smooth={true}

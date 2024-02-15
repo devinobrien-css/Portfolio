@@ -3,18 +3,13 @@ import { PageTitle } from '../components/PageTitle';
 import { SubTitle } from '../components/SubTitle';
 import { Title } from '../components/Title';
 import { TitleSize } from '../components/constants';
-import { useGlobalContext } from '../components/context/useGlobalContext';
 
 export const AcademicExperience = () => {
-  const { tldr } = useGlobalContext();
 
   return (
     <PageSection className='p-10 md:p-6'>
       <div className="mt-4 w-full p-3 transition-all duration-300 md:my-auto">
         <PageTitle title="Academics" />
-        <SubTitle>
-          click for more details
-        </SubTitle>
         <br />
         <div className="flex flex-wrap justify-between gap-y-8">
           <div

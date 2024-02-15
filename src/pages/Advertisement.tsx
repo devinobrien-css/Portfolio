@@ -11,7 +11,7 @@ const DevelopmentSection = () => {
   return (
     <div>
       <SectionTitle>
-        Better tools, Better practice, Better Performance.
+        Better tools, Better practice, Better performance.
       </SectionTitle>
       <SubTitle>
         Building enterprise-level software requires knowledge of the latest,
@@ -229,7 +229,7 @@ export const OverallAd = () => {
                   );
                 })}
               </div>
-              <div className="max-w-xl p-4 md:w-1/2">
+              <div className="max-w-xl px-4 md:w-1/2">
                 <Section />
                 <br />
                 {/* <Button style={ButtonType.PRIMARY} className='mx-auto block'>
