@@ -169,6 +169,17 @@ export const Navigation = () => {
               Dark Mode
           </p>
           <DarkModeSwitch />
+
+          <hr className='my-2 border-tiffany-blue'/>
+
+          <div className='flex flex-col gap-y-2'>
+            Fellow developer? <br/>
+            <a href='https://github.com/devinobrien-css' className='flex gap-x-2 underline'><Icon icon="ph:github-logo-duotone" className='size-6'/>check out my github</a>
+            <a href='https://github.com/devinobrien-css/Portfolio' className='flex gap-x-2 underline'><Icon icon="ph:github-logo-fill" className='size-6'/>view this site's code</a>
+            
+          </div>
+
+
         </div>
       </div>
   

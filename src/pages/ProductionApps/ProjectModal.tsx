@@ -16,23 +16,25 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
   return (  
     <div className="fixed left-0 top-0 z-[1000] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
       <div
-        className='relative mx-auto w-full rounded-lg bg-white p-8 shadow-lg dark:bg-slate-800 md:w-[50%]'
+        className='relative mx-auto h-[90vh] w-full overflow-y-auto rounded-lg bg-white px-8 shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
-        <button className="absolute right-0 top-0 p-4" onClick={() => closeModal()}>
-          <Icon icon="ic:round-close" className="size-8 dark:text-white"/>
-        </button>
-        <Title size={TitleSize.LG}>{title}</Title>
-        <SubTitle>
-          {subtitle}
-        </SubTitle>
-        <hr className="my-2"/>
+        <div className='sticky top-0 bg-white pt-8 dark:bg-slate-800'>
+          <button className="absolute right-0 top-0 p-4" onClick={() => closeModal()}>
+            <Icon icon="ic:round-close" className="size-8 dark:text-white"/>
+          </button>
+          <Title size={TitleSize.LG}>{title}</Title>
+          <SubTitle>
+            {subtitle}
+          </SubTitle>
+          <hr className="my-2"/>
+        </div>
         <TextSection>
           {description}
         </TextSection>
         <hr className="my-2"/>
         {
           image_url && (
-            <>
+            <div>
               <h2 className="font-montserrat text-xl dark:text-white">Website Link</h2>
               <a 
                 className="block justify-center overflow-hidden py-4 transition-all hover:scale-105 md:w-1/2"
@@ -47,10 +49,10 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
                 </p>
               </a>
               <hr className="my-2"/>
-            </>
+            </div>
           )
         }
-        <div className="max-h-[300px] overflow-y-auto">
+        <div className="">
           <h2 className="font-montserrat text-xl dark:text-white">Skills Required</h2>
           {skills?.map((skill) => {
             return (
