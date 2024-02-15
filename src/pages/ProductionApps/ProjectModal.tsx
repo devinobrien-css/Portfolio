@@ -18,7 +18,7 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
       <div
         className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white px-8 shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
-        <div className='sticky top-0 bg-white pt-8 dark:bg-slate-800'>
+        <div className='sticky top-0 z-[1001] bg-white pt-8 dark:bg-slate-800'>
           <button className="absolute right-0 top-0 p-4" onClick={() => closeModal()}>
             <Icon icon="ic:round-close" className="size-8 dark:text-white"/>
           </button>
