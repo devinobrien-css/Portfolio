@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import { PageSection } from '../components/PageSection';
 import { Title } from '../components/Title';
 import { TitleSize } from '../components/constants';
