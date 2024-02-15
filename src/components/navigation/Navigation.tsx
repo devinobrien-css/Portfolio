@@ -174,15 +174,11 @@ export const Navigation = () => {
 
           <div className='flex flex-col gap-y-2'>
             Fellow developer? <br/>
-            <a href='https://github.com/devinobrien-css' className='flex gap-x-2 underline'><Icon icon="ph:github-logo-duotone" className='size-6'/>check out my github</a>
-            <a href='https://github.com/devinobrien-css/Portfolio' className='flex gap-x-2 underline'><Icon icon="ph:github-logo-fill" className='size-6'/>view this site's code</a>
-            
+            <a href='https://github.com/devinobrien-css' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-duotone" className='size-6'/>check out my github</a>
+            <a href='https://github.com/devinobrien-css/Portfolio' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-fill" className='size-6'/>view this site's code</a>
           </div>
-
-
         </div>
       </div>
-  
     </div>
   );
   

@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className='bg-gray-50 dark:bg-gray-900'>
       <Background />
-      <svg version="1.1" viewBox="0 0 212 192" className='fixed w-1/5 md:w-1/12'>
+      <svg version="1.1" viewBox="0 0 212 192" className='fixed w-1/6 sm:w-1/12'>
         <g 
           transform='translate(-240, -320) scale(1)'
         >
