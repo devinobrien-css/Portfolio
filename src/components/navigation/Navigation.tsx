@@ -70,7 +70,10 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 z-[1000] flex  justify-end')}>
+    <div className={cx('z-[1000] fixed right-0 top-0  flex w-min justify-end transition-all', {
+      'w-[20%]': !show,
+      'w-[100%]': show,
+    })}>
       <button 
         className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow dark:bg-gray-800' 
         onClick={() => setShow(!show)}
@@ -88,7 +91,7 @@ export const Navigation = () => {
           'transition-all overflow-clip whitespace-nowrap bg-white dark:bg-gray-800 max-h-[90vh] duration-500',
           {
             'blur-sm w-[0%]': !show,
-            'rounded-b-lg shadow md:w-[100%] w-[90%]' : show,
+            'rounded-b-lg shadow md:w-[30%] w-[70%]' : show,
           }
         )
       }>
