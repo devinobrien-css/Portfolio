@@ -14,11 +14,11 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
   const { title, subtitle, description, skills, url, image_url } = project;
   
   return (  
-    <div className="fixed left-0 top-0 z-[1000] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
+    <div className="fixed left-0 top-0 z-[1001] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
       <div
         className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
-        <button className="absolute right-0 top-0 p-4 z-[1002]" onClick={() => closeModal()}>
+        <button className="fixed right-6 top-6 p-4 z-[1002]" onClick={() => closeModal()}>
           <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
         </button>
         <div className='sticky top-0 z-[1001] bg-white px-8 pt-8 dark:bg-slate-800'>
