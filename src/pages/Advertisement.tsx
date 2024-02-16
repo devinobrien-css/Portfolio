@@ -174,7 +174,6 @@ export const OverallAd = () => {
 
 
   return (
-    <PageSection className='p-6'>
       <BottomBarAnimation
         threshold={23}
         content={
@@ -192,6 +191,7 @@ export const OverallAd = () => {
             </div>
           }
         >
+    <PageSection className='p-6'>
           <div className="md:my-auto">
             <div className="md:flex">
               <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-1/2">
@@ -242,8 +242,8 @@ export const OverallAd = () => {
               </div>
             </div>
           </div>
+    </PageSection >
         </TopBarAnimation>
       </BottomBarAnimation>
-    </PageSection >
   );
 };

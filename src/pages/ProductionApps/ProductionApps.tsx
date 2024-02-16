@@ -10,7 +10,6 @@ export const ProjectExperience = () => {
 
   return (
     <PageSection className=''>
-
       <TopBarAnimation
         threshold={16}
         content={
@@ -20,15 +19,6 @@ export const ProjectExperience = () => {
           </div>
         }
       >
-        {/* <SideBarAnimation
-          threshold={11}
-          content={
-            <div className='mt-160 hidden md:block'>
-              <img src='https://access-portfolio-images.s3.amazonaws.com/Research+paper-amico.svg' alt='project' className='-mr-16 w-full object-cover'/>
-              <br/>
-            </div>
-          }
-        > */}
         <div className="w-[95%] p-10 md:mx-auto md:p-6">
           <PageTitle title="Production Apps" />
           <SubTitle>click for further details</SubTitle>
@@ -41,7 +31,6 @@ export const ProjectExperience = () => {
           </div>
           <br/>
         </div>
-        {/* </SideBarAnimation> */}
       </TopBarAnimation>
     </PageSection>
   );

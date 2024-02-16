@@ -128,6 +128,13 @@ export const Navigation = () => {
           </Link>
           <Link
             smooth={true}
+            to={'quick-stats'}
+            className="cursor-pointer p-1 md:p-2"
+          >
+              Quick Stats
+          </Link>
+          <Link
+            smooth={true}
             to={'project-experience'}
             className="cursor-pointer p-1 md:p-2"
           >

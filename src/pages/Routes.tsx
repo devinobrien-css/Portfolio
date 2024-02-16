@@ -17,7 +17,7 @@ export const Routes = () => {
       <div id='about-me' className='md:mb-12'/>
       <AboutMe />
 
-      <div id='stats' className='md:mb-32'/>
+      <div id='quick-stats' className='md:mb-32'/>
       <QuickStats />
 
       <OverallAd />

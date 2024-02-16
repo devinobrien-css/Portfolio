@@ -8,11 +8,10 @@ export const AboutMe = () => {
   const {tldr} = useGlobalContext();
 
   return (
-    <PageSection className="p-2">
-      <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap">
-        <div className="w-[95%] p-10 md:mx-auto md:p-6">
+    <PageSection>
+      <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap p-8 md:mx-auto md:p-6">
+        <div className="w-2/3">
           <PageTitle title="About Me" />
-
           <br />
           <p className={
             cx('text-paynes-grey font-montserrat transition-height delay-500 duration-[3s] overflow-clip')
@@ -42,16 +41,12 @@ export const AboutMe = () => {
                 </span>
               )
             }
-
           </p>
           <br />
           <br />
         </div>
-
-        <div className="hidden w-3/5 flex-col p-8 md:flex">
+        <div className="hidden w-2/5 flex-col p-8 md:flex my-auto">
           <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='size-90 my-auto rounded bg-white object-cover p-4 shadow'/>
-          {/* <img src='https://access-portfolio-images.s3.amazonaws.com/profile-removebg-preview.png' alt='Devin' className='size-90 my-auto rounded  object-cover p-4'/> */}
-          
         </div>
       </div>
     </PageSection >
