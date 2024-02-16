@@ -70,9 +70,9 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('z-[1000] fixed right-0 top-0  flex w-min justify-end transition-all', {
-      'w-[20%]': !show,
-      'w-[100%]': show,
+    <div className={cx('fixed right-0 top-0 flex justify-end transition-all', {
+      'w-[20%] z-[500]': !show,
+      'w-[100%] z-[1000]': show,
     })}>
       <button 
         className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow dark:bg-gray-800' 
