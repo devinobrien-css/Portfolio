@@ -174,16 +174,16 @@ export const OverallAd = () => {
 
 
   return (
-      <BottomBarAnimation
-        threshold={23}
-        content={
-          <div className='hidden w-full justify-end px-12 py-8 sm:flex'>
-            <div className='float-right size-32 bg-programming bg-cover bg-center bg-no-repeat md:size-64'></div>
-          </div>
-        }>
+    <BottomBarAnimation
+      threshold={23}
+      content={
+        <div className='hidden w-full justify-end px-12 py-8 sm:flex'>
+          <div className='float-right size-32 bg-programming bg-cover bg-center bg-no-repeat md:size-64'></div>
+        </div>
+      }>
         <TopBarAnimation
           className='hidden p-2 sm:block'
-          threshold={8}
+          threshold={9}
           content={
             <div className='z-[110] w-full py-8  font-montserrat'>
               <h2 className='text-4xl text-gray-900 dark:text-tiffany-blue'>Right Tool, Right Job</h2>

@@ -14,15 +14,15 @@ export const Routes = () => {
       <div id='introduction' />
       <Introduction />
 
-      <div id='about-me' className='md:mb-12'/>
+      <div id='about-me' />
       <AboutMe />
 
-      <div id='quick-stats' className='md:mb-32'/>
+      <div id='quick-stats' />
       <QuickStats />
 
       <OverallAd />
 
-      <div id='project-experience' className='md:mb-32'/>
+      <div id='project-experience' />
       <ProjectExperience />
 
       <div id='work-experience' />

@@ -70,10 +70,7 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 z-[1000] flex  justify-end transition-all duration-500', {
-      'w-[0%]': !show,
-      'md:w-[30%] w-[90%]': show,
-    })}>
+    <div className={cx('fixed right-0 top-0 z-[1000] flex  justify-end transition-all duration-500')}>
       <button 
         className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow dark:bg-gray-800' 
         onClick={() => setShow(!show)}
@@ -90,8 +87,8 @@ export const Navigation = () => {
         cx(
           'transition-all overflow-clip whitespace-nowrap bg-white dark:bg-gray-800 max-h-[90vh]',
           {
-            'blur-sm': !show,
-            'rounded-b-lg shadow': show,
+            'blur-sm w-[0%]': !show,
+            'rounded-b-lg shadow md:w-[100%] w-[90%]' : show,
           }
         )
       }>
@@ -184,6 +181,10 @@ export const Navigation = () => {
             <a href='https://github.com/devinobrien-css' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-duotone" className='size-6'/>check out my github</a>
             <a href='https://github.com/devinobrien-css/Portfolio' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-fill" className='size-6'/>view this site's code</a>
           </div>
+
+          <br/>
+          <br/>
+          <br/>
         </div>
       </div>
     </div>
