@@ -9,8 +9,8 @@ export const AboutMe = () => {
 
   return (
     <PageSection>
-      <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap p-8 md:mx-auto md:p-6">
-        <div className="w-2/3">
+      <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap p-10 md:mx-auto md:p-6">
+        <div className="md:w-2/3">
           <PageTitle title="About Me" />
           <br />
           <p className={
