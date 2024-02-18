@@ -71,7 +71,7 @@ export const Navigation = () => {
   
   return (
     <div className={cx('fixed right-0 top-0 flex justify-end transition-all', {
-      'w-[20%] z-[500]': !show,
+      'w-[18%] md:w-[8%] z-[500]': !show,
       'w-[100%] z-[1000]': show,
     })}>
       <button 
@@ -88,7 +88,7 @@ export const Navigation = () => {
   
       <div className={
         cx(
-          'transition-all overflow-clip whitespace-nowrap bg-white dark:bg-gray-800 max-h-[90vh] duration-500',
+          'transition-all overflow-clip whitespace-nowrap max-w-fit bg-white dark:bg-gray-800 max-h-[90vh] duration-500',
           {
             'blur-sm w-[0%]': !show,
             'rounded-b-lg shadow md:w-[30%] w-[70%]' : show,
