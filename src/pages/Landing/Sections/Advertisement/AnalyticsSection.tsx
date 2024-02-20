@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import { SectionTitle } from '../../components/titles/SectionTitle';
-import { SubTitle } from '../../components/titles/SubTitle';
+import { SectionTitle } from '../../../../components/text/SectionTitle';
+import { SubTitle } from '../../../../components/text/SubTitle';
 
 export const AnalyticsSection = () => {
   return (

@@ -1,6 +1,6 @@
-import { SectionTitle } from '../../components/titles/SectionTitle';
+import { SectionTitle } from '../../../../components/text/SectionTitle';
 import { Icon } from '@iconify/react';
-import { SubTitle } from '../../components/titles/SubTitle';
+import { SubTitle } from '../../../../components/text/SubTitle';
 
 export const DevelopmentSection = () => {
   return (

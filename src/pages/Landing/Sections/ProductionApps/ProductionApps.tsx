@@ -1,9 +1,9 @@
-import { PageSection } from '../../components/titles/PageSection';
-import { PageTitle } from '../../components/titles/PageTitle';
-import { SubTitle } from '../../components/titles/SubTitle';
-import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
+import { PageSection } from '../../../../components/text/PageSection';
+import { PageTitle } from '../../../../components/text/PageTitle';
+import { SubTitle } from '../../../../components/text/SubTitle';
+import { TopBarAnimation } from '../../../../components/animations/TopBarAnimation';
 import { ProjectCard } from './ProjectCard';
-import { projects } from '../../data/projects';
+import { projects } from '../../../../data/projects';
 
 
 export const ProjectExperience = () => {

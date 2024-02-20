@@ -1,9 +1,10 @@
 import { ToastContainer} from 'react-toastify';
 import { Navigation } from './components/navigation/Navigation';
 import { Background } from './components/Background';
-import { Routes } from './Routes';
+import { Routes } from './pages/Landing/Landing';
 import { Logo } from './components/Logo';
 import { initializeChartConfig } from './util/chart.config';
+import { Router } from './util/router/Router';
 
 initializeChartConfig();
 
@@ -17,7 +18,7 @@ const App = () => {
       <Background />
       <Logo />
       <Navigation />
-      <Routes />
+      <Router />
       <ToastContainer
         newestOnTop
         autoClose={3000}

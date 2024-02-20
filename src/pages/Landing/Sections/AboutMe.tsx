@@ -1,8 +1,8 @@
 
-import { PageSection } from '../components/titles/PageSection';
+import { PageSection } from '../../../components/text/PageSection';
 import cx from 'classnames';
-import { PageTitle } from '../components/titles/PageTitle';
-import { useGlobalContext } from '../components/context/useGlobalContext';
+import { PageTitle } from '../../../components/text/PageTitle';
+import { useGlobalContext } from '../../../components/context/useGlobalContext';
 
 export const AboutMe = () => {
   const {tldr} = useGlobalContext();

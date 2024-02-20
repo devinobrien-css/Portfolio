@@ -1,4 +1,4 @@
-import { Project } from '../pages/ProductionApps/ProjectCard';
+import { Project } from '../pages/Landing/Sections/ProductionApps/ProjectCard';
 
 export const projects: Project[] = [
   {

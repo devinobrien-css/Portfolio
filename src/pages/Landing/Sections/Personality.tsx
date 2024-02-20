@@ -1,5 +1,5 @@
-import { PageSection } from '../components/titles/PageSection';
-import { PageTitle } from '../components/titles/PageTitle';
+import { PageSection } from '../../../components/text/PageSection';
+import { PageTitle } from '../../../components/text/PageTitle';
 
 export const Personality = () => {
   return (

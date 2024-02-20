@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../data/skills';
-import { StatsSection } from '../../data/constants';
+import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../../../data/skills';
+import { StatsSection } from '../../../../data/constants';
 
 export const RenderSection = ({section}:{section:string}) => {
   switch (section) {

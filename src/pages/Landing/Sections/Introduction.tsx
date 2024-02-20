@@ -1,8 +1,8 @@
-import { TypewriterText } from '../animations/TypewriterText';
-import { PageSection } from '../components/titles/PageSection';
-import { Title } from '../components/titles/Title';
-import { TitleSize } from '../data/constants';
-import { useGlobalContext } from '../components/context/useGlobalContext';
+import { TypewriterText } from '../../../animations/TypewriterText';
+import { PageSection } from '../../../components/text/PageSection';
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
+import { useGlobalContext } from '../../../components/context/useGlobalContext';
 
 export const Introduction = () => {
   const {tldr} = useGlobalContext();

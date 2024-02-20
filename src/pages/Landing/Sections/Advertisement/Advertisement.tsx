@@ -1,6 +1,6 @@
-import { BottomBarAnimation } from '../../components/animations/BottomBarAnimation';
-import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
-import { PageSection } from '../../components/titles/PageSection';
+import { BottomBarAnimation } from '../../../../components/animations/BottomBarAnimation';
+import { TopBarAnimation } from '../../../../components/animations/TopBarAnimation';
+import { PageSection } from '../../../../components/text/PageSection';
 import { DevelopmentSection } from './DevelopmentSection';
 import { CloudSection } from './CloudSection';
 import { DataSection } from './DataSection';

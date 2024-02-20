@@ -1,13 +1,13 @@
 import { Bar, Pie } from 'react-chartjs-2';
-import { PageSection } from '../../components/titles/PageSection';
-import { PageTitle } from '../../components/titles/PageTitle';
+import { PageSection } from '../../../../components/text/PageSection';
+import { PageTitle } from '../../../../components/text/PageTitle';
 import { ChartEvent } from 'chart.js';
 import { useState } from 'react';
-import { SubTitle } from '../../components/titles/SubTitle';
-import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../data/skills';
-import { SideBarAnimation } from '../../components/animations/SideBarAnimation';
+import { SubTitle } from '../../../../components/text/SubTitle';
+import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../../../data/skills';
+import { SideBarAnimation } from '../../../../components/animations/SideBarAnimation';
 import { RenderSection } from './RenderSection';
-import { StatsSection } from '../../data/constants';
+import { StatsSection } from '../../../../data/constants';
 
 const data = {
   labels: ['Backend Frameworks', 'Frontend Frameworks', 'Design/Styling', 'Languages', 'Databases', 'Infrastructure', 'Cloud Services'],
