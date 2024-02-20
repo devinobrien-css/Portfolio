@@ -6,7 +6,7 @@ import { WorkExperience } from './WorkExperience';
 import { Introduction } from './Introduction';
 import { ProjectExperience } from './ProductionApps/ProductionApps';
 import { Personality } from './Personality';
-import { QuickStats } from './QuickStats/QuickStats';
+import { QuickStats } from './QuickStats';
 
 export const Routes = () => {
   return (

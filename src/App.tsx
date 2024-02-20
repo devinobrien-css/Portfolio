@@ -15,6 +15,7 @@ import {
 } from 'chart.js';
 import { Logo } from './components/Logo';
 
+// ChartJS configuration
 ChartJS.defaults.font.family = 'lato';
 ChartJS.defaults.font.size = 16;
 ChartJS.defaults.font.weight = 'lighter'; // lighter font weight
@@ -29,6 +30,10 @@ ChartJS.register(
   Legend
 );
 
+/** 
+ * Main App component
+ * @returns {JSX.Element} The main App component
+ */
 const App = () => {
   return (
     <div className='bg-gray-50 dark:bg-gray-900'>
@@ -37,10 +42,10 @@ const App = () => {
       <Navigation />
       <Routes />
       <ToastContainer
-        position="bottom-right"
         newestOnTop
         autoClose={3000}
-        toastClassName="rounded-lg"
+        position="bottom-right"
+        toastClassName="rounded-lg dark:bg-slate-800 dark:text-white"
         closeButton={true}
       />
     </div>

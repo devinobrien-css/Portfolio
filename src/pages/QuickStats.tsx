@@ -1,13 +1,12 @@
 import { Bar, Pie } from 'react-chartjs-2';
-import { PageSection } from '../../components/PageSection';
-import { PageTitle } from '../../components/PageTitle';
+import { PageSection } from '../components/PageSection';
+import { PageTitle } from '../components/PageTitle';
 import { ChartEvent } from 'chart.js';
 import { useState } from 'react';
-import { SubTitle } from '../../components/SubTitle';
-import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../data/skills';
+import { SubTitle } from '../components/SubTitle';
+import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../data/skills';
 import { Icon } from '@iconify/react';
-import { SideBarAnimation } from '../../components/animations/SideBarAnimation';
-import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
+import { SideBarAnimation } from '../components/animations/SideBarAnimation';
 
 enum Section {
   BackendFrameworks = 'Backend Frameworks',
@@ -182,43 +181,43 @@ export const QuickStats = () => {
       }
     > 
       <PageSection className=''>
-          <div className="p-10 md:mx-auto md:p-6 my-auto w-full">
-            <PageTitle title='Quick Stats' />
-            <div className='flex justify-between'>
-              <SubTitle className='hidden md:block'>
+        <div className="my-auto w-full p-10 md:mx-auto md:p-6">
+          <PageTitle title='Quick Stats' />
+          <div className='flex justify-between'>
+            <SubTitle className='hidden md:block'>
               Click on a section to see more details
-              </SubTitle>
-              <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='my-auto hidden font-montserrat text-tiffany-blue underline md:block'>
+            </SubTitle>
+            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='my-auto hidden font-montserrat text-tiffany-blue underline md:block'>
                 Switch to {chartType === 'bar' ? 'Pie' : 'Bar'}
-              </button>
-            </div>
+            </button>
+          </div>
 
-            <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
-              <Pie 
-                data={data} 
-                options={options}
-              />
+          <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
+            <Pie 
+              data={data} 
+              options={options}
+            />
+          </div>
+          <div className='py-4 lg:flex'>
+            <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
+              {
+                chartType === 'bar' ? <Bar 
+                  className='m-auto w-full cursor-pointer'
+                  data={data} 
+                  options={options}
+                /> : <Pie 
+                  className='m-auto w-3/5 cursor-pointer'
+                  data={data} 
+                  options={options}
+                />
+              }
             </div>
-            <div className='lg:flex py-4'>
-              <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
-                {
-                  chartType === 'bar' ? <Bar 
-                    className='m-auto cursor-pointer w-full'
-                    data={data} 
-                    options={options}
-                  /> : <Pie 
-                    className='m-auto w-3/5 cursor-pointer'
-                    data={data} 
-                    options={options}
-                  />
-                }
-              </div>
-              <div className='px-4 lg:w-1/3 lg:pt-4'>
-                <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
-                <RenderSection section={section} />
-              </div>
+            <div className='px-4 lg:w-1/3 lg:pt-4'>
+              <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
+              <RenderSection section={section} />
             </div>
           </div>
+        </div>
       </PageSection>
     </SideBarAnimation>
   );
