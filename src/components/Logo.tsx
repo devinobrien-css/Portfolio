@@ -2,7 +2,7 @@
  * The Logo SVG component
  * @returns {JSX.Element} The Logo SVG component
  */
-export const Logo = () => {
+export const Logo = (): JSX.Element => {
   return (
     <svg version="1.1" viewBox="0 0 212 192" className='fixed w-1/6 sm:w-1/12'>
       <g 

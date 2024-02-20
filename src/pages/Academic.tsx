@@ -3,7 +3,6 @@ import { PageTitle } from '../components/titles/PageTitle';
 import { SubTitle } from '../components/titles/SubTitle';
 import { Title } from '../components/titles/Title';
 import { SideBarAnimation } from '../components/animations/SideBarAnimation';
-import { TopBarAnimation } from '../components/animations/TopBarAnimation';
 import { TitleSize } from '../data/constants';
 
 export const AcademicExperience = () => {
