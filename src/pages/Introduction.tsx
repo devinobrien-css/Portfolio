@@ -1,7 +1,7 @@
 import { TypewriterText } from '../animations/TypewriterText';
-import { PageSection } from '../components/PageSection';
-import { Title } from '../components/Title';
-import { TitleSize } from '../components/constants';
+import { PageSection } from '../components/titles/PageSection';
+import { Title } from '../components/titles/Title';
+import { TitleSize } from '../data/constants';
 import { useGlobalContext } from '../components/context/useGlobalContext';
 
 export const Introduction = () => {

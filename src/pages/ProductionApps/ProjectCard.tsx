@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
-import { SubTitle } from '../../components/SubTitle';
-import { Title } from '../../components/Title';
-import { TitleSize } from '../../components/constants';
+import { SubTitle } from '../../components/titles/SubTitle';
+import { Title } from '../../components/titles/Title';
+import { TitleSize } from '../../data/constants';
 import { useState } from 'react';
 import { useGlobalContext } from '../../components/context/useGlobalContext';
 import { ProjectModal } from './ProjectModal';

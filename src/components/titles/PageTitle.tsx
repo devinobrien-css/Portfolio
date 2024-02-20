@@ -1,5 +1,8 @@
-
-
+/**
+ * PageTitle component
+ * @param {string} title - The title
+ * @returns {JSX.Element} The PageTitle component
+ */
 export const PageTitle = ({
   title
 }: {

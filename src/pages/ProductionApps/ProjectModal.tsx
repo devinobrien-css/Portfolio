@@ -1,9 +1,9 @@
 
 import { Icon } from '@iconify/react';
-import { SubTitle } from '../../components/SubTitle';
-import { TextSection } from '../../components/TextSection';
-import { Title } from '../../components/Title';
-import { TitleSize } from '../../components/constants';
+import { SubTitle } from '../../components/titles/SubTitle';
+import { TextSection } from '../../components/titles/TextSection';
+import { Title } from '../../components/titles/Title';
+import { TitleSize } from '../../data/constants';
 import { Project } from './ProjectCard';
 
 interface ProjectModalProps {

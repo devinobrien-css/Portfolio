@@ -1,12 +1,12 @@
-import { SocialsAdvertisement } from '../components/SocialsAdvertisement';
-import { AboutMe } from './AboutMe';
-import { AcademicExperience } from './Academic';
-import { OverallAd } from './Advertisement';
-import { WorkExperience } from './WorkExperience';
-import { Introduction } from './Introduction';
-import { ProjectExperience } from './ProductionApps/ProductionApps';
-import { Personality } from './Personality';
-import { QuickStats } from './QuickStats';
+import { SocialsAdvertisement } from './components/SocialsAdvertisement';
+import { AboutMe } from './pages/AboutMe';
+import { AcademicExperience } from './pages/Academic';
+import { OverallAd } from './pages/Advertisement/Advertisement';
+import { WorkExperience } from './pages/WorkExperience';
+import { Introduction } from './pages/Introduction';
+import { ProjectExperience } from './pages/ProductionApps/ProductionApps';
+import { Personality } from './pages/Personality';
+import { QuickStats } from './pages/QuickStats/QuickStats';
 
 export const Routes = () => {
   return (

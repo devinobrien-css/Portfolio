@@ -1,11 +1,11 @@
-import { PageSection } from '../components/PageSection';
-import { Title } from '../components/Title';
-import { TitleSize } from '../components/constants';
-import { SubTitle } from '../components/SubTitle';
-import { PageTitle } from '../components/PageTitle';
+import { PageSection } from '../components/titles/PageSection';
+import { Title } from '../components/titles/Title';
+import { TitleSize } from '../data/constants';
+import { SubTitle } from '../components/titles/SubTitle';
+import { PageTitle } from '../components/titles/PageTitle';
 import { employers } from '../data/employers';
 
-export const WorkExperience = () => {
+export const WorkExperience = (): JSX.Element => {
   return (
     <PageSection className="p-10 md:p-6">
       <div className="mt-4 w-full transition-all duration-300 md:my-auto">

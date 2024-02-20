@@ -1,8 +1,6 @@
 import { ReactElement } from 'react';
 import cx from 'classnames';
-import { TitleSize } from './constants';
-
-
+import { TitleSize } from '../../data/constants';
 
 interface TitleProps {
   size?: TitleSize;
@@ -10,7 +8,12 @@ interface TitleProps {
   children?: ReactElement | string;
 }
 
-export const Title = ({ className, size = TitleSize.SM, children }: TitleProps) => {
+/**
+ * Title component
+ * @param {TitleProps} props - The props
+ * @returns {JSX.Element} The Title component
+ */
+export const Title = ({ className, size = TitleSize.SM, children }: TitleProps): JSX.Element => {
   return (
     <p
       className={

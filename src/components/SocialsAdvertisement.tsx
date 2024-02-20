@@ -3,7 +3,11 @@ import gsap from 'gsap';
 import { useEffect } from 'react';
 import { Social, socials } from '../data/socials';
 
-export const SocialsAdvertisement = () => {
+/**
+ * SocialsAdvertisement component
+ * @returns {JSX.Element} The SocialsAdvertisement component
+ */
+export const SocialsAdvertisement = (): JSX.Element => {
   useEffect(() => {
     gsap.fromTo('#socials',
       {

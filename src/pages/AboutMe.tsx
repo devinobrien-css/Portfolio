@@ -1,7 +1,7 @@
 
-import { PageSection } from '../components/PageSection';
+import { PageSection } from '../components/titles/PageSection';
 import cx from 'classnames';
-import { PageTitle } from '../components/PageTitle';
+import { PageTitle } from '../components/titles/PageTitle';
 import { useGlobalContext } from '../components/context/useGlobalContext';
 
 export const AboutMe = () => {
@@ -9,7 +9,7 @@ export const AboutMe = () => {
 
   return (
     <PageSection>
-      <div className="flex flex-wrap transition-all duration-300 md:my-auto md:flex-nowrap p-10 md:mx-auto md:p-6">
+      <div className="flex flex-wrap p-10 transition-all duration-300 md:m-auto md:flex-nowrap md:p-6">
         <div className="md:w-2/3">
           <PageTitle title="About Me" />
           <br />
@@ -45,7 +45,7 @@ export const AboutMe = () => {
           <br />
           <br />
         </div>
-        <div className="hidden w-2/5 flex-col p-8 md:flex my-auto">
+        <div className="my-auto hidden w-2/5 flex-col p-8 md:flex">
           <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='size-90 my-auto rounded bg-white object-cover p-4 shadow'/>
         </div>
       </div>

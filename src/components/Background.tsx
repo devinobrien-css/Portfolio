@@ -1,12 +1,14 @@
 
-
-export const Background = () => {
+/**
+ * Background SVG component
+ * @returns {JSX.Element} The Background SVG component
+ */
+export const Background = (): JSX.Element => {
   return (
     <svg viewBox="0 0 602 792" className='fixed right-0 top-0 z-0 h-screen w-screen scale-150 border' >
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#33485E" />
-          {/* <stop offset="100%" stopColor="#78A6AE" /> */}
           <stop offset="100%" stopColor="#101935" />
         </linearGradient>
   
@@ -15,7 +17,6 @@ export const Background = () => {
         </filter>
       </defs>
       <path
-        // transform='translate(-30, -350) scale(1.7)'
         className='translate-y-[-24em]  scale-[1.7] fill-gray-100 dark:fill-charcoal/10' 
         d="M576.8,498.9c-0.6,0-1.3,0-1.9,0c-5.7,0.1-11.7-0.6-17.9-2c-39.2-8.8-37.4-47.9-24.7-78.3c20.4-49,71.3-124.8,31.9-175.3  c-0.4-0.5-0.7-1-1.2-1.5c-2.9-3.5-6.2-6.8-9.9-10c-42.8-36.3-97.2-17.6-141.6,10.5c-0.7,0.5-1.5,0.9-2.2,1.4  c-15.7,10.1-30,21.4-42.2,31.7c-11.2,9.5-22.1,19.4-33.8,28.2c-22.5,17-50.8,31.6-79.8,25.7c-64.2-13-66-86.8-49.9-137.6H612v296.2  C601.6,494.6,589.9,498.5,576.8,498.9z"
       />

@@ -1,6 +1,6 @@
-import { PageSection } from '../../components/PageSection';
-import { PageTitle } from '../../components/PageTitle';
-import { SubTitle } from '../../components/SubTitle';
+import { PageSection } from '../../components/titles/PageSection';
+import { PageTitle } from '../../components/titles/PageTitle';
+import { SubTitle } from '../../components/titles/SubTitle';
 import { TopBarAnimation } from '../../components/animations/TopBarAnimation';
 import { ProjectCard } from './ProjectCard';
 import { projects } from '../../data/projects';
