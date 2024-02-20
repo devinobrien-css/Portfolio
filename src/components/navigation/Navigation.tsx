@@ -53,7 +53,7 @@ const DarkModeSwitch = () => {
   
 export const Navigation = () => {
   const [show, setShow] = useState(false);
-  
+
   useEffect(() => {
     if(window.innerWidth > 908) {
       setShow(true);
@@ -70,9 +70,9 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 flex justify-end transition-all', {
-      'w-[18%] md:w-[8%] z-[500]': !show,
-      'w-[30%] z-[1000]': show,
+    <div className={cx('fixed right-0 top-0 flex justify-end transition-all z-[999]', {
+      // 'w-[18%] md:w-[8%] z-[500]': !show,
+      // 'w-[50%] z-[1000]': show,
     })}>
       <button 
         className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow dark:bg-gray-800' 
@@ -91,7 +91,7 @@ export const Navigation = () => {
           'transition-all overflow-clip whitespace-nowrap max-w-fit bg-white dark:bg-gray-800 max-h-[90vh] duration-500',
           {
             'blur-sm w-[0%]': !show,
-            'rounded-b-lg shadow md:w-[30%] w-[70%]' : show,
+            'rounded-b-lg shadow w-[100%]' : show,
           }
         )
       }>

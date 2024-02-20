@@ -54,10 +54,10 @@ export const OverallAd = () => {
 
   return (
     <BottomBarAnimation
-      threshold={23}
+      threshold={20}
       content={
         <div className='hidden w-full justify-end px-12 py-8 sm:flex'>
-          <div className='float-right size-32 bg-programming bg-cover bg-center bg-no-repeat md:size-64'></div>
+          <img src='https://access-portfolio-images.s3.amazonaws.com/Programming-amico.svg' alt='programming' className='m-12 hidden size-56 object-cover md:block'/>
         </div>
       }>
       <TopBarAnimation

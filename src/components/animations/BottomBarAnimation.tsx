@@ -11,7 +11,7 @@ interface SideBarAnimationProps {
   upper_value?: number;
 }
 
-export const BottomBarAnimation = ({children, content, threshold, initialPosition, lower_value, upper_value }:SideBarAnimationProps) => {
+export const BottomBarAnimation = ({children, content, threshold, lower_value, upper_value }:SideBarAnimationProps) => {
   const [currentPosition, setCurrentPosition] = useState(0);
 
   const [ref, percentage] = useScrollPercentage({
@@ -32,7 +32,7 @@ export const BottomBarAnimation = ({children, content, threshold, initialPositio
         style={{
           transform:`translateY(-${currentPosition}px)`,
         }}
-        className={cx('fixed w-screen left-0 -bottom-[550px] md:-right-[210px] transition-all')}
+        className={cx('fixed w-screen left-0 bottom-[-550px] transition-all')}
       >
         {content}
       </div>
