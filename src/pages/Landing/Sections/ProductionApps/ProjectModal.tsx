@@ -18,7 +18,7 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
       <div
         className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
-        <button className="absolute right-2 top-2 z-[1002] p-4" onClick={() => closeModal()}>
+        <button className="absolute right-2 top-2 z-[1005] rounded p-4 transition-colors hover:bg-moonstone/50" onClick={() => closeModal()}>
           <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
         </button>
         <div className='sticky top-0 z-[1001] bg-white px-8 pt-8 dark:bg-slate-800'>
@@ -54,7 +54,7 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
               </div>
             )
           }
-          <div className="">
+          <div className="pb-8">
             <h2 className="font-montserrat text-xl dark:text-white">Skills Required</h2>
             {skills?.map((skill) => {
               return (

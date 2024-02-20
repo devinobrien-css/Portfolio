@@ -20,7 +20,6 @@ export const ProjectExperience = () => {
         }
       >
         <div className="w-[95%] p-10 md:mx-auto md:p-0">
-
           <PageTitle title="Production Apps" />
           <SubTitle>click for further details</SubTitle>
 

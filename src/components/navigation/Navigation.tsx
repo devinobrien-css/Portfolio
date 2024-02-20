@@ -76,7 +76,7 @@ export const Navigation = () => {
       // 'w-[50%] z-[1000]': show,
     })}>
       <button 
-        className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow dark:bg-gray-800' 
+        className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80' 
         onClick={() => setShow(!show)}
       >
         <Icon icon="iconamoon:arrow-left-2-bold" className={cx(
@@ -116,49 +116,49 @@ export const Navigation = () => {
           <Link
             smooth={true}
             to={'introduction'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               Introduction
           </Link>
           <Link
             smooth={true}
             to={'about-me'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               About Me
           </Link>
           <Link
             smooth={true}
             to={'quick-stats'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               Quick Stats
           </Link>
           <Link
             smooth={true}
             to={'project-experience'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               Project Experience
           </Link>
           <Link
             smooth={true}
             to={'work-experience'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               Work Experience
           </Link>
           <Link
             smooth={true}
             to={'academic-experience'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               Academic Experience
           </Link>
           <Link
             smooth={true}
             to={'personality'}
-            className="cursor-pointer p-1 md:p-2"
+            className="cursor-pointer p-1 hover:underline md:p-2"
           >
               More than Code
           </Link>

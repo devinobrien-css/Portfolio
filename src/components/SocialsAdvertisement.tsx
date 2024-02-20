@@ -25,7 +25,7 @@ export const SocialsAdvertisement = (): JSX.Element => {
         {
           socials.map((social: Social) => {
             return (
-              <a className="group relative flex flex-nowrap" href={social.href} key={social.href} target='_blank'>
+              <a className="group relative flex flex-nowrap rounded p-1 transition-all hover:scale-110 hover:bg-moonstone/80" href={social.href} key={social.href} target='_blank'>
                 <Icon icon={social.icon} className={'m-auto text-gray-700 dark:text-light-cyan'} />
               </a>
             );

@@ -14,7 +14,7 @@ export const SkillIcon = ({ className, icon, skill, size }: SkillIconProps): JSX
   const [showTooltip,setShowTooltip] = useState<boolean>(false);
 
   return (
-    <div className={cx('mx-auto rounded bg-gray-50 p-2 shadow dark:bg-tiffany-blue w-min relative',className)}
+    <div className={cx('mx-auto rounded bg-gray-50 p-2 shadow dark:bg-white/80 w-min relative',className)}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >

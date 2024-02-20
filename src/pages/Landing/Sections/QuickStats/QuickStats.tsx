@@ -102,7 +102,7 @@ export const QuickStats = () => {
                   data={data} 
                   options={options}
                 /> : <Pie 
-                  className='m-auto size-full cursor-pointer'
+                  className='mx-auto mt-4 size-full cursor-pointer'
                   data={data} 
                   options={options}
                 />
