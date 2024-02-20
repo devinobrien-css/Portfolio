@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
 
 interface SubTitleProps {
   className?: string;
-  children: ReactElement | string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any;
 }
 
 /**
@@ -12,7 +12,7 @@ interface SubTitleProps {
  */
 export const SubTitle = ({ children, className }: SubTitleProps): JSX.Element => {
   return (
-    <p className={`font-lato font-light dark:text-gray-400 ${className}`}>
+    <p className={`font-montserrat text-paynes-grey dark:text-moonstone ${className}`}>
       {children}
     </p>
   );

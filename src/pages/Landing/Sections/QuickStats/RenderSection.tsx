@@ -1,6 +1,6 @@
-import { Icon } from '@iconify/react';
 import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../../../data/skills';
-import { StatsSection } from '../../../../data/constants';
+import { SkillIconSize, StatsSection } from '../../../../data/constants';
+import { SkillIcon } from '../../../../components/SkillIcon';
 
 export const RenderSection = ({section}:{section:string}) => {
   switch (section) {
@@ -10,7 +10,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           backendFrameworks.map((framework) => {
             return (
-              <Icon width={8} height={8} key={framework.title+new Date().getTime()} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={framework.title+new Date().getTime()} icon={framework.icon} size={SkillIconSize.LG} skill={framework.title}/>
             );
           })
         }
@@ -22,7 +22,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           frontendFrameworks.map((framework) => {
             return (
-              <Icon width={8} height={8} key={framework.title+new Date().getTime()} icon={framework.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={framework.title+new Date().getTime()} icon={framework.icon} size={SkillIconSize.LG} skill={framework.title}/>
             );
           })
         }
@@ -32,9 +32,9 @@ export const RenderSection = ({section}:{section:string}) => {
     return (
       <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
         {
-          styles.map((style) => {
+          styles.map((framework) => {
             return (
-              <Icon width={8} height={8} key={style.title+new Date().getTime()} icon={style.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={framework.title+new Date().getTime()} icon={framework.icon} size={SkillIconSize.LG} skill={framework.title}/>
             );
           })
         }
@@ -46,7 +46,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           languages.map((language) => {
             return (
-              <Icon width={8} height={8} key={language.title+new Date().getTime()} icon={language.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={language.title+new Date().getTime()} icon={language.icon} size={SkillIconSize.LG} skill={language.title}/>
             );
           })
         }
@@ -58,7 +58,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           infrastructure.map((infra) => {
             return (
-              <Icon width={8} height={8} key={infra.title+new Date().getTime()} icon={infra.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={infra.title+new Date().getTime()} icon={infra.icon} size={SkillIconSize.LG} skill={infra.title}/>
             );
           })
         }
@@ -70,7 +70,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           databases.map((database) => {
             return (
-              <Icon width={8} height={8} key={database.title+new Date().getTime()} icon={database.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={database.title+new Date().getTime()} icon={database.icon} size={SkillIconSize.LG} skill={database.title}/>
             );
           })
         }
@@ -82,7 +82,7 @@ export const RenderSection = ({section}:{section:string}) => {
         {
           cloudServices.map((cloud) => {
             return (
-              <Icon width={8} height={8} key={cloud.title+new Date().getTime()} icon={cloud.icon} className="size-16 rounded bg-white p-1 shadow dark:bg-azure-blue"/>
+              <SkillIcon key={cloud.title+new Date().getTime()} icon={cloud.icon} size={SkillIconSize.LG} skill={cloud.title}/>
             );
           })
         }

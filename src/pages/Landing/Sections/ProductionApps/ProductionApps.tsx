@@ -9,7 +9,7 @@ import { projects } from '../../../../data/projects';
 export const ProjectExperience = () => {
 
   return (
-    <PageSection className=''>
+    <PageSection>
       <TopBarAnimation
         threshold={16}
         content={
@@ -19,17 +19,16 @@ export const ProjectExperience = () => {
           </div>
         }
       >
-        <div className="w-[95%] p-10 md:mx-auto md:p-6">
+        <div className="w-[95%] p-10 md:mx-auto md:p-0">
+
           <PageTitle title="Production Apps" />
           <SubTitle>click for further details</SubTitle>
 
-          <br />
           <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
             {projects.map((project) => {
               return <ProjectCard project={project} key={project.content}/>;
             })} 
           </div>
-          <br/>
         </div>
       </TopBarAnimation>
     </PageSection>

@@ -130,15 +130,15 @@ export const projects: Project[] = [
         description: 'Lambda was used for the API to establish a serverless architecture.'
       },
       {
+        title: 'CloudFront',
+        icon: 'logos:aws-cloudfront',
+        description: 'CloudFront was used for serving the webapp to the internet.'
+      },
+      {
         title: 'S3',
         icon: 'logos:aws-s3',
         description: 'S3 was used for storing the webapp\'s static files and media.'
       },
-      {
-        title: 'CloudFront',
-        icon: 'logos:aws-cloudfront',
-        description: 'CloudFront was used for serving the webapp to the internet.'
-      }
     ]
   },
   {
@@ -220,9 +220,19 @@ export const projects: Project[] = [
         description: 'React was used for the user interface for its ease of use and responsiveness.'
       },
       {
+        title: 'TypeScript',
+        icon: 'logos:typescript-icon',
+        description: 'TypeScript was used for the frontend for its strict typing and ability to create a more maintainable codebase.'
+      },
+      {
         title: 'Tailwind',
         icon: 'devicon:tailwindcss',
         description: 'Tailwind was used for the styling for its ease of use and the ability to create a consistent look and feel.'
+      },
+      {
+        title: 'Netlify',
+        icon: 'logos:netlify',
+        description: 'Netlify was used for hosting the webapp and the book\'s media'
       },
       {
         title: 'AWS',

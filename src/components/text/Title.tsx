@@ -25,7 +25,7 @@ export const Title = ({ className, size = TitleSize.SM, children }: TitleProps):
             'text-xl sm:text-3xl md:text-4xl': size === TitleSize.LG,
             'text-md md:text-lg': size === TitleSize.MD,
             'text-xs sm:text-sm md:text-md': size === TitleSize.SM,
-            'sm:text-xs md:text-sm': size === TitleSize.XS,
+            'sm:text-xs text-sm': size === TitleSize.XS,
           }
         )}
     >

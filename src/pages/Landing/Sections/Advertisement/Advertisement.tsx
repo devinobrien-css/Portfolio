@@ -8,49 +8,51 @@ import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import cx from 'classnames';
 import { AnalyticsSection } from './AnalyticsSection';
+import { Title } from '../../../../components/text/Title';
+import { TitleSize } from '../../../../data/constants';
+import { SkillIcon } from '../../../../components/SkillIcon';
+import { SubTitle } from '../../../../components/text/SubTitle';
+import { advertisement } from '../../../../data/advertisement';
+
+enum TabNames {
+  Development = 'development',
+  Data = 'data',
+  Cloud = 'cloud',
+  Analytics = 'analytics',
+}
 
 const tabData = [
   {
     name: 'app development',
-    button: 'software experience',
+    tab: TabNames.Development,
     icon: 'ion:code-slash-outline',
     description: DevelopmentSection,
   },
   {
     name: 'data management',
-    button: 'storage experience',
+    tab: TabNames.Data,
     icon: 'carbon:datastore',
     description: DataSection,
   },
   {
     name: 'cloud integration',
-    button: 'serverless experience',
+    tab: TabNames.Cloud,
     icon: 'carbon:cloud-data-ops',
     description: CloudSection,
   },
   {
     name: 'performance analysis',
-    button: 'analytics experience',
+    tab: TabNames.Analytics,
     icon: 'carbon:chart-line-data',
     description: AnalyticsSection,
   },
 ];
 
-interface SelectedTab {
-  name: string;
-  index: number;
-  button_title?: string;
-}
 export const OverallAd = () => {
-  const [tab, setTab] = useState<SelectedTab>({
-    index: 0,
-    name: tabData[0].name,
-    button_title: tabData[0].button
-  });
+  const [tab, setTab] = useState<TabNames>(TabNames.Development);
 
-  const Section = tabData.filter((t) => {
-    return t.name === tab.name;
-  })[0].description;
+
+  const currentTab = advertisement[tab];
 
   return (
     <BottomBarAnimation
@@ -65,40 +67,37 @@ export const OverallAd = () => {
         threshold={9}
         content={
           <div className='z-[110] w-full py-8  font-montserrat'>
-            <h2 className='text-4xl text-gray-900 dark:text-tiffany-blue'>Right Tool, Right Job</h2>
-            <p className='text-xl text-gray-700 dark:text-moonstone'>Mastering Cloud Infra, Frontend, API, and DB Development Expertise</p>
+            <Title size={TitleSize.LG}>Right Tool, Right Job</Title>
+            <Title size={TitleSize.MD}>Mastering Cloud Infra, Frontend, API, and DB Development Expertise</Title>
           </div>
         }
       >
         <PageSection className='p-6'>
           <div className="md:my-auto">
             <div className="md:flex">
-              <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-1/2">
+              <div className="relative mx-auto h-fit w-11/12 md:mx-0 md:w-1/3">
                 <div className={
                   cx('z-10 border-l-2 dark:border-light-cyan border-gray-800 w-max h-1/4 absolute transition-all left-0', {
-                    'top-0': tab.index === 0,
-                    'top-1/4': tab.index === 1,
-                    'top-1/2': tab.index === 2,
-                    'top-3/4': tab.index === 3,
+                    'top-0': tab === TabNames.Development,
+                    'top-1/4': tab === TabNames.Data,
+                    'top-1/2': tab === TabNames.Cloud,
+                    'top-3/4': tab === TabNames.Analytics,
                   })}
                 ></div>
                 <div className={'absolute left-0 top-0  z-0 h-[100%] border-l-2 border-gray-500'}></div>
 
 
-                {tabData.map((t, index) => {
+                {tabData.map(t => {
                   return (
                     <div key={t.name} className='relative flex'>
                       <button
                         key={t.name}
                         className={
                           cx('p-2 transition-colors flex', {
-                            'dark:text-light-cyan text-gray-700': t.name === tab.name,
-                            'dark:text-paynes-grey text-gray-500': t.name !== tab.name,
+                            'dark:text-light-cyan text-gray-700': t.tab === tab,
+                            'dark:text-paynes-grey text-gray-500': t.tab !== tab,
                           })}
-                        onClick={() => setTab({
-                          name: t.name,
-                          index: index
-                        })}
+                        onClick={() => setTab(t.tab)}
                       >
                         <Icon icon={t.icon} width="40" height="40" />
                         <span className='my-auto ml-4 font-bebas text-2xl'>{t.name}</span>
@@ -107,9 +106,24 @@ export const OverallAd = () => {
                   );
                 })}
               </div>
-              <div className="max-w-xl px-4 md:w-1/2">
-                <Section />
-                <br />
+              <div className="max-w-xl px-4 md:w-2/3">
+                <div className='flex flex-col gap-y-2'>
+                  <Title size={TitleSize.LG}>
+                    {currentTab.title}
+                  </Title>
+                  <SubTitle>
+                    {currentTab.subtitle}
+                  </SubTitle>
+                  <div className="flex">
+                    {
+                      currentTab.skills.map((skill) => {
+                        return (
+                          <SkillIcon key={skill.icon} icon={skill.icon} skill={skill.title} />
+                        );
+                      })
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>

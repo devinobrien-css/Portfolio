@@ -1,14 +1,15 @@
 import { Icon } from '@iconify/react';
-import { SectionTitle } from '../../../../components/text/SectionTitle';
 import { SubTitle } from '../../../../components/text/SubTitle';
+import { TitleSize } from '../../../../data/constants';
+import { Title } from '../../../../components/text/Title';
 
 export const DataSection = () => {
   //SQL? NoSQL? Somewhere in-between?
   return (
     <div>
-      <SectionTitle>
-          Years of experience across various data stores
-      </SectionTitle>
+      <Title size={TitleSize.LG}>
+        Years of experience across various data stores
+      </Title>
       <SubTitle>
           Successfully selecting a datastore and optimizing its speed and cost is
           essential to proper management of an application...

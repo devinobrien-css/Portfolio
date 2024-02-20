@@ -1,7 +1,6 @@
 import { ToastContainer} from 'react-toastify';
 import { Navigation } from './components/navigation/Navigation';
 import { Background } from './components/Background';
-import { Routes } from './pages/Landing/Landing';
 import { Logo } from './components/Logo';
 import { initializeChartConfig } from './util/chart.config';
 import { Router } from './util/router/Router';
@@ -12,7 +11,7 @@ initializeChartConfig();
  * Main App component
  * @returns {JSX.Element} The main App component
  */
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className='bg-gray-50 dark:bg-gray-900'>
       <Background />

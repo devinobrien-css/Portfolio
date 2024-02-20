@@ -1,13 +1,15 @@
-import { SectionTitle } from '../../../../components/text/SectionTitle';
 import { Icon } from '@iconify/react';
 import { SubTitle } from '../../../../components/text/SubTitle';
+import { TitleSize } from '../../../../data/constants';
+import { Title } from '../../../../components/text/Title';
 
 export const DevelopmentSection = () => {
   return (
     <div>
-      <SectionTitle>
-          Better tools, Better practice, Better performance.
-      </SectionTitle>
+      <Title size={TitleSize.LG}>
+        Better tools, Better practice, Better performance.
+      </Title>
+
       <SubTitle>
           Building enterprise-level software requires knowledge of the latest,
           top-of-the-line tools available...

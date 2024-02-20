@@ -70,7 +70,8 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 flex justify-end transition-all z-[999]', {
+    <div className={cx('fixed right-0 top-0 flex justify-end transition-all', {
+      'z-[1000]': show,
       // 'w-[18%] md:w-[8%] z-[500]': !show,
       // 'w-[50%] z-[1000]': show,
     })}>

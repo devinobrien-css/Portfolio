@@ -76,38 +76,40 @@ export const QuickStats = () => {
         </div>
       }
     > 
-      <PageSection className=''>
-        <div className="my-auto w-full p-10 md:mx-auto md:p-6">
+      <PageSection>
+        <div className="my-auto w-full md:mx-auto">
           <PageTitle title='Quick Stats' />
           <div className='flex justify-between'>
             <SubTitle className='hidden md:block'>
               Click on a section to see more details
             </SubTitle>
-            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='my-auto hidden font-montserrat text-tiffany-blue underline md:block'>
+            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline md:block'>
                 Switch to {chartType === 'bar' ? 'Pie' : 'Bar'}
             </button>
           </div>
+          
           <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
             <Pie 
               data={data} 
               options={options}
             />
           </div>
-          <div className='py-4 lg:flex'>
+          <div className='lg:flex'>
             <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
               {
                 chartType === 'bar' ? <Bar 
-                  className='m-auto w-full cursor-pointer'
+                  className=' size-full cursor-pointer'
                   data={data} 
                   options={options}
                 /> : <Pie 
-                  className='m-auto w-3/5 cursor-pointer'
+                  className='m-auto size-full cursor-pointer'
                   data={data} 
                   options={options}
                 />
               }
             </div>
-            <div className='px-4 lg:w-1/3 lg:pt-4'>
+
+            <div className='lg:w-1/3 lg:pt-4'>
               <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
               <RenderSection section={section} />
             </div>

@@ -102,21 +102,21 @@ export const languages = [
     title: 'Kotlin',
   },
   {
-    icon: 'vscode-icons:file-type-dart',
+    icon: 'logos:dart',
     title: 'Dart',
   },
   // {
   //   icon: 'vscode-icons:file-type-rust',
   //   title: 'Rust',
   // },
-  // {
-  //   icon: 'vscode-icons:file-type-c',
-  //   title: 'C',
-  // },
   {
-    icon: 'vscode-icons:file-type-cpp',
-    title: 'C++',
+    icon: 'vscode-icons:file-type-c',
+    title: 'C',
   },
+  // {
+  //   icon: 'vscode-icons:file-type-cpp',
+  //   title: 'C++',
+  // },
   {
     icon: 'vscode-icons:file-type-assembly',
     title: 'Assembly',
@@ -168,7 +168,7 @@ export const databases = [
     title: 'MySQL',
   },
   {
-    icon: 'logos:microsoft-sql-server',
+    icon: 'devicon-plain:microsoftsqlserver-wordmark',
     title: 'SQL Server',
   },
   {
@@ -176,7 +176,7 @@ export const databases = [
     title: 'SQLite',
   },
   {
-    icon: 'logos:dynamodb',
+    icon: 'skill-icons:dynamodb-dark',
     title: 'DynamoDB',
   },
   {
@@ -184,7 +184,7 @@ export const databases = [
     title: 'Cassandra',
   },
   {
-    icon: 'logos:apache-couchdb',
+    icon: 'logos:couchdb',
     title: 'CouchDB',
   },
   {
@@ -217,10 +217,6 @@ export const infrastructure = [
   {
     title: 'Apache',
     icon: 'logos:apache'
-  },
-  {
-    title: 'CloudFront',
-    icon: 'logos:cloudfront'
   },
 ];
 

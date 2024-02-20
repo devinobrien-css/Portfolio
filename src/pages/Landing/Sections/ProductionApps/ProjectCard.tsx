@@ -1,10 +1,12 @@
-import { Icon } from '@iconify/react';
 import { SubTitle } from '../../../../components/text/SubTitle';
 import { Title } from '../../../../components/text/Title';
-import { TitleSize } from '../../../../data/constants';
+import { SkillIconSize, TitleSize } from '../../../../data/constants';
 import { useState } from 'react';
 import { useGlobalContext } from '../../../../components/context/useGlobalContext';
 import { ProjectModal } from './ProjectModal';
+import { Card } from '../../../../components/Card';
+import { TextSection } from '../../../../components/text/TextSection';
+import { SkillIcon } from '../../../../components/SkillIcon';
 
 export interface Project {
   title: string;
@@ -13,9 +15,9 @@ export interface Project {
   url?: string;
   image_url?: string;
   description?: string;
-  skills?: ProjectSkillProps[];
+  skills?: ProjectSkill[];
 }
-interface ProjectSkillProps {
+interface ProjectSkill {
   title: string;
   icon: string;
   description?: string;
@@ -38,31 +40,47 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           closeModal={() => setIsModalOpen(false)}
         />
       )}
-      <button
-        className="z-[500] w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-100 dark:bg-slate-700/80 dark:hover:bg-gray-700 md:w-[48%]"
-        onClick={() => setIsModalOpen(!isModalOpen)}
-      >
-        <Title size={TitleSize.LG}>{title}</Title>
-        <SubTitle>
-          {subtitle}
-        </SubTitle>
-        <hr className="my-2"/>
-        {!tldr && (
-          <p className="font-montserrat text-gray-600 dark:text-white">
-            {content}
-          </p>
-        )}
-        <hr className="my-2"/>
-        <div className="flex flex-wrap gap-2 overflow-x-auto py-1 md:flex-nowrap">
-          {skills?.map((skill) => {
-            return (
-              <div key={skill.title} className="mx-auto flex gap-2">
-                <Icon icon={skill.icon} className="size-12 rounded bg-white p-1 shadow"/>
-              </div>
-            );
-          })}
-        </div>
-      </button>
+      <Card>
+        <button
+          className="size-full text-left transition-all"
+          onClick={() => setIsModalOpen(!isModalOpen)}
+        >
+          <div className='flex h-full flex-col justify-between gap-y-2'>
+            <div>
+              <Title size={TitleSize.LG}>{title}</Title>
+              <SubTitle>
+                {subtitle}
+              </SubTitle>
+              {!tldr && (
+                <>
+                  <hr className="my-2" />
+                  <TextSection>
+                    {content}
+                  </TextSection>
+                </>
+              )}
+            </div>
+
+            <div className="flex flex-wrap gap-2 border-t pt-4 md:flex-nowrap">
+              {skills?.map((skill, idx) => {
+                return (
+                  idx < 4 &&
+                  <SkillIcon key={skill.title} icon={skill.icon} skill={skill.title} size={SkillIconSize.SM} />
+                );
+              })}
+              {
+                (skills??[]).length > 4 && (
+                  <div className={'relative mx-auto flex size-14 flex-col rounded bg-gray-50 p-2 shadow dark:bg-tiffany-blue'}>
+                    <span className='my-auto text-center font-code'>
+                      +{(skills??[]).length - 4}
+                    </span>
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </button>
+      </Card>
     </>
   );
 };

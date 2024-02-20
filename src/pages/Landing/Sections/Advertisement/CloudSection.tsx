@@ -1,32 +1,22 @@
-import { Icon } from '@iconify/react';
-import { SectionTitle } from '../../../../components/text/SectionTitle';
 import { SubTitle } from '../../../../components/text/SubTitle';
+import { Title } from '../../../../components/text/Title';
+import { TitleSize } from '../../../../data/constants';
+import { SkillIcon } from '../../../../components/SkillIcon';
 
 export const CloudSection = () => {
   return (
     <div>
-      <SectionTitle>
-          Low code? No code? Looking to enhance your app to the cloud?
-      </SectionTitle>
+      <Title size={TitleSize.LG}>
+          Low code? No code? Moving to the cloud?
+      </Title>
       <SubTitle>
           With serverless development on the rise, Google, Microsoft and Amazon
           have stepped up as cloud providers...
       </SubTitle>
       <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon
-            icon={'logos:aws'}
-            width="50"
-            height="50"
-            className="rounded border-white bg-white p-1 text-white"
-          />
-        </div>
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'logos:google-cloud'} width="50" height="50" />
-        </div>
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'logos:microsoft-icon'} width="50" height="50" />
-        </div>
+        <SkillIcon icon={'logos:aws'} />
+        <SkillIcon icon={'logos:google-cloud'} />
+        <SkillIcon icon={'logos:microsoft-icon'} />
       </div>
     </div>
   );

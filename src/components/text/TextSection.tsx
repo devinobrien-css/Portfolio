@@ -1,7 +1,7 @@
 import cx from 'classnames';
 
 interface TextSectionProps {
-  children?: string
+  children?: string | JSX.Element | JSX.Element[]
   className?: string
 }
 

@@ -1,34 +1,23 @@
-import { Icon } from '@iconify/react';
-import { SectionTitle } from '../../../../components/text/SectionTitle';
 import { SubTitle } from '../../../../components/text/SubTitle';
+import { Title } from '../../../../components/text/Title';
+import { TitleSize } from '../../../../data/constants';
+import { SkillIcon } from '../../../../components/SkillIcon';
 
 export const AnalyticsSection = () => {
   return (
-    <div>
-      <SectionTitle>
+    <div className='flex flex-col gap-y-2'>
+      <Title size={TitleSize.LG}>
           Track, analyze and assess issues before they occur
-      </SectionTitle>
+      </Title>
       <SubTitle>
           Continuous integration and development calls for carefully curated unit
           and end to end test suites...
       </SubTitle>
-      <div className="mt-4 flex">
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'vscode-icons:file-type-jest'} width="50" height="50" />
-        </div>
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'logos:github-octocat'} width="50" height="50" />
-        </div>
-  
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'logos:git-icon'} width="50" height="50" />
-        </div>  
-          
-        <div className="mx-auto rounded bg-gray-50 p-2 shadow dark:bg-gray-900">
-          <Icon icon={'logos:docker-icon'} width="50" height="50" />
-        </div>
-  
-          
+      <div className="flex">
+        <SkillIcon icon={'logos:jest'} />
+        <SkillIcon icon={'logos:selenium'} />
+        <SkillIcon icon={'logos:git-icon'} />
+        <SkillIcon icon={'logos:docker-icon'} />
       </div>
     </div>
   );
