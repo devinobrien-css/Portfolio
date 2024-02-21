@@ -70,10 +70,9 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 flex transition-width justify-end z-[1000] ', {
-      'z-[1000] w-[100%]': show,
-      'w-[15%] h-0': !show,
-      // 'w-[50%] z-[1000]': show,
+    <div className={cx('fixed right-0 top-0 flex transition-all justify-end z-[1000] duration-500', {
+      'z-[1000] w-[100%] h-[100%]': show,
+      'w-[15%] h-[0%]': !show,
     })}>
       <button 
         className='z-[1000] mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80' 
