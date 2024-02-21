@@ -19,15 +19,13 @@ export const ProjectExperience = () => {
       }
     >
       <PageSection>
-        <div className="">
-          <PageTitle title="Production Apps" />
-          <SubTitle>click for further details</SubTitle>
+        <PageTitle title="Production Apps" />
+        <SubTitle>click for further details</SubTitle>
 
-          <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
-            {projects.map((project) => {
-              return <ProjectCard project={project} key={project.content}/>;
-            })} 
-          </div>
+        <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
+          {projects.map((project) => {
+            return <ProjectCard project={project} key={project.content}/>;
+          })} 
         </div>
       </PageSection>
     </TopBarAnimation>

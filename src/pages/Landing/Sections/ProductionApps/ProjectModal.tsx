@@ -19,17 +19,16 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
         className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
         <div className='sticky top-0 z-[1001] bg-white px-8 pt-8 dark:bg-slate-800'>
-          <div className='flex justify-between'>
-            <div>
-
-              <Title size={TitleSize.LG}>{title}</Title>
-              <SubTitle>
-                {subtitle}
-              </SubTitle>
+          <div>
+            <div className='flex justify-between'>
+              <Title size={TitleSize.LG} className='my-auto'>{title}</Title>
+              <button className="z-[1005] my-auto w-min rounded transition-colors hover:bg-moonstone/50 md:p-4" onClick={() => closeModal()}>
+                <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
+              </button>
             </div>
-            <button className="z-[1005] w-min rounded p-4 transition-colors hover:bg-moonstone/50" onClick={() => closeModal()}>
-              <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
-            </button>
+            <SubTitle>
+              {subtitle}
+            </SubTitle>
           </div>
           <hr className="my-2"/>
         </div>

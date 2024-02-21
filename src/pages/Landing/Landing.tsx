@@ -10,7 +10,7 @@ import { QuickStats } from './Sections/QuickStats/QuickStats';
 
 export const Landing = () => {
   return (
-    <div className='relative mx-auto md:max-w-[70%]'>
+    <div className='relative mx-auto md:max-w-[65%]'>
       <div id='introduction' />
       <Introduction />
 
