@@ -16,7 +16,7 @@ export const WorkExperience = (): JSX.Element => {
           <img src='https://access-portfolio-images.s3.amazonaws.com/At+the+office-amico.svg' alt='programming' className='z-[10] m-2 hidden size-56 object-cover md:block'/>
         </div>
       }>
-      <PageSection className="p-10 md:p-6">
+      <PageSection>
         <div className="mt-4 w-full transition-all duration-300 md:my-auto">
           <PageTitle title='Employers' />
           <br />
@@ -26,7 +26,7 @@ export const WorkExperience = (): JSX.Element => {
                 return (
                   <Card key={employer.name}>
                     <div className='flex'>
-                      <img src={employer.icon} alt={employer.name} className="size-20 rounded-full object-cover p-2 shadow"/>
+                      <img src={employer.icon} alt={employer.name} className="size-20 rounded-full bg-white object-cover p-2 shadow"/>
                       <div className='pl-2'>
                         <Title size={TitleSize.MD}>{employer.name}</Title>
                         <SubTitle>

@@ -14,18 +14,23 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
   const { title, subtitle, description, skills, url, image_url } = project;
   
   return (  
-    <div className="fixed left-0 top-0 z-[1001] h-screen w-screen overflow-y-auto bg-gray-700/50 p-8 backdrop-blur-sm">
+    <div className="fixed left-0 top-0 z-[1001] h-screen w-screen overflow-y-auto bg-gray-700/50 p-4 backdrop-blur-sm md:p-8">
       <div
         className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-[50%]'
       >
-        <button className="absolute right-2 top-2 z-[1005] rounded p-4 transition-colors hover:bg-moonstone/50" onClick={() => closeModal()}>
-          <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
-        </button>
         <div className='sticky top-0 z-[1001] bg-white px-8 pt-8 dark:bg-slate-800'>
-          <Title size={TitleSize.LG}>{title}</Title>
-          <SubTitle>
-            {subtitle}
-          </SubTitle>
+          <div className='flex justify-between'>
+            <div>
+
+              <Title size={TitleSize.LG}>{title}</Title>
+              <SubTitle>
+                {subtitle}
+              </SubTitle>
+            </div>
+            <button className="z-[1005] w-min rounded p-4 transition-colors hover:bg-moonstone/50" onClick={() => closeModal()}>
+              <Icon icon="ic:round-close" className="size-10 dark:text-white"/>
+            </button>
+          </div>
           <hr className="my-2"/>
         </div>
 
@@ -37,7 +42,9 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
           {
             image_url && (
               <div>
-                <h2 className="font-montserrat text-xl dark:text-white">Website Link</h2>
+                <Title size={TitleSize.MD}>
+                  Website Link
+                </Title>
                 <a 
                   className="block justify-center overflow-hidden py-4 transition-all hover:scale-105 md:w-1/2"
                   href={url}
@@ -55,7 +62,9 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
             )
           }
           <div className="pb-8">
-            <h2 className="font-montserrat text-xl dark:text-white">Skills Required</h2>
+            <Title size={TitleSize.MD}>
+              Skills Required
+            </Title>
             {skills?.map((skill) => {
               return (
                 <div key={skill.title} className="mx-auto my-2 flex gap-2">

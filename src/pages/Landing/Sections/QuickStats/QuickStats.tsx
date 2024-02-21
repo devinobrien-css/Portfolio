@@ -76,15 +76,15 @@ export const QuickStats = () => {
         </div>
       }
     > 
-      <PageSection>
+      <PageSection className='w-full'>
         <div className="my-auto w-full md:mx-auto">
           <PageTitle title='Quick Stats' />
           <div className='flex justify-between'>
             <SubTitle className='hidden md:block'>
               Click on a section to see more details
             </SubTitle>
-            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline md:block'>
-                Switch to {chartType === 'bar' ? 'Pie' : 'Bar'}
+            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block'>
+                switch to {chartType === 'bar' ? 'pie' : 'bar'}
             </button>
           </div>
           
@@ -102,14 +102,14 @@ export const QuickStats = () => {
                   data={data} 
                   options={options}
                 /> : <Pie 
-                  className='mx-auto mt-4 size-full cursor-pointer'
+                  className='mx-auto mt-4 size-full max-w-[350px] cursor-pointer'
                   data={data} 
                   options={options}
                 />
               }
             </div>
 
-            <div className='lg:w-1/3 lg:pt-4'>
+            <div className='lg:w-1/3 lg:p-4'>
               <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
               <RenderSection section={section} />
             </div>

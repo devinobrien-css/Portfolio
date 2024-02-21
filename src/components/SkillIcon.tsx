@@ -18,7 +18,7 @@ export const SkillIcon = ({ className, icon, skill, size }: SkillIconProps): JSX
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
-      <span className={cx('absolute top-[90%] whitespace-nowrap rounded bg-slate-100 p-1 opacity-0 z-[200] font-code', {
+      <span className={cx('absolute top-[90%] whitespace-nowrap rounded bg-white shadow p-1 opacity-0 z-[200] font-code transition-opacity', {
         'opacity-100': showTooltip,
       })} 
       >

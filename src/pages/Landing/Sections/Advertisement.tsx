@@ -1,18 +1,14 @@
-import { BottomBarAnimation } from '../../../../components/animations/BottomBarAnimation';
-import { TopBarAnimation } from '../../../../components/animations/TopBarAnimation';
-import { PageSection } from '../../../../components/text/PageSection';
-import { DevelopmentSection } from './DevelopmentSection';
-import { CloudSection } from './CloudSection';
-import { DataSection } from './DataSection';
+import { BottomBarAnimation } from '../../../components/animations/BottomBarAnimation';
+import { TopBarAnimation } from '../../../components/animations/TopBarAnimation';
+import { PageSection } from '../../../components/text/PageSection';
+import { SubTitle } from '../../../components/text/SubTitle';
+import { advertisement } from '../../../data/advertisement';
+import { SkillIcon } from '../../../components/SkillIcon';
+import { Title } from '../../../components/text/Title';
+import { SkillIconSize, TitleSize } from '../../../data/constants';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import cx from 'classnames';
-import { AnalyticsSection } from './AnalyticsSection';
-import { Title } from '../../../../components/text/Title';
-import { TitleSize } from '../../../../data/constants';
-import { SkillIcon } from '../../../../components/SkillIcon';
-import { SubTitle } from '../../../../components/text/SubTitle';
-import { advertisement } from '../../../../data/advertisement';
 
 enum TabNames {
   Development = 'development',
@@ -26,25 +22,21 @@ const tabData = [
     name: 'app development',
     tab: TabNames.Development,
     icon: 'ion:code-slash-outline',
-    description: DevelopmentSection,
   },
   {
     name: 'data management',
     tab: TabNames.Data,
     icon: 'carbon:datastore',
-    description: DataSection,
   },
   {
     name: 'cloud integration',
     tab: TabNames.Cloud,
     icon: 'carbon:cloud-data-ops',
-    description: CloudSection,
   },
   {
     name: 'performance analysis',
     tab: TabNames.Analytics,
     icon: 'carbon:chart-line-data',
-    description: AnalyticsSection,
   },
 ];
 
@@ -106,7 +98,7 @@ export const OverallAd = () => {
                   );
                 })}
               </div>
-              <div className="max-w-xl px-4 md:w-2/3">
+              <div className="my-2 max-w-xl px-4 md:w-2/3">
                 <div className='flex flex-col gap-y-2'>
                   <Title size={TitleSize.LG}>
                     {currentTab.title}
@@ -114,11 +106,11 @@ export const OverallAd = () => {
                   <SubTitle>
                     {currentTab.subtitle}
                   </SubTitle>
-                  <div className="flex">
+                  <div className="flex gap-x-1">
                     {
                       currentTab.skills.map((skill) => {
                         return (
-                          <SkillIcon key={skill.icon} icon={skill.icon} skill={skill.title} />
+                          <SkillIcon key={skill.icon} icon={skill.icon} skill={skill.title} size={SkillIconSize.SM} />
                         );
                       })
                     }

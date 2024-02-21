@@ -4,6 +4,7 @@ import { SubTitle } from '../../../components/text/SubTitle';
 import { Title } from '../../../components/text/Title';
 import { SideBarAnimation } from '../../../components/animations/SideBarAnimation';
 import { TitleSize } from '../../../data/constants';
+import { Card } from '../../../components/Card';
 
 export const AcademicExperience = () => {
 
@@ -25,14 +26,12 @@ export const AcademicExperience = () => {
         </div>
       }
     > 
-      <PageSection className='p-10 md:p-6'>
+      <PageSection>
         <div className="mt-4 w-full p-3 transition-all duration-300 md:my-auto">
           <PageTitle title="Academics" />
           <br />
           <div className="flex flex-wrap justify-between gap-y-8">
-            <div
-              className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
-            >
+            <Card>
               <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Black_White.png' alt='ualbany' className='mx-auto  w-full rounded p-2 dark:hidden'/>
               <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto hidden w-full rounded p-2 dark:block'/>
               <hr className="my-2"/>
@@ -53,10 +52,13 @@ export const AcademicExperience = () => {
                   Databases
                 </Title>
                 <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
+                  Artificial Intelligence
+                </Title>
+                <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
                   Machine Learning
                 </Title>
               </div>
-            </div>
+            </Card>
 
             <div
               className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-slate-700/80  dark:hover:bg-gray-700 md:w-[48%]"
@@ -71,13 +73,13 @@ export const AcademicExperience = () => {
               <hr className="my-2"/>
               <div className="flex w-full flex-wrap gap-2 p-2">
                 <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  OS Development
+                  Operating Systems
                 </Title>
                 <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Multimedia
+                  Multimedia Programming
                 </Title>
                 <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  AI/Learning
+                  Motion Detection
                 </Title>
                 <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
                   Hardware Design

@@ -7,7 +7,7 @@ export const projects: Project[] = [
     content: 'A platform for managing the creation and distribution of contracts and royalties enabling the streaming of Warner Bros. Discovery content.',
     url: 'https://www.wbd.com/',
     image_url: 'https://access-portfolio-images.s3.amazonaws.com/warner',
-    description: 'Warner Bros. Discovery is a media company that sought a platform for managing the creation and distribution contracts and royalties for their streaming service. The platform is designed to be a one-stop shop for managing the content and the contracts associated with it. Note the included link is for the company\'s main site, not the app itself. The app is not publicly available.',
+    description: 'Warner Bros. Discovery is a media company that sought a platform for managing the creation and distribution of contracts and royalties for their streaming services. The platform is designed to be a one-stop shop for managing client related content. Note the included link is for the company\'s main site, not the app itself. The app is not publicly available.',
     skills: [
       {
         title: 'Angular',
@@ -153,6 +153,16 @@ export const projects: Project[] = [
         title: 'Vue',
         icon: 'logos:vue',
         description: 'Vue was used for the user interface for its ease of use and reliability with SVGs.'
+      },
+      {
+        title: 'TypeScript',
+        icon: 'logos:typescript-icon',
+        description: 'TypeScript was used for the frontend for its strict typing and ability to create a more maintainable codebase.'
+      },
+      {
+        title: 'Quasar',
+        icon: 'vscode-icons:file-type-quasar',
+        description: 'Quasar was used for the UI for its ability to create a consistent look and feel, and have more control over animations and transitions.'
       },
       {
         title: 'SCSS',

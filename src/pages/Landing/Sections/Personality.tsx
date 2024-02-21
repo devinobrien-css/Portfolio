@@ -3,7 +3,7 @@ import { PageTitle } from '../../../components/text/PageTitle';
 
 export const Personality = () => {
   return (
-    <PageSection className="p-10 md:p-6">
+    <PageSection>
       <div className="mt-4 w-full transition-all duration-300 md:my-auto">
         <PageTitle title="More than Code" />
         <br/> 

@@ -70,13 +70,13 @@ export const Navigation = () => {
   },[]);
   
   return (
-    <div className={cx('fixed right-0 top-0 flex justify-end transition-all', {
-      'z-[1000]': show,
-      // 'w-[18%] md:w-[8%] z-[500]': !show,
+    <div className={cx('fixed right-0 top-0 flex transition-width justify-end z-[1000] ', {
+      'z-[1000] w-[100%]': show,
+      'w-[15%] h-0': !show,
       // 'w-[50%] z-[1000]': show,
     })}>
       <button 
-        className='mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80' 
+        className='z-[1000] mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80' 
         onClick={() => setShow(!show)}
       >
         <Icon icon="iconamoon:arrow-left-2-bold" className={cx(
@@ -182,8 +182,8 @@ export const Navigation = () => {
 
           <div className='flex flex-col gap-y-2'>
             Fellow developer? <br/>
-            <a href='https://github.com/devinobrien-css' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-duotone" className='size-6'/>check out my github</a>
-            <a href='https://github.com/devinobrien-css/Portfolio' className='flex gap-x-2 underline' target='_blank'><Icon icon="ph:github-logo-fill" className='size-6'/>view this site's code</a>
+            <a href='https://github.com/devinobrien-css' className='group flex gap-x-2 hover:underline' target='_blank'><Icon icon="ph:github-logo-duotone" className='size-6 group-hover:scale-110'/>check out my github</a>
+            <a href='https://github.com/devinobrien-css/Portfolio' className='group flex gap-x-2 hover:underline' target='_blank'><Icon icon="ph:github-logo-fill" className='size-6 group-hover:scale-110'/>view this site's code</a>
           </div>
 
           <hr className='mb-24 mt-2 border-tiffany-blue'/>

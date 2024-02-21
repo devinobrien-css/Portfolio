@@ -9,17 +9,17 @@ import { projects } from '../../../../data/projects';
 export const ProjectExperience = () => {
 
   return (
-    <PageSection>
-      <TopBarAnimation
-        threshold={16}
-        content={
-          <div className='-ml-48 -mt-48 hidden w-1/5 pb-24 md:block'>
-            <img src='https://access-portfolio-images.s3.amazonaws.com/Data+extraction-amico.svg' alt='project' className='w-3/4 object-cover'/>
-            <br/>
-          </div>
-        }
-      >
-        <div className="w-[95%] p-10 md:mx-auto md:p-0">
+    <TopBarAnimation
+      threshold={16}
+      content={
+        <div className='-ml-48 -mt-48 hidden w-1/5 pb-24 md:block'>
+          <img src='https://access-portfolio-images.s3.amazonaws.com/Data+extraction-amico.svg' alt='project' className='w-3/4 object-cover'/>
+          <br/>
+        </div>
+      }
+    >
+      <PageSection>
+        <div className="">
           <PageTitle title="Production Apps" />
           <SubTitle>click for further details</SubTitle>
 
@@ -29,7 +29,7 @@ export const ProjectExperience = () => {
             })} 
           </div>
         </div>
-      </TopBarAnimation>
-    </PageSection>
+      </PageSection>
+    </TopBarAnimation>
   );
 };
