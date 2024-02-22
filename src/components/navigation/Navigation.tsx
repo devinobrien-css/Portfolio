@@ -105,7 +105,7 @@ export const Navigation = () => {
               devinobrien@icloud.com
           </a>
 
-          <a href='mailto:devinobrien@icloud.com' className='text-center text-paynes-grey underline'>
+          <a href="https://access-portfolio-images.s3.amazonaws.com/Devin+P+O'Brien.pdf" download="Devin P. O'Brien" className='text-center text-paynes-grey underline' target='_blank'>
             download my resume
           </a>
 
