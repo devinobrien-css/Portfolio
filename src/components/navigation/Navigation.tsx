@@ -71,7 +71,7 @@ export const Navigation = () => {
   
   return (
     <div className={cx('fixed right-0 top-0 flex transition-all justify-end z-[1000] duration-500', {
-      'z-[1000] w-[100%] h-[100%]': show,
+      'z-[1000] w-[30%] h-[100%]': show,
       'w-[15%] h-[0%]': !show,
     })}>
       <button 

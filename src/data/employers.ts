@@ -23,14 +23,14 @@ export const employers = [
   {
     name: 'Tekniverse',
     title: 'Software Intern',
-    timeline: '2020 - 2022',
+    timeline: '2021 - 2022',
     icon: 'https://access-portfolio-images.s3.amazonaws.com/tekniverse',
     description: 'Maintained a C# ASP.NET server. Constructed self-generating unit tests for a suite of applications',
   },
   {
     name: 'Content Critical Sol.',
     title: 'Software Intern',
-    timeline: '2020 - 2022',
+    timeline: '2021 - 2022',
     icon: 'https://access-portfolio-images.s3.amazonaws.com/ccs-icon',
     description: 'Built a GUI to track their manufactoring floor\'s processing, simplifying factory operation',
   },
