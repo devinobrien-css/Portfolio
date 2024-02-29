@@ -5,7 +5,7 @@ import { OverallAd } from './Sections/Advertisement';
 import { WorkExperience } from './Sections/WorkExperience';
 import { Introduction } from './Sections/Introduction';
 import { ProjectExperience } from './Sections/ProductionApps/ProductionApps';
-import { Personality } from './Sections/Personality';
+// import { Personality } from './Sections/Personality';
 import { QuickStats } from './Sections/QuickStats/QuickStats';
 
 export const Landing = () => {
