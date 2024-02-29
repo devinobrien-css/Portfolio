@@ -31,8 +31,8 @@ export const Landing = () => {
       <div id='academic-experience' />
       <AcademicExperience />
 
-      <div id='personality' />
-      <Personality />
+      {/* <div id='personality' />
+      <Personality /> */}
 
       <SocialsAdvertisement /> 
     </div>

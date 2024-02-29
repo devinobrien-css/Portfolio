@@ -154,13 +154,13 @@ export const Navigation = () => {
           >
               Academic Experience
           </Link>
-          <Link
+          {/* <Link
             smooth={true}
             to={'personality'}
             className="cursor-pointer p-1 hover:underline md:p-2"
           >
               More than Code
-          </Link>
+          </Link> */}
             
           <hr className='my-2 border-tiffany-blue'/>
             
