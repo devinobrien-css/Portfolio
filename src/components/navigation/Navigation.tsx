@@ -100,12 +100,13 @@ const NavButton = ({ text, to, isMulti = false, children }: NavButtonProps) => {
   
 export const Navigation = () => {
   const [show, setShow] = useState(false);
+  const { setTldr } = useGlobalContext();
   
   useEffect(() => {
-    if(window.innerWidth > 908) {
-      setShow(true);
-    } else {
+    if(window.innerWidth < 908) {
       setShow(false);
+      if(!localStorage.tldr)
+        setTldr(true);
       toast.info('TLDR mode is enabled. Descriptions are shortened. Click the switch in the menu to disable.');
     }
   
@@ -114,7 +115,7 @@ export const Navigation = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  },[]);
+  },[setTldr]);
   
   return (
     <div className={cx('fixed right-0 top-0 flex transition-all justify-end z-[1000] duration-500 w-fit', {
