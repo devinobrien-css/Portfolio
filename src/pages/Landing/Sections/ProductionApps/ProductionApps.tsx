@@ -20,7 +20,7 @@ export const ProjectExperience = () => {
     >
       <PageSection>
         <PageTitle title="Production Apps" />
-        <SubTitle>click for further details</SubTitle>
+        <SubTitle>click for more details</SubTitle>
 
         <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
           {projects.map((project) => {

@@ -5,7 +5,6 @@ import { ChartEvent } from 'chart.js';
 import { useState } from 'react';
 import { SubTitle } from '../../../../components/text/SubTitle';
 import { backendFrameworks, cloudServices, databases, frontendFrameworks, infrastructure, languages, styles } from '../../../../data/skills';
-import { SideBarAnimation } from '../../../../components/animations/SideBarAnimation';
 import { RenderSection } from './RenderSection';
 import { StatsSection } from '../../../../data/constants';
 
@@ -67,55 +66,55 @@ export const QuickStats = () => {
   };
 
   return (
-    <SideBarAnimation
-      threshold={10}
-      content={
-        <div className='mt-12 hidden md:block'>
-          <img src='https://access-portfolio-images.s3.amazonaws.com/Research+paper-amico.svg' alt='project' className='-mr-16 w-full object-cover'/>
-          <br/>
-        </div>
-      }
-    > 
-      <PageSection className='w-full'>
-        <div className="my-auto w-full md:mx-auto">
-          <PageTitle title='Quick Stats' />
-          <div className='flex justify-between'>
-            <SubTitle className='hidden md:block'>
+    // <SideBarAnimation
+    //   threshold={10}
+    //   content={
+    //     <div className='mt-12 hidden md:block'>
+    //       <img src='https://access-portfolio-images.s3.amazonaws.com/Research+paper-amico.svg' alt='project' className='-mr-16 w-full object-cover'/>
+    //       <br/>
+    //     </div>
+    //   }
+    // > 
+    <PageSection className='w-full'>
+      <div className="my-auto w-full md:mx-auto">
+        <PageTitle title='Quick Stats' />
+        <div className='flex justify-between'>
+          <SubTitle className='hidden md:block'>
               Click on a section to see more details
-            </SubTitle>
-            <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block'>
+          </SubTitle>
+          <button onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')} className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block'>
                 switch to {chartType === 'bar' ? 'pie' : 'bar'}
-            </button>
-          </div>
+          </button>
+        </div>
           
-          <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
-            <Pie 
-              data={data} 
-              options={options}
-            />
+        <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
+          <Pie 
+            data={data} 
+            options={options}
+          />
+        </div>
+        <div className='lg:flex'>
+          <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
+            {
+              chartType === 'bar' ? <Bar 
+                className=' size-full cursor-pointer'
+                data={data} 
+                options={options}
+              /> : <Pie 
+                className='mx-auto mt-4 size-full max-w-[350px] cursor-pointer'
+                data={data} 
+                options={options}
+              />
+            }
           </div>
-          <div className='lg:flex'>
-            <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
-              {
-                chartType === 'bar' ? <Bar 
-                  className=' size-full cursor-pointer'
-                  data={data} 
-                  options={options}
-                /> : <Pie 
-                  className='mx-auto mt-4 size-full max-w-[350px] cursor-pointer'
-                  data={data} 
-                  options={options}
-                />
-              }
-            </div>
 
-            <div className='lg:w-1/3 lg:p-4'>
-              <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
-              <RenderSection section={section} />
-            </div>
+          <div className='lg:w-1/3 lg:p-4'>
+            <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>{section}</h2>
+            <RenderSection section={section} />
           </div>
         </div>
-      </PageSection>
-    </SideBarAnimation>
+      </div>
+    </PageSection>
+    // </SideBarAnimation>
   );
 };

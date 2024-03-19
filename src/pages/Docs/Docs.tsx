@@ -1,4 +1,5 @@
-import { Card } from '../../components/Card';
+import { Card } from '../../components/cards/Card';
+import { ProjectCard } from '../../components/cards/ProjectCard';
 import { SkillIcon } from '../../components/SkillIcon';
 import { PageSection } from '../../components/text/PageSection';
 import { PageTitle } from '../../components/text/PageTitle';
@@ -10,16 +11,15 @@ import { TitleSize } from '../../data/constants';
 
 export const Docs = () => {
   return (
-    <PageSection>
-      <div className='z-[1000] w-2/3'>
+    <PageSection className='relative w-4/5'>
+      <div className=''>
         <br/>
-        <h1 className="font-code text-6xl">Component Library</h1>
+        <h1 className="font-code text-6xl dark:text-white">Component Library</h1>
         <br/>
         <br/>
         <PageTitle title='This is a Page Title'/>
         <br/>
         <hr className='my-1'/>
-
         <br/>
         <Title size={TitleSize.XL}>This is a Title XL</Title>
         <br/>
@@ -51,7 +51,92 @@ export const Docs = () => {
           </TextSection>
         </Card>
         <br/>
-        <SkillIcon icon='logos:react' />
+        <hr className='my-1'/>
+        <br/>
+        <div className='flex gap-x-2'>
+          <SkillIcon icon='logos:react' />
+          <SkillIcon icon='logos:angular' />
+        </div>
+        <br/>
+        <hr className='my-1'/>
+        <br/>
+        <div className='flex w-full justify-center gap-x-8'>
+          <ProjectCard project={{
+            title: 'Project Title',
+            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
+            image: 'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+            tags: ['react', 'typescript'],
+            github: '',
+            demo: '',
+            skills: [
+              {
+                name: 'React',
+                icon: 'https://via.placeholder.com/150'
+              }, 
+              {
+                name: 'TypeScript',
+                icon: 'https://via.placeholder.com/150'
+              },
+              {
+                name: 'TailwindCSS',
+                icon: 'https://via.placeholder.com/150'
+              }
+            ]
+          }} />
+
+          <ProjectCard project={{
+            title: 'Project Title',
+            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
+            image: 'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+            tags: ['react', 'typescript'],
+            github: '',
+            demo: '',
+            skills: [
+              {
+                name: 'React',
+                icon: 'https://via.placeholder.com/150'
+              }, 
+              {
+                name: 'TypeScript',
+                icon: 'https://via.placeholder.com/150'
+              },
+              {
+                name: 'TailwindCSS',
+                icon: 'https://via.placeholder.com/150'
+              }
+            ]
+          }} />
+
+          <ProjectCard project={{
+            title: 'Project Title',
+            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
+            image: 'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+            tags: ['react', 'typescript'],
+            github: '',
+            demo: '',
+            skills: [
+              {
+                name: 'React',
+                icon: 'https://via.placeholder.com/150'
+              }, 
+              {
+                name: 'TypeScript',
+                icon: 'https://via.placeholder.com/150'
+              },
+              {
+                name: 'TailwindCSS',
+                icon: 'https://via.placeholder.com/150'
+              }
+            ]
+          }} />
+        </div>
+
+
+
+        <br/>
+        <br/>
+        <br/>
+
       </div>
     </PageSection>
   );

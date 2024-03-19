@@ -5,7 +5,7 @@ import { TitleSize } from '../../data/constants';
 interface TitleProps {
   size?: TitleSize;
   className?: string;
-  children?: ReactElement | string;
+  children?: ReactElement | string | ( ReactElement | string)[];
 }
 
 /**

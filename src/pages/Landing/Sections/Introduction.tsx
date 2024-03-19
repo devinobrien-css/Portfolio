@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../../../components/context/useGlobalContext';
+import { useGlobalContext } from '../../../util/context/useGlobalContext';
 import { TypewriterText } from '../../../animations/TypewriterText';
 import { PageSection } from '../../../components/text/PageSection';
 import { SubTitle } from '../../../components/text/SubTitle';
@@ -46,7 +46,7 @@ export const Introduction = () => {
         }
       </SubTitle>
 
-      <a href='mailto:devinobrien@icloud.com' className='block rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal ring-slate-50 transition-colors hover:bg-moonstone/90 active:ring-2 md:w-1/2'>
+      <a href='mailto:devinobrien@icloud.com' className='block rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal ring-blue-300 transition-colors hover:bg-moonstone/90 active:ring-2 md:w-1/2'>
             get in touch
       </a>
     </PageSection>

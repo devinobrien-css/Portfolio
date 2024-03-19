@@ -6,7 +6,7 @@ export const RenderSection = ({section}:{section:string}) => {
   switch (section) {
   case StatsSection.BackendFrameworks:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           backendFrameworks.map((framework) => {
             return (
@@ -18,7 +18,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );
   case StatsSection.FrontendFrameworks:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           frontendFrameworks.map((framework) => {
             return (
@@ -30,7 +30,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );
   case StatsSection.Styling:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           styles.map((framework) => {
             return (
@@ -42,7 +42,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );
   case StatsSection.Languages:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           languages.map((language) => {
             return (
@@ -54,7 +54,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );
   case StatsSection.Infrastructure:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           infrastructure.map((infra) => {
             return (
@@ -66,7 +66,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );  
   case StatsSection.Databases:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           databases.map((database) => {
             return (
@@ -78,7 +78,7 @@ export const RenderSection = ({section}:{section:string}) => {
     );
   case StatsSection.CloudServices:
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-1 gap-y-3">
+      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
         {
           cloudServices.map((cloud) => {
             return (

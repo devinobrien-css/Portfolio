@@ -19,13 +19,13 @@ To run the web application locally, follow these simple steps:
 1. **Clone the repository:** Start by cloning this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/devinobrien/neuroexed.git
+git clone https://github.com/devinobrien/portfolio.git
 ```
 
 2. **Install dependencies:** Navigate to the project directory and install the required dependencies using npm:
 
 ```bash
-cd neuroexed
+cd portfolio
 npm i
 ```
 

@@ -1,4 +1,4 @@
-import { GlobalContextProvider } from './components/context/GlobalContext';
+import { GlobalContextProvider } from './util/context/GlobalContext';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import App from './App';

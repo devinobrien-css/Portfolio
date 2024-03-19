@@ -1,5 +1,4 @@
 import { ToastContainer} from 'react-toastify';
-import { Navigation } from './components/navigation/Navigation';
 import { Background } from './components/Background';
 import { Logo } from './components/Logo';
 import { initializeChartConfig } from './util/chart.config';
@@ -16,7 +15,6 @@ const App = (): JSX.Element => {
     <div className='bg-gray-50 dark:bg-gray-900'>
       <Background />
       <Logo />
-      <Navigation />
       <Router />
       <ToastContainer
         newestOnTop

@@ -12,7 +12,7 @@ interface PageSectionProps {
  */
 export const PageSection = ({ className, children }: PageSectionProps): JSX.Element => {
   return (
-    <section className={'flex min-h-screen flex-col items-center p-10 md:p-0 [&>*]:my-auto'}>
+    <section className={'flex min-h-screen w-full flex-col items-center p-4 md:p-0 [&>*]:my-auto'}>
       <div className={className}>
         {children}
       </div>

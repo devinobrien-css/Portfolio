@@ -1,5 +1,5 @@
 
-import { useGlobalContext } from '../../../components/context/useGlobalContext';
+import { useGlobalContext } from '../../../util/context/useGlobalContext';
 import { PageSection } from '../../../components/text/PageSection';
 import { PageTitle } from '../../../components/text/PageTitle';
 import { SubTitle } from '../../../components/text/SubTitle';
@@ -40,7 +40,7 @@ export const AboutMe = () => {
       </div>
 
       <div className="my-auto hidden w-2/5 flex-col p-8 md:flex">
-        <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='size-90 my-auto rounded bg-white object-cover p-4 shadow'/>
+        <img src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg' alt='Devin' className='size-90 my-auto rounded bg-white object-cover p-4 shadow dark:bg-tiffany-blue'/>
       </div>
     </PageSection>
   );

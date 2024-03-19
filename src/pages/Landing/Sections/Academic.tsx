@@ -4,7 +4,7 @@ import { SubTitle } from '../../../components/text/SubTitle';
 import { Title } from '../../../components/text/Title';
 import { SideBarAnimation } from '../../../components/animations/SideBarAnimation';
 import { TitleSize } from '../../../data/constants';
-import { Card } from '../../../components/Card';
+import { Card } from '../../../components/cards/Card';
 
 export const AcademicExperience = () => {
 
