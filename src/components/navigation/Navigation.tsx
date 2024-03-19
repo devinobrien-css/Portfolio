@@ -105,9 +105,10 @@ export const Navigation = () => {
   useEffect(() => {
     if(window.innerWidth < 908) {
       setShow(false);
-      if(!localStorage.tldr)
+      if(!localStorage.tldr){
         setTldr(true);
-      toast.info('TLDR mode is enabled. Descriptions are shortened. Click the switch in the menu to disable.');
+        // toast.info('TLDR mode is enabled. Descriptions are shortened. Click the switch in the menu to disable.');
+      }
     }
   
     const handleScroll = () => {
