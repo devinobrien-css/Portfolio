@@ -13,7 +13,7 @@ export const AboutMe = () => {
     <PageSection className="flex flex-wrap gap-12 transition-all duration-300 md:flex-nowrap">
       <div className=''>
         <img src='https://access-portfolio-images.s3.amazonaws.com/memoji.jpg' alt='Devin' className=' m-auto block max-w-64 rounded-full border-b-4 border-blue-300 object-cover shadow dark:border-red-500/70 md:size-60'/>
-        <div className='-my-5 rounded border-b-2 border-r-2 border-blue-300 bg-gray-800/10 p-2 backdrop-blur dark:border-red-500/70'>
+        <div className='-my-5 rounded border-b-2 border-r-2 border-blue-300 bg-white/40 p-2 backdrop-blur dark:border-red-500/70 dark:bg-gray-800/10'>
           <p className='mb-2 text-center font-montserrat  text-xl dark:text-tiffany-blue'>
             Devin O'Brien
           </p>
