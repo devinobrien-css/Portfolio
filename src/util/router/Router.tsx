@@ -1,13 +1,19 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, useLocation } from 'react-router-dom';
 import { Landing } from '../../pages/Landing/Landing';
 import { Docs } from '../../pages/Docs/Docs';
 import { Projects } from '../../pages/Projects/Projects';
 import { Navigation } from '../../components/navigation/Navigation';
 import { Personality } from '../../pages/Personality/Personality';
+import { useEffect } from 'react';
 
 const PageWithNav = ({ children } : {
   children: React.ReactNode
 }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Navigation />
@@ -37,6 +43,7 @@ const router = createBrowserRouter([
 ]);
 
 export const Router = () => {
+  
   return (
     <RouterProvider router={router} />
   );

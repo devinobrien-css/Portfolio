@@ -11,6 +11,7 @@ initializeChartConfig();
  * @returns {JSX.Element} The main App component
  */
 const App = (): JSX.Element => {
+
   return (
     <div className='bg-gray-50 dark:bg-gray-900'>
       <Background />

@@ -139,7 +139,7 @@ export const Navigation = () => {
           'transition-all h-min overflow-clip whitespace-nowrap max-w-fit bg-white dark:bg-gray-800 max-h-[90vh] duration-500 rounded-b-lg',
           {
             'blur-sm w-0': !show,
-            'shadow w-full' : show,
+            'shadow w-full  p-4' : show,
           }
         )
       }>
