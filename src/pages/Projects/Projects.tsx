@@ -199,10 +199,10 @@ export const Projects = () => {
             </div>
           </div>
 
-          <div className='flex flex-wrap justify-evenly gap-12 p-2'>
+          <div className='flex flex-wrap justify-evenly gap-8 p-2'>
             {
               projects.filter(project => {
-                return project.tags?.some(tag => tag.includes(search)) || project.title.toLowerCase().includes(search.toLowerCase());
+                return project.tags?.some(tag => tag.toLowerCase().includes(search.toLowerCase())) || project.title.toLowerCase().includes(search.toLowerCase());
               }).filter(project => {
                 if (tags.length === 0) {
                   return true;
