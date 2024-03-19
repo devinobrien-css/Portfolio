@@ -6,12 +6,16 @@ import { Introduction } from './Sections/Introduction';
 import { ProjectExperience } from './Sections/ProductionApps/ProductionApps';
 import { WhatIDo } from './Sections/WhatIDo';
 import { Projects as LandingProjects } from './Sections/Projects';
+import { AboutMe } from './Sections/AboutMe';
 
 export const Landing = () => {
   return (
     <div className='relative mx-auto p-10 md:max-w-[65%] md:p-0'>
       <div id='introduction' />
       <Introduction />
+
+      <div id='about-me' />
+      <AboutMe />
 
       <WhatIDo />
 
@@ -21,7 +25,7 @@ export const Landing = () => {
 
       <div id='work-experience' />
       <WorkExperience />
-      
+
       <div id='project-experience' />
       <ProjectExperience />
 

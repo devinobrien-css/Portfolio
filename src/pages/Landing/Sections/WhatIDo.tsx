@@ -18,7 +18,7 @@ export const WhatIDo = () => {
           <h3 className='my-2 font-montserrat dark:text-moonstone'>Front End Development</h3>
 
           <p className=' font-lato text-sm dark:text-tiffany-blue'>
-              I build beautiful, responsive, and accessible web applications using modern front end technologies.
+              Building responsive, and accessible apps using modern front end technologies.
           </p>
         </div>
         <div className='w-full rounded bg-white p-4 shadow dark:bg-slate-800 dark:shadow-slate-800 md:w-1/2 lg:w-[22%]'>
@@ -26,31 +26,7 @@ export const WhatIDo = () => {
           <h3 className='my-2 font-montserrat dark:text-moonstone'>Back End Development</h3>
 
           <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I write scalable, efficient, and secure server-side code to power web applications.
-          </p>
-        </div>
-        <div className='w-full rounded bg-white p-4 shadow dark:bg-slate-800 dark:shadow-slate-800 md:w-1/2 lg:w-[22%]'>
-          <Icon icon="ph:devices-thin" className='size-12 text-blue-300 dark:text-red-500' />
-          <h3 className='my-2 font-montserrat dark:text-moonstone'>Mobile Development</h3>
-
-          <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I build mobile applications for iOS and Android using modern technologies.
-          </p>
-        </div>
-        <div className='w-full rounded bg-white p-4 shadow dark:bg-slate-800 dark:shadow-slate-800 md:w-1/2 lg:w-[22%]'>
-          <Icon icon="ph:tree-structure-thin" className='size-12 text-blue-300 dark:text-red-500' />
-          <h3 className='my-2 font-montserrat dark:text-moonstone'>Infrastructure</h3>
-
-          <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I design and build scalable and reliable infrastructure to support applications.
-          </p>
-        </div>
-        <div className='dark:shadow-slate-80 md:w-1/20 w-full rounded bg-white p-4 shadow dark:bg-slate-800 lg:w-[22%]'>
-          <Icon icon="ph:package-thin" className='size-12 text-blue-300 dark:text-red-500' />
-          <h3 className='my-2 font-montserrat dark:text-moonstone'>Dev Ops</h3>
-
-          <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I automate and streamline development and production workflows.
+              Writing scalable, efficient, and secure server-side code to power web applications.
           </p>
         </div>
         <div className='dark:shadow-slate-80 md:w-1/20 w-full rounded bg-white p-4 shadow dark:bg-slate-800 lg:w-[22%]'>
@@ -58,7 +34,31 @@ export const WhatIDo = () => {
           <h3 className='my-2 font-montserrat dark:text-moonstone'>Database Management</h3>
             
           <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I design and manage databases to effeciently store and retrieve data.
+              Managing databases to effeciently store and retrieve data.
+          </p>
+        </div>
+        <div className='w-full rounded bg-white p-4 shadow dark:bg-slate-800 dark:shadow-slate-800 md:w-1/2 lg:w-[22%]'>
+          <Icon icon="ph:devices-thin" className='size-12 text-blue-300 dark:text-red-500' />
+          <h3 className='my-2 font-montserrat dark:text-moonstone'>Mobile App Development</h3>
+
+          <p className='font-lato text-sm dark:text-tiffany-blue'>
+              Building mobile applications for iOS and Android using modern technologies.
+          </p>
+        </div>
+        <div className='w-full rounded bg-white p-4 shadow dark:bg-slate-800 dark:shadow-slate-800 md:w-1/2 lg:w-[22%]'>
+          <Icon icon="ph:tree-structure-thin" className='size-12 text-blue-300 dark:text-red-500' />
+          <h3 className='my-2 font-montserrat dark:text-moonstone'>Infrastructure</h3>
+
+          <p className='font-lato text-sm dark:text-tiffany-blue'>
+              Architecting scalable and reliable infrastructure to support applications.
+          </p>
+        </div>
+        <div className='dark:shadow-slate-80 md:w-1/20 w-full rounded bg-white p-4 shadow dark:bg-slate-800 lg:w-[22%]'>
+          <Icon icon="ph:package-thin" className='size-12 text-blue-300 dark:text-red-500' />
+          <h3 className='my-2 font-montserrat dark:text-moonstone'>Dev Ops</h3>
+
+          <p className='font-lato text-sm dark:text-tiffany-blue'>
+              Automating and streamlining development and production workflows.
           </p>
         </div>
         <div className='dark:shadow-slate-80 md:w-1/20 w-full rounded bg-white p-4 shadow dark:bg-slate-800 lg:w-[22%]'>
@@ -66,7 +66,7 @@ export const WhatIDo = () => {
           <h3 className='my-2 font-montserrat dark:text-moonstone'>Cloud Computing</h3>
 
           <p className='font-lato text-sm dark:text-tiffany-blue'>
-              I build and manage cloud infrastructure using modern cloud providers.
+             Orchestrating cloud infrastructure using modern cloud providers.
           </p>
         </div>
         <div className='dark:shadow-slate-80 md:w-1/20 w-full rounded bg-white p-4 shadow dark:bg-slate-800 lg:w-[22%]'>
@@ -74,7 +74,7 @@ export const WhatIDo = () => {
           <h3 className='my-2 font-montserrat dark:text-moonstone'>Security</h3>
 
           <p className='font-lato text-sm dark:text-tiffany-blue'>
-              By following best practices, I ensure that applications are secure and protected from threats.
+              Ensure that applications are secure and protected from threats.
           </p>
         </div>
       </div>

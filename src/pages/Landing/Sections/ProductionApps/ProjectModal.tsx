@@ -14,11 +14,15 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
   const { title, subtitle, description, skills, url, image_url } = project;
   
   return (  
-    <div className="fixed left-0 top-0 z-[1001] h-screen w-screen overflow-y-auto bg-gray-700/50 p-4 backdrop-blur-sm md:p-8">
-      <div
-        className='relative mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-[50%]'
+    <>
+      <div className='fixed left-0 top-0 z-[1001] h-full w-screen bg-gray-700/50 p-4 backdrop-blur-sm'
+        onClick={() => closeModal()}
       >
-        <div className='sticky top-0 z-[1001] bg-white px-8 pt-8 dark:bg-slate-800'>
+      </div>
+      <div
+        className='fixed top-10 z-[1002] mx-auto h-[80vh] w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:left-1/4 md:w-1/2'
+      >
+        <div className='sticky top-0  bg-white px-8 pt-8 dark:bg-slate-800'>
           <div>
             <div className='flex justify-between'>
               <Title size={TitleSize.LG} className='my-auto'>{title}</Title>
@@ -41,9 +45,6 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
           {
             image_url && (
               <div>
-                <Title size={TitleSize.MD}>
-                  Website Link
-                </Title>
                 <a 
                   className="block justify-center overflow-hidden py-4 transition-all hover:scale-105 md:w-1/2"
                   href={url}
@@ -64,22 +65,22 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
             <Title size={TitleSize.MD}>
               Skills Required
             </Title>
-            {skills?.map((skill) => {
-              return (
-                <div key={skill.title} className="mx-auto my-2 flex gap-2">
-                  <div>
-                    <Icon icon={skill.icon} className="size-20 rounded bg-white p-1 shadow"/>
-                  </div>
-                  <div>
-                    <p className="my-auto font-montserrat text-xl dark:text-white ">{skill.title}</p>
-                    <p className="my-auto font-montserrat text-sm dark:text-slate-300 ">{skill.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className='flex flex-wrap justify-evenly gap-2 py-2'>
+              {skills?.map((skill) => {
+                return (
+                  <span 
+                    key={skill.title} 
+                    className='flex w-fit flex-col rounded-lg  px-2 py-1 font-lato text-xs dark:text-moonstone'
+                  >
+                    <Icon icon={skill.icon} className='mx-auto size-6'/>
+                    {skill.title}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
