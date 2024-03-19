@@ -7,7 +7,7 @@ import { TitleSize } from '../../../data/constants';
 export const Projects = () => {
   return (
     <div className='my-32 min-h-screen'>
-      <p className='font-montserrat text-red-500/50'>
+      <p className='font-montserrat text-blue-300 dark:text-red-500/50'>
           projects and applications
       </p>
       <Title size={TitleSize.XL} className='mb-4 md:mb-12'>
