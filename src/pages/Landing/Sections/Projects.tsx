@@ -95,7 +95,7 @@ export const Projects = () => {
 
       <a 
         href='/projects'
-        className='mx-auto mt-12 block w-fit rounded bg-white p-2 font-montserrat text-lg text-charcoal ring-blue-300 dark:bg-gray-800 dark:text-tiffany-blue dark:active:ring-2'
+        className='mx-auto mt-12 block w-fit rounded bg-white p-2 font-montserrat text-lg text-charcoal ring-blue-300 hover:bg-gray-100 active:ring-2 dark:bg-gray-800 dark:text-tiffany-blue'
       >
         See More Projects
       </a>
