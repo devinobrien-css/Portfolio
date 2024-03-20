@@ -1,12 +1,11 @@
 import { SubTitle } from '../../../../components/text/SubTitle';
 import { Title } from '../../../../components/text/Title';
-import { SkillIconSize, TitleSize } from '../../../../data/constants';
+import { TitleSize } from '../../../../data/constants';
 import { useState } from 'react';
 import { useGlobalContext } from '../../../../util/context/useGlobalContext';
 import { ProjectModal } from './ProjectModal';
 import { Card } from '../../../../components/cards/Card';
 import { TextSection } from '../../../../components/text/TextSection';
-import { SkillIcon } from '../../../../components/SkillIcon';
 
 export interface Project {
   title: string;
@@ -40,7 +39,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           closeModal={() => setIsModalOpen(false)}
         />
       )}
-      <Card>
+      <Card className='!bg-gray-800 ring-blue-300 transition-all hover:scale-105 active:ring-2'>
         <button
           className="size-full text-left transition-all"
           onClick={() => setIsModalOpen(!isModalOpen)}
@@ -64,19 +63,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             <div className="flex flex-wrap gap-2 border-t pt-4 md:flex-nowrap">
               {skills?.map((skill, idx) => {
                 return (
-                  idx < 4 &&
-                  <SkillIcon key={skill.title} icon={skill.icon} skill={skill.title} size={SkillIconSize.SM} />
+                  idx < 4 && (
+                    <span key={skill.title} className='rounded-lg bg-slate-200 px-2 py-1 font-lato text-xs dark:bg-slate-700 dark:text-moonstone'>
+                      {skill.title}
+                    </span>
+                  )
                 );
               })}
-              {
-                (skills??[]).length > 4 && (
-                  <div className={'relative mx-auto flex size-14 flex-col rounded bg-gray-50 p-2 shadow dark:bg-tiffany-blue'}>
-                    <span className='my-auto text-center font-code'>
-                      +{(skills??[]).length - 4}
-                    </span>
-                  </div>
-                )
-              }
             </div>
           </div>
         </button>

@@ -1,7 +1,6 @@
 import { useGlobalContext } from '../../util/context/useGlobalContext';
 import cx from 'classnames';
 import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import { Link as ScrollLink } from 'react-scroll';
 import { Icon } from '@iconify/react';
 import { useLocation, useNavigate } from 'react-router-dom';
