@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ProjectCard } from '../../../components/cards/ProjectCard';
 import { Title } from '../../../components/text/Title';
 import { TitleSize } from '../../../data/constants';
+import { projects } from '../../../data/github_projects';
 
 
 export const Projects = () => {
@@ -68,29 +69,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          project={{
-            title: 'Go Server Sample',
-            image: 'https://access-portfolio-images.s3.amazonaws.com/go-bg.png',
-            description: 'A RESTful server example using Go, built to learn best practices of the language. This project uses a PostgreSQL instance that is built locally using Docker.',
-            github: 'https://github.com/devinobrien-css/go-server-sample',
-            link: 'link',
-            tags: ['Go', 'Rest', 'PostgreSQL', 'Docker'],
-
-            skills: [
-              {
-                name: 'Go',
-                icon: 'https://via.placeholder.com/150'
-              }, 
-              {
-                name: 'PostgreSQL',
-                icon: 'https://via.placeholder.com/150'
-              },
-              {
-                name: 'Docker',
-                icon: 'https://via.placeholder.com/150'
-              }
-            ]
-          }}
+          project={projects[2]}
         />
       </div>
 
