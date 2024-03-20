@@ -18,10 +18,10 @@ export const AboutMe = () => {
             Devin O'Brien
           </p>
           <div className='flex justify-center gap-2'>
-            <a href='https://www.linkedin.com/in/devin-o-brien/' target='_blank' rel='noreferrer noopener' className='rounded-full bg-slate-300 p-1 transition-all hover:scale-110'>
+            <a href='https://www.linkedin.com/in/obrien-devin/' target='_blank' rel='noreferrer noopener' className='rounded-full bg-slate-300 p-1 transition-all hover:scale-110'>
               <Icon icon='line-md:linkedin' className='size-4'/>
             </a>
-            <a href='https://www.github.com/devinobrien' target='_blank' rel='noreferrer noopener' className='rounded-full bg-slate-300 p-1 transition-all hover:scale-110'>
+            <a href='https://www.github.com/devinobrien-css' target='_blank' rel='noreferrer noopener' className='rounded-full bg-slate-300 p-1 transition-all hover:scale-110'>
               <Icon icon='line-md:github-twotone' className='size-4'/>
             </a>
             <a href='https://www.instagram.com/devinobrien/' target='_blank' rel='noreferrer noopener' className='rounded-full bg-slate-300 p-1 transition-all hover:scale-110'>
