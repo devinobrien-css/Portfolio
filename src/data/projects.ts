@@ -143,7 +143,7 @@ export const projects: Project[] = [
   },
   {
     title: 'PlayARTI',
-    subtitle: 'An kid-accessible image generator made for AugX',
+    subtitle: 'A kid-accessible image generator made for AugX',
     url: 'https://playarti.com',
     image_url: 'https://access-portfolio-images.s3.amazonaws.com/playarti',
     content: 'This production application hits the midjourney API to allow kids to create custom generated images through emoji clicks.',
