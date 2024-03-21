@@ -21,7 +21,7 @@ export const Projects = () => {
             title: 'Neuroexed',
             image: 'https://access-portfolio-images.s3.amazonaws.com/neuroexed-bg.png',
             description: 'An organizational website for a neuroscience lab. Built with React and Typescript, utilizes a Python API and other AWS services.',
-            link: 'link',
+            link: 'neuroexed',
             github: 'https://github.com/devinobrien-css/neuroexed',
             demo:'https://neuroexed.com',
             tags: ['React', 'Typescript', 'Tailwind', 'DynamoDB', 'AWS', 'Netlify', 'Javascript'],
@@ -49,8 +49,8 @@ export const Projects = () => {
             description: 'A marketing website for a group of researchers and their publication. Built with React, Typescript and Tailwind. CICD is managed through Netlify',  
             github: 'https://github.com/devinobrien-css/diversity-at-college',
             demo: 'https://diversityatcollege.com',
-            link: 'link',
             tags: ['React', 'Typescript', 'Javascript', 'Tailwind', 'Netlify', 'Javascript'],
+            link: 'diversity',
             skills: [
               {
                 name: 'React',
@@ -69,7 +69,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          project={projects[2]}
+          project={{...projects[2], link: 'svelte'}}
         />
       </div>
 

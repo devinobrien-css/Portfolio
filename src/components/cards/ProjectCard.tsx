@@ -13,10 +13,17 @@ export const ProjectCard = ({
   const { title, description, image, github, demo, skills } = project;
 
   return (
-    <div
+    <button
       className={cx('md:w-[30%] sm:max-w-[300px] w-full overflow-clip shadow rounded-2xl dark:bg-gray-800 bg-white min-h-full transition-all', className, {
         'active:ring-2 ring-blue-300 hover:scale-105': project.link,
-      })}>
+      })}
+      onClick={() => {
+        if (project.link) {
+          window.open(`/projects?search=${project.link}`, '_blank');
+        }
+      
+      }}  
+    >
       <img 
         src={image} 
         alt={title} 
@@ -71,7 +78,7 @@ export const ProjectCard = ({
           }
         </div>
       </div>
-    </div>
+    </button>
 
   );
 };

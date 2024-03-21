@@ -58,13 +58,10 @@ export const Projects = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    if (queryParams.get('goto') === 'all-projects') {
-      scroller.scrollTo('all-projects', {
-        duration: 1500,
-        delay: 100,
-        smooth: true,
-        offset: -10,
-      });
+    if(queryParams.get('search')) {
+      console.log('search');
+      setSearch(queryParams.get('search') as string);
+      queryParams.delete('search');
     }
   } ,[location.search]);
 
