@@ -183,7 +183,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Printing Mgmt. Portal',
-    subtitle: 'Tracked shipping and handling of orders for Content Critical Solutions',
+    subtitle: 'A shipping and handling portal for Content Critical Solutions',
     url: 'https://www.contentcritical.com/',
     image_url: 'https://access-portfolio-images.s3.amazonaws.com/ccs',
     content: 'Provided full management for outgoing print jobs from cutting the paper to when it ships. This UI and API managed the 2021 NYS Ballot print job.',
