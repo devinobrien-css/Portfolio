@@ -39,7 +39,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           closeModal={() => setIsModalOpen(false)}
         />
       )}
-      <Card className='!bg-gray-800 ring-blue-300 transition-all hover:scale-105 active:ring-2'>
+      <Card className='ring-blue-300 transition-all hover:scale-105 active:ring-2 dark:!bg-gray-800'>
         <button
           className="size-full text-left transition-all"
           onClick={() => setIsModalOpen(!isModalOpen)}
