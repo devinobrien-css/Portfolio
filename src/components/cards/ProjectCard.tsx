@@ -27,11 +27,11 @@ export const ProjectCard = ({
       <img 
         src={image} 
         alt={title} 
-        className='h-32 w-full object-cover sm:h-40'
+        className='h-32 w-full object-cover shadow sm:h-40'
       />
 
       <div className='flex flex-col justify-between'>
-        <div className='flex flex-col gap-2 p-2'>
+        <div className='flex flex-col gap-2 p-2 text-left'>
           <h3 className='font-montserrat text-xl dark:text-tiffany-blue'>{title}</h3>
           <p className='min-h-24 font-lato text-sm dark:text-moonstone' >{description}</p>
           <div className='flex gap-2'>
