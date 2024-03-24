@@ -18,7 +18,7 @@ export const GlobalContext = createContext({
 export const GlobalContextProvider = ({ children }: {
     children: React.ReactNode;
 }) => {
-  const [tldr, setTldr] = useState(false);
+  const [tldr, setTldr] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
@@ -33,9 +33,7 @@ export const GlobalContextProvider = ({ children }: {
 
     if(localStorage.tldr === 'true'){
       setTldr(true);
-    } else {
-      setTldr(false);
-    }
+    } 
   }, []);
 
   const toggleDarkMode = (value: boolean) => {
