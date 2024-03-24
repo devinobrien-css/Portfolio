@@ -10,7 +10,6 @@ import { backend_tags, cloud_tags, database_tags, design_tags, devops_tags, fron
 import { projects } from '../../data/github_projects';
 import { QuickStats } from './Sections/QuickStats/QuickStats';
 import { ProjectCard } from '../../components/cards/ProjectCard';
-import { scroller } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 
 
@@ -59,7 +58,6 @@ export const Projects = () => {
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     if(queryParams.get('search')) {
-      console.log('search');
       setSearch(queryParams.get('search') as string);
       queryParams.delete('search');
     }
