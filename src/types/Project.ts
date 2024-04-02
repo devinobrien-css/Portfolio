@@ -35,7 +35,7 @@ export interface GithubProject {
     tags: string[];
 
     link?: string;
-    github: string;
+    github?: string;
     demo?: string;
 
     skills: Skill[];

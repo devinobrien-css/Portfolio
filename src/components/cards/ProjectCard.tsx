@@ -19,7 +19,7 @@ export const ProjectCard = ({
       })}
       onClick={() => {
         if (project.link) {
-          window.open(`/projects?search=${project.link}`, '_blank');
+          window.open(`/projects?search=${project.link}`, '_self','noopener noreferrer');
         }
       
       }}  

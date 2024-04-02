@@ -143,7 +143,7 @@ export const projects: Project[] = [
   },
   {
     title: 'PlayARTI',
-    subtitle: 'A kid-accessible image generator made for AugX',
+    subtitle: 'An kid-accessible image generator made for AugX',
     url: 'https://playarti.com',
     image_url: 'https://access-portfolio-images.s3.amazonaws.com/playarti',
     content: 'This production application hits the midjourney API to allow kids to create custom generated images through emoji clicks.',
@@ -183,7 +183,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Printing Mgmt. Portal',
-    subtitle: 'A shipping and handling portal for Content Critical Solutions',
+    subtitle: 'Tracked shipping and handling of orders for Content Critical Solutions',
     url: 'https://www.contentcritical.com/',
     image_url: 'https://access-portfolio-images.s3.amazonaws.com/ccs',
     content: 'Provided full management for outgoing print jobs from cutting the paper to when it ships. This UI and API managed the 2021 NYS Ballot print job.',

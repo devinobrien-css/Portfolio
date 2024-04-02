@@ -45,7 +45,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'A sample project using Angular and Tailwind providing a simple UI over a RESTful server',
-    link: '',
+    link: 'Angular Sample',
     tags: ['Angular', 'Typescript', 'Tailwind', 'Javascript']
   },
   {
@@ -68,7 +68,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'An lab website built with React and Typescript, utilizes a Python API and other AWS services.',
-    link: '',
+    link: 'Neuroexed',
     tags: ['React', 'Typescript', 'Tailwind', 'DynamoDB', 'AWS', 'Netlify', 'Javascript']
   },
   {
@@ -91,7 +91,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'A sample project using Svelte and Tailwind providing a simple UI over a RESTful server',
-    link: '',
+    link: 'Svelte Sample',
     tags: ['Svelte', 'Typescript', 'Tailwind', 'Javascript']
   },
   {
@@ -114,7 +114,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'An object detection project using Python and OpenCV. This project uses a pre-trained model to detect objects in an image.',
-    link: '',
+    link: 'Object Detect',
     tags: ['Python', 'OpenCV']
   },
   {
@@ -145,7 +145,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'An AWS CDK example to deploy a serverless infrastructure with Lambda, API Gateway, RDS, and S3.',
-    link: '',
+    link: 'CDK Infra',
     tags: ['AWS', 'CDK']
   
   },
@@ -173,7 +173,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'A RESTful server example using Python and Flask. This project uses a PostgreSQL instance that is built locally using Docker.',
-    link: '',
+    link: 'Flask Server',
     tags: ['Python', 'Flask', 'Rest', 'PostgreSQL', 'Docker']
   },
   {
@@ -200,7 +200,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A RESTful server example using Go',
-    link: '',
+    link: 'Go Server',
     tags: ['Go', 'Rest', 'PostgreSQL', 'Docker']
   },
   {
@@ -227,7 +227,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A simple RESTful C# server example',
-    link: '',
+    link: 'C# Server',
     tags: ['C#', 'Rest', 'API', 'SQL Server'], 
   },
   {
@@ -254,7 +254,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A simple project to test the use of the Spotify API',
-    link: '',
+    link: 'Spotify',
     tags: ['Rest', 'API', 'Typescript', 'React', 'Netlify', 'Javascript']
   },
   {
@@ -281,7 +281,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A website using react and Typescript',  
-    link: '',
+    link: 'Diversity',
     tags: ['React', 'Typescript', 'Javascript', 'Tailwind', 'Netlify', 'Javascript']
   },
   {
@@ -312,7 +312,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'A sample project using AWS Amplify and Geo to render maps in React',
-    link: '',
+    link: 'Amplify Geo',
     tags: ['AWS', 'Amplify', 'Geo', 'Maps', 'React', 'Typescript', 'Javascript']
   },
   {
@@ -331,7 +331,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A docker-compose example initializing a Postgres instance',
-    link: '',
+    link: 'Docker Postgres',
     tags: ['Docker', 'PostgreSQL']
   },
   {
@@ -350,7 +350,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A docker-compose example initializing a SQL server instance',
-    link: '',
+    link: 'Docker SQL',
     tags: ['Docker', 'SQL Server']
   },
   {
@@ -377,7 +377,7 @@ export const projects: GithubProject[] = [
       },
     ],
     description: 'GraphQL over a Postgres instance with Node, Express, Nexus/Prisma',
-    link: '',
+    link: 'Query Builder',
     tags: ['GraphQL', 'Node', 'Express', 'PostgreSQL', 'Typescript', 'Javascript']
   },
   {
@@ -404,7 +404,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A React client for the GraphQL Query Builder Server',
-    link:'',
+    link:'Query Builder',
     tags: ['GraphQL', 'React', 'Typescript', 'Javascript', 'Apollo Server']
   },
   {
@@ -427,7 +427,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A simple logistic regression model using Python',
-    link: '',
+    link: 'Logistic',
     tags: ['Python', 'Jupyter', 'Numpy', 'Pandas']
   },
   {
@@ -450,7 +450,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A simple PCA example using Python',
-    link: '',
+    link: 'PCA',
     tags: ['Python', 'Jupyter', 'Numpy', 'Pandas']
   },
   {
@@ -469,7 +469,7 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A multitenant TCP client & server example using C',
-    link: '',
+    link: 'TCP',
     tags: ['C', 'TCP']
   },
   {
@@ -488,8 +488,36 @@ export const projects: GithubProject[] = [
       }
     ],
     description: 'A simple UDP client & server using C',
-    link: '',
+    link: 'UDP',
     tags: ['C', 'UDP']
+  },
+  {
+    title: 'PlayARTi',
+    image: 'https://access-portfolio-images.s3.amazonaws.com/vue.png',
+    demo: 'https://playarti.com/',
+    skills:[
+      {
+        name: 'Vue', 
+        icon: ''
+      },
+      {
+        name: 'Typescript', 
+        icon: ''
+      },
+      {
+        name: 'Quasar', 
+        icon: ''
+      },
+      {
+        name: 'AWS', 
+        icon: ''
+      }
+    ],
+    description: 'A proof of concept AI powered art generator for kids',
+    link: 'Playarti',
+    tags: [
+      'Vue', 'Typescript', 'Quasar', 'AWS', 'Javascript', 'Typescript'
+    ]
   },
 ];
   
