@@ -8,7 +8,12 @@ interface GlobalContextProps {
 }
 
 // Create a context for your variable
-export const GlobalContext = createContext<GlobalContextProps>({});
+export const GlobalContext = createContext<GlobalContextProps>({
+  tldr: false,
+  setTldr: () => null,
+  darkMode: false,
+  setDarkMode: () => null,
+});
 
 // Provider component to wrap your app and manage the variable
 export const GlobalContextProvider = ({

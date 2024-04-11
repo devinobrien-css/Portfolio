@@ -18,8 +18,8 @@ export const ProjectModal = ({ project, closeModal }: ProjectModalProps) => {
         className='fixed left-0 top-0 z-[1001] h-full w-screen bg-gray-700/50 p-4 backdrop-blur-sm'
         onClick={() => closeModal()}
       ></button>
-      <div className='fixed top-0 z-[1002] mx-auto h-fit max-h-screen w-full overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:left-14 md:top-[10%] md:w-1/2'>
-        <div className='sticky top-0  bg-white px-8 pt-8 dark:bg-slate-800'>
+      <div className='fixed  left-1/2 top-1/2 z-[1002] mx-auto h-fit max-h-screen w-full -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg bg-white shadow-lg dark:bg-slate-800 md:w-1/2'>
+        <div className='sticky top-0 bg-white px-8 pt-8 dark:bg-slate-800'>
           <div>
             <div className='flex justify-between'>
               <Title size={TitleSize.LG} className='my-auto'>

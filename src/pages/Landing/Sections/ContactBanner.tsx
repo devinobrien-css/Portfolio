@@ -1,8 +1,9 @@
 import { Icon } from '@iconify/react';
+import { PageSection } from '../../../components/text/PageSection';
 
 export const ContactBanner = () => {
   return (
-    <div className='relative my-64 justify-between overflow-hidden rounded bg-slate-200 px-6 py-4 dark:bg-slate-700 md:flex'>
+    <PageSection className='relative my-64 justify-between overflow-hidden rounded bg-slate-200 px-6 py-4 dark:bg-slate-700 md:flex'>
       <h2 className='z-10 py-4 font-montserrat text-4xl font-bold dark:text-white md:text-center'>
         Get in touch
       </h2>
@@ -94,6 +95,6 @@ export const ContactBanner = () => {
           strokeWidth='1.5'
         />
       </svg>
-    </div>
+    </PageSection>
   );
 };
