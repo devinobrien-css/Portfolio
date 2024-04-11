@@ -1,0 +1,14 @@
+echo "\n-------------------"
+echo "LINTING"
+
+npm run precommit-lint
+
+echo "\n-------------------"
+echo "FORMATTING"
+
+npm run precommit-prettier
+
+echo "\n-------------------"
+echo "UNIT TESTING"
+
+npm run precommit-test

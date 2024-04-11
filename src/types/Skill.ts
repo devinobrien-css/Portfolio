@@ -1,6 +1,4 @@
-
-
 export interface Skill {
-    name: string;
-    icon: string;
+  name: string;
+  icon: string;
 }

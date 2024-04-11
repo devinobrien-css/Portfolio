@@ -1,4 +1,4 @@
-import { Skill } from './Skill';
+import { Skill } from "./Skill";
 
 /**
  * Type for a project that is hosted on GitHub.
@@ -10,33 +10,33 @@ import { Skill } from './Skill';
  * @property {string} github - The URL of the project's GitHub repository.
  * @property {string} demo - The URL of the project's demo.
  * @property {Skill[]} skills - An array of skills that were used in the project.
- * @example 
+ * @example
  *  {
  *    title: 'Angular Sample',
  *    image: 'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
  *    description: 'A sample project using Angular',
- * 
+ *
  *    tags: ['Angular', 'Typescript', 'Tailwind', 'Javascript']
- *    
+ *
  *    link: 'projects?search=angular-sample',
  *    github: 'https://github.com/devinobrien-css/angular-sample',
  *    demo: 'https://angular-sample.netlify.app',
- * 
+ *
  *    skills: [
  *      { name: 'Angular', icon: 'https://access-portfolio-images.s3.amazonaws.com/angular-icon.png' },
  *    ]
  *  }
  */
 export interface GithubProject {
-    title: string;
-    image: string;
-    description: string;
-    
-    tags: string[];
+  title: string;
+  image: string;
+  description: string;
 
-    link?: string;
-    github?: string;
-    demo?: string;
+  tags: string[];
 
-    skills: Skill[];
+  link?: string;
+  github?: string;
+  demo?: string;
+
+  skills: Skill[];
 }

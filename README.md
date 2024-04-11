@@ -45,6 +45,16 @@ The application will now be accessible at `http://localhost:5173`.
 
 ## Helpful Tips
 
+### Precommit Checks
+
+```bash
+    npx husky init
+```
+
+Move the file `husky-sample/pre-commit` inside of the `.husky` directory.
+
+By moving the pre-commit file inside the .husky directory, we have now configured your pre-commit hooks. This will prevent unlinted/untested code from being commited
+
 ### Auto Formatting Code
 
 This application uses `prettier` and `eslint` to maintain the formatting and syntax of the codebase. In order to utilize these features without console commands, install `eslint`, `prettier`, and `eslint prettier` extensions on VSCode.

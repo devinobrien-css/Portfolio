@@ -1,12 +1,11 @@
-import { PageSection } from '../../../components/text/PageSection';
-import { PageTitle } from '../../../components/text/PageTitle';
-import { SubTitle } from '../../../components/text/SubTitle';
-import { Title } from '../../../components/text/Title';
-import { TitleSize } from '../../../data/constants';
-import { Card } from '../../../components/cards/Card';
+import { PageSection } from "../../../components/text/PageSection";
+import { PageTitle } from "../../../components/text/PageTitle";
+import { SubTitle } from "../../../components/text/SubTitle";
+import { Title } from "../../../components/text/Title";
+import { TitleSize } from "../../../data/constants";
+import { Card } from "../../../components/cards/Card";
 
 export const AcademicExperience = () => {
-
   return (
     // <SideBarAnimation
     //   threshold={15}
@@ -24,64 +23,82 @@ export const AcademicExperience = () => {
     //       </svg>
     //     </div>
     //   }
-    // > 
+    // >
     <PageSection>
       <div className="mt-4 w-full p-3 transition-all duration-300 md:my-auto">
         <PageTitle title="Academics" />
         <br />
         <div className="flex flex-wrap justify-between gap-y-8">
-          <Card className='!dark:hover:bg-slate-800 dark:!bg-gray-800'>
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Black_White.png' alt='ualbany' className='mx-auto  w-full rounded p-2 dark:hidden'/>
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto hidden w-full rounded p-2 dark:block'/>
-            <hr className="my-2"/>
-              
+          <Card className="!dark:hover:bg-slate-800 dark:!bg-gray-800">
             <Title size={TitleSize.LG}>Master's Degree</Title>
-            <SubTitle className='italic'>
-                State University at Albany, SUNY - 2024
+            <SubTitle className="italic">
+              State University at Albany, SUNY - 2024
             </SubTitle>
-            <hr className="my-2"/>
+            <hr className="my-2" />
             <div className="flex w-full flex-wrap p-2">
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Data Structures
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Data Structures
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Discrete Math
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Discrete Math
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Databases
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Databases
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Artificial Intelligence
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Artificial Intelligence
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Machine Learning
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Machine Learning
               </Title>
             </div>
           </Card>
 
-          <div
-            className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-gray-800  dark:hover:bg-slate-800 md:w-[48%]"
-          >
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Reversal_Gold_White.png' alt='ualbany' className='mx-auto hidden w-full rounded p-2 dark:block'/>
-            <img src='https://access-portfolio-images.s3.amazonaws.com/UAlbanyMark_F_S03B_HEX_Black_White.png' alt='ualbany' className='mx-auto  w-full rounded p-2 dark:hidden'/>
-            <hr className="my-2"/>
+          <div className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-gray-800  dark:hover:bg-slate-800 md:w-[48%]">
             <Title size={TitleSize.LG}>Bachelor's Degree</Title>
-            <SubTitle className='italic'>
-                State University at Albany, SUNY - 2022
+            <SubTitle className="italic">
+              State University at Albany, SUNY - 2022
             </SubTitle>
-            <hr className="my-2"/>
+            <hr className="my-2" />
             <div className="flex w-full flex-wrap justify-evenly p-2">
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Operating Systems
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Operating Systems
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Multimedia Programming
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Multimedia Programming
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Motion Detection
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Motion Detection
               </Title>
-              <Title size={TitleSize.SM} className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center">
-                  Hardware Design
+              <Title
+                size={TitleSize.SM}
+                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+              >
+                Hardware Design
               </Title>
             </div>
           </div>
