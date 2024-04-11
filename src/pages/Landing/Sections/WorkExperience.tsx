@@ -30,28 +30,28 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
         'border-paynes-grey bg-gray-100 dark:bg-slate-900': !isOpen,
       })}
     >
-      <div className="flex flex-wrap-reverse justify-end sm:justify-between">
-        <Title size={TitleSize.MD} className="flex gap-2">
+      <div className='flex flex-wrap-reverse justify-end sm:justify-between'>
+        <Title size={TitleSize.MD} className='flex gap-2'>
           <img
             src={icon}
             alt={name}
-            className="my-auto size-8 rounded-full object-cover"
+            className='my-auto size-8 rounded-full object-cover'
           />
           {title} @ {name}
         </Title>
 
-        <div className="flex gap-2">
-          <SubTitle className="my-auto">{timeline}</SubTitle>
+        <div className='flex gap-2'>
+          <SubTitle className='my-auto'>{timeline}</SubTitle>
 
           <button
             aria-label={`Toggle Work Experience for ${name}`}
             onClick={() => setIsOpen(!isOpen)}
-            className="text-slate-400 transition-all hover:scale-125 dark:text-white"
+            className='text-slate-400 transition-all hover:scale-125 dark:text-white'
           >
             {isOpen ? (
-              <Icon icon="akar-icons:minus" className="my-auto size-6" />
+              <Icon icon='akar-icons:minus' className='my-auto size-6' />
             ) : (
-              <Icon icon="akar-icons:plus" className="my-auto size-6" />
+              <Icon icon='akar-icons:plus' className='my-auto size-6' />
             )}
           </button>
         </div>
@@ -71,40 +71,40 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
           },
         )}
       >
-        <div className="sticky top-0 flex gap-8 bg-white dark:bg-slate-800">
-          <div className="flex gap-2">
-            <Icon icon="ph:map-pin" className="size-6 dark:text-white" />
-            <span className="font-monterrat text-md font-light dark:text-white">
+        <div className='sticky top-0 flex gap-8 bg-white dark:bg-slate-800'>
+          <div className='flex gap-2'>
+            <Icon icon='ph:map-pin' className='size-6 dark:text-white' />
+            <span className='font-monterrat text-md font-light dark:text-white'>
               {location}
             </span>
           </div>
-          <div className="flex gap-2">
-            <Icon icon="ph:link" className="size-6 dark:text-white" />
+          <div className='flex gap-2'>
+            <Icon icon='ph:link' className='size-6 dark:text-white' />
             <a
               href={employer.name}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-md font-lato font-light underline dark:text-white"
+              target='_blank'
+              rel='noreferrer noopener'
+              className='text-md font-lato font-light underline dark:text-white'
             >
               {shortName}
             </a>
           </div>
         </div>
 
-        <div className="flex h-full flex-col justify-between">
-          <div className="flex flex-col gap-2">
+        <div className='flex h-full flex-col justify-between'>
+          <div className='flex flex-col gap-2'>
             {employer.bulletPoints?.map((point) => (
               <p
                 key={point}
-                className="text-md flex gap-2 font-montserrat text-paynes-grey dark:text-moonstone"
+                className='text-md flex gap-2 font-montserrat text-paynes-grey dark:text-moonstone'
               >
-                <span className="-mt-1 text-2xl">•</span>{' '}
-                <span className="my-auto">{point}</span>
+                <span className='-mt-1 text-2xl'>•</span>{' '}
+                <span className='my-auto'>{point}</span>
               </p>
             ))}
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className='mt-4 flex flex-wrap gap-2'>
             {employer.skills?.map((skill) => (
               <Pill key={skill.name}>{skill.name}</Pill>
             ))}
@@ -117,18 +117,18 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
 
 export const WorkExperience = (): JSX.Element => {
   return (
-    <div className="my-16 min-h-screen md:my-0">
-      <div className="mt-4 w-full transition-all duration-300 md:my-auto">
+    <div className='my-16 min-h-screen md:my-0'>
+      <div className='mt-4 w-full transition-all duration-300 md:my-auto'>
         <Title
           size={TitleSize.LG}
-          className="!font-bebas !text-5xl md:!text-6xl"
+          className='!font-bebas !text-5xl md:!text-6xl'
         >
           Where I've Worked
         </Title>
-        <PageTitle title="Past Employers" />
+        <PageTitle title='Past Employers' />
         <br />
         <br />
-        <div className="flex flex-col gap-4">
+        <div className='flex flex-col gap-4'>
           {employers.map((employer, index) => {
             return (
               <WorkCard

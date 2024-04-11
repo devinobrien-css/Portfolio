@@ -16,10 +16,10 @@ export const ProjectExperience = () => {
     //   }
     // >
     <PageSection>
-      <PageTitle title="Production Apps" />
+      <PageTitle title='Production Apps' />
       <SubTitle>click for more details</SubTitle>
 
-      <div className="flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4">
+      <div className='flex flex-wrap justify-evenly gap-x-4 gap-y-6 py-4'>
         {projects.map((project) => {
           return <ProjectCard project={project} key={project.content} />;
         })}

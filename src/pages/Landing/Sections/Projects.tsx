@@ -6,15 +6,15 @@ import { projects } from '../../../data/github_projects';
 
 export const Projects = () => {
   return (
-    <div className="my-32 min-h-screen">
-      <p className="font-montserrat text-blue-500 dark:text-red-500">
+    <div className='my-32 min-h-screen'>
+      <p className='font-montserrat text-blue-500 dark:text-red-500'>
         projects and applications
       </p>
-      <Title size={TitleSize.XL} className="mb-4 md:mb-12">
+      <Title size={TitleSize.XL} className='mb-4 md:mb-12'>
         What I've Built
       </Title>
 
-      <div className="flex flex-wrap gap-4 md:flex-nowrap md:justify-between">
+      <div className='flex flex-wrap gap-4 md:flex-nowrap md:justify-between'>
         <ProjectCard
           project={{
             title: 'Neuroexed',
@@ -90,8 +90,8 @@ export const Projects = () => {
       </div>
 
       <Link
-        to="/projects"
-        className="mx-auto mt-12 block w-fit rounded bg-white p-2 font-montserrat text-lg text-charcoal ring-blue-300 hover:bg-gray-100 active:ring-2 dark:bg-gray-800 dark:text-tiffany-blue"
+        to='/projects'
+        className='mx-auto mt-12 block w-fit rounded bg-white p-2 font-montserrat text-lg text-charcoal ring-blue-300 hover:bg-gray-100 active:ring-2 dark:bg-gray-800 dark:text-tiffany-blue'
       >
         See More Projects
       </Link>

@@ -44,15 +44,15 @@ export const OverallAd = () => {
   const currentTab = advertisement[tab];
 
   return (
-    <PageSection className="">
-      <div className="-ml-8 w-full rounded-l py-8 font-montserrat dark:bg-slate-800">
+    <PageSection className=''>
+      <div className='-ml-8 w-full rounded-l py-8 font-montserrat dark:bg-slate-800'>
         <Title size={TitleSize.LG}>Right Tool, Right Job</Title>
         <Title size={TitleSize.MD}>
           Mastering Cloud Infra, Frontend, API, and DB Development Expertise
         </Title>
       </div>
-      <div className="my-auto md:flex">
-        <div className="relative mx-auto h-fit w-full md:mx-0 md:w-1/3">
+      <div className='my-auto md:flex'>
+        <div className='relative mx-auto h-fit w-full md:mx-0 md:w-1/3'>
           <div
             className={cx(
               'absolute left-0 z-10 h-1/4 w-max border-l-2 border-gray-800 transition-all dark:border-light-cyan',
@@ -72,7 +72,7 @@ export const OverallAd = () => {
 
           {tabData.map((t) => {
             return (
-              <div key={t.name} className="relative flex">
+              <div key={t.name} className='relative flex'>
                 <button
                   key={t.name}
                   className={cx('flex p-2 transition-colors', {
@@ -81,8 +81,8 @@ export const OverallAd = () => {
                   })}
                   onClick={() => setTab(t.tab)}
                 >
-                  <Icon icon={t.icon} width="40" height="40" />
-                  <span className="my-auto ml-4 font-bebas text-2xl">
+                  <Icon icon={t.icon} width='40' height='40' />
+                  <span className='my-auto ml-4 font-bebas text-2xl'>
                     {t.name}
                   </span>
                 </button>
@@ -90,11 +90,11 @@ export const OverallAd = () => {
             );
           })}
         </div>
-        <div className="my-2 max-w-xl md:w-2/3 md:px-4">
-          <div className="flex flex-col gap-y-2">
+        <div className='my-2 max-w-xl md:w-2/3 md:px-4'>
+          <div className='flex flex-col gap-y-2'>
             <Title size={TitleSize.LG}>{currentTab.title}</Title>
             <SubTitle>{currentTab.subtitle}</SubTitle>
-            <div className="flex gap-x-1">
+            <div className='flex gap-x-1'>
               {currentTab.skills.map((skill) => {
                 return (
                   <SkillIcon

@@ -3,15 +3,15 @@ import cx from 'classnames';
 import { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Icon } from '@iconify/react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { NavButton } from './NavButton';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
 
   return (
     <button
-      aria-label="Toggle TLDR mode"
-      className="m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500"
+      aria-label='Toggle TLDR mode'
+      className='m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500'
       onClick={() => setTldr(!tldr)}
     >
       <div
@@ -22,7 +22,7 @@ const TldrSwitch = () => {
           },
         )}
       >
-        <Icon icon="fa6-solid:code" className="size-4 text-gray-800" />
+        <Icon icon='fa6-solid:code' className='size-4 text-gray-800' />
       </div>
       <div
         className={cx(
@@ -32,7 +32,7 @@ const TldrSwitch = () => {
           },
         )}
       >
-        <Icon icon="tabler:code-off" className="size-4 text-gray-800" />
+        <Icon icon='tabler:code-off' className='size-4 text-gray-800' />
       </div>
     </button>
   );
@@ -43,8 +43,8 @@ const DarkModeSwitch = () => {
 
   return (
     <button
-      aria-label="Toggle dark mode"
-      className="m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500"
+      aria-label='Toggle dark mode'
+      className='m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500'
       onClick={() => setDarkMode(!darkMode)}
     >
       <div
@@ -55,7 +55,7 @@ const DarkModeSwitch = () => {
           },
         )}
       >
-        <Icon icon="fa-solid:moon" className="size-4 text-gray-800" />
+        <Icon icon='fa-solid:moon' className='size-4 text-gray-800' />
       </div>
       <div
         className={cx(
@@ -65,59 +65,9 @@ const DarkModeSwitch = () => {
           },
         )}
       >
-        <Icon icon="fa-solid:sun" className="size-4 text-gray-800" />
+        <Icon icon='fa-solid:sun' className='size-4 text-gray-800' />
       </div>
     </button>
-  );
-};
-
-interface NavButtonProps {
-  text: string;
-  to: string;
-  isMulti?: boolean;
-  children?: React.ReactNode;
-}
-const NavButton = ({ text, to, isMulti = false, children }: NavButtonProps) => {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const [show, setShow] = useState(pathname === to);
-
-  useEffect(() => {
-    if (pathname === to) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  }, [pathname, to]);
-
-  return (
-    <>
-      <div className="flex justify-between">
-        <button
-          aria-label={`Navigate to page ${text}`}
-          onClick={() => navigate(to)}
-          className="flex p-2 text-left hover:underline "
-        >
-          {text}
-        </button>
-        {isMulti && (
-          <button
-            aria-label={`Toggle ${text} menu`}
-            onClick={() => setShow(!show)}
-          >
-            <Icon
-              icon="akar-icons:chevron-right"
-              className={cx('my-auto ml-2 size-6', {
-                'rotate-90 transform': show ?? pathname === to,
-              })}
-            />
-          </button>
-        )}
-      </div>
-      <div className="flex flex-col px-4">
-        {(show ?? pathname === to) && children}
-      </div>
-    </>
   );
 };
 
@@ -152,12 +102,12 @@ export const Navigation = () => {
       )}
     >
       <button
-        aria-label="Toggle navigation"
-        className="z-[1000] mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80"
+        aria-label='Toggle navigation'
+        className='z-[1000] mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80'
         onClick={() => setShow(!show)}
       >
         <Icon
-          icon="iconamoon:arrow-left-2-bold"
+          icon='iconamoon:arrow-left-2-bold'
           className={cx('h-12 w-12 text-gray-600 dark:text-white', {
             'rotate-180 transform': show,
           })}
@@ -173,22 +123,22 @@ export const Navigation = () => {
           },
         )}
       >
-        <div className="flex h-min max-h-screen flex-col overflow-y-auto p-2 py-4 font-code dark:text-tiffany-blue">
+        <div className='flex h-min max-h-screen flex-col overflow-y-auto p-2 py-4 font-code dark:text-tiffany-blue'>
           <img
-            src="https://access-portfolio-images.s3.amazonaws.com/profile.jpeg"
-            alt="Devin"
-            className="mx-auto size-20 rounded object-cover md:size-32"
+            src='https://access-portfolio-images.s3.amazonaws.com/profile.jpeg'
+            alt='Devin'
+            className='mx-auto size-20 rounded object-cover md:size-32'
           />
-          <h1 className="py-1 text-center text-lg">Devin O'Brien</h1>
+          <h1 className='py-1 text-center text-lg'>Devin O'Brien</h1>
           <a
-            href="tel:203-228-8579"
-            className="text-center text-paynes-grey underline"
+            href='tel:203-228-8579'
+            className='text-center text-paynes-grey underline'
           >
             203-228-8579
           </a>
           <a
-            href="mailto:devinobrien@icloud.com"
-            className="text-center text-paynes-grey underline"
+            href='mailto:devinobrien@icloud.com'
+            className='text-center text-paynes-grey underline'
           >
             devinobrien@icloud.com
           </a>
@@ -196,104 +146,104 @@ export const Navigation = () => {
           <a
             href="https://access-portfolio-images.s3.amazonaws.com/Devin+P+O'Brien.pdf"
             download="Devin P. O'Brien"
-            className="text-center text-paynes-grey underline"
-            target="_blank"
+            className='text-center text-paynes-grey underline'
+            target='_blank'
           >
             download my resume
           </a>
 
-          <hr className="my-2 border-tiffany-blue" />
+          <hr className='my-2 border-tiffany-blue' />
 
-          <NavButton text="Home" to="/" isMulti>
+          <NavButton text='Home' to='/' isMulti>
             <ScrollLink
               smooth={true}
               to={'introduction'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Introduction
             </ScrollLink>
             <ScrollLink
               smooth={true}
               to={'work-experience'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Work Experience
             </ScrollLink>
             <ScrollLink
               smooth={true}
               to={'project-experience'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Project Experience
             </ScrollLink>
             <ScrollLink
               smooth={true}
               to={'academic-experience'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Academic Experience
             </ScrollLink>
           </NavButton>
-          <NavButton text="Projects" to="/projects" isMulti>
+          <NavButton text='Projects' to='/projects' isMulti>
             <ScrollLink
               smooth={true}
               to={'all-projects'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Github Projects
             </ScrollLink>
             <ScrollLink
               smooth={true}
               to={'quick-stats'}
-              className="cursor-pointer p-1 hover:underline md:p-2"
+              className='cursor-pointer p-1 hover:underline md:p-2'
             >
               Quick Stats
             </ScrollLink>
           </NavButton>
-          <NavButton text="More than Code" to="/personality" />
+          <NavButton text='More than Code' to='/personality' />
 
-          <hr className="my-2 border-tiffany-blue" />
+          <hr className='my-2 border-tiffany-blue' />
 
-          <p className="">
-            TLDR: <span className="text-sm italic">(shorten descriptions)</span>
+          <p className=''>
+            TLDR: <span className='text-sm italic'>(shorten descriptions)</span>
           </p>
           <TldrSwitch />
 
-          <hr className="my-2 border-tiffany-blue" />
+          <hr className='my-2 border-tiffany-blue' />
 
-          <p className="">Dark Mode</p>
+          <p className=''>Dark Mode</p>
           <DarkModeSwitch />
 
-          <hr className="my-2 border-tiffany-blue" />
+          <hr className='my-2 border-tiffany-blue' />
 
-          <div className="flex flex-col gap-y-2">
+          <div className='flex flex-col gap-y-2'>
             Fellow developer?
             <br />
             <a
-              href="https://github.com/devinobrien-css"
-              className="group flex gap-x-2 hover:underline"
-              target="_blank"
+              href='https://github.com/devinobrien-css'
+              className='group flex gap-x-2 hover:underline'
+              target='_blank'
             >
               <Icon
-                icon="ph:github-logo-duotone"
-                className="size-6 group-hover:scale-110"
+                icon='ph:github-logo-duotone'
+                className='size-6 group-hover:scale-110'
               />
               check out my github
             </a>
             <a
-              href="https://github.com/devinobrien-css/Portfolio"
-              className="group flex gap-x-2 hover:underline"
-              target="_blank"
+              href='https://github.com/devinobrien-css/Portfolio'
+              className='group flex gap-x-2 hover:underline'
+              target='_blank'
             >
               <Icon
-                icon="ph:github-logo-fill"
-                className="size-6 group-hover:scale-110"
+                icon='ph:github-logo-fill'
+                className='size-6 group-hover:scale-110'
               />
               view this site's code
             </a>
           </div>
 
-          <hr className="mb-24 mt-2 border-tiffany-blue" />
+          <hr className='mb-24 mt-2 border-tiffany-blue' />
         </div>
       </div>
     </div>

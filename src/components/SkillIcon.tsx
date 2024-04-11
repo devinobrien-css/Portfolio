@@ -39,8 +39,8 @@ export const SkillIcon = ({
       </span>
       <Icon
         icon={icon}
-        width="50"
-        height="50"
+        width='50'
+        height='50'
         className={cx({
           [SkillIconSize.SM]: size === SkillIconSize.SM,
           [SkillIconSize.MD]: size === SkillIconSize.MD,

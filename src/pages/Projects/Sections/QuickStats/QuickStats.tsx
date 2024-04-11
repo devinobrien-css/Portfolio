@@ -101,43 +101,43 @@ export const QuickStats = () => {
     //     </div>
     //   }
     // >
-    <PageSection className="w-full">
-      <div className="my-auto w-full md:mx-auto">
-        <PageTitle title="Quick Stats" />
-        <div className="flex justify-between">
-          <SubTitle className="hidden md:block">
+    <PageSection className='w-full'>
+      <div className='my-auto w-full md:mx-auto'>
+        <PageTitle title='Quick Stats' />
+        <div className='flex justify-between'>
+          <SubTitle className='hidden md:block'>
             Click on a section to see more details
           </SubTitle>
           <button
             onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')}
-            className="z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block"
+            className='z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block'
           >
             switch to {chartType === 'bar' ? 'pie' : 'bar'}
           </button>
         </div>
 
-        <div className="mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5">
+        <div className='mx-auto block max-w-[350px] cursor-pointer md:hidden md:w-3/5'>
           <Pie data={data} options={options} />
         </div>
-        <div className="lg:flex">
-          <div className="hidden w-full flex-col font-lato md:flex lg:w-2/3">
+        <div className='lg:flex'>
+          <div className='hidden w-full flex-col font-lato md:flex lg:w-2/3'>
             {chartType === 'bar' ? (
               <Bar
-                className=" size-full cursor-pointer"
+                className=' size-full cursor-pointer'
                 data={data}
                 options={options}
               />
             ) : (
               <Pie
-                className="mx-auto mt-4 size-full max-w-[350px] cursor-pointer"
+                className='mx-auto mt-4 size-full max-w-[350px] cursor-pointer'
                 data={data}
                 options={options}
               />
             )}
           </div>
 
-          <div className="lg:w-1/3 lg:p-4">
-            <h2 className="font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl">
+          <div className='lg:w-1/3 lg:p-4'>
+            <h2 className='font-bebas text-3xl dark:text-white md:pb-4 md:text-4xl'>
               {section}
             </h2>
             <RenderSection section={section} />

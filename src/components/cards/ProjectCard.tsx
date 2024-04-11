@@ -32,32 +32,32 @@ export const ProjectCard = ({ project, className }: ProjectCardProps) => {
       <img
         src={image}
         alt={title}
-        className="h-32 w-full object-cover shadow sm:h-40"
+        className='h-32 w-full object-cover shadow sm:h-40'
       />
 
-      <div className="flex flex-col justify-between">
-        <div className="flex flex-col gap-2 p-2 text-left">
-          <h3 className="font-montserrat text-xl dark:text-tiffany-blue">
+      <div className='flex flex-col justify-between'>
+        <div className='flex flex-col gap-2 p-2 text-left'>
+          <h3 className='font-montserrat text-xl dark:text-tiffany-blue'>
             {title}
           </h3>
-          <p className="min-h-24 font-lato text-sm dark:text-moonstone">
+          <p className='min-h-24 font-lato text-sm dark:text-moonstone'>
             {description}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className='flex flex-wrap gap-2'>
             {skills?.map((skill) => <Pill key={skill.name}>{skill.name}</Pill>)}
           </div>
         </div>
-        <div className="mb-2 mt-4 flex justify-between p-2">
+        <div className='mb-2 mt-4 flex justify-between p-2'>
           {
             // if demo is not empty, render the demo link
             demo && (
               <a
                 href={demo}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="flex w-fit gap-1 font-code  text-sm underline dark:text-moonstone"
+                target='_blank'
+                rel='noreferrer noopener'
+                className='flex w-fit gap-1 font-code  text-sm underline dark:text-moonstone'
               >
-                <Icon icon="ph:link" className="m-auto size-4" />
+                <Icon icon='ph:link' className='m-auto size-4' />
                 view site
               </a>
             )
@@ -67,11 +67,11 @@ export const ProjectCard = ({ project, className }: ProjectCardProps) => {
             github && (
               <a
                 href={github}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="flex w-fit gap-1 font-code text-sm underline dark:text-moonstone"
+                target='_blank'
+                rel='noreferrer noopener'
+                className='flex w-fit gap-1 font-code text-sm underline dark:text-moonstone'
               >
-                <Icon icon="akar-icons:github-fill" className="m-auto size-4" />
+                <Icon icon='akar-icons:github-fill' className='m-auto size-4' />
                 view code
               </a>
             )

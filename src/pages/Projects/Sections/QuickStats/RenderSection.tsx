@@ -13,7 +13,7 @@ import { SkillIcon } from '../../../../components/SkillIcon';
 export const RenderSection = ({ section }: { section: string }) => {
   if (section === StatsSection.BackendFrameworks) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {backendFrameworks.map((framework) => {
           return (
             <SkillIcon
@@ -29,7 +29,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (section === StatsSection.FrontendFrameworks) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {frontendFrameworks.map((framework) => {
           return (
             <SkillIcon
@@ -45,7 +45,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (StatsSection.Styling) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {styles.map((framework) => {
           return (
             <SkillIcon
@@ -61,7 +61,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (StatsSection.Languages) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {languages.map((language) => {
           return (
             <SkillIcon
@@ -77,7 +77,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (StatsSection.Infrastructure) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {infrastructure.map((infra) => {
           return (
             <SkillIcon
@@ -93,7 +93,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (StatsSection.Databases) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {databases.map((database) => {
           return (
             <SkillIcon
@@ -109,7 +109,7 @@ export const RenderSection = ({ section }: { section: string }) => {
   }
   if (StatsSection.CloudServices) {
     return (
-      <div className="flex flex-wrap justify-evenly gap-x-2 gap-y-3">
+      <div className='flex flex-wrap justify-evenly gap-x-2 gap-y-3'>
         {cloudServices.map((cloud) => {
           return (
             <SkillIcon

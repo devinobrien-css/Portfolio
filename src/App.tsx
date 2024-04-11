@@ -13,15 +13,15 @@ initializeChartConfig();
  */
 const App = (): JSX.Element => {
   return (
-    <div className="dark:bg-gray-900">
+    <div className='dark:bg-gray-900'>
       <Background />
       <Logo />
       <Router />
       <ToastContainer
         newestOnTop
         autoClose={3000}
-        position="bottom-right"
-        toastClassName="rounded-lg dark:bg-slate-800 dark:text-white"
+        position='bottom-right'
+        toastClassName='rounded-lg dark:bg-slate-800 dark:text-white'
         closeButton={true}
       />
       <Footer />

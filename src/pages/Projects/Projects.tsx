@@ -82,27 +82,27 @@ export const Projects = () => {
         })}
         onClick={() => setShowFilterMenu(false)}
       ></div>
-      <div className="relative mx-auto py-12 md:max-w-[65%]" id="projects-page">
-        <div id="all-projects" />
-        <PageSection className="min-h-screen">
-          <div className="p-4">
-            <PageTitle title="Github Projects" />
+      <div className='relative mx-auto py-12 md:max-w-[65%]' id='projects-page'>
+        <div id='all-projects' />
+        <PageSection className='min-h-screen'>
+          <div className='p-4'>
+            <PageTitle title='Github Projects' />
 
-            <SubTitle className="flex flex-col gap-y-3">
+            <SubTitle className='flex flex-col gap-y-3'>
               Explore my diverse range of projects, each a testament to my
               attention to detail, and relentless pursuit of excellence in
               software development.
             </SubTitle>
 
-            <div className="relative" id="filter-menu-button">
-              <div className="flex w-full flex-wrap justify-between gap-4 py-4">
-                <div className="flex gap-2">
+            <div className='relative' id='filter-menu-button'>
+              <div className='flex w-full flex-wrap justify-between gap-4 py-4'>
+                <div className='flex gap-2'>
                   <input
-                    type="text"
-                    placeholder="Search"
+                    type='text'
+                    placeholder='Search'
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full appearance-none rounded px-3 py-2 font-code text-gray-700 shadow outline-none ring-blue-300 focus:ring-2 dark:bg-slate-800 dark:text-slate-50"
+                    className='w-full appearance-none rounded px-3 py-2 font-code text-gray-700 shadow outline-none ring-blue-300 focus:ring-2 dark:bg-slate-800 dark:text-slate-50'
                   />
                   <button
                     className={cx(
@@ -113,25 +113,25 @@ export const Projects = () => {
                     )}
                     onClick={() => setShowFilterMenu(!showFilterMenu)}
                   >
-                    <Icon icon="akar-icons:filter" className="size-6" />
+                    <Icon icon='akar-icons:filter' className='size-6' />
                     <span>Filter</span>
                   </button>
                 </div>
                 <a
-                  href="https://github.com/devinobrien-css"
-                  className="group flex w-fit gap-x-2 rounded bg-white p-4 font-montserrat text-paynes-grey shadow ring-blue-300 transition-all hover:scale-105 hover:underline active:ring-2 dark:bg-moonstone dark:text-gray-800 md:w-fit"
-                  target="_blank"
+                  href='https://github.com/devinobrien-css'
+                  className='group flex w-fit gap-x-2 rounded bg-white p-4 font-montserrat text-paynes-grey shadow ring-blue-300 transition-all hover:scale-105 hover:underline active:ring-2 dark:bg-moonstone dark:text-gray-800 md:w-fit'
+                  target='_blank'
                 >
                   <Icon
-                    icon="ph:github-logo-duotone"
-                    className="size-6 transition-all group-hover:scale-110"
+                    icon='ph:github-logo-duotone'
+                    className='size-6 transition-all group-hover:scale-110'
                   />
                   View all on Github
                 </a>
               </div>
 
               <div
-                id="filter-menu"
+                id='filter-menu'
                 className={cx(
                   'right-left md:top-18 absolute top-20 z-40 h-[60vh] flex-col gap-y-2 overflow-y-auto rounded bg-white p-4 text-left font-montserrat text-paynes-grey shadow ring-2 ring-blue-300 dark:bg-gray-800 md:h-max',
                   {
@@ -140,21 +140,21 @@ export const Projects = () => {
                 )}
               >
                 <div>
-                  <Title className="pb-4" size={TitleSize.LG}>
+                  <Title className='pb-4' size={TitleSize.LG}>
                     Click on tags to refine the projects
                   </Title>
 
                   <button
                     onClick={() => setTags([])}
-                    className="rounded bg-white p-2 shadow ring-blue-300 hover:bg-slate-300 active:bg-slate-400 active:ring-2 dark:bg-tiffany-blue"
+                    className='rounded bg-white p-2 shadow ring-blue-300 hover:bg-slate-300 active:bg-slate-400 active:ring-2 dark:bg-tiffany-blue'
                   >
                     Clear
                   </button>
                 </div>
 
-                <div className="flex flex-col gap-y-4 py-4">
-                  <SubTitle className="">Frontend</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                <div className='flex flex-col gap-y-4 py-4'>
+                  <SubTitle className=''>Frontend</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {frontend_tags.map((tag, i) => (
                       <Tag
                         key={i}
@@ -166,8 +166,8 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  <SubTitle className="">Backend</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                  <SubTitle className=''>Backend</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {backend_tags.map((tag, i) => (
                       <Tag
                         key={i}
@@ -179,8 +179,8 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  <SubTitle className="">Cloud</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                  <SubTitle className=''>Cloud</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {cloud_tags.map((tag, i) => (
                       <Tag
                         key={i}
@@ -191,8 +191,8 @@ export const Projects = () => {
                       />
                     ))}
                   </div>
-                  <SubTitle className="">Database</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                  <SubTitle className=''>Database</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {database_tags.map((tag, i) => (
                       <Tag
                         key={i}
@@ -204,8 +204,8 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  <SubTitle className="">Design</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                  <SubTitle className=''>Design</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {design_tags.map((tag, i) => (
                       <Tag
                         key={i}
@@ -217,8 +217,8 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  <SubTitle className="">DevOps</SubTitle>
-                  <div className="flex flex-wrap gap-4 border-b pb-4">
+                  <SubTitle className=''>DevOps</SubTitle>
+                  <div className='flex flex-wrap gap-4 border-b pb-4'>
                     {devops_tags.map((tag) => (
                       <Tag
                         key={tag}
@@ -234,7 +234,7 @@ export const Projects = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-evenly gap-8 p-2">
+          <div className='flex flex-wrap justify-evenly gap-8 p-2'>
             {projects
               .filter((project) => {
                 return (
@@ -256,7 +256,7 @@ export const Projects = () => {
           </div>
         </PageSection>
 
-        <div id="quick-stats" />
+        <div id='quick-stats' />
         <QuickStats />
       </div>
     </>

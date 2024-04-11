@@ -25,78 +25,78 @@ export const AcademicExperience = () => {
     //   }
     // >
     <PageSection>
-      <div className="mt-4 w-full p-3 transition-all duration-300 md:my-auto">
-        <PageTitle title="Academics" />
+      <div className='mt-4 w-full p-3 transition-all duration-300 md:my-auto'>
+        <PageTitle title='Academics' />
         <br />
-        <div className="flex flex-wrap justify-between gap-y-8">
-          <Card className="!dark:hover:bg-slate-800 dark:!bg-gray-800">
+        <div className='flex flex-wrap justify-between gap-y-8'>
+          <Card className='!dark:hover:bg-slate-800 dark:!bg-gray-800'>
             <Title size={TitleSize.LG}>Master's Degree</Title>
-            <SubTitle className="italic">
+            <SubTitle className='italic'>
               State University at Albany, SUNY - 2024
             </SubTitle>
-            <hr className="my-2" />
-            <div className="flex w-full flex-wrap p-2">
+            <hr className='my-2' />
+            <div className='flex w-full flex-wrap p-2'>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Data Structures
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Discrete Math
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Databases
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Artificial Intelligence
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Machine Learning
               </Title>
             </div>
           </Card>
 
-          <div className="w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-gray-800  dark:hover:bg-slate-800 md:w-[48%]">
+          <div className='w-full cursor-pointer rounded bg-white p-4 text-left shadow transition-all hover:bg-gray-50 dark:bg-gray-800  dark:hover:bg-slate-800 md:w-[48%]'>
             <Title size={TitleSize.LG}>Bachelor's Degree</Title>
-            <SubTitle className="italic">
+            <SubTitle className='italic'>
               State University at Albany, SUNY - 2022
             </SubTitle>
-            <hr className="my-2" />
-            <div className="flex w-full flex-wrap justify-evenly p-2">
+            <hr className='my-2' />
+            <div className='flex w-full flex-wrap justify-evenly p-2'>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Operating Systems
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Multimedia Programming
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Motion Detection
               </Title>
               <Title
                 size={TitleSize.SM}
-                className="bg-std-red mx-auto my-2 rounded px-3 py-1 text-center"
+                className='bg-std-red mx-auto my-2 rounded px-3 py-1 text-center'
               >
                 Hardware Design
               </Title>

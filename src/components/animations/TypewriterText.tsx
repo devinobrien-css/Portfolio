@@ -7,7 +7,7 @@ interface TypeTextAnimationProps {
 }
 export const TypewriterText = ({ text, className }: TypeTextAnimationProps) => {
   return (
-    <div id="typewriter" className={cx(className, '')}>
+    <div id='typewriter' className={cx(className, '')}>
       <Typewriter
         onInit={(typewriter) => {
           typewriter

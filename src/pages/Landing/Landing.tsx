@@ -11,26 +11,26 @@ import { ContactBanner } from './Sections/ContactBanner';
 
 export const Landing = () => {
   return (
-    <div className="relative mx-auto p-10 md:max-w-[65%] md:p-0">
-      <div id="introduction" />
+    <div className='relative mx-auto p-10 md:max-w-[65%] md:p-0'>
+      <div id='introduction' />
       <Introduction />
 
-      <div id="about-me" />
+      <div id='about-me' />
       <AboutMe />
 
       <WhatIDo />
 
       <LandingProjects />
 
-      <div id="work-experience" />
+      <div id='work-experience' />
       <WorkExperience />
 
       <ContactBanner />
 
-      <div id="project-experience" />
+      <div id='project-experience' />
       <ProjectExperience />
 
-      <div id="academic-experience" />
+      <div id='academic-experience' />
       <AcademicExperience />
 
       <OverallAd />
