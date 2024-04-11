@@ -45,7 +45,7 @@ export const OverallAd = () => {
 
   return (
     <PageSection className=''>
-      <div className='-ml-8 w-full rounded-l py-8 font-montserrat dark:bg-slate-800'>
+      <div className='w-full rounded-l py-8 font-montserrat dark:bg-slate-800 md:-ml-8'>
         <Title size={TitleSize.LG}>Right Tool, Right Job</Title>
         <Title size={TitleSize.MD}>
           Mastering Cloud Infra, Frontend, API, and DB Development Expertise

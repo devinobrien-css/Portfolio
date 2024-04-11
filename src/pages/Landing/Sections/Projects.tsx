@@ -3,10 +3,11 @@ import { ProjectCard } from '../../../components/cards/ProjectCard';
 import { Title } from '../../../components/text/Title';
 import { TitleSize } from '../../../data/constants';
 import { projects } from '../../../data/github_projects';
+import { PageSection } from '../../../components/text/PageSection';
 
 export const Projects = () => {
   return (
-    <div className='my-32 min-h-screen'>
+    <PageSection className='py-32'>
       <p className='font-montserrat text-blue-500 dark:text-red-500'>
         projects and applications
       </p>
@@ -95,6 +96,6 @@ export const Projects = () => {
       >
         See More Projects
       </Link>
-    </div>
+    </PageSection>
   );
 };

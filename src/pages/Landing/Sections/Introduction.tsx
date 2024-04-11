@@ -5,7 +5,7 @@ import { TitleSize } from '../../../data/constants';
 
 export const Introduction = () => {
   return (
-    <PageSection className='mx-auto flex flex-col gap-y-6 md:min-w-[65vw]'>
+    <PageSection className='flex flex-col gap-y-6'>
       <div>
         <TypewriterText
           text='Hello there, my name is'
@@ -28,6 +28,7 @@ export const Introduction = () => {
       </div>
 
       <a
+        aria-label='Get in touch with Devin O&#39;Brien'
         href='mailto:devinobrien@icloud.com'
         className='block rounded bg-tiffany-blue py-4 text-center font-montserrat text-lg text-charcoal ring-blue-300 transition-colors hover:bg-moonstone/90 active:ring-2 md:w-1/2'
       >

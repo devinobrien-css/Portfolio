@@ -1,10 +1,11 @@
 import { Icon } from '@iconify/react';
 import { TitleSize } from '../../../data/constants';
 import { Title } from '../../../components/text/Title';
+import { PageSection } from '../../../components/text/PageSection';
 
 export const WhatIDo = () => {
   return (
-    <div className='my-32 min-h-screen'>
+    <PageSection className='py-32'>
       <p className='font-montserrat text-blue-500 dark:text-red-600'>
         full stack development
       </p>
@@ -125,6 +126,6 @@ export const WhatIDo = () => {
           </p>
         </div>
       </div>
-    </div>
+    </PageSection>
   );
 };

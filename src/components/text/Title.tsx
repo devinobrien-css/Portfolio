@@ -19,7 +19,7 @@ export const Title = ({
   children,
 }: TitleProps): JSX.Element => {
   return (
-    <p
+    <h2
       className={cx(className, 'font-montserrat font-light dark:text-white', {
         'text-3xl sm:text-5xl md:text-6xl': size === TitleSize.XL,
         'text-xl sm:text-3xl md:text-4xl': size === TitleSize.LG,
@@ -29,6 +29,6 @@ export const Title = ({
       })}
     >
       {children}
-    </p>
+    </h2>
   );
 };

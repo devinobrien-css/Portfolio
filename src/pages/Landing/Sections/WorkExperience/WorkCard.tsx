@@ -1,13 +1,11 @@
-import { Title } from '../../../components/text/Title';
-import { TitleSize } from '../../../data/constants';
-import { SubTitle } from '../../../components/text/SubTitle';
-import { PageTitle } from '../../../components/text/PageTitle';
-import { employers } from '../../../data/employers';
+import { Title } from '../../../../components/text/Title';
+import { TitleSize } from '../../../../data/constants';
+import { SubTitle } from '../../../../components/text/SubTitle';
 import { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
-import { Employer } from '../../../types/Employer';
+import { Employer } from '../../../../types/Employer';
 import cx from 'classnames';
-import { Pill } from '../../../components/Pill';
+import { Pill } from '../../../../components/Pill';
 
 interface WorkCardProps {
   employer: Employer;
@@ -109,35 +107,6 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
               <Pill key={skill.name}>{skill.name}</Pill>
             ))}
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export const WorkExperience = (): JSX.Element => {
-  return (
-    <div className='my-16 min-h-screen md:my-0'>
-      <div className='mt-4 w-full transition-all duration-300 md:my-auto'>
-        <Title
-          size={TitleSize.LG}
-          className='!font-bebas !text-5xl md:!text-6xl'
-        >
-          Where I've Worked
-        </Title>
-        <PageTitle title='Past Employers' />
-        <br />
-        <br />
-        <div className='flex flex-col gap-4'>
-          {employers.map((employer, index) => {
-            return (
-              <WorkCard
-                key={employer.name}
-                employer={employer}
-                initialOpen={index === 0}
-              />
-            );
-          })}
         </div>
       </div>
     </div>

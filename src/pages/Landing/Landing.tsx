@@ -1,7 +1,7 @@
 import { SocialsAdvertisement } from '../../components/SocialsAdvertisement';
 import { AcademicExperience } from './Sections/Academic';
 import { OverallAd } from './Sections/Advertisement';
-import { WorkExperience } from './Sections/WorkExperience';
+import { WorkExperience } from './Sections/WorkExperience/WorkExperience';
 import { Introduction } from './Sections/Introduction';
 import { ProjectExperience } from './Sections/ProductionApps/ProductionApps';
 import { WhatIDo } from './Sections/WhatIDo';
