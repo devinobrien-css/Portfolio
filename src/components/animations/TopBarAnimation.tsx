@@ -1,6 +1,6 @@
-import { ReactNode, useEffect, useState } from "react";
-import { useScrollPercentage } from "react-scroll-percentage";
-import cx from "classnames";
+import { ReactNode, useEffect, useState } from 'react';
+import { useScrollPercentage } from 'react-scroll-percentage';
+import cx from 'classnames';
 
 interface SideBarAnimationProps {
   className?: string;
@@ -47,7 +47,7 @@ export const TopBarAnimation = ({
           opacity: with_opacity ? currentOpacity / 100 : 1,
         }}
         className={cx(
-          "fixed -top-[200px] right-0 w-screen transition-all md:-right-[210px]",
+          'fixed -top-[200px] right-0 w-screen transition-all md:-right-[210px]',
           className,
         )}
       >

@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
-import { GithubProject } from "../../types/Project";
-import cx from "classnames";
-import { Pill } from "../Pill";
+import { Icon } from '@iconify/react';
+import { GithubProject } from '../../types/Project';
+import cx from 'classnames';
+import { Pill } from '../Pill';
 
 interface ProjectCardProps {
   project: GithubProject;
@@ -13,18 +13,18 @@ export const ProjectCard = ({ project, className }: ProjectCardProps) => {
   return (
     <button
       className={cx(
-        "min-h-full w-full overflow-clip rounded-2xl bg-white shadow transition-all dark:bg-gray-800 sm:max-w-[300px] md:w-[30%]",
+        'min-h-full w-full overflow-clip rounded-2xl bg-white shadow transition-all dark:bg-gray-800 sm:max-w-[300px] md:w-[30%]',
         className,
         {
-          "ring-blue-300 hover:scale-105 active:ring-2": project.link,
+          'ring-blue-300 hover:scale-105 active:ring-2': project.link,
         },
       )}
       onClick={() => {
         if (project.link) {
           window.open(
             `/projects?search=${project.link}`,
-            "_self",
-            "noopener noreferrer",
+            '_self',
+            'noopener noreferrer',
           );
         }
       }}

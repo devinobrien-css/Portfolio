@@ -1,4 +1,4 @@
-import { Skill } from "./Skill";
+import { Skill } from './Skill';
 
 /**
  * Type for a project that is hosted on GitHub.

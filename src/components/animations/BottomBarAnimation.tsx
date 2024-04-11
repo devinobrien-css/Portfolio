@@ -1,6 +1,6 @@
-import { ReactNode, useEffect, useState } from "react";
-import { useScrollPercentage } from "react-scroll-percentage";
-import cx from "classnames";
+import { ReactNode, useEffect, useState } from 'react';
+import { useScrollPercentage } from 'react-scroll-percentage';
+import cx from 'classnames';
 
 interface SideBarAnimationProps {
   children: ReactNode;
@@ -37,7 +37,7 @@ export const BottomBarAnimation = ({
         style={{
           transform: `translateY(-${currentPosition}px)`,
         }}
-        className={cx("fixed bottom-[-550px] left-0 w-screen transition-all")}
+        className={cx('fixed bottom-[-550px] left-0 w-screen transition-all')}
       >
         {content}
       </div>

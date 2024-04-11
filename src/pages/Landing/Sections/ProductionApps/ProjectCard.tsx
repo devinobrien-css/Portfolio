@@ -1,11 +1,11 @@
-import { SubTitle } from "../../../../components/text/SubTitle";
-import { Title } from "../../../../components/text/Title";
-import { TitleSize } from "../../../../data/constants";
-import { useState } from "react";
-import { useGlobalContext } from "../../../../util/context/useGlobalContext";
-import { ProjectModal } from "./ProjectModal";
-import { Card } from "../../../../components/cards/Card";
-import { TextSection } from "../../../../components/text/TextSection";
+import { SubTitle } from '../../../../components/text/SubTitle';
+import { Title } from '../../../../components/text/Title';
+import { TitleSize } from '../../../../data/constants';
+import { useState } from 'react';
+import { useGlobalContext } from '../../../../util/context/useGlobalContext';
+import { ProjectModal } from './ProjectModal';
+import { Card } from '../../../../components/cards/Card';
+import { TextSection } from '../../../../components/text/TextSection';
 
 export interface Project {
   title: string;

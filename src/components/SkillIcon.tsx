@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
-import cx from "classnames";
-import { SkillIconSize } from "../data/constants";
-import { useState } from "react";
+import { Icon } from '@iconify/react';
+import cx from 'classnames';
+import { SkillIconSize } from '../data/constants';
+import { useState } from 'react';
 
 interface SkillIconProps {
   className?: string;
@@ -21,7 +21,7 @@ export const SkillIcon = ({
   return (
     <div
       className={cx(
-        "relative mx-auto w-min rounded bg-gray-50 p-2 shadow dark:bg-white/80",
+        'relative mx-auto w-min rounded bg-gray-50 p-2 shadow dark:bg-white/80',
         className,
       )}
       onMouseEnter={() => setShowTooltip(true)}
@@ -29,9 +29,9 @@ export const SkillIcon = ({
     >
       <span
         className={cx(
-          "absolute top-[90%] z-[200] whitespace-nowrap rounded bg-white p-1 font-code opacity-0 shadow transition-opacity",
+          'absolute top-[90%] z-[200] whitespace-nowrap rounded bg-white p-1 font-code opacity-0 shadow transition-opacity',
           {
-            "opacity-100": showTooltip,
+            'opacity-100': showTooltip,
           },
         )}
       >

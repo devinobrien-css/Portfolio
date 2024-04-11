@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import { ProjectCard } from "../../../components/cards/ProjectCard";
-import { Title } from "../../../components/text/Title";
-import { TitleSize } from "../../../data/constants";
-import { projects } from "../../../data/github_projects";
+import { Link } from 'react-router-dom';
+import { ProjectCard } from '../../../components/cards/ProjectCard';
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
+import { projects } from '../../../data/github_projects';
 
 export const Projects = () => {
   return (
@@ -17,35 +17,35 @@ export const Projects = () => {
       <div className="flex flex-wrap gap-4 md:flex-nowrap md:justify-between">
         <ProjectCard
           project={{
-            title: "Neuroexed",
+            title: 'Neuroexed',
             image:
-              "https://access-portfolio-images.s3.amazonaws.com/neuroexed-bg.png",
+              'https://access-portfolio-images.s3.amazonaws.com/neuroexed-bg.png',
             description:
-              "An organizational website for a neuroscience lab. Built with React and Typescript, utilizes a Python API and other AWS services.",
-            link: "neuroexed",
-            github: "https://github.com/devinobrien-css/neuroexed",
-            demo: "https://neuroexed.com",
+              'An organizational website for a neuroscience lab. Built with React and Typescript, utilizes a Python API and other AWS services.',
+            link: 'neuroexed',
+            github: 'https://github.com/devinobrien-css/neuroexed',
+            demo: 'https://neuroexed.com',
             tags: [
-              "React",
-              "Typescript",
-              "Tailwind",
-              "DynamoDB",
-              "AWS",
-              "Netlify",
-              "Javascript",
+              'React',
+              'Typescript',
+              'Tailwind',
+              'DynamoDB',
+              'AWS',
+              'Netlify',
+              'Javascript',
             ],
             skills: [
               {
-                name: "React",
-                icon: "https://via.placeholder.com/150",
+                name: 'React',
+                icon: 'https://via.placeholder.com/150',
               },
               {
-                name: "TypeScript",
-                icon: "https://via.placeholder.com/150",
+                name: 'TypeScript',
+                icon: 'https://via.placeholder.com/150',
               },
               {
-                name: "TailwindCSS",
-                icon: "https://via.placeholder.com/150",
+                name: 'TailwindCSS',
+                icon: 'https://via.placeholder.com/150',
               },
             ],
           }}
@@ -53,40 +53,40 @@ export const Projects = () => {
 
         <ProjectCard
           project={{
-            title: "Diversity At College",
+            title: 'Diversity At College',
             image:
-              "https://access-portfolio-images.s3.amazonaws.com/college-bg.jpeg",
+              'https://access-portfolio-images.s3.amazonaws.com/college-bg.jpeg',
             description:
-              "A marketing website for a group of researchers and their publication. Built with React, Typescript and Tailwind. CICD is managed through Netlify",
-            github: "https://github.com/devinobrien-css/diversity-at-college",
-            demo: "https://diversityatcollege.com",
+              'A marketing website for a group of researchers and their publication. Built with React, Typescript and Tailwind. CICD is managed through Netlify',
+            github: 'https://github.com/devinobrien-css/diversity-at-college',
+            demo: 'https://diversityatcollege.com',
             tags: [
-              "React",
-              "Typescript",
-              "Javascript",
-              "Tailwind",
-              "Netlify",
-              "Javascript",
+              'React',
+              'Typescript',
+              'Javascript',
+              'Tailwind',
+              'Netlify',
+              'Javascript',
             ],
-            link: "diversity",
+            link: 'diversity',
             skills: [
               {
-                name: "React",
-                icon: "https://via.placeholder.com/150",
+                name: 'React',
+                icon: 'https://via.placeholder.com/150',
               },
               {
-                name: "TypeScript",
-                icon: "https://via.placeholder.com/150",
+                name: 'TypeScript',
+                icon: 'https://via.placeholder.com/150',
               },
               {
-                name: "TailwindCSS",
-                icon: "https://via.placeholder.com/150",
+                name: 'TailwindCSS',
+                icon: 'https://via.placeholder.com/150',
               },
             ],
           }}
         />
 
-        <ProjectCard project={{ ...projects[2], link: "svelte" }} />
+        <ProjectCard project={{ ...projects[2], link: 'svelte' }} />
       </div>
 
       <Link

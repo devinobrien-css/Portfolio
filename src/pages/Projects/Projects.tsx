@@ -1,11 +1,11 @@
-import { Icon } from "@iconify/react";
-import { PageSection } from "../../components/text/PageSection";
-import { PageTitle } from "../../components/text/PageTitle";
-import { SubTitle } from "../../components/text/SubTitle";
-import { useEffect, useState } from "react";
-import cx from "classnames";
-import { Title } from "../../components/text/Title";
-import { TitleSize } from "../../data/constants";
+import { Icon } from '@iconify/react';
+import { PageSection } from '../../components/text/PageSection';
+import { PageTitle } from '../../components/text/PageTitle';
+import { SubTitle } from '../../components/text/SubTitle';
+import { useEffect, useState } from 'react';
+import cx from 'classnames';
+import { Title } from '../../components/text/Title';
+import { TitleSize } from '../../data/constants';
 import {
   backend_tags,
   cloud_tags,
@@ -13,11 +13,11 @@ import {
   design_tags,
   devops_tags,
   frontend_tags,
-} from "../../data/github_projects";
-import { projects } from "../../data/github_projects";
-import { QuickStats } from "./Sections/QuickStats/QuickStats";
-import { ProjectCard } from "../../components/cards/ProjectCard";
-import { useLocation } from "react-router-dom";
+} from '../../data/github_projects';
+import { projects } from '../../data/github_projects';
+import { QuickStats } from './Sections/QuickStats/QuickStats';
+import { ProjectCard } from '../../components/cards/ProjectCard';
+import { useLocation } from 'react-router-dom';
 
 interface TagProps {
   tag: string;
@@ -29,9 +29,9 @@ interface TagProps {
 const Tag = ({ tag, addTag, removeTag, isSelected }: TagProps) => {
   return (
     <button
-      className={cx("cursor-pointer rounded p-2 shadow transition-all", {
-        "ring ring-blue-300 dark:bg-slate-800 dark:text-slate-300": isSelected,
-        "bg-white text-slate-300 dark:bg-slate-600 dark:text-slate-400":
+      className={cx('cursor-pointer rounded p-2 shadow transition-all', {
+        'ring ring-blue-300 dark:bg-slate-800 dark:text-slate-300': isSelected,
+        'bg-white text-slate-300 dark:bg-slate-600 dark:text-slate-400':
           !isSelected,
       })}
       onClick={() => {
@@ -49,7 +49,7 @@ const Tag = ({ tag, addTag, removeTag, isSelected }: TagProps) => {
 
 export const Projects = () => {
   const location = useLocation();
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [showFilterMenu, setShowFilterMenu] = useState(false);
 
@@ -67,16 +67,16 @@ export const Projects = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    if (queryParams.get("search")) {
-      setSearch(queryParams.get("search") as string);
-      queryParams.delete("search");
+    if (queryParams.get('search')) {
+      setSearch(queryParams.get('search') as string);
+      queryParams.delete('search');
     }
   }, [location.search]);
 
   return (
     <>
       <div
-        className={cx("absolute left-0 top-0 z-30 h-screen w-screen", {
+        className={cx('absolute left-0 top-0 z-30 h-screen w-screen', {
           block: showFilterMenu,
           hidden: !showFilterMenu,
         })}
@@ -106,9 +106,9 @@ export const Projects = () => {
                   />
                   <button
                     className={cx(
-                      "z-50 flex gap-x-2 rounded bg-white p-4 font-montserrat text-paynes-grey shadow dark:bg-slate-800 dark:text-slate-400",
+                      'z-50 flex gap-x-2 rounded bg-white p-4 font-montserrat text-paynes-grey shadow dark:bg-slate-800 dark:text-slate-400',
                       {
-                        "ring-2 ring-blue-300 ": showFilterMenu,
+                        'ring-2 ring-blue-300 ': showFilterMenu,
                       },
                     )}
                     onClick={() => setShowFilterMenu(!showFilterMenu)}
@@ -133,7 +133,7 @@ export const Projects = () => {
               <div
                 id="filter-menu"
                 className={cx(
-                  "right-left md:top-18 absolute top-20 z-40 h-[60vh] flex-col gap-y-2 overflow-y-auto rounded bg-white p-4 text-left font-montserrat text-paynes-grey shadow ring-2 ring-blue-300 dark:bg-gray-800 md:h-max",
+                  'right-left md:top-18 absolute top-20 z-40 h-[60vh] flex-col gap-y-2 overflow-y-auto rounded bg-white p-4 text-left font-montserrat text-paynes-grey shadow ring-2 ring-blue-300 dark:bg-gray-800 md:h-max',
                   {
                     hidden: !showFilterMenu,
                   },

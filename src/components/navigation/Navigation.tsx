@@ -1,9 +1,9 @@
-import { useGlobalContext } from "../../util/context/useGlobalContext";
-import cx from "classnames";
-import { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { Icon } from "@iconify/react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useGlobalContext } from '../../util/context/useGlobalContext';
+import cx from 'classnames';
+import { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Icon } from '@iconify/react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const TldrSwitch = () => {
   const { tldr, setTldr } = useGlobalContext();
@@ -16,9 +16,9 @@ const TldrSwitch = () => {
     >
       <div
         className={cx(
-          "rounded-full bg-gray-300 p-2 transition-all duration-500",
+          'rounded-full bg-gray-300 p-2 transition-all duration-500',
           {
-            "opacity-0": !tldr,
+            'opacity-0': !tldr,
           },
         )}
       >
@@ -26,9 +26,9 @@ const TldrSwitch = () => {
       </div>
       <div
         className={cx(
-          "-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500",
+          '-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500',
           {
-            "opacity-0": tldr,
+            'opacity-0': tldr,
           },
         )}
       >
@@ -49,9 +49,9 @@ const DarkModeSwitch = () => {
     >
       <div
         className={cx(
-          "rounded-full bg-gray-300 p-2 transition-all duration-500",
+          'rounded-full bg-gray-300 p-2 transition-all duration-500',
           {
-            "opacity-0": !darkMode,
+            'opacity-0': !darkMode,
           },
         )}
       >
@@ -59,9 +59,9 @@ const DarkModeSwitch = () => {
       </div>
       <div
         className={cx(
-          "-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500",
+          '-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500',
           {
-            "opacity-0": darkMode,
+            'opacity-0': darkMode,
           },
         )}
       >
@@ -107,8 +107,8 @@ const NavButton = ({ text, to, isMulti = false, children }: NavButtonProps) => {
           >
             <Icon
               icon="akar-icons:chevron-right"
-              className={cx("my-auto ml-2 size-6", {
-                "rotate-90 transform": show ?? pathname === to,
+              className={cx('my-auto ml-2 size-6', {
+                'rotate-90 transform': show ?? pathname === to,
               })}
             />
           </button>
@@ -137,17 +137,17 @@ export const Navigation = () => {
     const handleScroll = () => {
       setShow(false);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [setTldr]);
 
   return (
     <div
       className={cx(
-        "fixed right-0 top-0 z-[1000] flex w-fit justify-end transition-all duration-500",
+        'fixed right-0 top-0 z-[1000] flex w-fit justify-end transition-all duration-500',
         {
-          " h-[100%]": show,
-          "h-[0%] w-[15%]": !show,
+          ' h-[100%]': show,
+          'h-[0%] w-[15%]': !show,
         },
       )}
     >
@@ -158,18 +158,18 @@ export const Navigation = () => {
       >
         <Icon
           icon="iconamoon:arrow-left-2-bold"
-          className={cx("h-12 w-12 text-gray-600 dark:text-white", {
-            "rotate-180 transform": show,
+          className={cx('h-12 w-12 text-gray-600 dark:text-white', {
+            'rotate-180 transform': show,
           })}
         />
       </button>
 
       <div
         className={cx(
-          "h-min max-h-[90vh] max-w-fit overflow-clip whitespace-nowrap rounded-b-lg bg-white transition-all duration-500 dark:bg-gray-800",
+          'h-min max-h-[90vh] max-w-fit overflow-clip whitespace-nowrap rounded-b-lg bg-white transition-all duration-500 dark:bg-gray-800',
           {
-            "w-0 blur-sm": !show,
-            "w-full p-4  shadow": show,
+            'w-0 blur-sm': !show,
+            'w-full p-4  shadow': show,
           },
         )}
       >
@@ -207,28 +207,28 @@ export const Navigation = () => {
           <NavButton text="Home" to="/" isMulti>
             <ScrollLink
               smooth={true}
-              to={"introduction"}
+              to={'introduction'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Introduction
             </ScrollLink>
             <ScrollLink
               smooth={true}
-              to={"work-experience"}
+              to={'work-experience'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Work Experience
             </ScrollLink>
             <ScrollLink
               smooth={true}
-              to={"project-experience"}
+              to={'project-experience'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Project Experience
             </ScrollLink>
             <ScrollLink
               smooth={true}
-              to={"academic-experience"}
+              to={'academic-experience'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Academic Experience
@@ -237,14 +237,14 @@ export const Navigation = () => {
           <NavButton text="Projects" to="/projects" isMulti>
             <ScrollLink
               smooth={true}
-              to={"all-projects"}
+              to={'all-projects'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Github Projects
             </ScrollLink>
             <ScrollLink
               smooth={true}
-              to={"quick-stats"}
+              to={'quick-stats'}
               className="cursor-pointer p-1 hover:underline md:p-2"
             >
               Quick Stats

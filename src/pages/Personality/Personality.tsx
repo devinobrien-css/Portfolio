@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { PageSection } from "../../components/text/PageSection";
-import { PageTitle } from "../../components/text/PageTitle";
+import { useEffect, useState } from 'react';
+import { PageSection } from '../../components/text/PageSection';
+import { PageTitle } from '../../components/text/PageTitle';
 
 export const Personality = () => {
   const [loading, setLoading] = useState(true);

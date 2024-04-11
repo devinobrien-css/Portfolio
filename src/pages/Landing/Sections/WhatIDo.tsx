@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
-import { TitleSize } from "../../../data/constants";
-import { Title } from "../../../components/text/Title";
+import { Icon } from '@iconify/react';
+import { TitleSize } from '../../../data/constants';
+import { Title } from '../../../components/text/Title';
 
 export const WhatIDo = () => {
   return (

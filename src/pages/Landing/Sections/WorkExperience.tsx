@@ -1,13 +1,13 @@
-import { Title } from "../../../components/text/Title";
-import { TitleSize } from "../../../data/constants";
-import { SubTitle } from "../../../components/text/SubTitle";
-import { PageTitle } from "../../../components/text/PageTitle";
-import { employers } from "../../../data/employers";
-import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
-import { Employer } from "../../../types/Employer";
-import cx from "classnames";
-import { Pill } from "../../../components/Pill";
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
+import { SubTitle } from '../../../components/text/SubTitle';
+import { PageTitle } from '../../../components/text/PageTitle';
+import { employers } from '../../../data/employers';
+import { useEffect, useState } from 'react';
+import { Icon } from '@iconify/react';
+import { Employer } from '../../../types/Employer';
+import cx from 'classnames';
+import { Pill } from '../../../components/Pill';
 
 interface WorkCardProps {
   employer: Employer;
@@ -25,14 +25,18 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
 
   return (
     <div
-      className={cx("w-full rounded-lg border p-4", {
-        "border-tiffany-blue bg-white dark:bg-slate-800": isOpen,
-        "border-paynes-grey bg-gray-100 dark:bg-slate-900": !isOpen,
+      className={cx('w-full rounded-lg border p-4', {
+        'border-tiffany-blue bg-white dark:bg-slate-800': isOpen,
+        'border-paynes-grey bg-gray-100 dark:bg-slate-900': !isOpen,
       })}
     >
       <div className="flex flex-wrap-reverse justify-end sm:justify-between">
         <Title size={TitleSize.MD} className="flex gap-2">
-          <img src={icon} alt={name} className="my-auto size-8 rounded-full " />
+          <img
+            src={icon}
+            alt={name}
+            className="my-auto size-8 rounded-full object-cover"
+          />
           {title} @ {name}
         </Title>
 
@@ -53,17 +57,17 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
         </div>
       </div>
       <hr
-        className={cx("border-tiffany-blue transition-all duration-300 ", {
-          "opacity-0": !isOpen,
-          "opacity-full my-2": isOpen,
+        className={cx('border-tiffany-blue transition-all duration-300 ', {
+          'opacity-0': !isOpen,
+          'opacity-full my-2': isOpen,
         })}
       />
       <div
         className={cx(
-          "flex flex-col gap-4 overflow-y-scroll transition-all duration-300",
+          'flex flex-col gap-4 overflow-y-scroll transition-all duration-300',
           {
-            "h-0": !isOpen,
-            "h-96 md:h-72": isOpen,
+            'h-0': !isOpen,
+            'h-96 md:h-72': isOpen,
           },
         )}
       >
@@ -94,7 +98,7 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
                 key={point}
                 className="text-md flex gap-2 font-montserrat text-paynes-grey dark:text-moonstone"
               >
-                <span className="-mt-1 text-2xl">•</span>{" "}
+                <span className="-mt-1 text-2xl">•</span>{' '}
                 <span className="my-auto">{point}</span>
               </p>
             ))}

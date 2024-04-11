@@ -1,9 +1,9 @@
-import { ToastContainer } from "react-toastify";
-import { Background } from "./components/Background";
-import { Logo } from "./components/Logo";
-import { initializeChartConfig } from "./util/chart.config";
-import { Router } from "./util/router/Router";
-import { Footer } from "./components/Footer";
+import { ToastContainer } from 'react-toastify';
+import { Background } from './components/Background';
+import { Logo } from './components/Logo';
+import { initializeChartConfig } from './util/chart.config';
+import { Router } from './util/router/Router';
+import { Footer } from './components/Footer';
 
 initializeChartConfig();
 

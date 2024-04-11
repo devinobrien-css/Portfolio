@@ -1,4 +1,4 @@
-import cx from "classnames";
+import cx from 'classnames';
 
 interface TextSectionProps {
   children?: string | JSX.Element | JSX.Element[];
@@ -15,7 +15,7 @@ export const TextSection = ({
   className,
 }: TextSectionProps): JSX.Element => {
   return (
-    <p className={cx(className, "font-lato text-gray-700 dark:text-gray-200")}>
+    <p className={cx(className, 'font-lato text-gray-700 dark:text-gray-200')}>
       {children}
     </p>
   );

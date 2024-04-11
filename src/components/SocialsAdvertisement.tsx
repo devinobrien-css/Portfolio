@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
-import gsap from "gsap";
-import { useEffect } from "react";
-import { Social, socials } from "../data/socials";
+import { Icon } from '@iconify/react';
+import gsap from 'gsap';
+import { useEffect } from 'react';
+import { Social, socials } from '../data/socials';
 
 /**
  * SocialsAdvertisement component
@@ -10,7 +10,7 @@ import { Social, socials } from "../data/socials";
 export const SocialsAdvertisement = (): JSX.Element => {
   useEffect(() => {
     gsap.fromTo(
-      "#socials",
+      '#socials',
       {
         translateY: 500,
       },
@@ -35,7 +35,7 @@ export const SocialsAdvertisement = (): JSX.Element => {
             >
               <Icon
                 icon={social.icon}
-                className={"m-auto text-gray-700 dark:text-light-cyan"}
+                className={'m-auto text-gray-700 dark:text-light-cyan'}
               />
             </a>
           );

@@ -1,8 +1,8 @@
-import { PageSection } from "../../../../components/text/PageSection";
-import { PageTitle } from "../../../../components/text/PageTitle";
-import { SubTitle } from "../../../../components/text/SubTitle";
-import { ProjectCard } from "./ProjectCard";
-import { projects } from "../../../../data/projects";
+import { PageSection } from '../../../../components/text/PageSection';
+import { PageTitle } from '../../../../components/text/PageTitle';
+import { SubTitle } from '../../../../components/text/SubTitle';
+import { ProjectCard } from './ProjectCard';
+import { projects } from '../../../../data/projects';
 
 export const ProjectExperience = () => {
   return (

@@ -1,9 +1,9 @@
-import { PageSection } from "../../../components/text/PageSection";
-import { PageTitle } from "../../../components/text/PageTitle";
-import { SubTitle } from "../../../components/text/SubTitle";
-import { Title } from "../../../components/text/Title";
-import { TitleSize } from "../../../data/constants";
-import { Card } from "../../../components/cards/Card";
+import { PageSection } from '../../../components/text/PageSection';
+import { PageTitle } from '../../../components/text/PageTitle';
+import { SubTitle } from '../../../components/text/SubTitle';
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
+import { Card } from '../../../components/cards/Card';
 
 export const AcademicExperience = () => {
   return (

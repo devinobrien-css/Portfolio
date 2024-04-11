@@ -6,9 +6,9 @@ import {
   infrastructure,
   languages,
   styles,
-} from "../../../../data/skills";
-import { SkillIconSize, StatsSection } from "../../../../data/constants";
-import { SkillIcon } from "../../../../components/SkillIcon";
+} from '../../../../data/skills';
+import { SkillIconSize, StatsSection } from '../../../../data/constants';
+import { SkillIcon } from '../../../../components/SkillIcon';
 
 export const RenderSection = ({ section }: { section: string }) => {
   if (section === StatsSection.BackendFrameworks) {

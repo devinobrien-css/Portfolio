@@ -1,13 +1,13 @@
-import { SocialsAdvertisement } from "../../components/SocialsAdvertisement";
-import { AcademicExperience } from "./Sections/Academic";
-import { OverallAd } from "./Sections/Advertisement";
-import { WorkExperience } from "./Sections/WorkExperience";
-import { Introduction } from "./Sections/Introduction";
-import { ProjectExperience } from "./Sections/ProductionApps/ProductionApps";
-import { WhatIDo } from "./Sections/WhatIDo";
-import { Projects as LandingProjects } from "./Sections/Projects";
-import { AboutMe } from "./Sections/AboutMe";
-import { ContactBanner } from "./Sections/ContactBanner";
+import { SocialsAdvertisement } from '../../components/SocialsAdvertisement';
+import { AcademicExperience } from './Sections/Academic';
+import { OverallAd } from './Sections/Advertisement';
+import { WorkExperience } from './Sections/WorkExperience';
+import { Introduction } from './Sections/Introduction';
+import { ProjectExperience } from './Sections/ProductionApps/ProductionApps';
+import { WhatIDo } from './Sections/WhatIDo';
+import { Projects as LandingProjects } from './Sections/Projects';
+import { AboutMe } from './Sections/AboutMe';
+import { ContactBanner } from './Sections/ContactBanner';
 
 export const Landing = () => {
   return (

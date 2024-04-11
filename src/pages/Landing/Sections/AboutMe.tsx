@@ -1,9 +1,9 @@
-import { useGlobalContext } from "../../../util/context/useGlobalContext";
-import { PageSection } from "../../../components/text/PageSection";
-import { SubTitle } from "../../../components/text/SubTitle";
-import { Title } from "../../../components/text/Title";
-import { TitleSize } from "../../../data/constants";
-import { Icon } from "@iconify/react";
+import { useGlobalContext } from '../../../util/context/useGlobalContext';
+import { PageSection } from '../../../components/text/PageSection';
+import { SubTitle } from '../../../components/text/SubTitle';
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
+import { Icon } from '@iconify/react';
 
 export const AboutMe = () => {
   const { tldr } = useGlobalContext();

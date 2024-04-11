@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from 'react';
 
 interface GlobalContextProps {
   tldr: boolean;
@@ -21,41 +21,41 @@ export const GlobalContextProvider = ({
 
   const setDarkMode = (value: boolean) => {
     if (value) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
     } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
     }
     setDarkModeFlag(value);
   };
 
   const setTldr = (value: boolean) => {
     if (value) {
-      localStorage.tldr = "true";
+      localStorage.tldr = 'true';
       setTldrFlag(true);
     } else {
-      localStorage.removeItem("tldr");
+      localStorage.removeItem('tldr');
       setTldrFlag(false);
     }
   };
 
   useEffect(() => {
     // On page load or when changing themes
-    if (!("theme" in localStorage)) {
+    if (!('theme' in localStorage)) {
       if (
-        localStorage.theme === "dark" ||
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+        localStorage.theme === 'dark' ||
+        window.matchMedia('(prefers-color-scheme: dark)').matches
       ) {
         setDarkMode(true);
       } else {
         setDarkMode(false);
       }
     } else {
-      setDarkMode(localStorage.theme === "dark");
+      setDarkMode(localStorage.theme === 'dark');
     }
 
-    if (localStorage.tldr === "true") {
+    if (localStorage.tldr === 'true') {
       setTldrFlag(true);
     }
   }, []);

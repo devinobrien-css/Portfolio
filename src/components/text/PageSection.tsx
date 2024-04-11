@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 interface PageSectionProps {
   className?: string;
@@ -23,7 +23,7 @@ export const PageSection = ({
   return (
     <section
       className={
-        "flex min-h-screen w-full flex-col items-center p-4 md:p-0 [&>*]:my-auto"
+        'flex min-h-screen w-full flex-col items-center p-4 md:p-0 [&>*]:my-auto'
       }
     >
       <div className={className}>{children}</div>

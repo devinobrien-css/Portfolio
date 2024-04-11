@@ -1,5 +1,5 @@
-import cx from "classnames";
-import Typewriter from "typewriter-effect";
+import cx from 'classnames';
+import Typewriter from 'typewriter-effect';
 
 interface TypeTextAnimationProps {
   text: string;
@@ -7,11 +7,11 @@ interface TypeTextAnimationProps {
 }
 export const TypewriterText = ({ text, className }: TypeTextAnimationProps) => {
   return (
-    <div id="typewriter" className={cx(className, "")}>
+    <div id="typewriter" className={cx(className, '')}>
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-            .typeString("Hi, my name is")
+            .typeString('Hi, my name is')
             .pauseFor(2500)
             .start()
             .deleteAll()
@@ -19,19 +19,19 @@ export const TypewriterText = ({ text, className }: TypeTextAnimationProps) => {
             .pauseFor(2500)
             .start()
             .deleteAll()
-            .typeString("Welcome! My name is")
+            .typeString('Welcome! My name is')
             .pauseFor(2500)
             .start()
             .deleteAll()
-            .typeString("Greetings! My name is")
+            .typeString('Greetings! My name is')
             .pauseFor(2500)
             .start()
             .deleteAll()
-            .typeString("Nice to have you! My name is")
+            .typeString('Nice to have you! My name is')
             .pauseFor(2500)
             .start()
             .deleteAll()
-            .typeString("Hello there, my name is")
+            .typeString('Hello there, my name is')
             .pauseFor(2500)
             .start();
         }}

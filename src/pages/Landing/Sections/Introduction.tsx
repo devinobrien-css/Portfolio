@@ -1,7 +1,7 @@
-import { TypewriterText } from "../../../components/animations/TypewriterText";
-import { PageSection } from "../../../components/text/PageSection";
-import { Title } from "../../../components/text/Title";
-import { TitleSize } from "../../../data/constants";
+import { TypewriterText } from '../../../components/animations/TypewriterText';
+import { PageSection } from '../../../components/text/PageSection';
+import { Title } from '../../../components/text/Title';
+import { TitleSize } from '../../../data/constants';
 
 export const Introduction = () => {
   return (

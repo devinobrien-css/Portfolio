@@ -1,12 +1,12 @@
-import { Card } from "../../components/cards/Card";
-import { ProjectCard } from "../../components/cards/ProjectCard";
-import { SkillIcon } from "../../components/SkillIcon";
-import { PageSection } from "../../components/text/PageSection";
-import { PageTitle } from "../../components/text/PageTitle";
-import { SubTitle } from "../../components/text/SubTitle";
-import { TextSection } from "../../components/text/TextSection";
-import { Title } from "../../components/text/Title";
-import { TitleSize } from "../../data/constants";
+import { Card } from '../../components/cards/Card';
+import { ProjectCard } from '../../components/cards/ProjectCard';
+import { SkillIcon } from '../../components/SkillIcon';
+import { PageSection } from '../../components/text/PageSection';
+import { PageTitle } from '../../components/text/PageTitle';
+import { SubTitle } from '../../components/text/SubTitle';
+import { TextSection } from '../../components/text/TextSection';
+import { Title } from '../../components/text/Title';
+import { TitleSize } from '../../data/constants';
 
 export const Docs = () => {
   return (
@@ -66,26 +66,26 @@ export const Docs = () => {
         <div className="flex w-full justify-center gap-x-8">
           <ProjectCard
             project={{
-              title: "Project Title",
+              title: 'Project Title',
               description:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.",
+                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
               image:
-                "https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp",
-              tags: ["react", "typescript"],
-              github: "",
-              demo: "",
+                'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+              tags: ['react', 'typescript'],
+              github: '',
+              demo: '',
               skills: [
                 {
-                  name: "React",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'React',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TypeScript",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TypeScript',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TailwindCSS",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TailwindCSS',
+                  icon: 'https://via.placeholder.com/150',
                 },
               ],
             }}
@@ -93,26 +93,26 @@ export const Docs = () => {
 
           <ProjectCard
             project={{
-              title: "Project Title",
+              title: 'Project Title',
               description:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.",
+                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
               image:
-                "https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp",
-              tags: ["react", "typescript"],
-              github: "",
-              demo: "",
+                'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+              tags: ['react', 'typescript'],
+              github: '',
+              demo: '',
               skills: [
                 {
-                  name: "React",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'React',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TypeScript",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TypeScript',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TailwindCSS",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TailwindCSS',
+                  icon: 'https://via.placeholder.com/150',
                 },
               ],
             }}
@@ -120,26 +120,26 @@ export const Docs = () => {
 
           <ProjectCard
             project={{
-              title: "Project Title",
+              title: 'Project Title',
               description:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.",
+                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat voluptatibus dolores, adipisci est necessitatibus asperiores.',
               image:
-                "https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp",
-              tags: ["react", "typescript"],
-              github: "",
-              demo: "",
+                'https://access-portfolio-images.s3.amazonaws.com/angular-bg.webp',
+              tags: ['react', 'typescript'],
+              github: '',
+              demo: '',
               skills: [
                 {
-                  name: "React",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'React',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TypeScript",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TypeScript',
+                  icon: 'https://via.placeholder.com/150',
                 },
                 {
-                  name: "TailwindCSS",
-                  icon: "https://via.placeholder.com/150",
+                  name: 'TailwindCSS',
+                  icon: 'https://via.placeholder.com/150',
                 },
               ],
             }}

@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import cx from "classnames";
-import { TitleSize } from "../../data/constants";
+import { ReactElement } from 'react';
+import cx from 'classnames';
+import { TitleSize } from '../../data/constants';
 
 interface TitleProps {
   size?: TitleSize;
@@ -20,12 +20,12 @@ export const Title = ({
 }: TitleProps): JSX.Element => {
   return (
     <p
-      className={cx(className, "font-montserrat font-light dark:text-white", {
-        "text-3xl sm:text-5xl md:text-6xl": size === TitleSize.XL,
-        "text-xl sm:text-3xl md:text-4xl": size === TitleSize.LG,
-        "text-md md:text-lg": size === TitleSize.MD,
-        "md:text-md text-xs sm:text-sm": size === TitleSize.SM,
-        "text-sm sm:text-xs": size === TitleSize.XS,
+      className={cx(className, 'font-montserrat font-light dark:text-white', {
+        'text-3xl sm:text-5xl md:text-6xl': size === TitleSize.XL,
+        'text-xl sm:text-3xl md:text-4xl': size === TitleSize.LG,
+        'text-md md:text-lg': size === TitleSize.MD,
+        'md:text-md text-xs sm:text-sm': size === TitleSize.SM,
+        'text-sm sm:text-xs': size === TitleSize.XS,
       })}
     >
       {children}

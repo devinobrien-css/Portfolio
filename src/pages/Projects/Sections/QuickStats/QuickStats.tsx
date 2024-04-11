@@ -1,9 +1,9 @@
-import { Bar, Pie } from "react-chartjs-2";
-import { PageSection } from "../../../../components/text/PageSection";
-import { PageTitle } from "../../../../components/text/PageTitle";
-import { ChartEvent } from "chart.js";
-import { useState } from "react";
-import { SubTitle } from "../../../../components/text/SubTitle";
+import { Bar, Pie } from 'react-chartjs-2';
+import { PageSection } from '../../../../components/text/PageSection';
+import { PageTitle } from '../../../../components/text/PageTitle';
+import { ChartEvent } from 'chart.js';
+import { useState } from 'react';
+import { SubTitle } from '../../../../components/text/SubTitle';
 import {
   backendFrameworks,
   cloudServices,
@@ -12,43 +12,43 @@ import {
   infrastructure,
   languages,
   styles,
-} from "../../../../data/skills";
-import { RenderSection } from "./RenderSection";
-import { StatsSection } from "../../../../data/constants";
+} from '../../../../data/skills';
+import { RenderSection } from './RenderSection';
+import { StatsSection } from '../../../../data/constants';
 
 const data = {
   labels: [
-    "Backend Frameworks",
-    "Frontend Frameworks",
-    "Design/Styling",
-    "Languages",
-    "Databases",
-    "Infrastructure",
-    "Cloud Services",
+    'Backend Frameworks',
+    'Frontend Frameworks',
+    'Design/Styling',
+    'Languages',
+    'Databases',
+    'Infrastructure',
+    'Cloud Services',
   ],
   datasets: [
     {
-      label: "# of Skills",
+      label: '# of Skills',
       backgroundColor: [
-        "#C6E9EB",
-        "#9AD4D6",
-        "#78A6AE",
-        "#78A6BE",
-        "#557786",
-        "#557796",
-        "#55A690",
+        '#C6E9EB',
+        '#9AD4D6',
+        '#78A6AE',
+        '#78A6BE',
+        '#557786',
+        '#557796',
+        '#55A690',
       ],
-      hoverBackgroundColor: "#F2FDFF",
+      hoverBackgroundColor: '#F2FDFF',
       hoverBorderColor: [
-        "#C6E9EB",
-        "#9AD4D6",
-        "#78A6AE",
-        "#78A6BE",
-        "#557786",
-        "#557796",
-        "#55A690",
+        '#C6E9EB',
+        '#9AD4D6',
+        '#78A6AE',
+        '#78A6BE',
+        '#557786',
+        '#557796',
+        '#55A690',
       ],
-      borderColor: "transparent",
+      borderColor: 'transparent',
       borderWidth: 2,
       data: [
         backendFrameworks.length,
@@ -67,7 +67,7 @@ export const QuickStats = () => {
   const [section, setSection] = useState<string>(
     StatsSection.BackendFrameworks,
   );
-  const [chartType, setChartType] = useState<string>("bar");
+  const [chartType, setChartType] = useState<string>('bar');
 
   const options = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -79,12 +79,12 @@ export const QuickStats = () => {
     },
     plugins: {
       legend: {
-        position: "bottom" as const,
+        position: 'bottom' as const,
         labels: {
           font: {
-            family: "Lato",
+            family: 'Lato',
             size: 11,
-            weight: "normal" as const,
+            weight: 'normal' as const,
           },
         },
       },
@@ -109,10 +109,10 @@ export const QuickStats = () => {
             Click on a section to see more details
           </SubTitle>
           <button
-            onClick={() => setChartType(chartType === "bar" ? "pie" : "bar")}
+            onClick={() => setChartType(chartType === 'bar' ? 'pie' : 'bar')}
             className="z-[999] my-auto hidden font-montserrat text-tiffany-blue underline transition-all hover:scale-110 md:block"
           >
-            switch to {chartType === "bar" ? "pie" : "bar"}
+            switch to {chartType === 'bar' ? 'pie' : 'bar'}
           </button>
         </div>
 
@@ -121,7 +121,7 @@ export const QuickStats = () => {
         </div>
         <div className="lg:flex">
           <div className="hidden w-full flex-col font-lato md:flex lg:w-2/3">
-            {chartType === "bar" ? (
+            {chartType === 'bar' ? (
               <Bar
                 className=" size-full cursor-pointer"
                 data={data}

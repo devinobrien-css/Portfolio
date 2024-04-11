@@ -2,13 +2,13 @@ import {
   RouterProvider,
   createBrowserRouter,
   useLocation,
-} from "react-router-dom";
-import { Landing } from "../../pages/Landing/Landing";
-import { Docs } from "../../pages/Docs/Docs";
-import { Projects } from "../../pages/Projects/Projects";
-import { Navigation } from "../../components/navigation/Navigation";
-import { Personality } from "../../pages/Personality/Personality";
-import { useEffect } from "react";
+} from 'react-router-dom';
+import { Landing } from '../../pages/Landing/Landing';
+import { Docs } from '../../pages/Docs/Docs';
+import { Projects } from '../../pages/Projects/Projects';
+import { Navigation } from '../../components/navigation/Navigation';
+import { Personality } from '../../pages/Personality/Personality';
+import { useEffect } from 'react';
 
 const PageWithNav = ({ children }: { children: React.ReactNode }) => {
   const { pathname } = useLocation();
@@ -26,7 +26,7 @@ const PageWithNav = ({ children }: { children: React.ReactNode }) => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: (
       <PageWithNav>
         <Landing />
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/projects",
+    path: '/projects',
     element: (
       <PageWithNav>
         <Projects />
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/personality",
+    path: '/personality',
     element: (
       <PageWithNav>
         <Personality />
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/docs",
+    path: '/docs',
     element: (
       <PageWithNav>
         <Docs />
