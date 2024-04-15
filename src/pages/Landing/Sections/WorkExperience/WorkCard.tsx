@@ -28,30 +28,39 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
         'border-paynes-grey bg-gray-100 dark:bg-slate-900': !isOpen,
       })}
     >
-      <div className='flex flex-wrap-reverse justify-end sm:justify-between'>
-        <Title size={TitleSize.MD} className='flex gap-2'>
+      <div className='flex flex-wrap-reverse sm:justify-between'>
+        <Title size={TitleSize.MD} className='gap-2 sm:flex'>
           <img
             src={icon}
             alt={name}
-            className='my-auto size-8 rounded-full object-cover'
+            className='my-auto hidden size-8 rounded-full object-cover sm:block'
           />
-          {title} @ {name}
+          <span className='my-auto'>
+            {title} @ {name}
+          </span>
         </Title>
 
-        <div className='flex gap-2'>
-          <SubTitle className='my-auto'>{timeline}</SubTitle>
+        <div className='mb-2 flex w-full justify-between gap-2 md:w-fit'>
+          <img
+            src={icon}
+            alt={name}
+            className='my-auto size-8 rounded-full object-cover sm:hidden'
+          />
+          <div className='flex gap-2'>
+            <SubTitle className='my-auto'>{timeline}</SubTitle>
 
-          <button
-            aria-label={`Toggle Work Experience for ${name}`}
-            onClick={() => setIsOpen(!isOpen)}
-            className='text-slate-400 transition-all hover:scale-125 dark:text-white'
-          >
-            {isOpen ? (
-              <Icon icon='akar-icons:minus' className='my-auto size-6' />
-            ) : (
-              <Icon icon='akar-icons:plus' className='my-auto size-6' />
-            )}
-          </button>
+            <button
+              aria-label={`Toggle Work Experience for ${name}`}
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-slate-400 transition-all hover:scale-125 dark:text-white'
+            >
+              {isOpen ? (
+                <Icon icon='akar-icons:minus' className='my-auto size-6' />
+              ) : (
+                <Icon icon='akar-icons:plus' className='my-auto size-6' />
+              )}
+            </button>
+          </div>
         </div>
       </div>
       <hr
@@ -62,14 +71,14 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
       />
       <div
         className={cx(
-          'flex flex-col gap-4 overflow-y-scroll transition-all duration-300',
+          'flex flex-col  overflow-y-scroll transition-all duration-300',
           {
             'h-0': !isOpen,
             'h-96 md:h-72': isOpen,
           },
         )}
       >
-        <div className='sticky top-0 flex gap-8 bg-white dark:bg-slate-800'>
+        <div className='sticky top-0 flex flex-col gap-2 bg-white dark:bg-slate-800 md:flex-row'>
           <div className='flex gap-2'>
             <Icon icon='ph:map-pin' className='size-6 dark:text-white' />
             <span className='font-monterrat text-md font-light dark:text-white'>
@@ -87,9 +96,26 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
               {shortName}
             </a>
           </div>
+          <hr
+            className={cx('border-tiffany-blue transition-all duration-300', {
+              'opacity-0': !isOpen,
+              'opacity-full my-2': isOpen,
+            })}
+          />
         </div>
 
         <div className='flex h-full flex-col justify-between'>
+          <div className='flex flex-wrap gap-2'>
+            {employer.skills?.map((skill) => (
+              <Pill key={skill.name}>{skill.name}</Pill>
+            ))}
+          </div>
+          <hr
+            className={cx('border-tiffany-blue transition-all duration-300', {
+              'opacity-0': !isOpen,
+              'opacity-full my-2': isOpen,
+            })}
+          />
           <div className='flex flex-col gap-2'>
             {employer.bulletPoints?.map((point) => (
               <p
@@ -99,12 +125,6 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
                 <span className='-mt-1 text-2xl'>•</span>{' '}
                 <span className='my-auto'>{point}</span>
               </p>
-            ))}
-          </div>
-
-          <div className='mt-4 flex flex-wrap gap-2'>
-            {employer.skills?.map((skill) => (
-              <Pill key={skill.name}>{skill.name}</Pill>
             ))}
           </div>
         </div>

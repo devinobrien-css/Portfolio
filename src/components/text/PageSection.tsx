@@ -21,9 +21,7 @@ export const PageSection = ({
   children,
 }: PageSectionProps): JSX.Element => {
   return (
-    <section
-      className={'flex min-h-screen w-full flex-col p-4 md:p-0 [&>*]:my-auto'}
-    >
+    <section className={'flex min-h-screen w-full flex-col p-0 [&>*]:my-auto'}>
       <div className={className}>{children}</div>
     </section>
   );

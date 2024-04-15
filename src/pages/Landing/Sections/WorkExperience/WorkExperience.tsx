@@ -11,7 +11,7 @@ export const WorkExperience = (): JSX.Element => {
       <div className='mt-4 w-full transition-all duration-300 md:my-auto'>
         <Title
           size={TitleSize.LG}
-          className='!font-bebas !text-5xl md:!text-6xl'
+          className='!font-bebas !text-4xl md:!text-6xl'
         >
           Where I've Worked
         </Title>
