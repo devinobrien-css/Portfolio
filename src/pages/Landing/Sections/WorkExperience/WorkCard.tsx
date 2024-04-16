@@ -99,13 +99,12 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
           <hr
             className={cx('border-tiffany-blue transition-all duration-300', {
               'opacity-0': !isOpen,
-              'opacity-full my-2': isOpen,
+              'opacity-full': isOpen,
             })}
           />
         </div>
-
         <div className='flex h-full flex-col justify-between'>
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex flex-wrap gap-2 p-2'>
             {employer.skills?.map((skill) => (
               <Pill key={skill.name}>{skill.name}</Pill>
             ))}
@@ -113,7 +112,7 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
           <hr
             className={cx('border-tiffany-blue transition-all duration-300', {
               'opacity-0': !isOpen,
-              'opacity-full my-2': isOpen,
+              'opacity-full': isOpen,
             })}
           />
           <div className='flex flex-col gap-2'>
