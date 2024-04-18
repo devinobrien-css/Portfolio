@@ -82,7 +82,10 @@ export const Projects = () => {
         })}
         onClick={() => setShowFilterMenu(false)}
       ></div>
-      <div className='relative mx-auto py-12 md:max-w-[65%]' id='projects-page'>
+      <div
+        className='relative mx-auto px-4 py-12 md:max-w-[65%]'
+        id='projects-page'
+      >
         <div id='all-projects' />
         <PageSection className='min-h-screen'>
           <div className='p-4'>

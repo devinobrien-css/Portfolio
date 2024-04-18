@@ -101,8 +101,8 @@ export const QuickStats = () => {
     //     </div>
     //   }
     // >
-    <PageSection className='w-full'>
-      <div className='my-auto w-full md:mx-auto'>
+    <PageSection className='w-full p-2'>
+      <div className='my-24 w-full md:m-auto'>
         <PageTitle title='Quick Stats' />
         <div className='flex justify-between'>
           <SubTitle className='hidden md:block'>

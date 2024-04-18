@@ -25,7 +25,7 @@ export const AcademicExperience = () => {
     //   }
     // >
     <PageSection>
-      <div className='mt-4 w-full p-3 transition-all duration-300 md:my-auto'>
+      <div className='mt-4 w-full transition-all duration-300 md:my-auto'>
         <PageTitle title='Academics' />
         <br />
         <div className='flex flex-wrap justify-between gap-y-8'>
