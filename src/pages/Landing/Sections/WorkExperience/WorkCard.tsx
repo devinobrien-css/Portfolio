@@ -78,7 +78,14 @@ export const WorkCard = ({ employer, initialOpen }: WorkCardProps) => {
           },
         )}
       >
-        <div className='sticky top-0 flex flex-col gap-2 bg-white dark:bg-slate-800 md:flex-row'>
+        <div
+          className={cx(
+            'sticky top-0 flex flex-col gap-2 dark:bg-slate-800 md:flex-row',
+            {
+              'bg-white': isOpen,
+            },
+          )}
+        >
           <div className='flex gap-2'>
             <Icon icon='ph:map-pin' className='size-6 dark:text-white' />
             <span className='font-monterrat text-md font-light dark:text-white'>

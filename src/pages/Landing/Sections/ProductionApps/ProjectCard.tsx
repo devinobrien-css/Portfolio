@@ -28,21 +28,21 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { title, subtitle, content, skills } = project;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { tldr } = useGlobalContext();
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
-      {isModalOpen && (
-        <ProjectModal
-          project={project}
-          closeModal={() => setIsModalOpen(false)}
-        />
-      )}
+      <ProjectModal
+        project={project}
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+      />
       <Card className='ring-blue-300 transition-all hover:scale-105 active:ring-2 dark:!bg-gray-800'>
         <button
           className='size-full text-left transition-all'
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => setModalOpen(!modalOpen)}
         >
           <div className='flex h-full flex-col justify-between gap-y-2'>
             <div>

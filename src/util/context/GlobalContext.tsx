@@ -5,6 +5,8 @@ interface GlobalContextProps {
   setTldr: (tldr: boolean) => void;
   darkMode: boolean;
   setDarkMode: (darkMode: boolean) => void;
+  modalOpen?: boolean;
+  setModalOpen?: (modalOpen: boolean) => void;
 }
 
 // Create a context for your variable
@@ -13,6 +15,8 @@ export const GlobalContext = createContext<GlobalContextProps>({
   setTldr: () => null,
   darkMode: false,
   setDarkMode: () => null,
+  modalOpen: false,
+  setModalOpen: () => null,
 });
 
 // Provider component to wrap your app and manage the variable

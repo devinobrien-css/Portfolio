@@ -8,10 +8,11 @@ import { WhatIDo } from './Sections/WhatIDo';
 import { Projects as LandingProjects } from './Sections/Projects';
 import { AboutMe } from './Sections/AboutMe';
 import { ContactBanner } from './Sections/ContactBanner';
+import cx from 'classnames';
 
 export const Landing = () => {
   return (
-    <div className='relative mx-auto p-10 md:max-w-[65%] md:p-0'>
+    <div className={cx('relative mx-auto p-10 md:max-w-[65%] md:p-0', {})}>
       <div id='introduction' />
       <Introduction />
 
