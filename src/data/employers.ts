@@ -2,13 +2,76 @@ import { Employer } from '../types/Employer';
 
 export const employers: Employer[] = [
   {
+    name: 'CDPHP',
+    shortName: 'CDPHP',
+    title: 'Full Stack Developer',
+    link: 'https://www.cdphp.com/',
+    location: 'Remote',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8-0U3OwyX_qTS1ESaFDaQ_fLDolpOLxXGA&s',
+    timeline: '2024 - Present',
+    description:
+      'Support over 400,000 users, including patients and members, through ongoing maintenance and enhancement of C#/.NET Framework/React MVC applications. Deliver a wide range of resources to the web portals and mobile applications by implementing scalable API infrastructure in MuleSoft integrated with a number of third party resources and APIs.',
+    bulletPoints: [
+      'Support over 400,000 users, including patients and members, through ongoing maintenance and enhancement of C#/.NET Framework/React MVC applications.',
+      'Deliver a wide range of resources to the web portals and mobile applications by implementing scalable API infrastructure in MuleSoft integrated with a number of third party resources and APIs.',
+      'Brought a significant reduction in deployment times (~60%) by implementing parallel execution of jobs in Jenkins.',
+      'Comply with HIPAA, PHI, and HITECH standards through the enforcement of secure development practices.'
+    ],
+    skills: [
+      {
+        name: 'C#',
+        icon: '',
+      },
+      {
+        name: '.NET Framework',
+        icon: '',
+      },
+      {
+        name: 'React',
+        icon: '',
+      },
+      {
+        name: 'MVC',
+        icon: '',
+      },
+      {
+        name: 'Sitecore',
+        icon: '',
+      },
+      {
+        name: 'MAUI',
+        icon: '',
+      },
+      {
+        name: 'MuleSoft',
+        icon: '',
+      },
+      {
+        name: 'Jenkins',
+        icon: '',
+      },
+      {
+        name: 'HIPAA',
+        icon: '',
+      },
+      {
+        name: 'PHI',
+        icon: '',
+      },
+      {
+        name: 'HITECH',
+        icon: '',
+      },
+    ],
+  },
+  {
     name: 'Warner Bros. Discovery',
     shortName: 'WBD',
     title: 'Full Stack Developer',
     link: 'https://www.warnerbrosdiscovery.com/',
     location: 'Remote',
     icon: 'https://access-portfolio-images.s3.amazonaws.com/wbd-icon',
-    timeline: '2024 - Present',
+    timeline: '2024',
     description:
       'Develop and maintain a suite of applications and APIs for the Warner Bros. Discovery contract management platform. Update and maintain database schemas and cloud infrastructure.',
     bulletPoints: [
@@ -53,7 +116,7 @@ export const employers: Employer[] = [
     title: 'Full Stack Developer',
     link: 'https://jahnelgroup.com/',
     location: 'Albany, NY',
-    timeline: '2022 - Present',
+    timeline: '2022 - 2024',
     icon: 'https://access-portfolio-images.s3.amazonaws.com/JG',
     bulletPoints: [
       'Collaborate effectively across AGILE teams, ranging from 5 to 18 members, to develop robust and scalable solutions.',
