@@ -3,10 +3,11 @@ import {
   createBrowserRouter,
   useLocation,
 } from 'react-router-dom';
-import { Landing } from '../../pages/Landing/Landing';
+import { ModernLanding } from '../../pages/Landing/ModernLanding';
 import { Docs } from '../../pages/Docs/Docs';
 import { Projects } from '../../pages/Projects/Projects';
-import { Navigation } from '../../components/navigation/Navigation';
+import { Skills } from '../../pages/Skills/Skills';
+import { ModernNavigation } from '../../components/ModernNavigation';
 import { Personality } from '../../pages/Personality/Personality';
 import { useEffect } from 'react';
 
@@ -18,7 +19,7 @@ const PageWithNav = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <Navigation />
+      <ModernNavigation />
       {children}
     </>
   );
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
     path: '/',
     element: (
       <PageWithNav>
-        <Landing />
+        <ModernLanding />
       </PageWithNav>
     ),
   },
@@ -38,6 +39,22 @@ const router = createBrowserRouter([
     element: (
       <PageWithNav>
         <Projects />
+      </PageWithNav>
+    ),
+  },
+  {
+    path: '/skills',
+    element: (
+      <PageWithNav>
+        <Skills />
+      </PageWithNav>
+    ),
+  },
+  {
+    path: '/about',
+    element: (
+      <PageWithNav>
+        <Personality />
       </PageWithNav>
     ),
   },
@@ -57,6 +74,14 @@ const router = createBrowserRouter([
       </PageWithNav>
     ),
     children: [],
+  },
+  {
+    path: '*',
+    element: (
+      <PageWithNav>
+        <ModernLanding />
+      </PageWithNav>
+    ),
   },
 ]);
 

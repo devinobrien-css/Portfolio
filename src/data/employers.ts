@@ -2,13 +2,113 @@ import { Employer } from '../types/Employer';
 
 export const employers: Employer[] = [
   {
+    name: 'Maro for Schools',
+    shortName: 'Maro for Schools',
+    title: 'Tech Lead',
+    link: 'https://meetmaro.com/',
+    location: 'Remote',
+    timeline: '2024 - Present',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdYE-3JetXbzIk0KYoW89mmqAiycG_bNO0A&s',
+    bulletPoints: [
+      'Collaborate effectively across AGILE teams, ranging from 5 to 18 members, to develop robust and scalable solutions.',
+      'Showcase proficiency across multiple UI frameworks including React, Vue, Angular, and Svelte, actively contributing to the creation of intuitive, responsive, and user-friendly interfaces.',
+      'Proactively identify areas for improvement and draft tickets to address them, while also providing mentorship and guidance to fellow team members, fostering a collaborative environment focused on continuous learning.',
+    ],
+    description:
+      'Collaborate effectively across AGILE teams, ranging from 5 to 18 members, to develop robust and scalable solutions. Showcase proficiency across multiple UI frameworks including React, Vue, Angular, and Svelte, actively contributing to the creation of intuitive, responsive, and user-friendly interfaces.',
+    skills: [
+      {
+        name: 'React',
+        icon: '',
+      },
+      {
+        name: 'Vue',
+        icon: '',
+      },
+      {
+        name: 'TypeScript',
+        icon: '',
+      },
+      {
+        name: 'AWS',
+        icon: '',
+      },
+      {
+        name: 'Node.js',
+        icon: '',
+      },
+      {
+        name: 'Express',
+        icon: '',
+      },
+      {
+        name: 'PostgreSQL',
+        icon: '',
+      },
+      {
+        name: 'MongoDB',
+        icon: '',
+      },
+      {
+        name: 'Docker',
+        icon: '',
+      },
+      {
+        name: 'Kubernetes',
+        icon: '',
+      },
+      {
+        name: 'Jira',
+        icon: '',
+      },
+      {
+        name: 'Confluence',
+        icon: '',
+      },
+    ],
+  },
+  {
+    name: 'Troy Web Consulting',
+    shortName: 'TWC',
+    title: 'Full Stack Developer',
+    link: 'https://www.troyweb.com/',
+    location: 'Remote',
+    icon: 'https://media.glassdoor.com/sqll/2079767/troy-web-consulting-squarelogo-1538159465847.png',
+    timeline: '2024 - Present',
+    description:
+      'Lead contributor on a suite of C#/.NET Framework/React MVC applications empowering oil drilling operations across the United States. Collaborate with a team of 5 developers to deliver a wide range of resources to the web portals by implementing scalable API infrastructure integrated with a number of third party resources.',
+    bulletPoints: [
+      'Architect and maintain scalable Azure infrastructure including App Services, SQL Databases, and Application Insights to ensure high availability for state-level regulatory compliance applications.',
+      'Implement robust CI/CD pipelines with Azure DevOps, automating deployment processes and ensuring consistent application updates across multiple state-specific environments.',
+      'Develop and enhance C#/.NET applications with Razor Pages, maintaining code quality through comprehensive unit testing and ensuring seamless integration with existing API infrastructure.',
+    ],
+    skills: [
+      {
+        name: 'C#',
+        icon: '',
+      },
+      {
+        name: '.NET Framework',
+        icon: '',
+      },
+      {
+        name: 'Razor Pages',
+        icon: '',
+      },
+      {
+        name: 'Azure',
+        icon: '',
+      },
+    ],
+  },
+  {
     name: 'CDPHP',
     shortName: 'CDPHP',
     title: 'Full Stack Developer',
     link: 'https://www.cdphp.com/',
     location: 'Remote',
     icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8-0U3OwyX_qTS1ESaFDaQ_fLDolpOLxXGA&s',
-    timeline: '2024 - Present',
+    timeline: '2024',
     description:
       'Support over 400,000 users, including patients and members, through ongoing maintenance and enhancement of C#/.NET Framework/React MVC applications. Deliver a wide range of resources to the web portals and mobile applications by implementing scalable API infrastructure in MuleSoft integrated with a number of third party resources and APIs.',
     bulletPoints: [

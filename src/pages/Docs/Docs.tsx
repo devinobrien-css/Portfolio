@@ -7,8 +7,12 @@ import { SubTitle } from '../../components/text/SubTitle';
 import { TextSection } from '../../components/text/TextSection';
 import { Title } from '../../components/text/Title';
 import { TitleSize } from '../../data/constants';
+import { useSEO, pageSEO } from '../../hooks/useSEO';
 
 export const Docs = () => {
+  // Apply SEO configuration with noIndex true for this internal docs page
+  useSEO(pageSEO.docs);
+
   return (
     <PageSection className='relative w-4/5'>
       <div className=''>

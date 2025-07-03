@@ -1,7 +1,11 @@
 import { PageSection } from '../../components/text/PageSection';
 import { PageTitle } from '../../components/text/PageTitle';
+import { useSEO, pageSEO } from '../../hooks/useSEO';
 
 export const Personality = () => {
+  // Enhanced SEO optimization
+  useSEO(pageSEO.personality);
+
   return (
     <div className='relative mx-auto p-4 py-12 md:max-w-[65%]'>
       <PageSection>

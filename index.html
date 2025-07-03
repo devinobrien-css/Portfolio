@@ -1,39 +1,167 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="viewport"
-      content="width=100%, height=device-height, initial-scale=1.0, maximum-scale=2.0"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert</title>
+    <meta name="title" content="Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert" />
+    <meta name="description" content="Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 5+ years building scalable web applications for top companies like Warner Bros Discovery." />
+    <meta name="keywords" content="Full Stack Developer, React Developer, TypeScript, Node.js, AWS, Software Engineer, Web Development, JavaScript, Python, PostgreSQL, Tech Lead" />
+    <meta name="author" content="Devin O'Brien" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="New York" />
+    <meta name="geo.position" content="40.7128;-74.0060" />
+    <meta name="ICBM" content="40.7128, -74.0060" />
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Devin P. O'Brien" />
+    <meta property="og:site_name" content="Devin O'Brien Portfolio" />
+    <meta property="og:title" content="Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert" />
+    <meta property="og:description" content="Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 5+ years building scalable web applications for top companies." />
     <meta property="og:url" content="https://devinobrien.netlify.app/" />
-    <meta property="og:description" content="Full Stack Software Engineer" />
-    <meta
-      property="og:image"
-      content="https://access-portfolio-images.s3.amazonaws.com/profile.jpeg"
-    />
+    <meta property="og:image" content="https://access-portfolio-images.s3.amazonaws.com/profile.jpeg" />
+    <meta property="og:image:alt" content="Devin O'Brien - Full Stack Software Engineer" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@devinobrien" />
+    <meta name="twitter:creator" content="@devinobrien" />
+    <meta name="twitter:title" content="Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert" />
+    <meta name="twitter:description" content="Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 5+ years building scalable web applications." />
+    <meta name="twitter:image" content="https://access-portfolio-images.s3.amazonaws.com/profile.jpeg" />
+    <meta name="twitter:image:alt" content="Devin O'Brien - Full Stack Software Engineer" />
+    
+    <!-- LinkedIn Meta Tags -->
+    <meta property="linkedin:owner" content="obrien-devin" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Devin O'Brien Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Devin O'Brien" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#3b82f6" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://devinobrien.netlify.app/" />
+    
+    <!-- Favicons and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- DNS Prefetch for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//access-portfolio-images.s3.amazonaws.com" />
+    <link rel="dns-prefetch" href="//api.iconify.design" />
+    
+    <!-- Preconnect for Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://access-portfolio-images.s3.amazonaws.com" />
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Devin O'Brien",
+      "alternateName": "Devin P. O'Brien",
+      "jobTitle": "Full Stack Software Engineer",
+      "description": "Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS with 5+ years of experience building scalable web applications.",
+      "url": "https://devinobrien.netlify.app",
+      "image": "https://access-portfolio-images.s3.amazonaws.com/profile.jpeg",
+      "email": "devinobrien@icloud.com",
+      "telephone": "+1-203-228-8579",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "State University of New York at Albany",
+          "url": "https://www.albany.edu"
+        }
+      ],
+      "knowsAbout": [
+        "React", "TypeScript", "JavaScript", "Node.js", "Python", "AWS", 
+        "PostgreSQL", "MongoDB", "Docker", "Kubernetes", "GraphQL", "REST APIs",
+        "Full Stack Development", "Software Engineering", "Web Development"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/obrien-devin/",
+        "https://github.com/devinobrien-css",
+        "https://www.instagram.com/devinobrien/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Maro for Schools"
+      }
+    }
+    </script>
+    
+    <!-- Alternative Schema for Professional Profile -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Devin O'Brien - Full Stack Development Services",
+      "description": "Professional full stack software development services specializing in modern web applications using React, Node.js, and cloud technologies.",
+      "provider": {
+        "@type": "Person",
+        "name": "Devin O'Brien"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": "Software Development",
+      "url": "https://devinobrien.netlify.app"
+    }
+    </script>
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Full Stack Software Engineer" />
-    <meta property="twitter:url" content="https://devinobrien.netlify.app/" />
-    <meta
-      property="twitter:image"
-      content="https://access-portfolio-images.s3.amazonaws.com/profile.jpeg"
-    />
-
+    <!-- CSS -->
     <link href="/dist/output.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="/favicon.ico" />
-
-    <title>Devin O'Brien</title>
-    <meta name="description" content="Portfolio website of Devin O'Brien" />
+    
+    <!-- Performance Hints -->
+    <link rel="preload" href="/dist/output.css" as="style" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
   </head>
 
   <body class="">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px;">
+        <h1>JavaScript Required</h1>
+        <p>This portfolio website requires JavaScript to run properly. Please enable JavaScript in your browser to view Devin O'Brien's portfolio.</p>
+        <p>Devin O'Brien is a Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS.</p>
+        <p>Contact: <a href="mailto:devinobrien@icloud.com">devinobrien@icloud.com</a></p>
+      </div>
+    </noscript>
     <div id="root" class=""></div>
     <script type="module" src="/src/index.tsx"></script>
   </body>

@@ -1,0 +1,91 @@
+{
+  "name": "Devin O'Brien - Full Stack Software Engineer",
+  "short_name": "Devin O'Brien",
+  "description": "Portfolio of Devin O'Brien, Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. Expert in modern web development and cloud architecture.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "theme_mode": "light",
+  "theme_color_scheme": {
+    "light": {
+      "background_color": "#f8fafc",
+      "theme_color": "#3b82f6", 
+      "text_color": "#1e293b",
+      "secondary_color": "#64748b",
+      "accent_color": "#0ea5e9",
+      "surface_color": "#ffffff",
+      "border_color": "#e2e8f0",
+      "highlight_color": "#dbeafe"
+    },
+    "dark": {
+      "background_color": "#0f172a",
+      "theme_color": "#3b82f6",
+      "text_color": "#f8fafc",
+      "secondary_color": "#94a3b8",
+      "accent_color": "#38bdf8",
+      "surface_color": "#1e293b",
+      "border_color": "#334155",
+      "highlight_color": "#1e40af"
+    }
+  },
+  "categories": ["business", "developer", "portfolio", "software", "engineering", "technology", "web", "full stack", "react", "typescript", "nodejs", "aws", "cloud", "frontend", "backend"],
+  "screenshots": [
+    {
+      "src": "https://access-portfolio-images.s3.amazonaws.com/profile.jpeg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Devin O'Brien - Full Stack Software Engineer"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projects",
+      "url": "/projects",
+      "description": "View my development projects"
+    },
+    {
+      "name": "Skills",
+      "url": "/skills",
+      "description": "View my technical skills"
+    },
+    {
+      "name": "About",
+      "url": "/about",
+      "description": "Learn more about me"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://devinobrien.netlify.app/manifest.json"
+    }
+  ]
+}

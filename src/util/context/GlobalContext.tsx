@@ -31,9 +31,33 @@ export const GlobalContextProvider = ({
   const setDarkMode = (value: boolean) => {
     if (value) {
       document.documentElement.classList.add('dark');
+      document.documentElement.style.setProperty(
+        '--color-primary',
+        '59 130 246',
+      );
+      document.documentElement.style.setProperty(
+        '--color-primary-light',
+        '96 165 250',
+      );
+      document.documentElement.style.setProperty(
+        '--color-secondary',
+        '167 139 250',
+      );
       localStorage.theme = 'dark';
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.style.setProperty(
+        '--color-primary',
+        '59 130 246',
+      );
+      document.documentElement.style.setProperty(
+        '--color-primary-light',
+        '96 165 250',
+      );
+      document.documentElement.style.setProperty(
+        '--color-secondary',
+        '139 92 246',
+      );
       localStorage.theme = 'light';
     }
     setDarkModeFlag(value);

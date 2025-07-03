@@ -1,7 +1,6 @@
 import { useGlobalContext } from '../../util/context/useGlobalContext';
 import cx from 'classnames';
 import { useEffect, useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { Icon } from '@iconify/react';
 import { NavButton } from './NavButton';
 
@@ -11,28 +10,28 @@ const TldrSwitch = () => {
   return (
     <button
       aria-label='Toggle TLDR mode'
-      className='m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500'
+      className='m-2 flex w-fit rounded-full bg-gradient-to-r from-blue-50 to-slate-100 p-1 shadow-inner shadow-slate-200 dark:from-gray-700 dark:to-gray-600 dark:shadow-none'
       onClick={() => setTldr(!tldr)}
     >
       <div
         className={cx(
-          'rounded-full bg-gray-300 p-2 transition-all duration-500',
+          'rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-2 shadow-md transition-all duration-500',
           {
-            'opacity-0': !tldr,
+            'translate-x-6 opacity-0': !tldr,
           },
         )}
       >
-        <Icon icon='fa6-solid:code' className='size-4 text-gray-800' />
+        <Icon icon='fa6-solid:code' className='size-4 text-white' />
       </div>
       <div
         className={cx(
-          '-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500',
+          '-ml-4 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 p-2 shadow-md transition-all duration-500',
           {
-            'opacity-0': tldr,
+            '-translate-x-6 opacity-0': tldr,
           },
         )}
       >
-        <Icon icon='tabler:code-off' className='size-4 text-gray-800' />
+        <Icon icon='tabler:code-off' className='size-4 text-white' />
       </div>
     </button>
   );
@@ -44,28 +43,28 @@ const DarkModeSwitch = () => {
   return (
     <button
       aria-label='Toggle dark mode'
-      className='m-2 flex w-fit rounded-full bg-gray-200 p-1 text-tiffany-blue dark:bg-gray-500'
+      className='m-2 flex w-fit rounded-full bg-gradient-to-r from-blue-50 to-slate-100 p-1 shadow-inner shadow-slate-200 dark:from-gray-700 dark:to-gray-600 dark:shadow-none'
       onClick={() => setDarkMode(!darkMode)}
     >
       <div
         className={cx(
-          'rounded-full bg-gray-300 p-2 transition-all duration-500',
+          'rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 p-2 shadow-md transition-all duration-500',
           {
-            'opacity-0': !darkMode,
+            'translate-x-6 opacity-0': !darkMode,
           },
         )}
       >
-        <Icon icon='fa-solid:moon' className='size-4 text-gray-800' />
+        <Icon icon='fa-solid:moon' className='size-4 text-white' />
       </div>
       <div
         className={cx(
-          '-ml-4 rounded-full bg-gray-300 p-2 transition-all duration-500',
+          '-ml-4 rounded-full bg-gradient-to-br from-amber-300 to-yellow-500 p-2 shadow-md transition-all duration-500',
           {
-            'opacity-0': darkMode,
+            '-translate-x-6 opacity-0': darkMode,
           },
         )}
       >
-        <Icon icon='fa-solid:sun' className='size-4 text-gray-800' />
+        <Icon icon='fa-solid:sun' className='size-4 text-white' />
       </div>
     </button>
   );
@@ -103,12 +102,12 @@ export const Navigation = () => {
     >
       <button
         aria-label='Toggle navigation'
-        className='z-[1000] mt-4 flex h-fit rounded-l-full bg-white p-1 text-white shadow ring-moonstone hover:bg-slate-50/80 active:ring-2 dark:bg-gray-800 hover:dark:bg-gray-800/80'
+        className='z-[1000] mt-4 flex h-fit rounded-l-full bg-white/90 p-1 text-white shadow-lg shadow-blue-100 ring-blue-500 hover:bg-white hover:shadow-blue-200 active:ring-2 dark:bg-gray-800 dark:shadow-none hover:dark:bg-gray-800/80'
         onClick={() => setShow(!show)}
       >
         <Icon
           icon='iconamoon:arrow-left-2-bold'
-          className={cx('h-12 w-12 text-gray-600 dark:text-white', {
+          className={cx('h-12 w-12 text-blue-600 dark:text-white', {
             'rotate-180 transform': show,
           })}
         />
@@ -116,10 +115,10 @@ export const Navigation = () => {
 
       <div
         className={cx(
-          'h-min max-h-[90vh] max-w-fit overflow-clip whitespace-nowrap rounded-b-lg bg-white transition-all duration-500 dark:bg-gray-800',
+          'h-min max-h-[90vh] max-w-fit overflow-clip whitespace-nowrap rounded-b-lg bg-white/95 shadow-lg shadow-blue-100/50 backdrop-blur-sm transition-all duration-500 dark:bg-gray-800 dark:shadow-none',
           {
             'w-0 blur-sm': !show,
-            'w-full p-4  shadow': show,
+            'w-full border border-slate-100 p-4': show,
           },
         )}
       >
@@ -154,53 +153,10 @@ export const Navigation = () => {
 
           <hr className='my-2 border-tiffany-blue' />
 
-          <NavButton text='Home' to='/' isMulti>
-            <ScrollLink
-              smooth={true}
-              to={'introduction'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Introduction
-            </ScrollLink>
-            <ScrollLink
-              smooth={true}
-              to={'work-experience'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Work Experience
-            </ScrollLink>
-            <ScrollLink
-              smooth={true}
-              to={'project-experience'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Project Experience
-            </ScrollLink>
-            <ScrollLink
-              smooth={true}
-              to={'academic-experience'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Academic Experience
-            </ScrollLink>
-          </NavButton>
-          <NavButton text='Projects' to='/projects' isMulti>
-            <ScrollLink
-              smooth={true}
-              to={'all-projects'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Github Projects
-            </ScrollLink>
-            <ScrollLink
-              smooth={true}
-              to={'quick-stats'}
-              className='cursor-pointer p-1 hover:underline md:p-2'
-            >
-              Quick Stats
-            </ScrollLink>
-          </NavButton>
-          <NavButton text='More than Code' to='/personality' />
+          <NavButton text='Home' to='/' />
+          <NavButton text='Projects' to='/projects' />
+          <NavButton text='Skills' to='/skills' />
+          <NavButton text='About' to='/personality' />
 
           <hr className='my-2 border-tiffany-blue' />
 
