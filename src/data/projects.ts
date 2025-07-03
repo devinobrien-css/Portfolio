@@ -1,6 +1,5 @@
-import { Project } from '../pages/Landing/Sections/ProductionApps/ProjectCard';
 
-export const projects: Project[] = [
+export const projects = [
   {
     title: 'WBD DEAL',
     subtitle: 'A Streaming Management platform for Warner Bros. Discovery',
