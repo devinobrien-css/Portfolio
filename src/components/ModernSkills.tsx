@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Skill {
   name: string;
@@ -168,6 +169,7 @@ const skills: Skill[] = [
 const categories = ['All', 'Frontend', 'Backend', 'Cloud', 'Tools'];
 
 export const ModernSkills = () => {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState('All');
   const [animatedLevels, setAnimatedLevels] = useState<{
     [key: string]: number;
@@ -207,7 +209,7 @@ export const ModernSkills = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVisible) {
+          if (entry.isIntersecting) {
             setIsVisible(true);
             // Animate each skill bar with staggered timing
             filteredSkills.forEach((skill, index) => {
@@ -230,24 +232,29 @@ export const ModernSkills = () => {
     }
 
     return () => observer.disconnect();
-  }, [filteredSkills, isVisible]);
+  }, []);
 
-  // Reset animations when category changes
+  // Re-trigger animations when category changes
   useEffect(() => {
     setAnimatedLevels({});
-    setIsVisible(false);
-    // Re-trigger animations after category change
-    setTimeout(() => {
-      filteredSkills.forEach((skill, index) => {
-        setTimeout(() => {
-          setAnimatedLevels((prev) => ({
-            ...prev,
-            [skill.name]: skill.level,
-          }));
-        }, index * 100);
-      });
-    }, 100);
-  }, [activeCategory, filteredSkills]);
+    // Re-animate after a brief reset
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    timeouts.push(
+      setTimeout(() => {
+        filteredSkills.forEach((skill, index) => {
+          timeouts.push(
+            setTimeout(() => {
+              setAnimatedLevels((prev) => ({
+                ...prev,
+                [skill.name]: skill.level,
+              }));
+            }, index * 100),
+          );
+        });
+      }, 50),
+    );
+    return () => timeouts.forEach(clearTimeout);
+  }, [activeCategory]);
 
   return (
     <section
@@ -457,6 +464,15 @@ export const ModernSkills = () => {
                     )}
                   </div>
                 </div>
+
+                {/* View Projects Link */}
+                <button
+                  onClick={() => navigate(`/projects?search=${encodeURIComponent(skill.name)}`)}
+                  className='mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg bg-neutral-100 py-2 text-xs font-medium text-neutral-600 opacity-0 transition-all group-hover:opacity-100 dark:bg-neutral-700 dark:text-neutral-300'
+                >
+                  <Icon icon='ph:arrow-right' className='size-3' />
+                  View Projects
+                </button>
               </div>
             </div>
           ))}
@@ -468,7 +484,7 @@ export const ModernSkills = () => {
             <h3 className='mb-4 text-2xl font-bold sm:text-3xl'>
               Ready to leverage these skills for your project?
             </h3>
-            <p className='mb-6 text-lg text-blue-100'>
+            <p className='mb-6 text-lg text-neutral-300 dark:text-neutral-600'>
               Let's discuss how my technical expertise can help bring your ideas
               to life and drive real business results.
             </p>
@@ -487,7 +503,7 @@ export const ModernSkills = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 download="Devin P. O'Brien Resume"
-                className='group rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:border-white hover:bg-white/10'
+                className='group rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:border-white hover:bg-white/10 dark:border-neutral-300 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100'
               >
                 <span className='flex items-center gap-2'>
                   <Icon icon='ph:download' className='size-5' />

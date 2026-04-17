@@ -3,12 +3,14 @@ import { useEffect, useState } from 'react';
 import {
   backend_tags,
   cloud_tags,
+  data_tags,
   database_tags,
   design_tags,
   devops_tags,
   frontend_tags,
 } from '../../data/github_projects';
 import { projects } from '../../data/github_projects';
+import { GithubProject } from '../../types/Project';
 import { useLocation } from 'react-router-dom';
 import { useTLDR } from '../../util/context/TLDRContext';
 import { useSEO, pageSEO } from '../../hooks/useSEO';
@@ -29,7 +31,7 @@ const ModernTag = ({ tag, isSelected, onClick }: TagProps) => {
   );
 };
 interface ModernProjectCardProps {
-  project: any;
+  project: GithubProject;
 }
 const ModernProjectCard = ({ project }: ModernProjectCardProps) => {
   const { isTLDRMode } = useTLDR();
@@ -122,6 +124,7 @@ export const Projects = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [activeCategory, setActiveCategory] = useState('All');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [sortBy, setSortBy] = useState<'default' | 'name' | 'tags'>('default');
   const [isLoaded, setIsLoaded] = useState(false);
   const { isTLDRMode } = useTLDR();
 
@@ -151,6 +154,7 @@ export const Projects = () => {
     ...database_tags,
     ...devops_tags,
     ...design_tags,
+    ...data_tags,
   ];
   const categories = [
     { name: 'All', tags: allTags },
@@ -160,6 +164,7 @@ export const Projects = () => {
     { name: 'Database', tags: database_tags },
     { name: 'DevOps', tags: devops_tags },
     { name: 'Design', tags: design_tags },
+    { name: 'Data Science', tags: data_tags },
   ];
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
@@ -179,6 +184,11 @@ export const Projects = () => {
       selectedTags.length === 0 ||
       selectedTags.some((tag) => project.tags?.includes(tag));
     return matchesSearch && matchesTags;
+  });
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    if (sortBy === 'name') return a.title.localeCompare(b.title);
+    if (sortBy === 'tags') return (b.tags?.length || 0) - (a.tags?.length || 0);
+    return 0;
   });
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -244,7 +254,7 @@ export const Projects = () => {
                 {' '}
                 <div className='text-3xl font-bold text-blue-600 dark:text-blue-500'>
                   {' '}
-                  7+{' '}
+                  {new Date().getFullYear() - 2019}+{' '}
                 </div>{' '}
                 <div className='text-sm text-neutral-500 dark:text-neutral-400'>
                   {' '}
@@ -281,6 +291,22 @@ export const Projects = () => {
             {/* Action Buttons */}{' '}
             <div className='flex gap-3'>
               {' '}
+              {/* Sort Dropdown */}
+              <div className='relative'>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as 'default' | 'name' | 'tags')}
+                  className='appearance-none rounded-xl border border-neutral-200 bg-white py-3 pl-4 pr-10 font-medium text-neutral-700 transition-all hover:bg-neutral-50 hover:shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700'
+                >
+                  <option value='default'>Default</option>
+                  <option value='name'>A → Z</option>
+                  <option value='tags'>Most Tags</option>
+                </select>
+                <Icon
+                  icon='ph:sort-ascending'
+                  className='pointer-events-none absolute right-3 top-1/2 size-5 -translate-y-1/2 text-neutral-500'
+                />
+              </div>
               <button
                 onClick={() => setIsFilterOpen(!isFilterOpen)}
                 className={`flex items-center gap-2 rounded-xl px-4 py-3 font-medium transition-all ${isFilterOpen || selectedTags.length > 0 ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900' : 'border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 hover:shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700'}`}
@@ -382,15 +408,39 @@ export const Projects = () => {
             </div>
           )}{' '}
         </div>{' '}
+        {/* Featured Projects */}{' '}
+        {sortedProjects.some((p) => p.featured) && search === '' && selectedTags.length === 0 && (
+          <div className='mb-12'>
+            {' '}
+            <h2 className='mb-6 flex items-center gap-2 text-lg font-semibold text-neutral-900 dark:text-white'>
+              <Icon icon='ph:star-fill' className='size-5 text-blue-600' />
+              Featured Projects
+            </h2>
+            <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+              {' '}
+              {sortedProjects
+                .filter((p) => p.featured)
+                .map((project) => (
+                  <div key={project.title} className='relative'>
+                    <div className='absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-400 opacity-20'></div>
+                    <ModernProjectCard project={project} />
+                  </div>
+                ))}{' '}
+            </div>
+          </div>
+        )}
         {/* Projects Grid */}{' '}
         <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
           {' '}
-          {filteredProjects.map((project) => (
+          {(search === '' && selectedTags.length === 0
+            ? sortedProjects.filter((p) => !p.featured)
+            : sortedProjects
+          ).map((project) => (
             <ModernProjectCard key={project.title} project={project} />
           ))}{' '}
         </div>{' '}
         {/* Empty State */}{' '}
-        {filteredProjects.length === 0 && (
+        {sortedProjects.length === 0 && (
           <div className='py-20 text-center'>
             {' '}
             <Icon

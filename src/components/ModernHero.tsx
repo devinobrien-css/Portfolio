@@ -98,9 +98,13 @@ export const ModernHero = () => {
           >
             <h1 className='text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-6xl lg:text-7xl'>
               Building{' '}
-              <span className='text-blue-600 dark:text-blue-500'>
-                {typedText}
-                <span className='animate-pulse'>|</span>
+              <span className='relative inline-block text-blue-600 dark:text-blue-500'>
+                {/* Invisible longest word to reserve space */}
+                <span className='invisible'>production-grade</span>
+                <span className='absolute inset-0'>
+                  {typedText}
+                  <span className='animate-pulse'>|</span>
+                </span>
               </span>
               <br />
               applications.

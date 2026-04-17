@@ -4,41 +4,51 @@ export const frontend_tags = [
   'Angular',
   'React',
   'Svelte',
+  'Vue',
+  'Quasar',
   'Typescript',
-  'Javascript', // 'Vue',
+  'Javascript',
 ];
 export const backend_tags = [
   'Python',
   'Go',
+  'C',
   'C#',
   'Flask',
   'GraphQL',
   'Apollo Server',
   'Node',
-  'Express', //'Django'
+  'Express',
+  'Rest',
+  'API',
+  'TCP',
+  'UDP',
 ];
 export const cloud_tags = [
   'AWS',
   'CDK',
-  'Amplify', // 'GCP', 'Azure',
+  'Amplify',
 ];
 export const database_tags = [
   'PostgreSQL',
   'SQL Server',
-  'DynamoDB', // 'MongoDB', 'MySQL', 'SQLite'
+  'DynamoDB',
 ];
 export const devops_tags = [
   'Docker',
-  'Netlify', //'Github Actions',
+  'Netlify',
 ];
 export const design_tags = [
   'CSS',
   'SCSS',
-  'Tailwind', //'Bootstrap', 'Material UI'
+  'Tailwind',
 ];
-// const other_tags = [
-//   'C', 'C++', 'Java', 'Rust', 'TCP', 'UDP', 'Rest', 'API', 'Geo', 'Maps', 'WebSockets'
-// ];
+export const data_tags = [
+  'Jupyter',
+  'Numpy',
+  'Pandas',
+  'OpenCV',
+];
 
 export const projects: GithubProject[] = [
   {
@@ -94,6 +104,7 @@ export const projects: GithubProject[] = [
       'Netlify',
       'Javascript',
     ],
+    featured: true,
   },
   {
     title: 'Svelte Sample',
@@ -307,8 +318,8 @@ export const projects: GithubProject[] = [
       'Javascript',
       'Tailwind',
       'Netlify',
-      'Javascript',
     ],
+    featured: true,
   },
   {
     title: 'Amplify Geo Maps',
@@ -551,5 +562,6 @@ export const projects: GithubProject[] = [
     ],
     description: 'A proof of concept AI powered art generator for kids',
     tags: ['Vue', 'Typescript', 'Quasar', 'AWS', 'Javascript', 'Typescript'],
+    featured: true,
   },
 ];

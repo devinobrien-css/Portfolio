@@ -38,5 +38,7 @@ export interface GithubProject {
   github?: string;
   demo?: string;
 
+  featured?: boolean;
+
   skills: Skill[];
 }

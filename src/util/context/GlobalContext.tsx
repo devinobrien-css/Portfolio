@@ -59,18 +59,10 @@ export const GlobalContextProvider = ({
   };
 
   useEffect(() => {
-    // On page load or when changing themes
-    if (!('theme' in localStorage)) {
-      if (
-        localStorage.theme === 'dark' ||
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        setDarkMode(true);
-      } else {
-        setDarkMode(false);
-      }
-    } else {
+    if ('theme' in localStorage) {
       setDarkMode(localStorage.theme === 'dark');
+    } else {
+      setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
   }, []);
 
