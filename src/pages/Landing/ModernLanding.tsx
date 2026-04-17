@@ -2,6 +2,7 @@ import { ModernHero } from '../../components/ModernHero';
 import { ModernServices } from '../../components/ModernServices';
 import { ModernCTA } from '../../components/ModernCTA';
 import { QuickStats } from '../../components/QuickStats';
+import { SocialProof } from '../../components/SocialProof';
 import { AcademicExperience } from './Sections/Academic';
 import { WorkExperience } from './Sections/WorkExperience/WorkExperience';
 import { UIShowcase } from './Sections/UIShowcase';
@@ -13,7 +14,7 @@ export const ModernLanding = () => {
     ...pageSEO.home,
     url: 'https://devinobrien.netlify.app/', // Explicitly set canonical URL for home page
     publishedTime: '2024-01-01T00:00:00Z',
-    modifiedTime: new Date().toISOString(),
+    modifiedTime: '2026-04-17T00:00:00Z',
     locale: 'en_US',
     alternateLocales: [], // Add alternate locales if you have them
   });
@@ -28,28 +29,24 @@ export const ModernLanding = () => {
       <div id='services' />
       <ModernServices />
 
+      {/* Work Experience */}
+      <div id='experience' />
+      <WorkExperience />
+
       {/* Quick Stats */}
       <QuickStats />
-
-      {/* Modern Portfolio */}
-      {/* <div id='portfolio' /> */}
-      {/* <ModernPortfolio /> */}
 
       {/* UI Showcase */}
       <div id='ui-showcase' />
       <UIShowcase />
 
-      {/* Work Experience */}
-      <div id='experience' />
-      <WorkExperience />
+      {/* Proven Impact & Tech Stack */}
+      <div id='results' />
+      <SocialProof />
 
       {/* Academic Background */}
       <div id='education' />
       <AcademicExperience />
-
-      {/* Social Proof & Testimonials */}
-      {/* <div id='testimonials' />
-      <SocialProof /> */}
 
       {/* Call to Action */}
       <div id='contact' />

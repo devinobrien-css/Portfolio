@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import { useTLDR } from '../util/context/TLDRContext';
 
 interface Service {
@@ -12,8 +13,7 @@ interface Service {
     name: string;
     icon: string;
   }>;
-  priceRange: string;
-  deliveryTime: string;
+  highlight: string;
 }
 
 const services: Service[] = [
@@ -37,8 +37,7 @@ const services: Service[] = [
       { name: 'Next.js', icon: 'logos:nextjs-icon' },
       { name: 'Tailwind', icon: 'logos:tailwindcss-icon' },
     ],
-    priceRange: '$5K - $25K',
-    deliveryTime: '4-12 weeks',
+    highlight: 'Built for WBD, Maro, CDPHP',
   },
   {
     id: 'api-development',
@@ -60,31 +59,7 @@ const services: Service[] = [
       { name: 'PostgreSQL', icon: 'logos:postgresql' },
       { name: 'AWS', icon: 'logos:aws' },
     ],
-    priceRange: '$3K - $20K',
-    deliveryTime: '3-8 weeks',
-  },
-  {
-    id: 'mobile-development',
-    title: 'Mobile App Development',
-    description:
-      'Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.',
-    icon: 'ph:device-mobile',
-    features: [
-      'Cross-platform development',
-      'Native performance',
-      'App store optimization',
-      'Push notifications',
-      'Offline functionality',
-      'Device hardware integration',
-    ],
-    technologies: [
-      { name: 'React Native', icon: 'logos:react' },
-      { name: 'Flutter', icon: 'logos:flutter' },
-      { name: 'Swift', icon: 'logos:swift' },
-      { name: 'Kotlin', icon: 'logos:kotlin-icon' },
-    ],
-    priceRange: '$8K - $40K',
-    deliveryTime: '6-16 weeks',
+    highlight: '60% faster deployments achieved',
   },
   {
     id: 'cloud-infrastructure',
@@ -98,7 +73,7 @@ const services: Service[] = [
       'Kubernetes orchestration',
       'CI/CD pipeline setup',
       'Monitoring & logging',
-      'Auto-scaling configuration',
+      'Infrastructure as Code (Terraform)',
     ],
     technologies: [
       { name: 'AWS', icon: 'logos:aws' },
@@ -106,31 +81,7 @@ const services: Service[] = [
       { name: 'Kubernetes', icon: 'logos:kubernetes' },
       { name: 'Terraform', icon: 'logos:terraform-icon' },
     ],
-    priceRange: '$2K - $15K',
-    deliveryTime: '2-6 weeks',
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-commerce Solutions',
-    description:
-      'Complete e-commerce platforms with payment processing, inventory management, and customer experience optimization.',
-    icon: 'ph:shopping-cart',
-    features: [
-      'Payment gateway integration',
-      'Inventory management',
-      'Order processing system',
-      'Customer accounts',
-      'Admin dashboard',
-      'Analytics & reporting',
-    ],
-    technologies: [
-      { name: 'Shopify', icon: 'logos:shopify' },
-      { name: 'Stripe', icon: 'logos:stripe' },
-      { name: 'WooCommerce', icon: 'logos:woocommerce' },
-      { name: 'Next.js', icon: 'logos:nextjs-icon' },
-    ],
-    priceRange: '$10K - $50K',
-    deliveryTime: '8-20 weeks',
+    highlight: '70% infrastructure cost reduction',
   },
   {
     id: 'consultation',
@@ -152,8 +103,7 @@ const services: Service[] = [
       { name: 'Security', icon: 'ph:shield-check' },
       { name: 'Performance', icon: 'ph:lightning' },
     ],
-    priceRange: '$150 - $300/hr',
-    deliveryTime: '1-4 weeks',
+    highlight: 'HIPAA/HITECH compliant systems',
   },
 ];
 
@@ -164,20 +114,21 @@ export const ModernServices = () => {
     services.find((s) => s.id === activeService) || services[0];
 
   return (
-    <section className='bg-gray-50 py-20 dark:bg-gray-900'>
+    <section className='bg-neutral-50 py-20 dark:bg-neutral-900'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center'>
-          <div className='mb-4 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-200'>
+          <div className='mb-4 inline-flex items-center rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'>
             <Icon icon='ph:wrench' className='mr-2 size-4' />
-            Services & Solutions
+            Expertise
           </div>
-          <h2 className='mb-4 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl'>
-            How I Can <span className='text-blue-600'>Help You</span>
+          <h2 className='mb-4 text-4xl font-bold text-neutral-900 dark:text-white sm:text-5xl'>
+            What I{' '}
+            <span className='text-blue-600 dark:text-blue-500'>Build</span>
           </h2>
-          <p className='mx-auto max-w-2xl text-xl text-gray-700 dark:text-gray-300'>
-            From concept to deployment, I provide end-to-end development
-            services tailored to your business needs and technical requirements.
+          <p className='mx-auto max-w-2xl text-xl text-neutral-600 dark:text-neutral-400'>
+            From concept to deployment, I provide end-to-end development across
+            the full stack.
           </p>
         </div>
 
@@ -188,25 +139,17 @@ export const ModernServices = () => {
             {services.map((service) => (
               <div
                 key={service.id}
-                className='rounded-xl border border-gray-200 bg-white/80 p-6 backdrop-blur-sm transition-all hover:shadow-lg dark:border-gray-700 dark:bg-gray-800/80'
+                className='rounded-xl border border-neutral-200 bg-white p-6 transition-all hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800'
               >
                 <Icon
                   icon={service.icon}
-                  className='mb-4 size-8 text-blue-600 dark:text-blue-400'
+                  className='mb-4 size-8 text-neutral-700 dark:text-neutral-300'
                 />
-                <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mb-2 text-lg font-semibold text-neutral-900 dark:text-white'>
                   {service.title}
                 </h3>
-                {/* <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
-                  {service.description.split('.')[0]}.
-                </p> */}
-                <div className='flex items-center justify-between text-sm'>
-                  <span className='font-medium text-blue-600 dark:text-blue-400'>
-                    {service.priceRange}
-                  </span>
-                  <span className='text-gray-500 dark:text-gray-400'>
-                    {service.deliveryTime}
-                  </span>
+                <div className='text-sm font-medium text-blue-600 dark:text-blue-400'>
+                  {service.highlight}
                 </div>
               </div>
             ))}
@@ -222,8 +165,8 @@ export const ModernServices = () => {
                     onClick={() => setActiveService(service.id)}
                     className={`w-full rounded-lg p-4 text-left transition-all ${
                       activeService === service.id
-                        ? 'bg-blue-600 text-white shadow-lg'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                        ? 'bg-neutral-900 text-white shadow-lg dark:bg-white dark:text-neutral-900'
+                        : 'bg-white text-neutral-700 hover:bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700'
                     }`}
                   >
                     <div className='flex items-center gap-3'>
@@ -231,8 +174,8 @@ export const ModernServices = () => {
                         icon={service.icon}
                         className={`size-6 ${
                           activeService === service.id
-                            ? 'text-white'
-                            : 'text-blue-600'
+                            ? 'text-white dark:text-neutral-900'
+                            : 'text-neutral-600 dark:text-neutral-400'
                         }`}
                       />
                       <div>
@@ -240,11 +183,11 @@ export const ModernServices = () => {
                         <p
                           className={`text-sm ${
                             activeService === service.id
-                              ? 'text-blue-100'
-                              : 'text-gray-500'
+                              ? 'text-neutral-300 dark:text-neutral-500'
+                              : 'text-neutral-500'
                           }`}
                         >
-                          {service.priceRange} • {service.deliveryTime}
+                          {service.highlight}
                         </p>
                       </div>
                     </div>
@@ -255,40 +198,34 @@ export const ModernServices = () => {
 
             {/* Service Details */}
             <div className='mt-8 lg:col-span-2 lg:mt-0'>
-              <div className='rounded-2xl bg-white p-8 shadow-xl dark:bg-gray-800'>
+              <div className='rounded-2xl bg-white p-8 shadow-sm dark:bg-neutral-800'>
                 <div className='mb-6 flex items-center gap-4'>
-                  <div className='flex size-16 items-center justify-center rounded-2xl bg-blue-100 dark:bg-blue-900'>
+                  <div className='flex size-16 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-700'>
                     <Icon
                       icon={currentService.icon}
-                      className='size-8 text-blue-600 dark:text-blue-400'
+                      className='size-8 text-neutral-700 dark:text-neutral-300'
                     />
                   </div>
                   <div>
-                    <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>
+                    <h3 className='text-2xl font-bold text-neutral-900 dark:text-white'>
                       {currentService.title}
                     </h3>
-                    <div className='flex items-center gap-4 text-sm text-gray-700 dark:text-gray-400'>
+                    <div className='flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400'>
                       <span className='flex items-center gap-1'>
-                        <Icon icon='ph:currency-dollar' className='size-4' />
-                        {currentService.priceRange}
-                      </span>
-                      <span className='flex items-center gap-1'>
-                        <Icon icon='ph:clock' className='size-4' />
-                        {currentService.deliveryTime}
+                        <Icon icon='ph:star' className='size-4' />
+                        {currentService.highlight}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className='mb-8 text-gray-700 dark:text-gray-300'>
+                <p className='mb-8 text-neutral-600 dark:text-neutral-400'>
                   {currentService.description}
                 </p>
 
                 {/* Features */}
                 <div className='mb-8'>
-                  <h4 className='mb-4 text-lg font-semibold text-gray-900 dark:text-white'>
-                    What's Included
-                  </h4>
+                  <h4 className='mb-4 text-lg font-semibold text-neutral-900 dark:text-white'></h4>
                   <div className='grid gap-3 sm:grid-cols-2'>
                     {currentService.features.map((feature, index) => (
                       <div key={index} className='flex items-center gap-3'>
@@ -296,7 +233,7 @@ export const ModernServices = () => {
                           icon='ph:check-circle'
                           className='size-5 text-green-500'
                         />
-                        <span className='text-gray-700 dark:text-gray-300'>
+                        <span className='text-neutral-700 dark:text-neutral-300'>
                           {feature}
                         </span>
                       </div>
@@ -306,24 +243,24 @@ export const ModernServices = () => {
 
                 {/* Technologies */}
                 <div className='mb-8'>
-                  <h4 className='mb-4 text-lg font-semibold text-gray-900 dark:text-white'>
+                  <h4 className='mb-4 text-lg font-semibold text-neutral-900 dark:text-white'>
                     Technologies Used
                   </h4>
                   <div className='flex flex-wrap gap-4'>
                     {currentService.technologies.map((tech, index) => (
                       <div
                         key={index}
-                        className='flex items-center gap-2 rounded-lg bg-gray-100 px-3 py-2 dark:bg-gray-700'
+                        className='flex items-center gap-2 rounded-lg bg-neutral-100 px-3 py-2 dark:bg-neutral-700'
                       >
                         {tech.icon.startsWith('ph:') ? (
                           <Icon
                             icon={tech.icon}
-                            className='size-5 text-gray-700 dark:text-gray-400'
+                            className='size-5 text-neutral-600 dark:text-neutral-400'
                           />
                         ) : (
                           <Icon icon={tech.icon} className='size-5' />
                         )}
-                        <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                        <span className='text-sm font-medium text-neutral-700 dark:text-neutral-300'>
                           {tech.name}
                         </span>
                       </div>
@@ -333,14 +270,16 @@ export const ModernServices = () => {
 
                 {/* CTA */}
                 <div className='flex flex-col gap-4 sm:flex-row'>
-                  <button className='flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700'>
+                  <ScrollLink
+                    to='contact'
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className='flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-neutral-900 px-6 py-3 font-semibold text-white transition-all hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100'
+                  >
                     <Icon icon='ph:chat-circle' className='size-5' />
-                    Discuss This Service
-                  </button>
-                  <button className='flex items-center justify-center gap-2 rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:bg-gray-700'>
-                    <Icon icon='ph:file-text' className='size-5' />
-                    Get Quote
-                  </button>
+                    Get in Touch
+                  </ScrollLink>
                 </div>
               </div>
             </div>

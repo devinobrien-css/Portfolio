@@ -1,8 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 
 interface GlobalContextProps {
-  tldr: boolean;
-  setTldr: (tldr: boolean) => void;
   darkMode: boolean;
   setDarkMode: (darkMode: boolean) => void;
   modalOpen?: boolean;
@@ -11,8 +9,6 @@ interface GlobalContextProps {
 
 // Create a context for your variable
 export const GlobalContext = createContext<GlobalContextProps>({
-  tldr: false,
-  setTldr: () => null,
   darkMode: false,
   setDarkMode: () => null,
   modalOpen: false,
@@ -25,7 +21,6 @@ export const GlobalContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [tldrFlag, setTldrFlag] = useState(true);
   const [darkModeFlag, setDarkModeFlag] = useState(false);
 
   const setDarkMode = (value: boolean) => {
@@ -63,16 +58,6 @@ export const GlobalContextProvider = ({
     setDarkModeFlag(value);
   };
 
-  const setTldr = (value: boolean) => {
-    if (value) {
-      localStorage.tldr = 'true';
-      setTldrFlag(true);
-    } else {
-      localStorage.removeItem('tldr');
-      setTldrFlag(false);
-    }
-  };
-
   useEffect(() => {
     // On page load or when changing themes
     if (!('theme' in localStorage)) {
@@ -87,15 +72,9 @@ export const GlobalContextProvider = ({
     } else {
       setDarkMode(localStorage.theme === 'dark');
     }
-
-    if (localStorage.tldr === 'true') {
-      setTldrFlag(true);
-    }
   }, []);
 
   const exportContext = {
-    tldr: tldrFlag,
-    setTldr: setTldr,
     darkMode: darkModeFlag,
     setDarkMode: setDarkMode,
   };

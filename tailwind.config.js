@@ -89,6 +89,7 @@ module.exports = {
         'tiffany-blue': '#9AD4D6',
         'light-cyan': '#C6E9EB',
         'azure-blue': '#F2FDFF',
+        accent: '#2563eb',
       },
       backgroundImage: {
         headshot: "url('./assets/img/headshot.jpeg')",

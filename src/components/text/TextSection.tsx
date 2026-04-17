@@ -15,7 +15,7 @@ export const TextSection = ({
   className,
 }: TextSectionProps): JSX.Element => {
   return (
-    <p className={cx(className, 'font-lato text-gray-700 dark:text-gray-200')}>
+    <p className={cx(className, 'font-lato text-neutral-700 dark:text-neutral-200')}>
       {children}
     </p>
   );

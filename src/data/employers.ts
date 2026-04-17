@@ -4,25 +4,21 @@ export const employers: Employer[] = [
   {
     name: 'Maro for Schools',
     shortName: 'Maro for Schools',
-    title: 'Tech Lead',
+    title: 'Code Founder',
     link: 'https://meetmaro.com/',
     location: 'Remote',
     timeline: '2024 - Present',
     icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdYE-3JetXbzIk0KYoW89mmqAiycG_bNO0A&s',
     bulletPoints: [
-      'Collaborate effectively across AGILE teams, ranging from 5 to 18 members, to develop robust and scalable solutions.',
-      'Showcase proficiency across multiple UI frameworks including React, Vue, Angular, and Svelte, actively contributing to the creation of intuitive, responsive, and user-friendly interfaces.',
-      'Proactively identify areas for improvement and draft tickets to address them, while also providing mentorship and guidance to fellow team members, fostering a collaborative environment focused on continuous learning.',
+      'Founded and engineered a full-stack education technology platform serving K-12 mental health screening across multiple school districts, building a Node.js/TypeScript API, two React/TypeScript frontends, and AWS infrastructure (EC2, RDS, Lambda, Cognito) with Terraform IaC and CI/CD automation.',
+      'Designed and implemented complex clinical screening workflows including multi-tenant parent consent management, real-time assessment sessions via Socket.IO, configurable risk thresholds, and automated referral pipelines — enabling schools to efficiently screen and support thousands of students.',
+      'Established engineering standards and developer tooling including domain-driven module architecture, Prisma ORM data layer, comprehensive documentation systems, and custom agentic CLI workflows for code review, PR preparation, and deployment — accelerating team velocity and enforcing quality across four repositories.',
     ],
     description:
-      'Collaborate effectively across AGILE teams, ranging from 5 to 18 members, to develop robust and scalable solutions. Showcase proficiency across multiple UI frameworks including React, Vue, Angular, and Svelte, actively contributing to the creation of intuitive, responsive, and user-friendly interfaces.',
+      'Founded and engineered a full-stack education technology platform serving K-12 mental health screening across multiple school districts, building a Node.js/TypeScript API, two React/TypeScript frontends, and AWS infrastructure (EC2, RDS, Lambda, Cognito) with Terraform IaC and CI/CD automation. Showcase proficiency across multiple UI frameworks including React, Vue, Angular, and Svelte, actively contributing to the creation of intuitive, responsive, and user-friendly interfaces.',
     skills: [
       {
         name: 'React',
-        icon: '',
-      },
-      {
-        name: 'Vue',
         icon: '',
       },
       {
@@ -46,23 +42,31 @@ export const employers: Employer[] = [
         icon: '',
       },
       {
-        name: 'MongoDB',
-        icon: '',
-      },
-      {
         name: 'Docker',
         icon: '',
       },
       {
-        name: 'Kubernetes',
+        name: 'Prisma',
         icon: '',
       },
       {
-        name: 'Jira',
+        name: 'Socket.IO',
         icon: '',
       },
       {
-        name: 'Confluence',
+        name: 'Terraform',
+        icon: '',
+      },
+      {
+        name: 'HIPAA',
+        icon: '',
+      },
+      {
+        name: 'COPPA',
+        icon: '',
+      },
+      {
+        name: 'FERPA',
         icon: '',
       },
     ],
@@ -279,11 +283,11 @@ export const employers: Employer[] = [
   {
     name: 'NeuroExed Lab',
     shortName: 'NeuroExed',
-    title: 'Code Owner & Lead Developer',
+    title: 'Code Founder & Lead Developer',
     link: 'https://neuroexed.com/',
     location: 'Albany, NY',
     timeline: '2019 - Present',
-    icon: 'https://access-portfolio-images.s3.amazonaws.com/neuro-icon',
+    icon: '/neuroexed-logo.svg',
     description:
       "Reduced technological budget by ~70%. Develop and manage the Center for Neuroscience and Experiantal Education's web presence",
     bulletPoints: [

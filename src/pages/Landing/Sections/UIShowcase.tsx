@@ -74,8 +74,8 @@ const LivePreview = ({
 
       {/* Loading Indicator */}
       {showPreview && !isLoaded && !hasError && (
-        <div className='absolute inset-0 flex items-center justify-center bg-gray-100/80 backdrop-blur-sm dark:bg-gray-800/80'>
-          <div className='flex items-center gap-2 text-gray-600 dark:text-gray-400'>
+        <div className='absolute inset-0 flex items-center justify-center bg-neutral-100/80 backdrop-blur-sm dark:bg-neutral-800/80'>
+          <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400'>
             <Icon icon='ph:spinner' className='size-6 animate-spin' />
             <span className='text-sm font-medium'>Loading live preview...</span>
           </div>
@@ -84,8 +84,8 @@ const LivePreview = ({
 
       {/* Error State */}
       {hasError && showPreview && (
-        <div className='absolute inset-0 flex items-center justify-center bg-gray-100/80 backdrop-blur-sm dark:bg-gray-800/80'>
-          <div className='text-center text-gray-600 dark:text-gray-400'>
+        <div className='absolute inset-0 flex items-center justify-center bg-neutral-100/80 backdrop-blur-sm dark:bg-neutral-800/80'>
+          <div className='text-center text-neutral-600 dark:text-neutral-400'>
             <Icon icon='ph:warning' className='mx-auto mb-2 size-8' />
             <p className='text-sm font-medium'>Live preview unavailable</p>
             <p className='text-xs'>Some sites prevent embedding</p>
@@ -96,7 +96,7 @@ const LivePreview = ({
       {/* Preview Toggle Button */}
       <button
         onClick={() => setShowPreview(!showPreview)}
-        className={`absolute bottom-3 right-3 flex items-center gap-2 rounded-lg bg-blue-500/90 px-3 py-2 text-sm font-medium text-white shadow-lg backdrop-blur-sm transition-all hover:bg-blue-600 ${
+        className={`absolute bottom-3 right-3 flex items-center gap-2 rounded-lg bg-blue-500/90 px-3 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-blue-600 ${
           showPreview && isLoaded && !hasError
             ? 'bg-red-500/90 hover:bg-red-600'
             : ''
@@ -265,13 +265,13 @@ export const UIShowcase = () => {
   return (
     <section
       ref={sectionRef}
-      className='relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50 py-24 dark:from-slate-900 dark:via-blue-950 dark:to-slate-900'
+      className='relative overflow-hidden bg-neutral-50 py-24 dark:bg-neutral-950'
     >
       {/* Background Elements */}
       <div className='absolute inset-0'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
-        <div className='absolute left-1/4 top-20 size-32 animate-float rounded-full bg-gradient-to-br from-blue-400/10 to-indigo-600/10 blur-2xl dark:from-blue-400/10 dark:to-purple-600/10'></div>
-        <div className='absolute bottom-20 right-1/4 size-24 animate-float-delayed rounded-full bg-gradient-to-br from-purple-400/10 to-pink-600/10 blur-2xl'></div>
+        <div className='absolute left-1/4 top-20 size-32 animate-float rounded-full bg-neutral-300/20 blur-2xl dark:bg-neutral-600/20'></div>
+        <div className='absolute bottom-20 right-1/4 size-24 animate-float-delayed rounded-full bg-neutral-300/20 blur-2xl'></div>
       </div>
 
       <div className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -279,52 +279,42 @@ export const UIShowcase = () => {
         <div
           className={`mb-16 text-center transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
         >
-          <div className='mb-4 flex items-center justify-center gap-4'>
-            <div className='inline-flex items-center rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 backdrop-blur-sm'>
-              <Icon icon='ph:monitor' className='mr-2 size-5 text-blue-400' />
-              <span className='text-sm font-medium text-blue-600 dark:text-blue-300'>
-                UI & Frontend Showcase
-              </span>
-            </div>
-
-            {/* Live Preview Toggle */}
-            <button
-              onClick={() => setLivePreviewsEnabled(!livePreviewsEnabled)}
-              className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all ${
-                livePreviewsEnabled
-                  ? 'border-green-500/20 bg-green-500/10 text-green-600 dark:text-green-300'
-                  : 'border-gray-500/20 bg-gray-500/10 text-gray-600 dark:text-gray-300'
-              } backdrop-blur-sm hover:scale-105`}
-              title={`${livePreviewsEnabled ? 'Disable' : 'Enable'} live previews`}
-            >
-              <Icon
-                icon={livePreviewsEnabled ? 'ph:eye' : 'ph:eye-slash'}
-                className='size-4'
-              />
-              <span>Live Previews {livePreviewsEnabled ? 'ON' : 'OFF'}</span>
-            </button>
+          <div className='mb-4 inline-flex items-center rounded-full border border-neutral-300 bg-neutral-100 px-4 py-2 backdrop-blur-sm dark:border-neutral-600 dark:bg-neutral-800'>
+            <Icon
+              icon='ph:monitor'
+              className='mr-2 size-5 text-neutral-500 dark:text-neutral-400'
+            />
+            <span className='text-sm font-medium text-neutral-700 dark:text-neutral-300'>
+              Frontend Showcase
+            </span>
           </div>
 
-          <h2 className='mb-6 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl lg:text-6xl'>
-            User{' '}
-            <span className='bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
-              Interfaces
-            </span>
-            <br />
-            That Inspire
+          <h2 className='mb-6 text-4xl font-bold text-neutral-900 dark:text-white sm:text-5xl'>
+            Interfaces I've{' '}
+            <span className='text-blue-600 dark:text-blue-500'>Built</span>
           </h2>
 
-          <p className='mx-auto max-w-3xl text-xl text-gray-700 dark:text-slate-300'>
-            Explore the diverse range of user interfaces and web applications
-            I've crafted, from enterprise dashboards to creative platforms, each
-            designed with user experience at its core.
-            {livePreviewsEnabled && (
-              <span className='mt-2 block text-sm text-blue-600 dark:text-blue-400'>
-                ✨ Live previews enabled - Click the buttons to toggle between
-                live and static views
-              </span>
-            )}
+          <p className='mx-auto max-w-2xl text-lg text-neutral-600 dark:text-neutral-400'>
+            From enterprise dashboards to creative platforms — each designed
+            with user experience at its core.
           </p>
+
+          {/* Live Preview Toggle */}
+          <button
+            onClick={() => setLivePreviewsEnabled(!livePreviewsEnabled)}
+            className={`mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all ${
+              livePreviewsEnabled
+                ? 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300'
+                : 'border-neutral-300 bg-neutral-100 text-neutral-600 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-400'
+            } backdrop-blur-sm hover:scale-105`}
+            title={`${livePreviewsEnabled ? 'Disable' : 'Enable'} live previews`}
+          >
+            <Icon
+              icon={livePreviewsEnabled ? 'ph:eye' : 'ph:eye-slash'}
+              className='size-4'
+            />
+            <span>Live Previews {livePreviewsEnabled ? 'ON' : 'OFF'}</span>
+          </button>
         </div>
 
         {/* Project Selector Grid - Hidden in TLDR Mode */}
@@ -332,35 +322,29 @@ export const UIShowcase = () => {
           <div
             className={`mb-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
           >
-            <div className='mb-8 flex items-center justify-between'>
-              <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>
-                Select a Project
-              </h3>
-              <div className='flex gap-2'>
-                <button
-                  onClick={scrollLeft}
-                  className='flex size-10 items-center justify-center rounded-full bg-white/80 text-gray-600 shadow-lg backdrop-blur-sm transition-all hover:scale-110 hover:bg-white hover:text-blue-600 dark:bg-slate-800/80 dark:text-gray-400 dark:hover:bg-slate-700 dark:hover:text-blue-400'
-                  title='Scroll left'
-                  aria-label='Scroll left'
-                >
-                  <Icon icon='ph:caret-left-bold' className='size-5' />
-                </button>
-                <button
-                  onClick={scrollRight}
-                  className='flex size-10 items-center justify-center rounded-full bg-white/80 text-gray-600 shadow-lg backdrop-blur-sm transition-all hover:scale-110 hover:bg-white hover:text-blue-600 dark:bg-slate-800/80 dark:text-gray-400 dark:hover:bg-slate-700 dark:hover:text-blue-400'
-                  title='Scroll right'
-                  aria-label='Scroll right'
-                >
-                  <Icon icon='ph:caret-right-bold' className='size-5' />
-                </button>
-              </div>
-            </div>
-
             {/* Horizontal Scrollable Container */}
             <div className='relative'>
+              {/* Scroll Arrows */}
+              <button
+                onClick={scrollLeft}
+                className='absolute -left-4 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white/90 text-neutral-600 backdrop-blur-sm transition-all hover:bg-white hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800/90 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white'
+                title='Scroll left'
+                aria-label='Scroll left'
+              >
+                <Icon icon='ph:caret-left-bold' className='size-5' />
+              </button>
+              <button
+                onClick={scrollRight}
+                className='absolute -right-4 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white/90 text-neutral-600 backdrop-blur-sm transition-all hover:bg-white hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800/90 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white'
+                title='Scroll right'
+                aria-label='Scroll right'
+              >
+                <Icon icon='ph:caret-right-bold' className='size-5' />
+              </button>
+
               <div
                 ref={scrollContainerRef}
-                className='flex gap-4 overflow-x-auto pb-4'
+                className='flex gap-5 overflow-x-auto px-3 py-2'
                 style={{
                   scrollbarWidth: 'none',
                   msOverflowStyle: 'none',
@@ -371,100 +355,63 @@ export const UIShowcase = () => {
                   <button
                     key={project.title}
                     onClick={() => setActiveIndex(index)}
-                    className={`group relative shrink-0 overflow-hidden rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                    className={`group relative shrink-0 overflow-hidden rounded-2xl transition-all duration-300 ${
                       index === activeIndex
-                        ? 'border-blue-500 bg-gradient-to-br from-blue-50 via-blue-100/50 to-indigo-50 shadow-2xl shadow-blue-500/25 dark:border-blue-400 dark:from-blue-950/50 dark:via-blue-900/30 dark:to-indigo-950/50'
-                        : 'border-gray-200 bg-white/60 hover:border-gray-300 hover:bg-white/80 hover:shadow-xl dark:border-slate-700/50 dark:bg-slate-800/40 dark:hover:border-slate-600 dark:hover:bg-slate-800/60'
+                        ? 'scale-[1.02] ring-2 ring-blue-600 ring-offset-2 ring-offset-neutral-50 dark:ring-blue-500 dark:ring-offset-neutral-950'
+                        : 'ring-1 ring-neutral-200 hover:ring-neutral-300 dark:ring-neutral-700 dark:hover:ring-neutral-600'
                     }`}
-                    style={{ width: '280px' }}
+                    style={{ width: '300px' }}
                     aria-label={`Select ${project.title}`}
                   >
                     {/* Project Thumbnail */}
-                    <div className='relative aspect-[4/3] overflow-hidden'>
+                    <div className='relative aspect-[16/10] overflow-hidden'>
                       <img
                         src={project.image_url}
                         alt={project.title}
-                        className='size-full object-cover transition-all duration-500 group-hover:scale-110'
-                      />
-
-                      {/* Overlay Gradient */}
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-300 ${
+                        className={`size-full object-cover transition-all duration-500 group-hover:scale-105 ${
                           index === activeIndex
-                            ? 'from-blue-900/60 via-blue-600/20 to-transparent'
-                            : 'from-gray-900/40 via-gray-600/10 to-transparent group-hover:from-gray-900/60'
+                            ? 'brightness-100'
+                            : 'brightness-90 group-hover:brightness-100'
                         }`}
                       />
 
-                      {/* Active Indicator */}
+                      {/* Bottom gradient overlay for text readability */}
+                      <div className='absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent' />
+
+                      {/* Category Badge */}
+                      <div className='absolute right-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md'>
+                        {project.category.split(' ')[0]}
+                      </div>
+
+                      {/* Project Info - overlaid on image */}
+                      <div className='absolute inset-x-0 bottom-0 p-4'>
+                        <h4 className='mb-1 truncate text-base font-semibold text-white'>
+                          {project.title}
+                        </h4>
+                        <div className='flex items-center gap-1.5'>
+                          <Icon
+                            icon='ph:code-bold'
+                            className='size-3.5 text-neutral-300'
+                          />
+                          <span className='text-xs font-medium text-neutral-300'>
+                            {project.tech.slice(0, 2).join(' · ')}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Active play indicator */}
                       {index === activeIndex && (
-                        <div className='absolute inset-0 flex items-center justify-center'>
-                          <div className='rounded-full bg-blue-500 p-2 shadow-lg'>
-                            <Icon
-                              icon='ph:play-fill'
-                              className='size-4 text-white'
-                            />
+                        <div className='absolute left-3 top-3'>
+                          <div className='flex items-center gap-1.5 rounded-full bg-blue-600 px-2.5 py-1 text-xs font-medium text-white'>
+                            <Icon icon='ph:play-fill' className='size-3' />
+                            Active
                           </div>
                         </div>
                       )}
-
-                      {/* Category Badge */}
-                      <div
-                        className={`absolute right-2 top-2 rounded-full px-2 py-1 text-xs font-medium backdrop-blur-sm ${
-                          index === activeIndex
-                            ? 'bg-blue-500/90 text-white'
-                            : 'bg-white/90 text-gray-700 dark:bg-slate-800/90 dark:text-slate-300'
-                        }`}
-                      >
-                        {project.category.split(' ')[0]}
-                      </div>
                     </div>
-
-                    {/* Project Info */}
-                    <div className='p-3'>
-                      <h4
-                        className={`mb-1 truncate text-sm font-semibold ${
-                          index === activeIndex
-                            ? 'text-blue-700 dark:text-blue-300'
-                            : 'text-gray-900 dark:text-white'
-                        }`}
-                      >
-                        {project.title}
-                      </h4>
-
-                      {/* Primary Tech */}
-                      <div className='flex items-center gap-1'>
-                        <Icon
-                          icon='ph:code-bold'
-                          className={`size-3 ${
-                            index === activeIndex
-                              ? 'text-blue-500'
-                              : 'text-gray-400 dark:text-gray-500'
-                          }`}
-                        />
-                        <span
-                          className={`text-xs ${
-                            index === activeIndex
-                              ? 'text-blue-600 dark:text-blue-400'
-                              : 'text-gray-500 dark:text-gray-400'
-                          }`}
-                        >
-                          {project.tech[0]}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Selection Ring */}
-                    {index === activeIndex && (
-                      <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-75 blur-sm' />
-                    )}
                   </button>
                 ))}
               </div>
-
-              {/* Fade edges */}
-              <div className='pointer-events-none absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-gray-50 to-transparent dark:from-slate-900' />
-              <div className='pointer-events-none absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-gray-50 to-transparent dark:from-slate-900' />
             </div>
           </div>
         )}
@@ -477,7 +424,7 @@ export const UIShowcase = () => {
               {uiProjects.map((project) => (
                 <div
                   key={project.title}
-                  className='group shrink-0 overflow-hidden rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm transition-all hover:shadow-md dark:border-slate-700/50 dark:bg-slate-800/30'
+                  className='group shrink-0 overflow-hidden rounded-lg border border-neutral-200 bg-white transition-all dark:border-neutral-700 dark:bg-neutral-800'
                   style={{ width: '200px' }}
                 >
                   {/* Project Image */}
@@ -487,7 +434,7 @@ export const UIShowcase = () => {
                       alt={project.title}
                       className='size-full object-cover transition-transform duration-300 group-hover:scale-105'
                     />
-                    <div className='absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent' />
+                    <div className='absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent' />
 
                     {/* Category Badge */}
                     <div className='absolute right-1.5 top-1.5 rounded-full bg-blue-500/90 px-1.5 py-0.5 text-xs font-medium text-white backdrop-blur-sm'>
@@ -497,10 +444,10 @@ export const UIShowcase = () => {
 
                   {/* Project Info */}
                   <div className='p-2'>
-                    <h3 className='mb-1 text-xs font-semibold text-gray-900 dark:text-white'>
+                    <h3 className='mb-1 text-xs font-semibold text-neutral-900 dark:text-white'>
                       {project.title}
                     </h3>
-                    <p className='mb-2 text-xs text-gray-600 dark:text-slate-300'>
+                    <p className='mb-2 text-xs text-neutral-600 dark:text-neutral-400'>
                       {project.subtitle}
                     </p>
 
@@ -509,7 +456,7 @@ export const UIShowcase = () => {
                       {project.tech.slice(0, 2).map((tech) => (
                         <span
                           key={tech}
-                          className='rounded-full bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                          className='rounded-full bg-neutral-100 px-1.5 py-0.5 text-xs font-medium text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300'
                         >
                           {tech}
                         </span>
@@ -530,10 +477,6 @@ export const UIShowcase = () => {
                 </div>
               ))}
             </div>
-
-            {/* Fade edges for horizontal scroll */}
-            <div className='pointer-events-none absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-gray-50 to-transparent dark:from-slate-900' />
-            <div className='pointer-events-none absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-gray-50 to-transparent dark:from-slate-900' />
           </div>
         ) : (
           // Full Mode - Interactive Showcase
@@ -543,9 +486,9 @@ export const UIShowcase = () => {
               className={`space-y-6 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'} transition-all delay-200 duration-1000`}
             >
               {/* Enhanced Browser Window */}
-              <div className='relative overflow-hidden rounded-2xl border border-gray-200 bg-white/80 shadow-2xl backdrop-blur-sm dark:border-slate-700/50 dark:bg-slate-800/30'>
+              <div className='relative overflow-hidden rounded-2xl border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800'>
                 {/* Browser Chrome */}
-                <div className='flex items-center gap-2 border-b border-gray-200 bg-gray-100/80 px-6 py-4 dark:border-slate-700/50 dark:bg-slate-700/50'>
+                <div className='flex items-center gap-2 border-b border-neutral-200 bg-neutral-100 px-6 py-4 dark:border-neutral-700 dark:bg-neutral-700'>
                   <div className='flex gap-2'>
                     <div className='size-3 rounded-full bg-red-500'></div>
                     <div className='size-3 rounded-full bg-yellow-500'></div>
@@ -553,7 +496,7 @@ export const UIShowcase = () => {
                   </div>
                   <div className='ml-4 flex flex-1 items-center gap-3'>
                     <Icon icon='ph:lock' className='size-4 text-green-600' />
-                    <div className='flex-1 rounded-lg bg-white/60 px-4 py-2 text-sm text-gray-600 dark:bg-slate-600/60 dark:text-slate-300'>
+                    <div className='flex-1 rounded-lg bg-neutral-50 px-4 py-2 text-sm text-neutral-600 dark:bg-neutral-600 dark:text-neutral-300'>
                       {uiProjects[activeIndex].url}
                     </div>
                     <a
@@ -581,14 +524,14 @@ export const UIShowcase = () => {
               </div>
 
               {/* Project Details Card */}
-              <div className='rounded-2xl border border-gray-200 bg-white/80 p-8 backdrop-blur-sm dark:border-slate-700/50 dark:bg-slate-800/30'>
+              <div className='rounded-2xl border border-neutral-200 bg-white p-8 dark:border-neutral-700 dark:bg-neutral-800'>
                 <div className='mb-6 flex items-start justify-between'>
                   <div>
                     <div className='mb-2 flex items-center gap-3'>
-                      <h3 className='text-3xl font-bold text-gray-900 dark:text-white'>
+                      <h3 className='text-3xl font-bold text-neutral-900 dark:text-white'>
                         {uiProjects[activeIndex].title}
                       </h3>
-                      <span className='rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'>
+                      <span className='rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300'>
                         {uiProjects[activeIndex].category}
                       </span>
                     </div>
@@ -606,7 +549,7 @@ export const UIShowcase = () => {
                             (prev - 1 + uiProjects.length) % uiProjects.length,
                         )
                       }
-                      className='flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
+                      className='flex size-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600'
                       title='Previous project'
                     >
                       <Icon icon='ph:caret-left' className='size-5' />
@@ -615,7 +558,7 @@ export const UIShowcase = () => {
                       onClick={() =>
                         setActiveIndex((prev) => (prev + 1) % uiProjects.length)
                       }
-                      className='flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
+                      className='flex size-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600'
                       title='Next project'
                     >
                       <Icon icon='ph:caret-right' className='size-5' />
@@ -623,20 +566,20 @@ export const UIShowcase = () => {
                   </div>
                 </div>
 
-                <p className='mb-6 text-lg leading-relaxed text-gray-700 dark:text-slate-300'>
+                <p className='mb-6 text-lg leading-relaxed text-neutral-600 dark:text-neutral-400'>
                   {uiProjects[activeIndex].description}
                 </p>
 
                 {/* Complete Tech Stack */}
                 <div className='mb-6'>
-                  <h4 className='mb-4 text-lg font-semibold text-gray-900 dark:text-white'>
+                  <h4 className='mb-4 text-lg font-semibold text-neutral-900 dark:text-white'>
                     Technologies Used
                   </h4>
                   <div className='flex flex-wrap gap-3'>
                     {uiProjects[activeIndex].tech.map((tech) => (
                       <span
                         key={tech}
-                        className='rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 px-4 py-2 text-sm font-medium text-blue-700 transition-transform hover:scale-105 dark:from-blue-900/50 dark:to-indigo-900/50 dark:text-blue-300'
+                        className='rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700 transition-transform hover:scale-105 dark:bg-neutral-700 dark:text-neutral-300'
                       >
                         {tech}
                       </span>
@@ -650,7 +593,7 @@ export const UIShowcase = () => {
                     href={uiProjects[activeIndex].url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:shadow-lg'
+                    className='flex items-center gap-2 rounded-lg bg-neutral-900 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100'
                   >
                     <Icon icon='ph:arrow-square-out' className='size-5' />
                     View Live Site
@@ -659,7 +602,7 @@ export const UIShowcase = () => {
                     onClick={() =>
                       setActiveIndex((prev) => (prev + 1) % uiProjects.length)
                     }
-                    className='flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 transition-all hover:bg-gray-50 hover:shadow-md dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                    className='flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-6 py-3 font-semibold text-neutral-700 transition-all hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700'
                   >
                     <Icon icon='ph:caret-right' className='size-5' />
                     Next Project

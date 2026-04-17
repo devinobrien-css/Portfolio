@@ -24,34 +24,34 @@ export const LoadingScreen = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 transition-opacity duration-500 ${progress >= 100 ? 'opacity-0' : 'opacity-100'}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-neutral-950 transition-opacity duration-500 ${progress >= 100 ? 'opacity-0' : 'opacity-100'}`}
     >
       <div className='text-center'>
         {/* Logo/Name */}
         <div className='mb-8'>
-          <h1 className='mb-2 text-4xl font-bold text-gray-900 sm:text-5xl'>
+          <h1 className='mb-2 text-4xl font-bold text-neutral-900 sm:text-5xl'>
             Devin O'Brien
           </h1>
-          <p className='text-lg text-gray-600'>Full Stack Developer</p>
+          <p className='text-lg text-neutral-600'>Full Stack Developer</p>
         </div>
 
         {/* Loading Animation */}
         <div className='mb-6 flex justify-center'>
           <div className='relative'>
-            <div className='size-16 rounded-full border-4 border-gray-200'></div>
+            <div className='size-16 rounded-full border-4 border-neutral-200'></div>
             <div className='absolute inset-0 size-16 animate-spin rounded-full border-4 border-blue-600 border-t-transparent'></div>
           </div>
         </div>
 
         {/* Progress Bar */}
         <div className='mx-auto w-64'>
-          <div className='mb-2 flex justify-between text-sm text-gray-600'>
+          <div className='mb-2 flex justify-between text-sm text-neutral-600'>
             <span>Loading...</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className='h-2 rounded-full bg-gray-200'>
+          <div className='h-2 rounded-full bg-neutral-200'>
             <div
-              className='h-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 dark:from-blue-600 dark:to-purple-600'
+              className='h-2 rounded-full bg-blue-600 transition-all duration-300'
               style={{ width: `${progress}%` }}
             ></div>
           </div>

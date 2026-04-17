@@ -6,7 +6,7 @@ export const Skills = () => {
   useSEO(pageSEO.skills);
 
   return (
-    <div className='min-h-screen bg-white dark:bg-gray-900'>
+    <div className='min-h-screen bg-white dark:bg-neutral-950'>
       <div className='pt-16'>
         <ModernSkills />
       </div>

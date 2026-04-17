@@ -1,5 +1,4 @@
 import { ToastContainer } from 'react-toastify';
-import { LoadingScreen } from './components/LoadingScreen';
 import { initializeChartConfig } from './util/chart.config';
 import { Router } from './util/router/Router';
 import { Footer } from './components/Footer';
@@ -23,13 +22,12 @@ const App = (): JSX.Element => {
         <MyOrganizationSchema />
 
         <div className=''>
-          <LoadingScreen />
           <Router />
           <ToastContainer
             newestOnTop
             autoClose={3000}
             position='bottom-right'
-            toastClassName='rounded-lg dark:bg-slate-800 dark:text-white'
+            toastClassName='rounded-lg dark:bg-neutral-800 dark:text-white'
             closeButton={true}
           />
           <Footer />

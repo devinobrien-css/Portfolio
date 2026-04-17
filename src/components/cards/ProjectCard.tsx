@@ -13,7 +13,7 @@ export const ProjectCard = ({ project, className }: ProjectCardProps) => {
   return (
     <button
       className={cx(
-        'min-h-full w-full overflow-clip rounded-2xl bg-white shadow transition-all dark:bg-gray-800 sm:max-w-[300px] md:w-[30%]',
+        'min-h-full w-full overflow-clip rounded-2xl bg-white shadow transition-all dark:bg-neutral-800 sm:max-w-[300px] md:w-[30%]',
         className,
         {
           'ring-blue-300 hover:scale-105 active:ring-2': project.link,

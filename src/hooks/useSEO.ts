@@ -20,7 +20,7 @@ interface SEOProps {
 
 const defaultSEO = {
   title: "Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert",
-  description: "Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 5+ years building scalable web applications for top companies like Warner Bros Discovery.",
+  description: "Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 7+ years building scalable web applications for top companies like Warner Bros Discovery.",
   keywords: "Full Stack Developer, React Developer, TypeScript, Node.js, AWS, Software Engineer, Web Development, JavaScript, Python, PostgreSQL, Tech Lead",
   image: "https://access-portfolio-images.s3.amazonaws.com/profile.jpeg",
   url: "https://devinobrien.netlify.app",
@@ -209,7 +209,7 @@ export const useSEO = (seoProps: SEOProps = {}) => {
 export const pageSEO = {
   home: {
     title: "Devin O'Brien - Full Stack Software Engineer | React, Node.js, AWS Expert",
-    description: "Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 5+ years building scalable web applications for top companies.",
+    description: "Experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and AWS. 7+ years building scalable web applications for top companies.",
     keywords: "Full Stack Developer, React Developer, TypeScript, Node.js, AWS, Software Engineer, Web Development, JavaScript, Python, PostgreSQL, Tech Lead, Devin O'Brien, Portfolio",
     type: "website",
     section: "Portfolio"

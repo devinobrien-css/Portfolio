@@ -21,7 +21,7 @@ const ModernTag = ({ tag, isSelected, onClick }: TagProps) => {
   return (
     <button
       onClick={onClick}
-      className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${isSelected ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md shadow-blue-200 dark:from-blue-600 dark:to-purple-600 dark:shadow-blue-900/10' : 'border border-slate-100 bg-white/90 text-slate-700 hover:border-blue-100 hover:bg-white hover:shadow-sm hover:shadow-blue-50 dark:border-slate-700 dark:bg-gray-800/80 dark:text-gray-300 dark:hover:border-slate-600 dark:hover:bg-gray-700'}`}
+      className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${isSelected ? 'bg-neutral-900 text-white shadow-md dark:bg-white dark:text-neutral-900' : 'border border-neutral-200 bg-white/90 text-neutral-700 hover:border-neutral-300 hover:bg-white hover:shadow-sm dark:border-neutral-700 dark:bg-neutral-800/80 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:bg-neutral-700'}`}
     >
       {' '}
       {tag}{' '}
@@ -34,7 +34,7 @@ interface ModernProjectCardProps {
 const ModernProjectCard = ({ project }: ModernProjectCardProps) => {
   const { isTLDRMode } = useTLDR();
   return (
-    <div className='group relative overflow-hidden rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:border-blue-100 hover:shadow-xl hover:shadow-blue-100/20 dark:border-slate-700 dark:bg-gray-800/80 dark:hover:border-slate-600'>
+    <div className='group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white/90 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:border-neutral-300 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800/80 dark:hover:border-neutral-600'>
       {' '}
       {/* Project Image */}{' '}
       {project.image && (
@@ -53,12 +53,12 @@ const ModernProjectCard = ({ project }: ModernProjectCardProps) => {
         {' '}
         <div>
           {' '}
-          <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
+          <h3 className='text-xl font-bold text-neutral-900 dark:text-white'>
             {' '}
             {project.title}{' '}
           </h3>{' '}
           <p
-            className={`text-gray-700 dark:text-gray-300 ${isTLDRMode ? 'line-clamp-2' : 'line-clamp-3'}`}
+            className={`text-neutral-600 dark:text-neutral-400 ${isTLDRMode ? 'line-clamp-2' : 'line-clamp-3'}`}
           >
             {' '}
             {project.description ||
@@ -79,7 +79,7 @@ const ModernProjectCard = ({ project }: ModernProjectCardProps) => {
               </span>
             ))}{' '}
             {project.tags.length > (isTLDRMode ? 3 : 5) && (
-              <span className='rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-400'>
+              <span className='rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 dark:bg-neutral-700 dark:text-neutral-400'>
                 {' '}
                 +{project.tags.length - (isTLDRMode ? 3 : 5)} more{' '}
               </span>
@@ -94,7 +94,7 @@ const ModernProjectCard = ({ project }: ModernProjectCardProps) => {
               href={project.github}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center gap-2 rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600'
+              className='flex items-center gap-2 rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-neutral-800 dark:bg-neutral-700 dark:hover:bg-neutral-600'
             >
               {' '}
               <Icon icon='ph:github-logo' className='size-4' /> Code{' '}
@@ -122,7 +122,12 @@ export const Projects = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [activeCategory, setActiveCategory] = useState('All');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const { isTLDRMode } = useTLDR();
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   // Enhanced SEO optimization for projects
   useSEO({
@@ -183,58 +188,65 @@ export const Projects = () => {
     document.title = "Projects - Devin O'Brien";
   }, [location.search]);
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900'>
+    <div className='min-h-screen bg-neutral-50 dark:bg-neutral-950'>
       {' '}
       {/* Hero Section */}{' '}
-      <div className='relative overflow-hidden pb-16 pt-20'>
+      <div className='relative overflow-hidden pb-16 pt-36'>
         {' '}
-        <div className='absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 dark:from-blue-600/20 dark:via-purple-600/20 dark:to-pink-600/20'></div>{' '}
+        <div className='absolute inset-0'></div>{' '}
         <div className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           {' '}
-          <div className='text-center'>
+          <div className={`text-center transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
             {' '}
-            <h1 className='text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl lg:text-6xl'>
+            <div className='mb-4 inline-flex items-center rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'>
+              <Icon icon='ph:code' className='mr-2 size-4' />
+              Project Portfolio
+            </div>
+            <h1 className='mb-4 text-4xl font-bold text-neutral-900 dark:text-white sm:text-5xl'>
               {' '}
-              My Projects{' '}
+              My{' '}
+              <span className='text-blue-600 dark:text-blue-500'>
+                Projects
+              </span>
             </h1>{' '}
-            <p className='mx-auto mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-300'>
+            <p className='mx-auto mt-6 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400'>
               {' '}
               {isTLDRMode
                 ? 'A collection of my recent work showcasing modern web development.'
                 : 'Explore my diverse range of projects, each a testament to my attention to detail and relentless pursuit of excellence in software development.'}{' '}
             </p>{' '}
             {/* Quick Stats */}{' '}
-            <div className='mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3'>
+            <div className={`mt-12 grid grid-cols-1 gap-6 transition-all delay-300 duration-700 sm:grid-cols-3 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               {' '}
-              <div className='rounded-2xl bg-white/80 p-6 backdrop-blur-sm dark:bg-gray-800/80'>
+              <div className='rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800'>
                 {' '}
-                <div className='text-3xl font-bold text-blue-600 dark:text-blue-400'>
+                <div className='text-3xl font-bold text-blue-600 dark:text-blue-500'>
                   {' '}
                   {projects.length}+{' '}
                 </div>{' '}
-                <div className='text-sm text-gray-700 dark:text-gray-400'>
+                <div className='text-sm text-neutral-500 dark:text-neutral-400'>
                   {' '}
                   Total Projects{' '}
                 </div>{' '}
               </div>{' '}
-              <div className='rounded-2xl bg-white/80 p-6 backdrop-blur-sm dark:bg-gray-800/80'>
+              <div className='rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800'>
                 {' '}
-                <div className='text-3xl font-bold text-green-600 dark:text-green-400'>
+                <div className='text-3xl font-bold text-blue-600 dark:text-blue-500'>
                   {' '}
                   {allTags.length}+{' '}
                 </div>{' '}
-                <div className='text-sm text-gray-700 dark:text-gray-400'>
+                <div className='text-sm text-neutral-500 dark:text-neutral-400'>
                   {' '}
                   Technologies{' '}
                 </div>{' '}
               </div>{' '}
-              <div className='rounded-2xl bg-white/80 p-6 backdrop-blur-sm dark:bg-gray-800/80'>
+              <div className='rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800'>
                 {' '}
-                <div className='text-3xl font-bold text-purple-600 dark:text-purple-400'>
+                <div className='text-3xl font-bold text-blue-600 dark:text-blue-500'>
                   {' '}
-                  5+{' '}
+                  7+{' '}
                 </div>{' '}
-                <div className='text-sm text-gray-700 dark:text-gray-400'>
+                <div className='text-sm text-neutral-500 dark:text-neutral-400'>
                   {' '}
                   Years Experience{' '}
                 </div>{' '}
@@ -244,7 +256,7 @@ export const Projects = () => {
         </div>{' '}
       </div>{' '}
       {/* Main Content */}{' '}
-      <div className='mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8'>
+      <div className={`mx-auto max-w-7xl px-4 pb-20 transition-all delay-500 duration-700 sm:px-6 lg:px-8 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
         {' '}
         {/* Search and Filter Controls */}{' '}
         <div className='my-12'>
@@ -256,14 +268,14 @@ export const Projects = () => {
               {' '}
               <Icon
                 icon='ph:magnifying-glass'
-                className='absolute left-3 top-1/2 size-5 -translate-y-1/2 text-gray-400'
+                className='absolute left-3 top-1/2 size-5 -translate-y-1/2 text-neutral-400'
               />{' '}
               <input
                 type='text'
                 placeholder='Search projects...'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className='w-full rounded-xl border-0 bg-white/80 py-3 pl-10 pr-4 text-gray-900 shadow-lg backdrop-blur-sm transition-all placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 dark:bg-gray-800/80 dark:text-white dark:placeholder:text-gray-400'
+                className='w-full rounded-xl border border-neutral-200 bg-white py-3 pl-10 pr-4 text-neutral-900 shadow-sm transition-all placeholder:text-neutral-500 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400'
               />{' '}
             </div>{' '}
             {/* Action Buttons */}{' '}
@@ -271,7 +283,7 @@ export const Projects = () => {
               {' '}
               <button
                 onClick={() => setIsFilterOpen(!isFilterOpen)}
-                className={`flex items-center gap-2 rounded-xl px-4 py-3 font-medium transition-all ${isFilterOpen || selectedTags.length > 0 ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25' : 'bg-white/80 text-gray-700 hover:bg-white hover:shadow-md dark:bg-gray-800/80 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+                className={`flex items-center gap-2 rounded-xl px-4 py-3 font-medium transition-all ${isFilterOpen || selectedTags.length > 0 ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900' : 'border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 hover:shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700'}`}
               >
                 {' '}
                 <Icon icon='ph:funnel' className='size-5' /> Filter{' '}
@@ -286,7 +298,7 @@ export const Projects = () => {
                 href='https://github.com/devinobrien-css'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-3 font-medium text-white transition-all hover:scale-105 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600'
+                className='flex items-center gap-2 rounded-xl bg-neutral-900 px-4 py-3 font-medium text-white transition-all hover:scale-105 hover:bg-neutral-800 dark:bg-neutral-700 dark:hover:bg-neutral-600'
               >
                 {' '}
                 <Icon icon='ph:github-logo' className='size-5' /> View on GitHub{' '}
@@ -295,11 +307,11 @@ export const Projects = () => {
           </div>{' '}
           {/* Filter Panel */}{' '}
           {isFilterOpen && (
-            <div className='mt-6 rounded-2xl bg-white/80 p-6 backdrop-blur-sm dark:bg-gray-800/80'>
+            <div className='mt-6 rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800'>
               {' '}
               <div className='mb-4 flex items-center justify-between'>
                 {' '}
-                <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='text-lg font-semibold text-neutral-900 dark:text-white'>
                   {' '}
                   Filter by Technology{' '}
                 </h3>{' '}
@@ -320,7 +332,7 @@ export const Projects = () => {
                   <button
                     key={category.name}
                     onClick={() => setActiveCategory(category.name)}
-                    className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${activeCategory === category.name ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'}`}
+                    className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${activeCategory === category.name ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900' : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-600'}`}
                   >
                     {' '}
                     {category.name}{' '}
@@ -347,7 +359,7 @@ export const Projects = () => {
           {selectedTags.length > 0 && (
             <div className='mt-4 flex flex-wrap items-center gap-2'>
               {' '}
-              <span className='text-sm text-gray-700 dark:text-gray-300'>
+              <span className='text-sm text-neutral-700 dark:text-neutral-300'>
                 {' '}
                 Active filters:{' '}
               </span>{' '}
@@ -383,13 +395,13 @@ export const Projects = () => {
             {' '}
             <Icon
               icon='ph:folder-open'
-              className='mx-auto size-16 text-gray-400 dark:text-gray-600'
+              className='mx-auto size-16 text-neutral-400 dark:text-neutral-600'
             />{' '}
-            <h3 className='mt-4 text-lg font-semibold text-gray-900 dark:text-white'>
+            <h3 className='mt-4 text-lg font-semibold text-neutral-900 dark:text-white'>
               {' '}
               No projects found{' '}
             </h3>{' '}
-            <p className='mt-2 text-gray-600 dark:text-gray-400'>
+            <p className='mt-2 text-neutral-600 dark:text-neutral-400'>
               {' '}
               Try adjusting your search or filter criteria.{' '}
             </p>{' '}
@@ -409,13 +421,13 @@ export const Projects = () => {
         {/* CTA Section */}{' '}
         <div className='mt-20 text-center'>
           {' '}
-          <div className='rounded-3xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-white shadow-2xl'>
+          <div className='rounded-3xl bg-neutral-900 p-8 text-white shadow-sm dark:bg-white dark:text-neutral-900'>
             {' '}
             <h3 className='mb-4 text-2xl font-bold sm:text-3xl'>
               {' '}
               Ready to start your next project?{' '}
             </h3>{' '}
-            <p className='mb-6 text-lg text-blue-100'>
+            <p className='mb-6 text-lg text-neutral-300 dark:text-neutral-600'>
               {' '}
               {isTLDRMode
                 ? "Let's discuss how I can help bring your ideas to life."
@@ -425,7 +437,7 @@ export const Projects = () => {
               {' '}
               <a
                 href="mailto:devinobrien@icloud.com?subject=Project%20Inquiry&body=Hi%20Devin,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20project%20with%20you."
-                className='group relative overflow-hidden rounded-lg bg-white px-8 py-4 font-semibold text-blue-600 transition-all hover:scale-105 hover:bg-gray-100 hover:shadow-lg'
+                className='group relative overflow-hidden rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:bg-blue-700 hover:shadow-lg dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800'
               >
                 {' '}
                 <span className='relative z-10 flex items-center gap-2'>
@@ -438,7 +450,7 @@ export const Projects = () => {
                 href='https://github.com/devinobrien-css'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='group rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:border-white hover:bg-white/10'
+                className='group rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white transition-all hover:scale-105 hover:border-white hover:bg-white/10 dark:border-neutral-300 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100'
               >
                 {' '}
                 <span className='flex items-center gap-2'>

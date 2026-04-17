@@ -21,7 +21,7 @@ export const SkillIcon = ({
   return (
     <div
       className={cx(
-        'relative mx-auto w-min rounded bg-gray-50 p-2 shadow dark:bg-white/80',
+        'relative mx-auto w-min rounded bg-neutral-50 p-2 shadow dark:bg-white/80',
         className,
       )}
       onMouseEnter={() => setShowTooltip(true)}

@@ -40,7 +40,7 @@ export const SEOImage = ({
         fetchPriority={priority ? 'high' : 'auto'}
       />
       {caption && (
-        <figcaption className='mt-2 text-sm text-gray-600'>
+        <figcaption className='mt-2 text-sm text-neutral-600'>
           {caption}
         </figcaption>
       )}

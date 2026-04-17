@@ -11,32 +11,32 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: 'Projects Completed',
-    value: 50,
+    label: 'Companies Served',
+    value: 6,
     suffix: '+',
-    icon: 'ph:code',
-    color: 'text-blue-600',
+    icon: 'ph:buildings',
+    color: 'text-neutral-600',
   },
   {
-    label: 'Happy Clients',
-    value: 35,
-    suffix: '+',
+    label: 'Users Supported',
+    value: 400,
+    suffix: 'K+',
     icon: 'ph:users-three',
-    color: 'text-green-600',
+    color: 'text-neutral-600',
   },
   {
     label: 'Years Experience',
     value: 5,
     suffix: '+',
     icon: 'ph:calendar',
-    color: 'text-purple-600',
+    color: 'text-neutral-600',
   },
   {
-    label: 'Technologies Mastered',
-    value: 25,
+    label: 'Technologies Used',
+    value: 20,
     suffix: '+',
     icon: 'ph:stack',
-    color: 'text-orange-600',
+    color: 'text-neutral-600',
   },
 ];
 
@@ -85,19 +85,16 @@ export const QuickStats = () => {
   }, []);
 
   return (
-    <section
-      id='quick-stats'
-      className='bg-white py-16 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-800'
-    >
+    <section id='quick-stats' className='bg-white py-16 dark:bg-neutral-950'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h2 className='mb-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl'>
+          <h2 className='mb-4 text-3xl font-bold text-neutral-900 dark:text-white sm:text-4xl'>
             Delivering Results That{' '}
-            <span className='text-blue-400'>Matter</span>
+            <span className='text-blue-600 dark:text-blue-500'>Matter</span>
           </h2>
-          <p className='mx-auto mb-12 max-w-2xl text-lg text-gray-300'>
-            Numbers that speak to my commitment to excellence and client
-            satisfaction.
+          <p className='mx-auto mb-12 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400'>
+            Numbers that speak to the impact of my work across enterprise and
+            startup environments.
           </p>
         </div>
 
@@ -107,11 +104,11 @@ export const QuickStats = () => {
               <div className='mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm'>
                 <Icon icon={stat.icon} className={`size-8 ${stat.color}`} />
               </div>
-              <div className='mb-2 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl'>
+              <div className='mb-2 text-4xl font-bold text-neutral-900 dark:text-white sm:text-5xl'>
                 {animatedValues[index]}
                 {stat.suffix}
               </div>
-              <div className='text-sm font-medium text-gray-300 sm:text-base'>
+              <div className='text-sm font-medium text-neutral-600 dark:text-neutral-400 sm:text-base'>
                 {stat.label}
               </div>
             </div>
@@ -121,21 +118,27 @@ export const QuickStats = () => {
         {/* Additional Trust Indicators */}
         <div className='mt-16 text-center'>
           <div className='flex flex-wrap items-center justify-center gap-8 opacity-60'>
-            <div className='flex items-center gap-2 text-gray-400'>
-              <Icon icon='ph:shield-check' className='size-5 text-green-400' />
-              <span className='text-sm font-medium'>Security First</span>
+            <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400'>
+              <Icon
+                icon='ph:shield-check'
+                className='size-5 text-neutral-500'
+              />
+              <span className='text-sm font-medium'>HIPAA Compliant</span>
             </div>
-            <div className='flex items-center gap-2 text-gray-400'>
-              <Icon icon='ph:clock' className='size-5 text-blue-400' />
-              <span className='text-sm font-medium'>On-Time Delivery</span>
+            <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400'>
+              <Icon icon='ph:cloud' className='size-5 text-neutral-500' />
+              <span className='text-sm font-medium'>AWS & Azure</span>
             </div>
-            <div className='flex items-center gap-2 text-gray-400'>
-              <Icon icon='ph:handshake' className='size-5 text-purple-400' />
-              <span className='text-sm font-medium'>100% Satisfaction</span>
+            <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400'>
+              <Icon icon='ph:git-branch' className='size-5 text-neutral-500' />
+              <span className='text-sm font-medium'>CI/CD Automation</span>
             </div>
-            <div className='flex items-center gap-2 text-gray-400'>
-              <Icon icon='ph:headset' className='size-5 text-orange-400' />
-              <span className='text-sm font-medium'>24/7 Support</span>
+            <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400'>
+              <Icon
+                icon='ph:graduation-cap'
+                className='size-5 text-neutral-500'
+              />
+              <span className='text-sm font-medium'>MS Computer Science</span>
             </div>
           </div>
         </div>
