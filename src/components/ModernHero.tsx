@@ -97,14 +97,11 @@ export const ModernHero = () => {
             className={`transition-all delay-200 duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
           >
             <h1 className='text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-6xl lg:text-7xl'>
-              Building{' '}
-              <span className='relative inline-block text-blue-600 dark:text-blue-500'>
-                {/* Invisible longest word to reserve space */}
-                <span className='invisible'>production-grade</span>
-                <span className='absolute inset-0'>
-                  {typedText}
-                  <span className='animate-pulse'>|</span>
-                </span>
+              Building
+              <br />
+              <span className='text-blue-600 dark:text-blue-500'>
+                {typedText}
+                <span className='animate-pulse'>|</span>
               </span>
               <br />
               applications.
