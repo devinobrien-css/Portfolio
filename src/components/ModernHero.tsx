@@ -13,7 +13,7 @@ export const ModernHero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const words = useMemo(
-    () => ['scalable', 'performant', 'production-grade', 'secure'],
+    () => ['scalable', 'performant', 'reliable', 'secure'],
     [],
   );
 

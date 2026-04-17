@@ -45,11 +45,11 @@ export const WorkCard = ({ employer, initialOpen, index }: WorkCardProps) => {
             <div className='flex items-start justify-between'>
               <div className='flex items-center gap-4'>
                 {/* Company Logo */}
-                <div className='relative flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-neutral-200 bg-white dark:border-neutral-600'>
+                <div className='relative flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-neutral-200 bg-white dark:border-neutral-600'>
                   <img
                     src={icon}
                     alt={name}
-                    className={`${icon.endsWith('.svg') ? 'size-10' : 'size-12'} object-contain`}
+                    className='size-full object-cover'
                   />
                 </div>
 
